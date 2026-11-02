@@ -1,6 +1,6 @@
-{"build": true, "tests": [
-  {"kind": "game", "name": "moon_dm", "map": "/Game/Maps/L_Moon?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechVacuumLog", "-MechQuitAfter=80"], "seconds": 130},
-  {"kind": "game", "name": "easter_drones", "map": "/Game/Maps/L_Nature?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechEasterPlaceholder", "-MechEasterTest=drones", "-MechQuitAfter=70"], "seconds": 130},
-  {"kind": "game", "name": "easter_stampede", "map": "/Game/Maps/L_OldStreet?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechEasterPlaceholder", "-MechEasterTest=stampede", "-MechLoopLog", "-MechQuitAfter=70"], "seconds": 130},
-  {"kind": "game", "name": "easter_dogs", "map": "/Game/Maps/L_Soviet?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechEasterPlaceholder", "-MechEasterTest=dogs", "-MechQuitAfter=70"], "seconds": 130}
+{"build": false, "tests": [
+  {"kind": "gamepy", "name": "grade_oldstreet", "map": "/Game/Maps/L_OldStreet", "script": "tools/grade_shots_oldstreet.py", "args": ["-MechBeauty"], "seconds": 240},
+  {"kind": "gamepy", "name": "grade_moon", "map": "/Game/Maps/L_Moon", "script": "tools/grade_shots_moon.py", "args": ["-MechBeauty"], "seconds": 240},
+  {"kind": "gamepy", "name": "grade_soviet", "map": "/Game/Maps/L_Soviet?Range", "script": "tools/grade_shots_soviet.py", "args": ["-MechInfiniteEnergy"], "seconds": 240},
+  {"kind": "gamepy", "name": "grade_pillars", "map": "/Game/Maps/L_Pillars", "script": "tools/grade_shots_pillars.py", "args": ["-MechBeauty"], "seconds": 240}
 ]}
