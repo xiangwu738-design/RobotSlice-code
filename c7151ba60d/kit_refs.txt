@@ -1,0 +1,698 @@
+exit=0
+[2026.11.02-18.14.44:084][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-18.14.44:625][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-18.14.44:633][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.686 ms
+[2026.11.02-18.14.44:633][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-18.14.44:648][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 15.076 ms (total: 22.763 ms)
+[2026.11.02-18.14.44:648][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_kit_refs.py
+[2026.11.02-18.14.44:655][  0]LogPython: Warning: [kitref] lookdev 閲� 93 涓� .py
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref] == lookdev\ai\make_jobs.py 48 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref]    12: "fist": "gigantic block-shaped forearms and fists like hydraulic presses hanging down to its knees, massive "
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref]    19: "hydraulic pistons, the right arm is long and thin and ends in a heavy integrated cannon, one oversized "
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref]    33: [["鏈虹敳_ProjectBeta_BetaHK.safetensors", 0.8], ["鐢靛奖_2020sSciFiMovie_ArsMovieStill.safetensors", 0.6]]),
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref]    36: [["鏈虹敳_MechaKnights_hkmecha.safetensors", 0.8], ["鏋勫浘_CinematicShot_zy_cinematic.safetensors", 0.6]]),
+[2026.11.02-18.14.44:660][  0]LogPython: Warning: [kitref]    45: jobs.append({"name": f"r1_{dname}_{sname}", "prompt": prompt, "seed": seed, "w": 832, "h": 1248,
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref] == lookdev\ai\make_jobs2.py 46 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref]    1: """绗�浜岃疆锛氫笉鎻� robot/mecha銆佷笉鎸傛満鐢� LoRA锛屽彧淇濈暀銆屼袱鏉¤吙鐨勪汉褰�銆嶏紝閫犲瀷璇�瑷�浠庢満鐢蹭互澶栫殑涓滆タ鍊熴��
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref]    15: "hydraulic jacks and steel rods; it has no head, only a ring of small sensors on top of the tank.",
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref]    41: jobs.append({"name": f"r2_{cname}_a", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref]    42: jobs.append({"name": f"r2_{cname}_b", "prompt": prompt, "seed": seeds[1], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.44:666][  0]LogPython: Warning: [kitref]    43: jobs.append({"name": f"r2_{cname}_x", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248,
+[2026.11.02-18.14.44:672][  0]LogPython: Warning: [kitref] == lookdev\ai\make_jobs3.py 41 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:672][  0]LogPython: Warning: [kitref]    7: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.44:672][  0]LogPython: Warning: [kitref]    37: jobs.append({"name": f"r3_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.44:676][  0]LogPython: Warning: [kitref] == lookdev\ai\make_jobs4.py 40 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:676][  0]LogPython: Warning: [kitref]    6: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.44:676][  0]LogPython: Warning: [kitref]    36: jobs.append({"name": f"r4_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs.py 48 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref]    12: "fist": "gigantic block-shaped forearms and fists like hydraulic presses hanging down to its knees, massive "
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref]    19: "hydraulic pistons, the right arm is long and thin and ends in a heavy integrated cannon, one oversized "
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref]    33: [["鏈虹敳_ProjectBeta_BetaHK.safetensors", 0.8], ["鐢靛奖_2020sSciFiMovie_ArsMovieStill.safetensors", 0.6]]),
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref]    36: [["鏈虹敳_MechaKnights_hkmecha.safetensors", 0.8], ["鏋勫浘_CinematicShot_zy_cinematic.safetensors", 0.6]]),
+[2026.11.02-18.14.44:687][  0]LogPython: Warning: [kitref]    45: jobs.append({"name": f"r1_{dname}_{sname}", "prompt": prompt, "seed": seed, "w": 832, "h": 1248,
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs2.py 46 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref]    1: """绗�浜岃疆锛氫笉鎻� robot/mecha銆佷笉鎸傛満鐢� LoRA锛屽彧淇濈暀銆屼袱鏉¤吙鐨勪汉褰�銆嶏紝閫犲瀷璇�瑷�浠庢満鐢蹭互澶栫殑涓滆タ鍊熴��
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref]    15: "hydraulic jacks and steel rods; it has no head, only a ring of small sensors on top of the tank.",
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref]    41: jobs.append({"name": f"r2_{cname}_a", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref]    42: jobs.append({"name": f"r2_{cname}_b", "prompt": prompt, "seed": seeds[1], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.44:688][  0]LogPython: Warning: [kitref]    43: jobs.append({"name": f"r2_{cname}_x", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248,
+[2026.11.02-18.14.44:689][  0]LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs3.py 41 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:689][  0]LogPython: Warning: [kitref]    7: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.44:689][  0]LogPython: Warning: [kitref]    37: jobs.append({"name": f"r3_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.44:690][  0]LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs4.py 40 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:690][  0]LogPython: Warning: [kitref]    6: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.44:690][  0]LogPython: Warning: [kitref]    36: jobs.append({"name": f"r4_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\baita_build.py 213 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    32: ap.add_argument('--dynpose', default='Rifle/Aim_CC.fbx:12')
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    49: print('[baita] 闆朵欢', len(C.PARTS), '缃戞牸', len(objs))
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    60: NOZ.append(dict(name=holder.name, bone=holder.parent_bone, radius_cm=round(r, 2),
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    87: info['kit'] = sorted(set(C.KIT_USED))
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    178: path = fbx if os.path.isabs(fbx) else os.path.join(os.path.dirname(C.LOOKDEV), 'Inbox', '_retarget_pick', fbx)
+[2026.11.02-18.14.44:703][  0]LogPython: Warning: [kitref]    212: bpy.ops.wm.save_as_mainfile(filepath=os.path.join(d, f'鐧藉�擾{tag}.blend'), copy=True)
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\baita_clipcheck.py 141 琛岋紝鐩稿叧 12 琛�
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    2: blender -b D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend -P D:/RobotSlice/lookdev/factions/baita/baita_clipcheck.py -- --scheme BM [--every 3]
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    3: 绔�鏋�鍔ㄤ綔鎸夋父鎴忕殑鍙屾墜鎸傛硶鎽嗘灙锛堟彙鎶婂湪鍙虫墜銆佹灙绠℃寚鍚戝乏鎵嬶級锛涙寜 BVH 涓夎�掗潰鐩镐氦璁℃暟锛岃緭鍑烘瘡瀵归浂浠剁�板埌鐨勫抚鏁板拰渚嬪瓙銆�"""
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    26: PICK = os.path.join(ROOT, 'Inbox', '_retarget_pick')
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    27: GUN_ANIMS = [os.path.join(PICK, 'Rifle', n + '.fbx') for n in ('Aim_CC', 'Aim_U', 'Aim_D', 'Rifle_Idle', 'Rifle_ShootOnce', 'Rifle_Reload_2')]
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    28: MELEE_ANIMS = [os.path.join(ROOT, 'SourceAssets', 'katana', n + '_InPlace.fbx') for n in
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    30: MELEE_ANIMS += [os.path.join(PICK, 'GreatSword', f'GreatSword_Attack0{i}_InPlace.fbx') for i in (1, 2, 3, 4)]
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    41: out.append(o)
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    65: before = set(bpy.data.objects)
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    66: bpy.ops.import_scene.fbx(filepath=SCH.GUN_FBX)
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    67: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    76: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:707][  0]LogPython: Warning: [kitref]    135: hits[(a, b)].append(f'{name}@{fr}')
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\baita_common.py 879 琛岋紝鐩稿叧 42 琛�
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    50: PARTS = []      # (闆朵欢, 楠ㄥご)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    56: """鎵撳紑鐨勬槸 SKM_Robot_v3.blend锛氬垹鎺� v3 鐣欎笅鐨勫叧鑺傜┖鐗╀綋锛屽�嶅埗涓�浠介�ㄦ灦缁欐柊鏂规�堢敤銆�"""
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    58: V3ARM = next(o for o in SCENE.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    59: V3MESH = next(o for o in SCENE.objects if o.type == 'MESH' and o.parent == V3ARM)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    60: for o in list(SCENE.objects):
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    62: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    69: SCENE.collection.objects.link(ARM)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    79: """闆朵欢寤烘ā鐢ㄧ殑鍧愭爣绯伙細鍘熺偣鍦ㄩ�ㄥご澶撮儴锛泎 杞翠粠瀛愬叧鑺傛寚鍥炶繖鏍归�ㄥご锛堟部鑲�浣撴湞涓婏紝鍜� v3 涓�鏍凤級锛寉 鏈濆悗锛寈 = y脳z銆�
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    114: """娌块�ㄥご鑷�韬�鏂瑰悜锛堝ご鈫掑熬锛夌殑鍧愭爣绯伙紝闆朵欢寰� -z 鏂瑰悜闀匡紙鎷囨寚鐢�锛夈��"""
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    121: """闆朵欢 ob锛堝潗鏍囨槸鍦� F 閲岀殑灞�閮ㄥ潗鏍囷級鎸傚埌楠ㄥご bone 涓婏紝涓栫晫浣嶇疆 = F @ 灞�閮ㄣ��"""
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    129: PARTS.append((ob, bone))
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    134: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    135: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.44:715][  0]LogPython: Warning: [kitref]    137: me.materials.append(mat)
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\baita_schemes.py 157 琛岋紝鐩稿叧 10 琛�
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    72: GUN_FBX = os.path.join(os.path.dirname(C.LOOKDEV), 'SourceAssets', 'guns', 'SM_Gun2.fbx')
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    79: before = set(bpy.data.objects)
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    80: bpy.ops.import_scene.fbx(filepath=GUN_FBX)
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    81: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    91: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    92: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    95: bpy.context.view_layer.objects.active = meshes[0]
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    97: bpy.ops.object.join()
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    98: gun = bpy.context.view_layer.objects.active
+[2026.11.02-18.14.44:720][  0]LogPython: Warning: [kitref]    104: gun.data.materials.append(C.M['frame'])
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\baita_sheet.py 255 琛岋紝鐩稿叧 10 琛�
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    6: 璇� renders/ 涓嬬殑娓叉煋鍥惧拰 *_info.json锛岃緭鍑哄埌 D:/RobotSlice/docs/闃佃惀鏈虹敳/銆�"""
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    15: OUT = r'D:\RobotSlice\docs\闃佃惀鏈虹敳'
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    82: row.append(im.resize((int(im.width * K), int(im.height * K)), Image.LANCZOS))
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    83: cells.append(row)
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    114: d.text((gap + 6, H - 34), '璇存槑锛欴:\\RobotSlice\\docs\\闃佃惀鏈虹敳\\鐧藉�旂�戞妧.md銆�鑴氭湰锛歭ookdev\\factions\\baita\\', font=font(18), fill=(120, 126, 132))
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    164: ('H2', '閲嶅瀷 路 鏂瑰悜浜屻�岄棬鏋躲��', '鑳屽悗涓�鍏烽棬寮忚捣閲嶆灦锛氭瘮鑲╁�界殑妯�姊� + 涓ゆ牴绔嬫煴 + 涓�闂寸殑鎺ㄨ繘鍣ㄦ粦杞︼紝鍓�褰辨槸銆屛犮�嶏紱V 褰㈣兏銆佸眿妾愯偐銆佸ぇ鑵垮�栦晶澶栭湶绮楁恫鍘嬬几'),
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    192: ims.append(im.resize((int(im.width * k), int(im.height * k)), Image.LANCZOS))
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    201: rows.append((s, name, desc, ims + [sil], sh / ref_sh if ref_sh else 1.0))
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    230: d.text((gap + 6, H - 34), r'璇存槑锛欴:\RobotSlice\docs\闃佃惀鏈虹敳\鐧藉�旂�戞妧.md銆�鑴氭湰锛歭ookdev\factions\baita\scheme_dir.py',
+[2026.11.02-18.14.44:724][  0]LogPython: Warning: [kitref]    245: ('H2', '閲嶅瀷 路 闂ㄦ灦', '鑳屽悗闂ㄥ紡璧烽噸鏋讹紙妯�姊� + 涓ゆ牴绔嬫煴 + 鎺ㄨ繘鍣ㄦ粦杞︼級锛屽壀褰便�屛犮�嶏紱鍔犲帤鐨� V 鑳搞�佷袱绾ф��褰㈤澊銆佸ぇ鑵垮�栦晶澶栭湶娑插帇缂�'),
+[2026.11.02-18.14.44:730][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\scheme_a.py 188 琛岋紝鐩稿叧 4 琛�
+[2026.11.02-18.14.44:730][  0]LogPython: Warning: [kitref]    117: C.kit_span(P + '澶ц吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (-3.4, 3.8, -6), (-3.0, 3.4, -39), (1, 0, 0),
+[2026.11.02-18.14.44:730][  0]LogPython: Warning: [kitref]    143: arc.append((5.2 + 9.0 * __import__('math').sin(3.14159 * t) ** 0.8 - 1.5 * t, -7.0 - 24.0 * t))
+[2026.11.02-18.14.44:730][  0]LogPython: Warning: [kitref]    146: arc.append((5.2 + 4.0 * __import__('math').sin(3.14159 * t) - 1.5 * t, -7.0 - 24.0 * t))
+[2026.11.02-18.14.44:730][  0]LogPython: Warning: [kitref]    151: C.kit_span(P + '灏忚吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'calf_' + s, K, (0, 3.6, -8), (0, 3.4, -24), (1, 0, 0),
+[2026.11.02-18.14.44:735][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\scheme_b.py 164 琛岋紝鐩稿叧 4 琛�
+[2026.11.02-18.14.44:735][  0]LogPython: Warning: [kitref]    24: keys.append(S((z0 + z1) / 2, (w0 + w1) / 2 * (1 + bulge), (d0 + d1) / 2 * (1 + bulge), (db0 + db1) / 2 * (1 + bulge), **kw))
+[2026.11.02-18.14.44:735][  0]LogPython: Warning: [kitref]    25: keys.append(S(z1, w1, d1, db1, **kw))
+[2026.11.02-18.14.44:735][  0]LogPython: Warning: [kitref]    112: C.kit_span(P + '澶ц吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 4.4, -5), (0, 3.8, -38), (1, 0, 0),
+[2026.11.02-18.14.44:735][  0]LogPython: Warning: [kitref]    125: sb.append(tier(f'{P}灏忚吙鏉縶i}', z0, z1, w, w * 0.94, d, d * 0.93, m[mat], 'calf_' + s, K, sx, db0=db, db1=db * 0.95,
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\scheme_bx.py 330 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    26: tower_levels=3, slats=3, brim=False, eave=0.0, eave_kx=1.0, tassets=False, thk=1.0, chest_w=1.0, chest_layers=2,
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    78: keys.append(S((z0 + z1) / 2, (w0 + w1) / 2 * (1 + bulge), (d0 + d1) / 2 * (1 + bulge), (db0 + db1) / 2 * (1 + bulge), **kw))
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    79: keys.append(S(z1, w1, d1, db1, **kw))
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    240: C.kit_span(P + '澶ц吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 5.4, -4), (0, 5.0, -22), (1, 0, 0),
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    242: C.kit_span(P + '鑶濆悗娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 5.2, -24), (0, 4.4, -41), (1, 0, 0),
+[2026.11.02-18.14.44:761][  0]LogPython: Warning: [kitref]    261: C.kit_span(P + '灏忚吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'calf_' + s, K, (0, 4.6, -6), (0, 4.2, -26), (1, 0, 0),
+[2026.11.02-18.14.44:766][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\scheme_c.py 206 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:766][  0]LogPython: Warning: [kitref]    132: secs.append(S(z, r, r * 0.88, n=2.1))
+[2026.11.02-18.14.44:766][  0]LogPython: Warning: [kitref]    162: C.kit_span(P + '澶ц吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 6.0, -26), (0, 4.8, -41), (1, 0, 0),
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref] == lookdev\factions\baita\scheme_dir.py 398 琛岋紝鐩稿叧 9 琛�
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    40: keys.append(S((z0 + z1) / 2, (w0 + w1) / 2 * (1 + bulge), (d0 + d1) / 2 * (1 + bulge), (db0 + db1) / 2 * (1 + bulge), **kw))
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    41: keys.append(S(z1, w1, d1, db1, **kw))
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    205: C.kit_span(P + '澶ц吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 5.2, -4), (0, 4.8, -24), (1, 0, 0), thick=0.9,
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    207: C.kit_span(P + '鑶濆悗娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 5.0, -26), (0, 4.4, -41), (1, 0, 0), thick=0.9,
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    216: C.kit_span(P + '灏忚吙娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'calf_' + s, K, (0, 4.6, -6), (0, 4.2, -26), (1, 0, 0), thick=0.9,
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    289: C.kit_span(P + '鑶濆悗娑插帇', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (0, 5.6, -26), (0, 4.6, -41), (1, 0, 0), thick=1.1,
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    369: C.kit_span(P + '澶ц吙澶栨恫鍘�', 'Hydraulics_T1_02', '鏈虹敳2', 'thigh_' + s, T, (9.4, 0.0, -2), (8.6, 0.0, -30), (0, 1, 0),
+[2026.11.02-18.14.44:773][  0]LogPython: Warning: [kitref]    371: C.blk(P + '娑插帇搴�', 3.0, 5.0, 4.0, m['frame'], 'thigh_' + s, T, (8.4, 0.0, -1.0), bevel=0.3, sx=sx)
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_camcheck.py 134 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref]    54: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref]    55: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref]    122: cam = bpy.data.objects.new('鐩告満_' + shot, cd)
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref]    123: SCENE.collection.objects.link(cam)
+[2026.11.02-18.14.44:787][  0]LogPython: Warning: [kitref]    131: bpy.data.objects.remove(cam, do_unlink=True)
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_clip.py 226 琛岋紝鐩稿叧 18 琛�
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    2: 鎸� BVH 涓夎�掗潰鐩镐氦锛屾暟姣忎竴瀵归浂浠剁�板埌鐨勫抚鏁般�傜��鏋�鍔ㄤ綔鎸夋父鎴忕殑鍙屾墜鎸傛硶鎽嗛湴寮规灙锛堟彙鎶婂湪鍙虫墜銆佹灙绠℃寚鍚戝乏鎵嬶級銆�
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    31: PICK = os.path.join(ROOT, 'Inbox', '_retarget_pick')
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    32: GUN_ANIMS = [os.path.join(PICK, 'Rifle', n + '.fbx') for n in
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    34: MELEE_ANIMS = [os.path.join(ROOT, 'SourceAssets', 'katana', n + '_InPlace.fbx') for n in
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    36: MELEE_ANIMS += [os.path.join(PICK, 'GreatSword', f'GreatSword_Attack0{i}_InPlace.fbx') for i in (1, 2, 3, 4)]
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    38: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    39: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    53: """涓�娈典笂鐨勯浂浠讹紱榛樿�ゅ幓鎺夊叧鑺傞攢杞达紙閿�鏈�鏉ュ氨鎻掑湪鐩搁偦闆朵欢閲岋紝绠楃┛妯℃病鎰忎箟锛夈��"""
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    85: vb.append(gname.get(best.group) if best is not None else None)
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    95: before = set(bpy.data.objects)
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    96: bpy.ops.import_scene.fbx(filepath=os.path.join(ROOT, 'SourceAssets', 'guns', 'SM_Gun11.fbx'))
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    97: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    106: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:792][  0]LogPython: Warning: [kitref]    142: bpy.ops.import_scene.fbx(filepath=path, automatic_bone_orientation=False)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_common.py 1250 琛岋紝鐩稿叧 71 琛�
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    15: RIG_BLEND = r'D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend'
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    18: '鏈虹敳2': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈虹敳2.blend',
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    19: '鏈烘�伴浂浠�': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈烘�伴浂浠�.blend',
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    23: USED_KIT = {}      # 鐢ㄥ埌鐨勭礌鏉愪欢锛氬悕瀛� 鈫� (搴�, 娆℃暟)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    31: out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    61: self.obj = sock(tc, 'Object', True)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    104: self.feed(sock(node, 'Vector'), coord if coord is not None else self.obj)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    109: self.feed(node.inputs[0], self.obj)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    248: b.feed(sep.inputs[0], b.obj)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    285: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    294: ob = bpy.data.objects.new(name, None)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    303: ob.data.materials.append(mat)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    318: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.44:799][  0]LogPython: Warning: [kitref]    406: rings.append([bm.verts.new((r * math.cos(2 * math.pi * i / segs), r * math.sin(2 * math.pi * i / segs), z))
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_family.py 249 琛岋紝鐩稿叧 13 琛�
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    12: from bpy_extras.object_utils import world_to_camera_view
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    36: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    37: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    57: ROBOTS.append(dict(key=key, name=name, arm=arm, parts=B.parts(), B=B, spread=SCHEMES[key]['spread']))
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    64: EXTRA.append(dict(key=ARGS.ref, name=f'绗�涓�杞�鏂规�坽ARGS.ref}锛堝弬鐓э級', arm=arm, parts=B.parts(), B=B,
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    77: pts.append(mw @ v.co)
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    97: """娓告垙鐗堥潰鏁扮矖浼帮紙鍚� ds_render.game_tris锛夛細澶у�掕�� 1 娈点�佸皬鍦嗚�掑幓鎺夈�佺礌鏉愭恫鍘嬫潌鍑忓埌 0.2銆佽蒋绠￠檷绮惧害銆佸柗瀛椾笉绠椼��"""
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    102: undo.append((md, md.segments, md.show_viewport))
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    107: if o.type == 'MESH' and any(m and m.name.startswith('MI_Kit') for m in o.data.materials):
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    110: added.append((o, d))
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    112: undo.append((o.data, o.data.resolution_u, o.data.bevel_resolution))
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    157: NOZ.setdefault(R['key'], []).append(dict(
+[2026.11.02-18.14.44:810][  0]LogPython: Warning: [kitref]    243: LABELS[NAMES[v]].append(dict(key=R['key'], name=R['name'], u=uh.x, v_top=uh.y, v_foot=uf.y))
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_render.py 292 琛岋紝鐩稿叧 24 琛�
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    40: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    41: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    78: f'娣� {hi.y - lo.y:.3f}锛涗笁瑙掗潰 {tris}锛涢浂浠� {len(parts)}')
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    79: print('[ds] 绱犳潗浠�', {k: v for k, v in C.USED_KIT.items()})
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    87: parts=len(parts), kit={k: v for k, v in C.USED_KIT.items()}, bones=bones, game_tris=game_tris())
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    92: """娓告垙鐗堥潰鏁扮矖浼帮細澶у�掕�掔暀 1 娈点��2 姣�绫崇骇灏忓渾瑙掑幓鎺夈�佺礌鏉愭恫鍘嬫潌鎸� robot_lookdev 鐨� KIT_LITE 鍑忓埌 0.2銆佽蒋绠￠檷绮惧害銆�
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    98: undo.append((md, md.segments, md.show_viewport))
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    103: if o.type == 'MESH' and any(m and m.name.startswith('MI_Kit') for m in o.data.materials):
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    106: added.append((o, d))
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    108: undo.append((o.data, o.data.resolution_u, o.data.bevel_resolution))
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    168: """鍔ㄦ�佸Э鍔垮彸鎵嬫嬁榧庡北鐨勯湴寮规灙锛圫ourceAssets/guns/SM_Gun11.fbx锛屼汉褰㈠昂瀵� 鈫� 脳1.35锛夈�傛灙绠￠『鐫�鍓嶈噦銆佹灙椤舵湞涓娿��"""
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    169: before = set(bpy.data.objects)
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    170: bpy.ops.import_scene.fbx(filepath=r'D:/RobotSlice/SourceAssets/guns/SM_Gun11.fbx')
+[2026.11.02-18.14.44:824][  0]LogPython: Warning: [kitref]    171: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.44:832][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_schemes.py 650 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:832][  0]LogPython: Warning: [kitref]    308: pts.append((-(r - t) * math.sin(th), -(r - (r - t) * math.cos(th)) - 0.004))
+[2026.11.02-18.14.44:836][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\ds_sheet.py 347 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.44:836][  0]LogPython: Warning: [kitref]    129: V3_GAME_TRIS = 93604   # 娓告垙閲岀幇鐢ㄧ殑 SKM_Robot_v3锛坙ookdev/rig/SKM_Robot_v3.blend 鐨勭綉鏍硷級
+[2026.11.02-18.14.44:836][  0]LogPython: Warning: [kitref]    164: '鍏辩敤鍐风伆 + 姗欒壊鐐圭紑銆佹�欒壊鎶よ啙鍜岃偐娌裤�佸�栭湶娑插帇浠躲��', font=f_sub, fill=sub)
+[2026.11.02-18.14.44:845][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\flat\ds_flat.py 371 琛岋紝鐩稿叧 3 琛�
+[2026.11.02-18.14.44:845][  0]LogPython: Warning: [kitref]    42: """鍒犳帀鎸傜偣 seg 涓嬮潰鐩存帴鎸傜潃鐨勩�佸悕瀛楀湪 names 閲岀殑闆朵欢锛堣繛鍚屽瓙鐗╀綋锛夈�傚悓涓�鍦烘櫙寤轰簡鍑犲彴鏃跺悕瀛椾細甯� .001锛屽厛鍘绘帀鍐嶆瘮銆�"""
+[2026.11.02-18.14.44:845][  0]LogPython: Warning: [kitref]    47: bpy.data.objects.remove(c, do_unlink=True)
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\flat\flat_census.py 289 琛岋紝鐩稿叧 20 琛�
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    5: 1. 闈㈠垎绫伙紙鎸夊嚑浣曪紝涓嶉潬闆朵欢鍚嶏紝v3 閭ｅ潡鍚堝苟缃戞牸涔熻兘閲忥級锛氬厛鎶婂す瑙� < 4 搴︾殑鐩搁偦闈㈠苟鎺夛紱鐩搁偦涓や釜闈㈠す瑙� 5鈥�25 搴︺�佷氦绾垮�熼暱銆�
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    7: R 鈮� 4.5 鍘樼背锛堢洿寰� 9 鍘樼背浠ヤ笂锛夎�般�屽ぇ鏇查潰銆嶏紝鍏朵綑璁般�屽皬鏇查潰銆嶏紱鏇寸粏鐨勬潌銆佽蒋绠°�佹爮鏉嗕笉绠椼�傞噺涔嬪墠鎶婃柊绾�闆朵欢鐨勫�掕�掑叏鏀规垚 1 娈点��
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    9: 鍏�杈瑰舰 / 鍏�杈瑰舰杩欑�嶃�屽�氳竟褰㈣繎浼煎渾銆嶄笉绠楁洸闈�锛堝す瑙� 45 搴︼級锛屼絾鎸夐浂浠跺悕鍗曠嫭鍒楋紙鏈鸿埍銆侀厤閲嶃�侀�堟姢濂楋級锛屾姤鍛婇噷鍙﹁�淬��
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    11: 姣� px 绫充竴鏉″皠绾匡紙BVH锛岀��涓�娆″懡涓�鐨勯潰锛夛紝鏁版満浣撳壀褰遍噷姣忕被闈�銆佹瘡涓�闆朵欢鍗犲�氬皯鍍忕礌銆�
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    12: 杈撳嚭 <out>/鏇查潰鏅�鏌�_<tag>.json锛氭瘡鍙扮殑闈㈢Н銆佷笁瑙嗗浘鍍忕礌鍗犳瘮銆佹寜澶ф洸闈㈠儚绱犳帓搴忕殑闆朵欢琛ㄣ��"""
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    102: """闆朵欢褰掔被锛氬線涓婃壘鍒扮洿鎺ユ寕鍦ㄥ垎娈垫寕鐐癸紙<tag>_xxx锛変笅鐨勯偅涓�绾э紝鍘绘帀宸﹀彸 / 缂栧彿鍚庣紑銆�"""
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    116: """鎶婃暣鍙版満浣擄紙褰撳墠濮垮娍銆佷笘鐣屽潗鏍囷級鍚堟垚涓�涓�涓夎�掗潰琛�锛歷erts, polys, 姣忎釜闈㈢殑 (闆朵欢缂栧彿, 绫诲埆, 闈㈢Н)銆�"""
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    137: if v3:    # 鍚堝苟缃戞牸锛氭寜杩為�氬潡鍒嗛浂浠讹紝鍚嶅瓧 = 涓昏�侀�ㄥご + 鍖呭洿鐩掑昂瀵�
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    149: isl.append(f)
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    154: stack.append(g)
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    171: names.append(f'{b} {round(dim[0] * 50) * 2:.0f}脳{round(dim[1] * 50) * 2:.0f}脳{round(dim[2] * 50) * 2:.0f}cm')
+[2026.11.02-18.14.44:849][  0]LogPython: Warning: [kitref]    175: polys.append(list(range(off, off + len(f.verts))))
+[2026.11.02-18.14.44:850][  0]LogPython: Warning: [kitref]    176: info.append((pid, cls[f.index], f.calc_area()))
+[2026.11.02-18.14.44:850][  0]LogPython: Warning: [kitref]    179: names.append(group_name(o, tag))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\flat\flat_render.py 211 琛岋紝鐩稿叧 11 琛�
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    13: from bpy_extras.object_utils import world_to_camera_view
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    38: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    39: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    55: ROBOTS.append(dict(key=key, name=NAMES[key], arm=arm, parts=[mesh], B=None, spread=10, mesh=mesh))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    61: ROBOTS.append(dict(key=key, name=NAMES.get(key, key), arm=arm, parts=B.parts(), B=B, spread=SCHEMES[key]['spread']))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    73: pts.append(mw @ v.co)
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    97: undo.append((md, md.segments, md.show_viewport))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    102: if o.type == 'MESH' and any(m and m.name.startswith('MI_Kit') for m in o.data.materials):
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    105: added.append((o, d))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    107: undo.append((o.data, o.data.resolution_u, o.data.bevel_resolution))
+[2026.11.02-18.14.44:857][  0]LogPython: Warning: [kitref]    206: LABELS[VNAME[v]].append(dict(key=R['key'], name=R['name'], u=uh.x, v_top=uh.y, v_foot=uf.y))
+[2026.11.02-18.14.44:874][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\flat\flat_run.py 18 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:874][  0]LogPython: Warning: [kitref]    5: --out D:/RobotSlice/lookdev/factions/dingshan/flat/wip --blend D:/RobotSlice/lookdev/factions/dingshan/flat/DS_H2.blend"""
+[2026.11.02-18.14.44:878][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\flat\flat_sheet.py 220 琛岋紝鐩稿叧 3 琛�
+[2026.11.02-18.14.44:878][  0]LogPython: Warning: [kitref]    121: d.text((30, 122), '鍜屾父鎴忕��涓変汉绉伴暅澶村悓涓�渚э級銆備袱涓�鏂瑰悜閮藉彧鍦ㄥ師闆朵欢鑼冨洿閲屾敼锛氳偐瀹姐�佽兏鑵斿�� / 鍓嶅悗銆佽韩楂橀兘娌″彉澶э紙鏁板瓧瑙佹渶涓嬮潰鐨勮〃锛夈��'
+[2026.11.02-18.14.44:878][  0]LogPython: Warning: [kitref]    163: '鍏朵腑鍏�涓冩垚鏄�璺ㄥ叧鑺傜殑娑插帇鏉嗗拰鍑忛渿寮圭哀锛堢礌鏉愪欢锛寁3 瀹氱�挎椂鍔犵殑璺ㄥ叧鑺傚噺闇囷級锛屽叾浣欐槸 9鈥�14 鍘樼背鐨勫叧鑺傚渾鏌卞拰鑵版煴锛�'
+[2026.11.02-18.14.44:878][  0]LogPython: Warning: [kitref]    208: '銆屽ぇ鏇查潰銆�= 鐩村緞 9 鍘樼背浠ヤ笂鐨勫渾鏌� / 绠� / 鐞冦�傛父鎴忕増闈㈡暟鏄�浼扮殑锛堝�掕�� 1 娈点�佸幓灏忓渾瑙掋�佹恫鍘嬫潌鍑忛潰 0.2锛夛紱v3 鏄�鐜扮敤缃戞牸銆�',
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref] == lookdev\factions\dingshan\inspect_v3.py 44 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    1: """鍙�璇绘��鏌� SKM_Robot_v3.blend锛氶�ㄩ�肩粦瀹氬Э鍔裤�佺綉鏍煎昂瀵搞�佹潗璐ㄦЫ銆佸悇楠ㄥご涓婄殑椤剁偣鏁板拰鍖呭洿鐩掋��
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    2: blender -b lookdev/rig/SKM_Robot_v3.blend -P lookdev/factions/dingshan/inspect_v3.py -- <杈撳嚭json>"""
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    12: for o in sc.objects:
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    13: info['objects'].append({'name': o.name, 'type': o.type, 'parent': o.parent.name if o.parent else None,
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    15: arm = next(o for o in sc.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.44:883][  0]LogPython: Warning: [kitref]    21: robot = next(o for o in sc.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.44:888][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\compose.py 134 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:888][  0]LogPython: Warning: [kitref]    11: DOCS = r'D:\RobotSlice\docs\闃佃惀鏈虹敳'
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\compose2.py 311 琛岋紝鐩稿叧 13 琛�
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    16: DOCS = r'D:\RobotSlice\docs\闃佃惀鏈虹敳'
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    43: polys.append(cur)
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    55: cur.append(pos)
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    70: cur.append(((1 - t) ** 2 * pos[0] + 2 * (1 - t) * t * c[0] + t * t * e[0],
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    106: lines.append(line)
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    124: d.text((32, 88), '鍜屾柊绾�寤鸿�炬媺寮�锛氬叏鍖呰�嗕笉闇叉恫鍘� / 閿�杞达紱鍙嶅簲瑁呯敳鍧� + 鏍呮爮瑁呯敳 + 鐑熷箷绛� + 涓嬫矇鐐�濉斿皬澶达紱鍩庡競鐏拌糠褰╋紝涓嶇敤姗欓粍銆�|銆�銆屽�煎緱淇¤禆鐨勫姏閲忋�傘��',
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    201: segs.append((start, x))
+[2026.11.02-18.14.44:893][  0]LogPython: Warning: [kitref]    283: ('鏈烘瀯', '鍏ㄥ寘瑕嗭細娑插帇 / 閿�杞� / 鍑忛渿閮藉寘鍦ㄨ�呯敳閲岋紝鍏宠妭鍙�闇蹭竴鍦堟�¤兌闃插皹濂�', '澶栭湶娑插帇缂搞�侀攢杞淬�佹补缂搞�侀厤閲嶅潡銆佺�卞舰姊�'),
+[2026.11.02-18.14.44:898][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\compose3.py 98 琛岋紝鐩稿叧 3 琛�
+[2026.11.02-18.14.44:898][  0]LogPython: Warning: [kitref]    14: DOCS = r'D:\RobotSlice\docs\闃佃惀鏈虹敳'
+[2026.11.02-18.14.44:898][  0]LogPython: Warning: [kitref]    39: out.append(line)
+[2026.11.02-18.14.44:903][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\compose4.py 124 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:903][  0]LogPython: Warning: [kitref]    16: DOCS = r'D:\RobotSlice\docs\闃佃惀鏈虹敳'
+[2026.11.02-18.14.44:907][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\count_v3.py 20 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:907][  0]LogPython: Warning: [kitref]    5: me = next(o for o in bpy.context.scene.objects if o.type == 'MESH')
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\designs_heitie.py 1530 琛岋紝鐩稿叧 17 琛�
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    38: pts.append(tuple(c + u * a + v * b + n * lift))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    43: pts.append(tuple(c + u * a * k + v * b * k + n * (lift + t)))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    100: pts.append(tuple(p + s * a * w / 2 + n * b * h))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    120: fp.append(tuple(c + u * a * (w / 2 + 0.003) + v * (h / 2 + 0.003) + n * d * 0.3))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    144: P.append((xoff, y_nose - ridge, z_nose))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    160: pts.append(tuple(b + s * (k * (span / 2 + r * 1.4)) + up * (j * r * 1.5) + d * t))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    376: if slot == 'Kit_Hydraulics' and grp.startswith('thigh') and abs(c.x) > 0.16:
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    377: return True                               # 澶ц吙澶栦晶閭ｅ�规恫鍘嬫潌琚�渚ц�欐澘鐩栦綇
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    378: if slot == 'Kit_Hydraulics' and grp.startswith('lowerarm'):
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    379: return True                               # 鍓嶈噦娑插帇鏉嗚��鎶よ厱鐩栦綇
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    715: oc.append((math.sin(a) * r * 1.05, -math.cos(a) * r * 1.02 - 0.012, z))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    830: out.append((x2, y * f, z))
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    1078: """鍏ㄥ寘瑕嗭細鏍囧噯搴曠洏澶栭湶鐨勬恫鍘嬫潌銆佺嚎缂嗐�佽法鍏宠妭鍑忛渿鍏ㄥ垹锛堝�栧３鐩栦綇鏈烘瀯锛涙父鎴忛噷杩欎簺楠ㄥご鐣欑潃銆佸彧鏄�娌＄綉鏍硷級銆�"""
+[2026.11.02-18.14.44:918][  0]LogPython: Warning: [kitref]    1496: if bpy.data.objects.get('姝ユ灙_鎻�') is not None:
+[2026.11.02-18.14.44:923][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\heitie.py 162 琛岋紝鐩稿叧 4 琛�
+[2026.11.02-18.14.44:923][  0]LogPython: Warning: [kitref]    45: v3 = next(o for o in H.SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-18.14.44:923][  0]LogPython: Warning: [kitref]    46: for o in list(H.SCENE.objects):
+[2026.11.02-18.14.44:923][  0]LogPython: Warning: [kitref]    48: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:923][  0]LogPython: Warning: [kitref]    70: bpy.ops.wm.save_as_mainfile(filepath=os.path.join(HERE, f'heitie_{A.design}.blend'), copy=True)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\hx_common.py 1075 琛岋紝鐩稿叧 56 琛�
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    14: PARTS = []      # (闆朵欢瀵硅薄, 楠ㄥご鍚�)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    15: PART_NAMES = []  # 鍚堝苟鍚庣綉鏍奸潰灞炴�� part 鐨勭紪鍙� 鈫� 闆朵欢鍚嶏紙0 = 鏍囧噯搴曠洏锛�
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    16: JOINT_OBJ = {}  # 鍏宠妭鍚� -> 绌虹墿浣擄紙闆朵欢鐨勭埗鐗╀綋锛�
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    24: out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    54: self.obj = sock(tc, 'Object', True)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    97: self.feed(sock(node, 'Vector'), coord if coord is not None else self.obj)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    102: self.feed(node.inputs[0], self.obj)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    181: """涓夎壊纭�杈硅糠褰╋紙鍩庡競鐏帮級锛氬ぇ鍧楁枒鎸夌墿浣撳潗鏍囷紙缁戝畾濮垮娍銆佸帢绫筹級绠楋紝璺ㄩ浂浠惰繛缁�锛涘啀鍙犳帀婕� / 绉�鐏般��
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    185: b.feed(warp.inputs[0], b.obj)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    189: b.feed(sock(nz, 'Vector'), b.obj)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    308: if m.name.startswith('MI_Kit_Hydraulics'):
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    310: M['Kit_Hydraulics'] = m
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    327: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.44:931][  0]LogPython: Warning: [kitref]    336: ob = bpy.data.objects.new(name, None)
+[2026.11.02-18.14.44:934][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\inspect_blend.py 9 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:934][  0]LogPython: Warning: [kitref]    4: for o in bpy.context.scene.objects:
+[2026.11.02-18.14.44:939][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\inspect_v3.py 38 琛岋紝鐩稿叧 3 琛�
+[2026.11.02-18.14.44:939][  0]LogPython: Warning: [kitref]    8: for o in sc.objects:
+[2026.11.02-18.14.44:939][  0]LogPython: Warning: [kitref]    11: arm = next(o for o in sc.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.44:939][  0]LogPython: Warning: [kitref]    17: me = next(o for o in sc.objects if o.type == 'MESH')
+[2026.11.02-18.14.44:944][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\stats_heitie.py 56 琛岋紝鐩稿叧 3 琛�
+[2026.11.02-18.14.44:944][  0]LogPython: Warning: [kitref]    16: v3 = next(o for o in H.SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-18.14.44:944][  0]LogPython: Warning: [kitref]    17: for o in list(H.SCENE.objects):
+[2026.11.02-18.14.44:944][  0]LogPython: Warning: [kitref]    19: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:948][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\tile.py 17 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.44:948][  0]LogPython: Warning: [kitref]    10: ims.append(im.resize((round(im.width * h / im.height), h), Image.LANCZOS))
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\vhi_cam.py 111 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref]    47: v3 = next(o for o in H.SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref]    48: for o in list(H.SCENE.objects):
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref]    50: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref]    101: cam = bpy.data.objects.new('鐩告満_' + shot, cd)
+[2026.11.02-18.14.44:952][  0]LogPython: Warning: [kitref]    102: H.SCENE.collection.objects.link(cam)
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\vhi_clip.py 190 琛岋紝鐩稿叧 14 琛�
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    28: PICK = os.path.join(ROOT, 'Inbox', '_retarget_pick')
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    29: GUN_ANIMS = [os.path.join(PICK, 'Rifle', n + '.fbx') for n in ('Aim_CC', 'Aim_U', 'Aim_D', 'Rifle_Idle', 'Rifle_ShootOnce', 'Rifle_Reload_2')]
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    30: MELEE_ANIMS = [os.path.join(ROOT, 'SourceAssets', 'katana', n + '_InPlace.fbx') for n in
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    32: MELEE_ANIMS += [os.path.join(PICK, 'GreatSword', f'GreatSword_Attack0{i}_InPlace.fbx') for i in (1, 2, 3, 4)]
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    43: v3 = next(o for o in H.SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    44: for o in list(H.SCENE.objects):
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    46: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    58: bpy.data.objects.remove(v3, do_unlink=True)
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    72: G.setdefault(g, []).append(list(poly.vertices))
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    135: before = set(bpy.data.objects)
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    136: bpy.ops.import_scene.fbx(filepath=path, automatic_bone_orientation=False)
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    137: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.44:957][  0]LogPython: Warning: [kitref]    182: hits[pr].append(f'{nm}@{fr}')
+[2026.11.02-18.14.44:962][  0]LogPython: Warning: [kitref] == lookdev\factions\heitie\vhi_nozzle.py 55 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.44:962][  0]LogPython: Warning: [kitref]    19: v3 = next(o for o in H.SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-18.14.44:962][  0]LogPython: Warning: [kitref]    20: for o in list(H.SCENE.objects):
+[2026.11.02-18.14.44:962][  0]LogPython: Warning: [kitref]    22: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.44:962][  0]LogPython: Warning: [kitref]    50: out.append(dict(side='宸�' if sx > 0 else '鍙�', mouth_ue_cm=[round(c.x, 2), round(-c.y, 2), round(c.z, 2)],
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref] == lookdev\kit\kit_inspect.py 70 琛岋紝鐩稿叧 18 琛�
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    8: r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈虹敳2.blend': ['Hydraulics_T1_02', 'Hydraulics_T1_06', 'Hydraulics_T2_02', 'Hydraulics_T2_06',
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    9: 'Hydraulics_T2_11', 'Pipes_02', 'Pipes_07', 'Pipes_11', 'BodyKit_T3_09'],
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    10: r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈烘�伴浂浠�.blend': ['hutch_01', 'hutch_03'],
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    12: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    13: bpy.data.objects.remove(ob)
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    16: with bpy.data.libraries.load(path, link=False) as (src, dst):
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    17: dst.objects = [n for n in src.objects if n in names]
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    18: for ob in dst.objects:
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    21: sc.collection.objects.link(ob)
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    24: if c.name not in sc.collection.objects:
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    25: sc.collection.objects.link(c)
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    28: roots = [o for o in sc.objects if o.parent is None]
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    41: print(f'[kit] {ob.name}: 鍘熺偣 {tuple(round(v, 3) for v in ob.location)} 鏃嬭浆 {tuple(round(math.degrees(a)) for a in ob.rotation_euler)} 缂╂斁 {tuple(round(v, 3) for v in ob.scale)}')
+[2026.11.02-18.14.44:967][  0]LogPython: Warning: [kitref]    42: print(f'[kit]   鍖呭洿鐩� {tuple(round(v, 3) for v in lo)} 鈫� {tuple(round(v, 3) for v in hi)} 灏哄�� {tuple(round(v, 3) for v in hi - lo)} 涓夎�掗潰 {tris}')
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref] == lookdev\kit\kit_islands.py 35 琛岋紝鐩稿叧 9 琛�
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    4: LIB = {'鏈虹敳2': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈虹敳2.blend', '鏈烘�伴浂浠�': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈烘�伴浂浠�.blend'}
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    5: for name, lib in (('Hydraulics_T1_02', '鏈虹敳2'), ('Hydraulics_T2_02', '鏈虹敳2'), ('hutch_01', '鏈烘�伴浂浠�')):
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    6: with bpy.data.libraries.load(LIB[lib], link=False) as (src, dst):
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    7: dst.objects = [name]
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    8: ob = dst.objects[0]
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    22: x = stack.pop(); isl.append(x)
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    26: seen.add(o.index); stack.append(o)
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    27: islands.append(isl)
+[2026.11.02-18.14.44:971][  0]LogPython: Warning: [kitref]    32: rows.append((len(isl), lo, hi))
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref] == lookdev\kit\kit_profile.py 49 琛岋紝鐩稿叧 10 琛�
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    1: """Hydraulics_T1_02 娌块暱杞达紙Y锛夋瘡 4 鍘樼背涓�娈电殑鏈�澶у崐寰勫拰鎵�鍦ㄥ潡锛氭壘缂哥瓛鍜屾椿濉炴潌鐨勫垎鐣屻�俬utch_01 鐨勫脊绨у湀缁熻�°��"""
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    4: LIB = {'鏈虹敳2': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈虹敳2.blend', '鏈烘�伴浂浠�': r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈烘�伴浂浠�.blend'}
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    6: with bpy.data.libraries.load(LIB[lib], link=False) as (src, dst):
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    7: dst.objects = [name]
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    8: ob = dst.objects[0]
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    21: isl_of[o.index] = k; stack.append(o)
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    24: bm, isl = load('Hydraulics_T1_02', '鏈虹敳2')
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    38: bm2, isl2 = load('hutch_01', '鏈烘�伴浂浠�')
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    41: for v in bm2.verts: g[isl2[v.index]].append(v)
+[2026.11.02-18.14.44:976][  0]LogPython: Warning: [kitref]    47: coils.append((lo.x, hi.x, lo, hi))
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref] == lookdev\kit\kit_textures.py 25 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    1: """鎶婃満鐢�2 绱犳潗閲屾恫鍘嬫潌銆佺嚎缂嗘潗璐ㄧ殑鎵撳寘璐村浘瀛樻垚鏂囦欢缁� UE 鐢�锛歭ookdev/kit/tex/<Hydraulics|Pipes>_<BaseColor|Normal|Metallic|Roughness>.png銆�
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    4: OUT = r'D:/RobotSlice/lookdev/kit/tex'
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    5: LIB = r'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/鏈虹敳2.blend'
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    7: with bpy.data.libraries.load(LIB, link=False) as (src, dst):
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    8: dst.objects = ['Hydraulics_T1_02', 'Pipes_07']
+[2026.11.02-18.14.44:980][  0]LogPython: Warning: [kitref]    9: for ob, tag in zip(dst.objects, ('Hydraulics', 'Pipes')):
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref] == lookdev\make_cables.py 61 琛岋紝鐩稿叧 12 琛�
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    23: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    24: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    45: ob = bpy.data.objects.new(f'{name}_{k}', cu)
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    46: bpy.context.scene.collection.objects.link(ob)
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    47: parts.append(ob)
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    48: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    51: bpy.context.view_layer.objects.active = parts[0]
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    52: bpy.ops.object.convert(target='MESH')
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    54: bpy.ops.object.join()
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    55: ob = bpy.context.view_layer.objects.active
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    58: ob.data.materials.append(bpy.data.materials.get('Cable') or bpy.data.materials.new('Cable'))
+[2026.11.02-18.14.44:985][  0]LogPython: Warning: [kitref]    59: bpy.ops.export_scene.fbx(filepath=os.path.join(OUT, name + '.fbx'), use_selection=True, object_types={'MESH'},
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref] == lookdev\make_shoulder_game.py 281 琛岋紝鐩稿叧 38 琛�
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    2: 闆朵欢鍜岀綉鐨勫仛娉曡�� make_shoulder_kits.py锛堟牱瀛愬浘锛夈�傛寕鍦ㄦ満浣撲笂鐨勶紙鍙戝皠鍣ㄣ�佺埅瀛愶級鎸� 1.8 绫充汉褰㈤�ㄦ灦鐨勫昂瀵稿仛锛堟父鎴忛噷璺熸満浣撴斁澶� 1.35 鍊嶏級锛�
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    15: for o in list(sc.objects):
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    16: bpy.data.objects.remove(o)
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    29: if ob.name not in sc.collection.objects:
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    30: sc.collection.objects.link(ob)
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    31: bpy.context.view_layer.objects.active = ob
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    33: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    35: bpy.ops.object.convert(target='MESH')
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    43: bpy.ops.object.modifier_apply(modifier='d')
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    45: ob.data.materials.append(mat(matname))
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    53: bpy.ops.object.transform_apply(scale=True)
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    62: bpy.context.view_layer.objects.active = objs[0]
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    64: bpy.ops.object.join()
+[2026.11.02-18.14.44:990][  0]LogPython: Warning: [kitref]    68: bpy.ops.object.shade_flat()
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref] == lookdev\make_shoulder_kits.py 275 琛岋紝鐩稿叧 31 琛�
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    2: 闆朵欢浠庢満鐢茬粍浠跺簱閲屽彇锛堢紪鍙疯�� Inbox/_鏈虹敳缁勪欢棰勮��/<搴�>/_survey.json锛夛紝缃戞槸杩欓噷绋嬪簭鐢熸垚鐨勶紙绱犳潗搴撳拰 Poly Haven 閮芥病鏈夌綉锛夈��
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    7: LIB = 'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/'
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    14: with bpy.data.libraries.load(LIB + lib + '.blend', link=False) as (src, dst):
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    15: dst.objects = [name]
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    16: ob = dst.objects[0]
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    28: new = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    47: ob = bpy.data.objects.new(name, cu)
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    58: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.44:994][  0]LogPython: Warning: [kitref]    91: pts.append(mapper(x, y))
+[2026.11.02-18.14.44:996][  0]LogPython: Warning: [kitref]    94: lines.append(pts)
+[2026.11.02-18.14.44:996][  0]LogPython: Warning: [kitref]    100: knots.append(mapper(x, y))
+[2026.11.02-18.14.44:996][  0]LogPython: Warning: [kitref]    138: objs.append(pod(f'{prefix}_pod{i}', p, p - q))
+[2026.11.02-18.14.44:996][  0]LogPython: Warning: [kitref]    148: for o in list(sc.objects):
+[2026.11.02-18.14.44:996][  0]LogPython: Warning: [kitref]    149: bpy.data.objects.remove(o)
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref] == lookdev\make_shoulder_tactical.py 319 琛岋紝鐩稿叧 64 琛�
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    1: """骞跺叆鑲╅儴鐨勫洓浠惰�呭�囩殑鏃犱汉鏈烘満韬� + 鍦伴浄鏈�浣擄紙11-01锛岀敤鎴凤細銆岃ˉ鍏ㄥ墿涓嬬殑瑁呭�囨ā鍨嬨�嶏級銆傚仛娉曞悓 make_shoulder_game.py锛氭満鐢茬粍浠跺簱闆朵欢鎷艰�� + 灏戦噺绋嬪簭鐢熸垚浠躲��
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    18: for o in list(sc.objects):
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    19: bpy.data.objects.remove(o)
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    30: if ob.name not in sc.collection.objects:
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    31: sc.collection.objects.link(ob)
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    32: bpy.context.view_layer.objects.active = ob
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    34: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    36: bpy.ops.object.convert(target='MESH')
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    44: bpy.ops.object.modifier_apply(modifier='d')
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    46: ob.data.materials.append(mat(matname))
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    51: """鍙栦竴浠堕浂浠讹細杞�濂姐�佸眳涓�銆乤xis 鏂瑰悜鐨勯暱搴︾缉鏀惧埌 length 绫�"""
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    81: bpy.ops.object.transform_apply(scale=True)
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    86: bpy.ops.object.modifier_apply(modifier='b')
+[2026.11.02-18.14.45:000][  0]LogPython: Warning: [kitref]    98: bpy.ops.object.transform_apply(rotation=True)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref] == lookdev\make_signs.py 87 琛岋紝鐩稿叧 17 琛�
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    31: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    32: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    48: text = bpy.data.objects.new(name, cu)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    49: bpy.context.scene.collection.objects.link(text)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    51: bpy.context.view_layer.objects.active = text
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    53: bpy.ops.object.convert(target='MESH')
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    54: text = bpy.context.view_layer.objects.active
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    55: text.data.materials.append(neon_mat)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    56: bpy.ops.object.transform_apply(location=False, rotation=True, scale=True)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    67: board.data.materials.append(board_mat)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    68: bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    73: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    76: bpy.context.view_layer.objects.active = board
+[2026.11.02-18.14.45:005][  0]LogPython: Warning: [kitref]    78: bpy.ops.object.join()
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref] == lookdev\make_weapons.py 132 琛岋紝鐩稿叧 16 琛�
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    18: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    19: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    30: bpy.ops.object.transform_apply(scale=True)
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    35: bpy.ops.object.modifier_apply(modifier='b')
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    36: ob.data.materials.append(mat(m))
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    50: bpy.ops.object.transform_apply(rotation=True)
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    63: ob = bpy.data.objects.new('w', me)
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    64: bpy.context.scene.collection.objects.link(ob)
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    70: obs = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    71: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    74: bpy.context.view_layer.objects.active = obs[0]
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    75: bpy.ops.object.join()
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    78: bpy.ops.object.shade_flat()
+[2026.11.02-18.14.45:010][  0]LogPython: Warning: [kitref]    79: bpy.ops.export_scene.fbx(filepath=os.path.join(OUT, name + '.fbx'), use_selection=True, object_types={'MESH'},
+[2026.11.02-18.14.45:016][  0]LogPython: Warning: [kitref] == lookdev\poster\poster.py 111 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.45:016][  0]LogPython: Warning: [kitref]    65: return Image.composite(img, Image.blend(img, dark, 0.45), vig)
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref] == lookdev\rig\check_neck_clip.py 129 琛岋紝鐩稿叧 18 琛�
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    2: 鐢� BVH 鏌ヨ繖鍑犲�归浂浠舵湁娌℃湁浜掔浉绌胯繘鍘伙細
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    7: blender -b <鏈轰綋.blend> -P lookdev/rig/check_neck_clip.py -- <姣忎釜鍔ㄤ綔鍙栧嚑甯�> <鍔ㄤ綔.fbx 閫氶厤绗�> [...]"""
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    22: arm = next(o for o in scene.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    23: robot = next(o for o in scene.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    45: groups['鑳稿彛涓婇儴'].append(tuple(vs))
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    46: gmat['鑳稿彛涓婇儴'].append(mats[t.material_index])
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    48: groups['澶�'].append(tuple(vs))
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    49: gmat['澶�'].append(mats[t.material_index])
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    51: groups['涓婅噦'].append(tuple(vs))
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    52: gmat['涓婅噦'].append(mats[t.material_index])
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    56: groups['棰堟煴'].append(tuple(vs))
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    57: gmat['棰堟煴'].append(mats[t.material_index])
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    87: before = set(bpy.data.objects)
+[2026.11.02-18.14.45:019][  0]LogPython: Warning: [kitref]    89: bpy.ops.import_scene.fbx(filepath=f, automatic_bone_orientation=False)
+[2026.11.02-18.14.45:025][  0]LogPython: Warning: [kitref] == lookdev\rig\debug2.py 3 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.45:025][  0]LogPython: Warning: [kitref]    2: for o in bpy.context.scene.objects:
+[2026.11.02-18.14.45:031][  0]LogPython: Warning: [kitref] == lookdev\rig\debug_blend.py 18 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:031][  0]LogPython: Warning: [kitref]    4: for o in bpy.context.scene.objects:
+[2026.11.02-18.14.45:031][  0]LogPython: Warning: [kitref]    15: r = bpy.data.objects['SKM_Robot_v3'].evaluated_get(dg)
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\check_factions.py 209 琛岋紝鐩稿叧 14 琛�
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    15: V3_FBX = os.path.join(os.path.dirname(HERE), 'SKM_Robot_v3.fbx')
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    16: ORDER = ['v3', 'NEC_L', 'NEC_M', 'NEC_H', 'PHASE_L', 'PHASE_M', 'PHASE_H', 'VHI_L', 'VHI_M', 'VHI_H']   # v3 = 鐜拌�� SKM_Robot_v3.fbx锛堝�圭収锛�
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    18: 'MI_Robot_Plastic', 'MI_Robot_Lens', 'MI_Robot_Glow', 'MI_Robot_Rubber', 'MI_Kit_Hydraulics', 'MI_Kit_Pipes']
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    23: 'MI_Robot_Glow': '#7fd8ff', 'MI_Robot_Rubber': '#151617', 'MI_Kit_Hydraulics': '#7d8288', 'MI_Kit_Pipes': '#26282a'}
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    48: bpy.ops.import_scene.fbx(filepath=path, automatic_bone_orientation=False)
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    50: arms = [o for o in sc.objects if o.type == 'ARMATURE']
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    51: meshes = [o for o in sc.objects if o.type == 'MESH']
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    60: out.append(dict(name=b.name, parent=b.parent.name if b.parent else None, head=m.translation.copy(),
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    76: bad_parent.append(b['name'])
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    97: vgrp.append(gname[max(gs, key=lambda g: g.weight).group] if gs else None)
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    128: isl.setdefault(find(i), []).append(i)
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    165: cam = bpy.data.objects.new('cam', bpy.data.cameras.new('cam'))
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    166: sc.collection.objects.link(cam)
+[2026.11.02-18.14.45:039][  0]LogPython: Warning: [kitref]    183: path = V3_FBX if key == 'v3' else os.path.join(A.dir, key + '.fbx')
+[2026.11.02-18.14.45:043][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\check_flex.py 106 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:043][  0]LogPython: Warning: [kitref]    16: arm = next(o for o in bpy.data.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:043][  0]LogPython: Warning: [kitref]    17: robot = next(o for o in bpy.data.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.45:047][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\check_grip.py 153 琛岋紝鐩稿叧 7 琛�
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    24: robot = next(o for o in bpy.data.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    25: for o in list(bpy.data.objects):          # v3 宸ョ▼閲岃繕鏈夊叧鑺傜┖鐗╀綋锛屽埆鎸￠暅澶�
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    27: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    32: PN = json.loads(me.get('part_names', '[]'))          # 瀵煎嚭鏃惰�扮殑闆朵欢鍚嶏紙v3 鐜拌�屾枃浠舵病鏈夛級
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    97: w = load_weapon(f"{ROOT}/SourceAssets/{case['fbx']}.fbx")
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    133: where.append((q.dot(k), q.dot(n), q.dot(d), fgrp[fidx[fi]]))
+[2026.11.02-18.14.45:048][  0]LogPython: Warning: [kitref]    148: bpy.data.objects.remove(w, do_unlink=True)
+[2026.11.02-18.14.45:053][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\compose_compare.py 37 琛岋紝鐩稿叧 1 琛�
+[2026.11.02-18.14.45:053][  0]LogPython: Warning: [kitref]    13: rows.append((lab, [n for n in names.split(',') if n]))
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\export_factions.py 823 琛岋紝鐩稿叧 93 琛�
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    43: V3_BLEND = os.path.join(LOOKDEV, 'rig', 'SKM_Robot_v3.blend')
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    49: 'NEC_M': dict(kind='ds', src='factions/dingshan/flat/DS_M2.blend', name='鏂扮邯寤鸿�� 涓�鍨嬨�屾寲鎺樻満銆嶏紙鍑忔洸闈㈡柟妗堜簩锛�'),
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    50: 'NEC_H': dict(kind='ds', src='factions/dingshan/flat/DS_H1.blend', name='鏂扮邯寤鸿�� 閲嶅瀷銆岀熆鍗°�嶏紙鍑忔洸闈㈡柟妗堜竴锛�'),
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    51: 'PHASE_L': dict(kind='bt', src='factions/baita/blend/鐧藉�擾L1.blend', name='鐩镐綅鐢靛瓙 杞诲瀷銆屽弻濉斻��'),
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    52: 'PHASE_M': dict(kind='bt', src='factions/baita/blend/鐧藉�擾BM.blend', name='鐩镐綅鐢靛瓙 涓�鍨嬨�孊2銆�'),
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    53: 'PHASE_H': dict(kind='bt', src='factions/baita/blend/鐧藉�擾H2.blend', name='鐩镐綅鐢靛瓙 閲嶅瀷銆岄棬鏋躲��'),
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    59: 'MI_Robot_Plastic', 'MI_Robot_Lens', 'MI_Robot_Glow', 'MI_Robot_Rubber', 'MI_Kit_Hydraulics', 'MI_Kit_Pipes']
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    62: KIT_FINAL = 0.2          # 绱犳潗娑插帇鏉� / 绾跨紗鏈�缁堝噺闈�锛堢浉瀵圭礌鏉愬師浠讹級
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    73: p.add_argument('--out', default=HERE)                 # FBX / .blend / 缁熻�¤緭鍑虹洰褰�
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    85: SOURCE = {'v3': 'robot_lookdev.py --design v3 --kit --rig锛堝拰鐜拌�� SKM_Robot_v3.fbx 鍚屼竴濂楀缓妯★紝瀵煎嚭鍓嶅�楁父鎴忕増瑙勭煩锛�',
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    100: arm = bpy.data.objects['root']      # VHI锛氭墦寮�鐨勫氨鏄� v3 缁戦�ㄥ伐绋嬶紙涓嶈兘浠庡綋鍓嶆枃浠� load锛�
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    102: with bpy.data.libraries.load(V3_BLEND, link=False) as (src, dst):
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    103: dst.objects = ['root']
+[2026.11.02-18.14.45:059][  0]LogPython: Warning: [kitref]    104: arm = dst.objects[0]
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\make_manifest.py 271 琛岋紝鐩稿叧 32 琛�
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    12: 'MI_Robot_Plastic', 'MI_Robot_Lens', 'MI_Robot_Glow', 'MI_Robot_Rubber', 'MI_Kit_Hydraulics', 'MI_Kit_Pipes']
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    31: DOC = {'NEC': 'docs/闃佃惀鏈虹敳/榧庡北閲嶅伐.md', 'PHASE': 'docs/闃佃惀鏈虹敳/鐧藉�旂�戞妧.md', 'VHI': 'docs/闃佃惀鏈虹敳/榛戦搧鍐涘伐.md'}
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    41: diff_vs_current=['鐜拌�屾父鎴忕敤鐨勬槸 lookdev/rig/SKM_Robot_v3.fbx锛�100,660 涓夎�掞級锛岃繖浠� NEC_L.fbx 鏄�鍚屼竴濂楀缓妯★紙robot_lookdev.py --design v3 --kit --rig锛夊湪瀵煎嚭鍓嶅�椾簡闃佃惀鏈轰綋閭ｅ�楁父鎴忕増瑙勭煩锛�'
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    43: '娑插帇鏉� / 绾跨紗鐨勮创鍥� UV 鍚屾椂鍐欒繘绗� 1 濂� UV锛圲VMap锛夛紱鐜拌�屾枃浠跺彧鍦ㄧ�� 2 濂楋紙baked锛夛紝UE 鐨� M_WeaponPBR 璇� UV0 鈫� 鐜拌�屾父鎴忛噷绱犳潗浠惰创鍥惧�氬崐鍙�鍙栧埌涓�涓�鍍忕礌',
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    44: '楠ㄦ灦銆侀�ㄥご鍚嶃�佺粦瀹氬Э鍔裤�佹潗璐ㄦЫ鍚嶅拰椤哄簭銆乁V 灞傚悕銆佹瘡涓�闆朵欢鎸傜殑楠ㄥご鍜岀幇琛屾枃浠跺畬鍏ㄤ竴鏍凤紱澶栧舰鍙�宸�鍊掕�掑渾婊戠▼搴﹀拰閭ｅ潡鍠峰瓧',
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    81: future=['杩峰僵锛氬師鏉ユ槸 Paint 鏉愯川閲岀殑绋嬪簭绾圭悊锛堜笁鑹� Voronoi锛夛紝娓告垙閲屽厛鎸夐浂浠跺垎涓よ壊锛堢害涓夋垚涓绘紗闆朵欢鏀� PaintDark锛屽拰鍙嶅簲瑁呯敳 / 闄勫姞鏉垮悓鑹诧級锛�'
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    87: future=['杩峰僵锛氬悓 VHI_L锛堝厛鎸夐浂浠朵袱鑹诧級'] + FUT_ALL),
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    93: FROM_SRC = {'NEC_L': 'lookdev/robot_lookdev.py --design v3 --kit --rig lookdev/rig/SKM_Manny_Simple.fbx锛堝�煎嚭鏃跺湪鏈�杩涚▼閲岄噸寤猴級', 'NEC_M': 'lookdev/factions/dingshan/flat/DS_M2.blend锛�10-31 鍑忔洸闈㈡柟妗堜簩锛涙敼鍓� dingshan/DS_M
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    94: 'PHASE_L': 'lookdev/factions/baita/blend/鐧藉�擾L1.blend', 'PHASE_M': 'lookdev/factions/baita/blend/鐧藉�擾BM.blend',
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    95: 'PHASE_H': 'lookdev/factions/baita/blend/鐧藉�擾H2.blend',
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    96: 'VHI_L': 'lookdev/factions/heitie/heitie_Lb.blend锛堝�煎嚭鏃舵寜 designs_heitie 閲嶅缓锛岄潰鏁板拰瀹冧竴鑷达級',
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    97: 'VHI_M': 'lookdev/factions/heitie/heitie_M2.blend锛堝悓涓婏級', 'VHI_H': 'lookdev/factions/heitie/heitie_Ha.blend锛堝悓涓婏級'}
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    121: clipping.append(THUMB.format('銆�'.join(f'{c} {n}' for c, n in thumb_hits.items())))
+[2026.11.02-18.14.45:065][  0]LogPython: Warning: [kitref]    124: clipping.append('姝﹀櫒纰板埌鎵嬭儗浠讹細' + '銆�'.join(f'{c} {n}' for c, n in acc_hits.items()))
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\render_closeups.py 129 琛岋紝鐩稿叧 9 琛�
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    18: 'MI_Robot_Glow': '#7fd8ff', 'MI_Robot_Rubber': '#151617', 'MI_Kit_Hydraulics': '#7d8288', 'MI_Kit_Pipes': '#26282a'}
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    31: arm = next(o for o in bpy.data.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    32: robot = next(o for o in bpy.data.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    33: for o in list(bpy.data.objects):
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    35: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    50: cam = bpy.data.objects.new('cam', bpy.data.cameras.new('cam'))
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    51: sc.collection.objects.link(cam)
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    102: w = load_weapon(f"D:/RobotSlice/SourceAssets/{case['fbx']}.fbx")   # noqa: F821
+[2026.11.02-18.14.45:070][  0]LogPython: Warning: [kitref]    113: bpy.data.objects.remove(w, do_unlink=True)
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref] == lookdev\rig\factions\run_export.py 70 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref]    16: 'NEC_M': 'factions/dingshan/flat/DS_M2.blend', 'NEC_H': 'factions/dingshan/flat/DS_H1.blend',
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref]    17: 'PHASE_L': 'factions/baita/blend/鐧藉�擾L1.blend', 'PHASE_M': 'factions/baita/blend/鐧藉�擾BM.blend',
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref]    18: 'PHASE_H': 'factions/baita/blend/鐧藉�擾H2.blend',
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref]    19: 'VHI_L': 'rig/SKM_Robot_v3.blend', 'VHI_M': 'rig/SKM_Robot_v3.blend', 'VHI_H': 'rig/SKM_Robot_v3.blend',
+[2026.11.02-18.14.45:075][  0]LogPython: Warning: [kitref]    50: return os.path.join(LOOKDEV, 'rig', 'SKM_Robot_v3.blend') if k == 'v3' else os.path.join(A.out, k + '.blend')
+[2026.11.02-18.14.45:079][  0]LogPython: Warning: [kitref] == lookdev\rig\inspect_rig.py 23 琛岋紝鐩稿叧 4 琛�
+[2026.11.02-18.14.45:079][  0]LogPython: Warning: [kitref]    6: for ob in list(bpy.data.objects):
+[2026.11.02-18.14.45:079][  0]LogPython: Warning: [kitref]    7: bpy.data.objects.remove(ob, do_unlink=True)
+[2026.11.02-18.14.45:079][  0]LogPython: Warning: [kitref]    8: bpy.ops.import_scene.fbx(filepath=fbx, automatic_bone_orientation=False)
+[2026.11.02-18.14.45:079][  0]LogPython: Warning: [kitref]    9: arm = next(ob for ob in bpy.data.objects if ob.type == 'ARMATURE')
+[2026.11.02-18.14.45:084][  0]LogPython: Warning: [kitref] == lookdev\rig\preview_neck.py 132 琛岋紝鐩稿叧 18 琛�
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    3: blender -b <鏈轰綋.blend> -P lookdev/rig/preview_neck.py -- <杈撳嚭鍓嶇紑> [鍔ㄤ綔.fbx:甯� ...]
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    16: arm = next(o for o in scene.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    17: robot = next(o for o in scene.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    18: for o in list(scene.objects):
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    20: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    38: sun = bpy.data.objects.new(name, bpy.data.lights.new(name, 'SUN'))
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    42: scene.collection.objects.link(sun)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    45: fo = bpy.data.objects.new('鍦伴潰', floor)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    48: fo.data.materials.append(fm)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    49: scene.collection.objects.link(fo)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    78: cam = bpy.data.objects.new('鐩告満', cd)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    79: scene.collection.objects.link(cam)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    90: bpy.data.objects.remove(cam, do_unlink=True)
+[2026.11.02-18.14.45:085][  0]LogPython: Warning: [kitref]    95: """spec = 鍔ㄤ綔.fbx:甯с�傚�煎叆鍔ㄤ綔锛屾妸瀹冪殑 action 濂楀埌鏈轰綋楠ㄦ灦涓婏紙楠ㄥご鍚嶄竴鏍凤級锛屽垹鎺夊�煎叆鐨勯�ㄦ灦銆�"""
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref] == lookdev\rig\preview_rig.py 46 琛岋紝鐩稿叧 9 琛�
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    1: """鎵撳紑缁戝ソ楠ㄧ殑 .blend锛屾憜涓や釜濮垮娍锛堝弬鑰冨Э鍔� + 寮�鑵挎姮鎵嬶級鍚勬覆姝ｉ潰鍜屼晶闈�锛屾��鏌ラ浂浠舵槸鍚﹁窡鐫�楠ㄥご璧般��"""
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    10: arm = next(o for o in scene.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    16: sun = bpy.data.objects.new('sun', bpy.data.lights.new('sun', 'SUN'))
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    19: scene.collection.objects.link(sun)
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    23: cam = bpy.data.objects.new('cam', bpy.data.cameras.new('cam'))
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    26: scene.collection.objects.link(cam)
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    37: bpy.context.view_layer.objects.active = arm
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    38: bpy.ops.object.mode_set(mode='POSE')
+[2026.11.02-18.14.45:089][  0]LogPython: Warning: [kitref]    44: bpy.ops.object.mode_set(mode='OBJECT')
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref] == lookdev\robot_lookdev.py 2157 琛岋紝鐩稿叧 169 琛�
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    29: p.add_argument('--kit', action='store_true')  # v3 鍔犵礌鏉愬寘缁嗚妭锛氭満鐢�2 鐨勬恫鍘嬫潌 / 绾跨紗銆佹満姊伴浂浠剁殑鍑忛渿寮圭哀
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    30: p.add_argument('--kit-lite', action='store_true')  # 绱犳潗浠舵寜娓告垙鐢ㄧ殑闈㈡暟鍑忛潰锛�--rig 瀵煎嚭鏃惰嚜鍔ㄥ紑锛�
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    49: out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    81: self.obj = sock(tc, 'Object', True)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    124: self.feed(sock(node, 'Vector'), coord if coord is not None else self.obj)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    129: self.feed(node.inputs[0], self.obj)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    191: b.feed(sock(wave, 'Vector'), b.obj)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    273: b.feed(sep.inputs[0], b.obj)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    291: b.feed(sock(vor, 'Vector'), b.obj)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    319: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    328: ob = bpy.data.objects.new(name, None)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    337: ob.data.materials.append(mat)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    360: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.45:100][  0]LogPython: Warning: [kitref]    400: me.materials.append(mat)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref] == lookdev\v1_鍐欏疄宸ヤ笟鐗圽robot_lookdev_v1.py 1006 琛岋紝鐩稿叧 43 琛�
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    40: out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    72: self.obj = sock(tc, 'Object', True)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    115: self.feed(sock(node, 'Vector'), coord if coord is not None else self.obj)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    120: self.feed(node.inputs[0], self.obj)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    182: b.feed(sock(wave, 'Vector'), b.obj)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    264: b.feed(sep.inputs[0], b.obj)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    282: b.feed(sock(vor, 'Vector'), b.obj)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    310: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    319: ob = bpy.data.objects.new(name, None)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    328: ob.data.materials.append(mat)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    351: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    391: me.materials.append(mat)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    458: ob = bpy.data.objects.new(name, cu)
+[2026.11.02-18.14.45:110][  0]LogPython: Warning: [kitref]    459: ob.data.materials.append(mat or M['rubber'])
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref] == lookdev\v1_鍐欏疄宸ヤ笟鐗圽robot_lookdev_娴锋姤鐗�.py 1014 琛岋紝鐩稿叧 44 琛�
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    40: out.append(c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    72: self.obj = sock(tc, 'Object', True)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    115: self.feed(sock(node, 'Vector'), coord if coord is not None else self.obj)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    120: self.feed(node.inputs[0], self.obj)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    182: b.feed(sock(wave, 'Vector'), b.obj)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    264: b.feed(sep.inputs[0], b.obj)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    282: b.feed(sock(vor, 'Vector'), b.obj)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    310: SCENE.collection.objects.link(ob)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    319: ob = bpy.data.objects.new(name, None)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    328: ob.data.materials.append(mat)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    351: ob = bpy.data.objects.new(name, me)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    391: me.materials.append(mat)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    458: ob = bpy.data.objects.new(name, cu)
+[2026.11.02-18.14.45:116][  0]LogPython: Warning: [kitref]    459: ob.data.materials.append(mat or M['rubber'])
+[2026.11.02-18.14.45:119][  0]LogPython: Warning: [kitref] == lookdev\weapon_normalize.py 79 琛岋紝鐩稿叧 10 琛�
+[2026.11.02-18.14.45:119][  0]LogPython: Warning: [kitref]    1: """鎶婄礌鏉愬寘閲岀殑姝﹀櫒锛堝墤銆佹灙锛夋憜鎴愬拰鍗犱綅姝﹀櫒涓�鏍风殑绾﹀畾鍐嶅�煎嚭锛氬師鐐瑰湪鎻℃妸涓�蹇冿紝鍒�韬� / 鏋�绠℃部 +X锛屽垉鍙� / 鏋�搴曟湞 -Z锛�
+[2026.11.02-18.14.45:119][  0]LogPython: Warning: [kitref]    25: bpy.ops.import_scene.fbx(filepath=SRC)
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    26: obs = [o for o in bpy.context.scene.objects if o.type == 'MESH']
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    27: bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    30: bpy.context.view_layer.objects.active = obs[0]
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    31: bpy.ops.object.join()
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    33: bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    58: bpy.ops.export_scene.fbx(filepath=OUT, use_selection=True, object_types={'MESH'}, apply_unit_scale=True, mesh_smooth_type='OFF')
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    70: cam = bpy.data.objects.new('cam', bpy.data.cameras.new('cam'))
+[2026.11.02-18.14.45:120][  0]LogPython: Warning: [kitref]    71: scn.collection.objects.link(cam)
+[2026.11.02-18.14.45:120][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-18.14.45:120][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] lookdev 閲� 93 涓� .py
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\make_jobs.py 48 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    12: "fist": "gigantic block-shaped forearms and fists like hydraulic presses hanging down to its knees, massive "
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    19: "hydraulic pistons, the right arm is long and thin and ends in a heavy integrated cannon, one oversized "
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    33: [["鏈虹敳_ProjectBeta_BetaHK.safetensors", 0.8], ["鐢靛奖_2020sSciFiMovie_ArsMovieStill.safetensors", 0.6]]),
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    36: [["鏈虹敳_MechaKnights_hkmecha.safetensors", 0.8], ["鏋勫浘_CinematicShot_zy_cinematic.safetensors", 0.6]]),
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    45: jobs.append({"name": f"r1_{dname}_{sname}", "prompt": prompt, "seed": seed, "w": 832, "h": 1248,
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\make_jobs2.py 46 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    1: """绗�浜岃疆锛氫笉鎻� robot/mecha銆佷笉鎸傛満鐢� LoRA锛屽彧淇濈暀銆屼袱鏉¤吙鐨勪汉褰�銆嶏紝閫犲瀷璇�瑷�浠庢満鐢蹭互澶栫殑涓滆タ鍊熴��
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    15: "hydraulic jacks and steel rods; it has no head, only a ring of small sensors on top of the tank.",
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    41: jobs.append({"name": f"r2_{cname}_a", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    42: jobs.append({"name": f"r2_{cname}_b", "prompt": prompt, "seed": seeds[1], "w": 832, "h": 1248, "loras": REAL})
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    43: jobs.append({"name": f"r2_{cname}_x", "prompt": prompt, "seed": seeds[0], "w": 832, "h": 1248,
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\make_jobs3.py 41 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    7: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    37: jobs.append({"name": f"r3_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\make_jobs4.py 40 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    6: "safety-orange shoulder pauldrons and shin guards with black-and-orange hazard stripes, exposed hydraulic "
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    36: jobs.append({"name": f"r4_{sname}_{lname}_{int(dn * 100)}", "prompt": f"{trigger}{LOOK} {desc}",
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs.py 48 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs2.py 46 琛岋紝鐩稿叧 5 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs3.py 41 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\ai\鏈嶅姟鍣ㄥ�囦唤\mech\make_jobs4.py 40 琛岋紝鐩稿叧 2 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\factions\baita\baita_build.py 213 琛岋紝鐩稿叧 6 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    32: ap.add_argument('--dynpose', default='Rifle/Aim_CC.fbx:12')
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    49: print('[baita] 闆朵欢', len(C.PARTS), '缃戞牸', len(objs))
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    60: NOZ.append(dict(name=holder.name, bone=holder.parent_bone, radius_cm=round(r, 2),
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    87: info['kit'] = sorted(set(C.KIT_USED))
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    178: path = fbx if os.path.isabs(fbx) else os.path.join(os.path.dirname(C.LOOKDEV), 'Inbox', '_retarget_pick', fbx)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    212: bpy.ops.wm.save_as_mainfile(filepath=os.path.join(d, f'鐧藉�擾{tag}.blend'), copy=True)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\factions\baita\baita_clipcheck.py 141 琛岋紝鐩稿叧 12 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    2: blender -b D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend -P D:/RobotSlice/lookdev/factions/baita/baita_clipcheck.py -- --scheme BM [--every 3]
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    3: 绔�鏋�鍔ㄤ綔鎸夋父鎴忕殑鍙屾墜鎸傛硶鎽嗘灙锛堟彙鎶婂湪鍙虫墜銆佹灙绠℃寚鍚戝乏鎵嬶級锛涙寜 BVH 涓夎�掗潰鐩镐氦璁℃暟锛岃緭鍑烘瘡瀵归浂浠剁�板埌鐨勫抚鏁板拰渚嬪瓙銆�"""
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    26: PICK = os.path.join(ROOT, 'Inbox', '_retarget_pick')
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    27: GUN_ANIMS = [os.path.join(PICK, 'Rifle', n + '.fbx') for n in ('Aim_CC', 'Aim_U', 'Aim_D', 'Rifle_Idle', 'Rifle_ShootOnce', 'Rifle_Reload_2')]
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    28: MELEE_ANIMS = [os.path.join(ROOT, 'SourceAssets', 'katana', n + '_InPlace.fbx') for n in
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    30: MELEE_ANIMS += [os.path.join(PICK, 'GreatSword', f'GreatSword_Attack0{i}_InPlace.fbx') for i in (1, 2, 3, 4)]
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    41: out.append(o)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    65: before = set(bpy.data.objects)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    66: bpy.ops.import_scene.fbx(filepath=SCH.GUN_FBX)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    67: new = [o for o in bpy.data.objects if o not in before]
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    76: bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    135: hits[(a, b)].append(f'{name}@{fr}')
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref] == lookdev\factions\baita\baita_common.py 879 琛岋紝鐩稿叧 42 琛�
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    50: PARTS = []      # (闆朵欢, 楠ㄥご)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    56: """鎵撳紑鐨勬槸 SKM_Robot_v3.blend锛氬垹鎺� v3 鐣欎笅鐨勫叧鑺傜┖鐗╀綋锛屽�嶅埗涓�浠介�ㄦ灦缁欐柊鏂规�堢敤銆�"""
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    58: V3ARM = next(o for o in SCENE.objects if o.type == 'ARMATURE')
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    59: V3MESH = next(o for o in SCENE.objects if o.type == 'MESH' and o.parent == V3ARM)
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    60: for o in list(SCENE.objects):
+[2026.11.02-18.14.45:120][  0]LogInit: Display: LogPython: Warning: [kitref]    62: bpy.data.objects.remove(o, do_unlink=True)
