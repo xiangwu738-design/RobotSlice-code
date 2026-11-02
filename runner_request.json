@@ -1,3 +1,4 @@
 {"build": false, "tests": [
-  {"kind": "gamepy", "name": "k62_sheets", "map": "/Game/Maps/L_Range", "script": "tools/grab_k62_sheets.py", "args": ["-MechBeauty"], "seconds": 90}
+  {"kind": "py", "name": "soviet_replan", "script": "tools/ue_soviet_replan.py", "seconds": 900},
+  {"kind": "gamepy", "name": "grade_soviet", "map": "/Game/Maps/L_Soviet?Range", "script": "tools/grade_shots_soviet.py", "args": ["-MechInfiniteEnergy"], "seconds": 240}
 ]}
