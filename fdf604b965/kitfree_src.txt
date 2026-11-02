@@ -1,0 +1,101 @@
+kitfree_src 结束：ok，用时 39 秒，日志行 100
+[2026.11.02-19.25.13:043][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.25.13:043][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-19.25.13:043][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.25.13:043][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-19.25.13:043][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-19.25.13:803][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-19.25.13:804][  0]LogPython: Using Python 3.11.8
+[2026.11.02-19.25.13:844][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.25.14:558][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-19.25.14:579][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-19.25.14:629][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-19.25.14:629][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.25.14:629][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.25.14:629][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.25.14:633][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-19.25.14:633][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-19.25.14:634][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-19.25.14:706][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-19.25.15:361][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-19.25.15:386][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.25.15:396][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 9.129 ms
+[2026.11.02-19.25.15:396][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.25.15:406][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-19.25.15:416][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 19.786 ms (total: 28.916 ms)
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] == NEC_H 退出码 0 5 秒
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [kitfree] 已替换 ds_common.kit_source
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] after 绑定姿势：高 2.430 米（最低 -0.000 最高 2.430），宽 1.602，深 0.839；三角面 59652；零件 239
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 素材件 {'Hydraulics_T1_02': ['机甲2', 2]}
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] after 游戏版面数估计 15408
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] after 站姿高 2.438 米
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 渲好 D:/RobotSlice/Saved/KitFree/src/H1\after_正面.png
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 渲好 D:/RobotSlice/Saved/KitFree/src/H1\after_侧面.png
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 渲好 D:/RobotSlice/Saved/KitFree/src/H1\after_背面.png
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 渲好 D:/RobotSlice/Saved/KitFree/src/H1\after_斜侧.png
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [ds] 存好 D:/RobotSlice/lookdev/factions/dingshan/flat/kitfree/DS_H1_kitfree.blend
+[2026.11.02-19.25.20:252][  0]LogPython: Warning: [kfsrc] NEC_H | [kitfree] 用到的素材件 {'Hydraulics_T1_02': ['机甲2', 2]}
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] == PHASE_L1 退出码 0 4 秒
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [kitfree] 已替换 robot_lookdev 命名空间里的 kit_source / kit_coilover_meshes
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 方案 L1 引擎 workbench
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 零件 166 网格 198
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 喷口 {'name': 'L1主推进器', 'bone': 'spine_05', 'radius_cm': 4.6, 'ue_mouth_cm': [8.9, -18.29, 115.07], 'ue_dir': [0.101, -0.404, -0.909]}
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 喷口 {'name': 'L1主推进器.001', 'bone': 'spine_05', 'radius_cm': 4.6, 'ue_mouth_cm': [-8.9, -18.29, 115.07], 'ue_dir': [-0.101, -0.404, -0.909]}
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 喷口 {'name': 'L1腿喷口', 'bone': 'calf_l', 'radius_cm': 3.2, 'ue_mouth_cm': [13.65, -9.13, 18.79], 'ue_dir': [0.021, -0.865, -0.501]}
+[2026.11.02-19.25.24:135][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 喷口 {'name': 'L1腿喷口.001', 'bone': 'calf_r', 'radius_cm': 3.2, 'ue_mouth_cm': [-13.65, -9.12, 18.79], 'ue_dir': [-0.021, -0.865, -0.501]}
+[2026.11.02-19.25.24:182][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 信息 {"scheme": "L1", "tris": 57278, "height_m": 2.44, "width_m": 0.979, "kit": ["机甲2.blend / Hydraulics_T1_02"], "parts_by_bone": {"spine_05": 44, "spine_02": 1, "spine_03": 1, "pelvis": 4, "neck_01": 2, "thigh_l": 7, "calf_
+[2026.11.02-19.25.24:182][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/L1\L1_kitfree_front.png
+[2026.11.02-19.25.24:182][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/L1\L1_kitfree_34.png
+[2026.11.02-19.25.24:182][  0]LogPython: Warning: [kfsrc] PHASE_L1 | [baita] 完成 L1_kitfree
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] == PHASE_BM 退出码 0 4 秒
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [kitfree] 已替换 robot_lookdev 命名空间里的 kit_source / kit_coilover_meshes
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 方案 BM 引擎 workbench
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 零件 174 网格 206
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 喷口 {'name': 'BM主推进器', 'bone': 'spine_05', 'radius_cm': 3.6, 'ue_mouth_cm': [6.57, -20.07, 115.39], 'ue_dir': [0.08, -0.47, -0.879]}
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 喷口 {'name': 'BM主推进器.001', 'bone': 'spine_05', 'radius_cm': 3.6, 'ue_mouth_cm': [-6.57, -20.07, 115.39], 'ue_dir': [-0.08, -0.47, -0.879]}
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 喷口 {'name': 'BM腿喷口', 'bone': 'calf_l', 'radius_cm': 2.4, 'ue_mouth_cm': [13.12, -7.72, 31.49], 'ue_dir': [0.018, -0.898, -0.439]}
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 喷口 {'name': 'BM腿喷口.001', 'bone': 'calf_r', 'radius_cm': 2.4, 'ue_mouth_cm': [-13.12, -7.71, 31.49], 'ue_dir': [-0.018, -0.898, -0.439]}
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 信息 {"scheme": "BM", "tris": 62758, "height_m": 2.367, "width_m": 1.022, "kit": ["机甲2.blend / Hydraulics_T1_02"], "parts_by_bone": {"spine_05": 36, "neck_01": 2, "head": 16, "spine_03": 1, "spine_04": 1, "spine_02": 1, "pelv
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/BM\BM_kitfree_front.png
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/BM\BM_kitfree_34.png
+[2026.11.02-19.25.27:866][  0]LogPython: Warning: [kfsrc] PHASE_BM | [baita] 完成 BM_kitfree
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] == PHASE_H2 退出码 0 3 秒
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [kitfree] 已替换 robot_lookdev 命名空间里的 kit_source / kit_coilover_meshes
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 方案 H2 引擎 workbench
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 零件 161 网格 177
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 喷口 {'name': 'H2主推进器', 'bone': 'spine_05', 'radius_cm': 4.2, 'ue_mouth_cm': [8.13, -19.98, 112.16], 'ue_dir': [0.06, -0.422, -0.905]}
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 喷口 {'name': 'H2主推进器.001', 'bone': 'spine_05', 'radius_cm': 4.2, 'ue_mouth_cm': [-8.13, -19.98, 112.16], 'ue_dir': [-0.06, -0.422, -0.905]}
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 信息 {"scheme": "H2", "tris": 51784, "height_m": 2.362, "width_m": 1.025, "kit": ["机甲2.blend / Hydraulics_T1_02"], "parts_by_bone": {"spine_05": 25, "spine_02": 1, "spine_03": 2, "pelvis": 4, "neck_01": 2, "thigh_l": 9, "calf
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/H2\H2_kitfree_front.png
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 渲好 D:/RobotSlice/Saved/KitFree/src/H2\H2_kitfree_34.png
+[2026.11.02-19.25.30:448][  0]LogPython: Warning: [kfsrc] PHASE_H2 | [baita] 完成 H2_kitfree
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] == v3 退出码 0 2 秒
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [kitfree] 自建减震：活塞杆 125 面、缸筒 286 面、弹簧 898 面
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [kitfree] 自建 Pipes_07：608 面，长 2.3773
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | Error, could not find any file path in  FBXElem(id=b'Texture', props=[1766797291856, b'EnvSamplerTex\x00\x01Texture', b''], props_type=bytearray(b'LSS'), elems=[FBXElem(id=b'Type', props=[b'TextureVideoClip'], props_type=bytearray(b'S'),
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 减震骨头 ['damper_knee_a_l', 'damper_knee_b_l', 'damper_ankle_a_l', 'damper_ankle_b_l', 'damper_knee_a_r', 'damper_knee_b_r', 'damper_ankle_a_r', 'damper_ankle_b_r']
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 拇指骨头 ['thumb_up_l', 'thumb_up_r']
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 零件数 222 顶点 45898 材质槽 ['骨架金属', '涂装灰', '涂装深灰', '警示色', '白色喷字', '喷口内壁', '黑色塑料', '镜头玻璃', '镜头光点', '橡胶', 'MI_Kit_Hydraulics', 'MI_Kit_Pipes']
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 人形尺寸下高度 -0.001 ~ 1.785 米；游戏里乘 1.35 = 2.41 米
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 三角面 89348
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [rig] 导出 D:\RobotSlice\lookdev\rig\kitfree\SKM_Robot_v3.fbx
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] v3 | [kitfree] v3 绑骨工程（去组件） D:\RobotSlice\lookdev\rig\kitfree\SKM_Robot_v3.fbx
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\factions\dingshan\flat\kitfree\DS_H1_kitfree.blend 有 20:25
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\factions\baita\blend\白塔_L1_kitfree.blend 有 20:25
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\factions\baita\blend\白塔_BM_kitfree.blend 有 20:25
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\factions\baita\blend\白塔_H2_kitfree.blend 有 20:25
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\rig\kitfree\SKM_Robot_v3.blend 有 20:25
+[2026.11.02-19.25.32:389][  0]LogPython: Warning: [kfsrc] 文件 lookdev\rig\kitfree\SKM_Robot_v3.fbx 有 20:25
+[2026.11.02-19.25.32:391][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-19.25.32:402][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-19.25.32:403][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.25.32:403][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.25.32:403][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.25.32:405][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-19.25.32:738][ 12]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-19.25.32:814][ 13]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
