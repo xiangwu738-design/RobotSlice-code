@@ -1,0 +1,469 @@
+exit=0
+[2026.11.02-19.14.03:503][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.14.03:890][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.14.03:899][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 8.862 ms
+[2026.11.02-19.14.03:899][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.14.03:912][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 13.133 ms (total: 21.996 ms)
+[2026.11.02-19.14.03:912][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_dump_src.py
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src] #### lookdev/rig/factions/export_factions.py 823 琛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     1| # 闃佃惀鏈轰綋锛堟柊绾� NEC / 鐩镐綅 PHASE / 缁村厠鎵� VHI 脳 杞讳腑閲嶏級瀵煎嚭娓告垙鐗� FBX锛氬拰 v3 鍚屼竴鍓�楠ㄦ灦銆佸帢绫冲埗銆佹瘡涓�椤剁偣鍙�缁欎竴鏍归�ㄥご鏉冮噸 1銆�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     2| #
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     3| # 鐢ㄦ硶锛圔lender 鍛戒护琛岋紝鍙�鐢� CPU锛屼笉娓叉煋锛夛細涓�鍙颁竴娆�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     4| #   NEC 涓� / 閲嶏細闆朵欢鎸傚湪缁戦�ㄧ殑绌虹墿浣撲笅锛堥紟灞卞伐绋嬶紝娓告垙绫筹級
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     5| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_M2.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_M
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     6| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_H1.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_H
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     7| #     锛�10-31 鍑忔洸闈�浠ュ悗鐨勬簮鏂囦欢锛涙敼鍓嶆槸 dingshan/DS_M.blend / DS_HKF.blend锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     8| #   PHASE 杞� / 涓� / 閲嶏細闆朵欢鐩存帴鎸傞�ㄥご锛堢櫧濉斿伐绋嬶紝鍘樼背锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]     9| #     blender -b --factory-startup lookdev/factions/baita/blend/鐧藉�擾L1.blend -P ... -- --key PHASE_L   锛圔M 鈫� PHASE_M銆丠2 鈫� PHASE_H锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    10| #   VHI 杞� / 涓� / 閲嶏細瀛樺ソ鐨� heitie_*.blend 閲屽�栧３宸茬粡鍚堟垚涓�鍧椼�佸垎涓嶅嚭闆朵欢锛堝柗瀛楀垹涓嶆帀锛夛紝鎵�浠ュ湪 v3 缁戦�ㄥ伐绋嬮噷
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    11| #     鎸� designs_heitie 閲嶅缓涓�閬嶏紙鍜� heitie.py --save 鍚屼竴濂楄皟鐢�锛岄潰鏁颁細鏍稿�癸級
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    12| #     blender -b --factory-startup lookdev/rig/SKM_Robot_v3.blend -P ... -- --key VHI_L   锛圴HI_M銆乂HI_H锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    13| #   NEC 杞伙紙v3锛夛細涓嶇敤鎵撳紑宸ョ▼锛屾湰杩涚▼閲岀収 robot_lookdev.py 鐨勭幇琛屽�煎嚭閲嶅缓涓�閬嶏紝瀵煎嚭鍓嶅�楀悓涓�濂楁父鎴忕増瑙勭煩
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    14| #     blender -b --factory-startup -P lookdev/rig/factions/export_factions.py -- --key NEC_L
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    15| #   鍏ㄩ儴锛歱y -3 lookdev/rig/factions/run_export.py
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    16| #
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    17| # 鍋氫簡浠�涔堬紙姣忓彴閮戒竴鏍凤紝瑙勭煩鐓� robot_lookdev.fit_to_rig锛夛細
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    18| #   1. 鍙栭浂浠讹細娌跨埗閾炬壘鍒版寕楠ㄥご鐨勯偅涓�绾э紙parent_type=BONE锛夛紝楠ㄥご灏辨槸杩欎欢鐨勬潈閲嶉��锛涘嚭鍥剧敤鐨勬灙銆佸湴闈�銆佹�氬�欍�乿3 瀵圭収涓嶈�併��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    19| #      缁戝畾濮垮娍锛氶�ㄦ灦鍒囧埌 REST銆傚師宸ョ▼鐨勫崟浣嶏紙榧庡北娓告垙绫� / 鐧藉�斿帢绫� + 鐗╀綋缂╂斁锛夋寜楠ㄥご澶撮儴浣嶇疆鎷熷悎鍒� v3 楠ㄦ灦锛堝帢绫筹級銆�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    20| #   2. 鎵嬶細NEC / PHASE 鍘熸潵鏄�鏁村潡鎵嬶紙鎺� + 涓よ妭鎵嬫寚鎸� hand銆佹媷鎸囨寕 thumb_up锛夆啋 鍒犳帀锛屾崲 robot_lookdev.build_grip_hand 鐨�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    21| #      鍙�寮�鎵嬫寚鎵嬶紙bulk=1.0锛歜ulk 浼氬悓鏃舵敼鎵嬫帉鍘氬害鍜屾寚鑺傚帤搴︼紝C++ 鐨� PalmFront / FingerHalfT 鏄�鎸� 1.0 瀹氱殑锛夛紝鍙�鎹㈡潗璐�锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    22| #      NEC 鎵嬭儗涓婄殑閾叉枟 / 鎸囪檸鍘熸潵鎸夋棫鎵嬶紙鎵嬪績鏈濆墠锛夋憜锛岃浆 90 搴﹀埌鏂版墜鐨勬墜鑳屾柟鍚戯紙-n锛夈�俈HI 鐨勫簳鐩樻湰鏉ュ氨鏄� v3 鐨勬柊鎵嬶紝涓嶅姩銆�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    23| #   3. 娓告垙鐗堝噺闈�锛坉ocs/闃佃惀鏈虹敳/榧庡北閲嶅伐.md銆屾父鎴忕増鍑忛潰鍙傛暟銆嶏紝涓夊�跺悓涓�濂楄�勭煩锛夛細鍊掕�掗兘鏀� 1 娈点�併�屽皬鍦嗚�掋�嶅幓鎺夈��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    24| #      浜哄舰灏哄�� 0.5 姣�绫充互涓嬬殑寰�鍊掕�掑幓鎺夈�佺礌鏉愭恫鍘嬫潌鏈�缁� 0.2锛堝拰 v3 鐨� KIT_LITE 涓�鏍凤級銆佽蒋绠� resolution 4 / 1銆�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    25| #      骞抽潰鏍囪瘑鏇茬嚎 resolution 3锛涘嚑浣曞柗瀛楋紙鏂囧瓧鐗╀綋锛夈�乂HI 鐨勬潯鐮� / 鍗曚綅鏍囪�板垹鎺夛紝浣嶇疆璁拌繘娓呭崟浠ュ悗鍋氳创鑺便��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    26| #   4. 鍚堟垚涓�涓�缃戞牸锛歎V 灞傚拰 v3 涓�鏍凤紙UVMap / baked / UVChannel_1锛岀礌鏉愪欢璐村浘 UV 鍚屾椂鍐欒繘 UVMap锛夈��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    27| #      鏉愯川妲芥寜 v3 鐨� 12 涓�鍚嶅瓧鍜岄『搴忥紙MI_Robot_* + MI_Kit_*锛夛紱VHI 杩峰僵鍏堟寜闆朵欢鍒嗕袱鑹诧紙Paint / PaintDark锛夈��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    28| #   5. 绗�浜屾�ユ墦寮� v3 缁戦�ㄥ伐绋嬶紙lookdev/rig/SKM_Robot_v3.blend锛屽彧璇讳笉瀛橈級锛岀敤瀹冨師灏佷笉鍔ㄧ殑 root 楠ㄦ灦锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    29| #      缃戞牸鎸備笂鍘汇�佺敤 fit_to_rig 涓�鏍风殑 FBX 鍙傛暟瀵煎嚭锛堝満鏅�鍗曚綅 0.01銆乤pply_unit_scale锛夛紱鍙﹀瓨涓�浠界粦濂介�ㄧ殑 .blend锛堟��鏌� / 鎻℃寔鑴氭湰鐢�锛夈��
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    30| import argparse
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    31| import json
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    32| import math
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    33| import os
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    34| import re
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    35| import sys
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    37| import bmesh
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    38| import bpy
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    39| from mathutils import Matrix, Vector, noise
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    41| HERE = os.path.dirname(os.path.abspath(__file__))
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    42| LOOKDEV = os.path.dirname(os.path.dirname(HERE))
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    43| V3_BLEND = os.path.join(LOOKDEV, 'rig', 'SKM_Robot_v3.blend')
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    44| TMP = os.path.join(os.environ.get('TEMP', HERE), 'robotslice_factions')
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    46| KEYS = {
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    47|     'NEC_L': dict(kind='v3', name='鏂扮邯寤鸿�� 杞诲瀷 v3锛堟父鎴忕増閲嶅�硷級'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    48|     # 10-31 鍑忔洸闈�锛氫腑鍨嬫崲鏂规�堜簩锛堝叏閮ㄦ柟姝ｅ寲锛夈�侀噸鍨嬫崲鏂规�堜竴锛堝彧鎹㈠ぇ鏇查潰锛夛紱鏀瑰墠鏄� factions/dingshan/DS_M.blend / DS_HKF.blend
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    49|     'NEC_M': dict(kind='ds', src='factions/dingshan/flat/DS_M2.blend', name='鏂扮邯寤鸿�� 涓�鍨嬨�屾寲鎺樻満銆嶏紙鍑忔洸闈㈡柟妗堜簩锛�'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    50|     'NEC_H': dict(kind='ds', src='factions/dingshan/flat/DS_H1.blend', name='鏂扮邯寤鸿�� 閲嶅瀷銆岀熆鍗°�嶏紙鍑忔洸闈㈡柟妗堜竴锛�'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    51|     'PHASE_L': dict(kind='bt', src='factions/baita/blend/鐧藉�擾L1.blend', name='鐩镐綅鐢靛瓙 杞诲瀷銆屽弻濉斻��'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    52|     'PHASE_M': dict(kind='bt', src='factions/baita/blend/鐧藉�擾BM.blend', name='鐩镐綅鐢靛瓙 涓�鍨嬨�孊2銆�'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    53|     'PHASE_H': dict(kind='bt', src='factions/baita/blend/鐧藉�擾H2.blend', name='鐩镐綅鐢靛瓙 閲嶅瀷銆岄棬鏋躲��'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    54|     'VHI_L': dict(kind='vhi', design='Lb', name='缁村厠鎵橀噸宸� 杞诲瀷銆屾枼鍊欍��'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    55|     'VHI_M': dict(kind='vhi', design='M2', name='缁村厠鎵橀噸宸� 涓�鍨嬨�岄搧澹併��'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    56|     'VHI_H': dict(kind='vhi', design='Ha', name='缁村厠鎵橀噸宸� 閲嶅瀷銆岀獊鍑荤偖銆�'),
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    57| }
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    58| SLOTS = ['MI_Robot_Frame', 'MI_Robot_Paint', 'MI_Robot_PaintDark', 'MI_Robot_Accent', 'MI_Robot_Stencil', 'MI_Robot_Nozzle',
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    59|          'MI_Robot_Plastic', 'MI_Robot_Lens', 'MI_Robot_Glow', 'MI_Robot_Rubber', 'MI_Kit_Hydraulics', 'MI_Kit_Pipes']
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    60| LEGACY = {'Chrome': 'Frame', 'Hazard': 'Accent', 'Label': 'Stencil', 'Ink': 'Plastic', 'Lamp': 'Glow'}   # v3 鏃╂湡妲藉悕锛堢幇鍦ㄤ笉鐢�锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    61| UV_LAYERS = ['UVMap', 'baked', 'UVChannel_1']
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    62| KIT_FINAL = 0.2          # 绱犳潗娑插帇鏉� / 绾跨紗鏈�缁堝噺闈�锛堢浉瀵圭礌鏉愬師浠讹級
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    63| MIN_BEVEL_CM = 0.05      # 浜哄舰灏哄�� 0.5 姣�绫充互涓嬬殑鍊掕�掑湪娓告垙閲岀湅涓嶅嚭鏉ワ紝鍘绘帀
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    64| LOGO_RES = 3             # 骞抽潰鏍囪瘑鏇茬嚎锛圫VG 瀵煎叆銆佹病鏈夊�掕�掓繁搴︼級鐨� resolution_u
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    65| HAND_BONES = ('hand_', 'thumb_', 'index_', 'middle_', 'ring_', 'pinky_')
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    66| FINGER_SLOTS = None
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    69| def parse():
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    70|     argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    71|     p = argparse.ArgumentParser()
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    72|     p.add_argument('--key', required=True, choices=sorted(KEYS))
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    73|     p.add_argument('--out', default=HERE)                 # FBX / .blend / 缁熻�¤緭鍑虹洰褰�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    74|     p.add_argument('--no-camo', action='store_true')      # VHI 涓嶅仛涓よ壊杩峰僵
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    75|     p.add_argument('--no-fix', action='store_true')         # 涓嶅仛鍑犱綍灏忎慨锛堝嚭鏀瑰墠瀵规瘮鐢�锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    76|     p.add_argument('--old-hand', action='store_true')       # NEC / PHASE 淇濈暀鍘熸潵鐨勬暣鍧楁墜锛堝嚭鎵嬮儴鏀瑰墠瀵规瘮鐢�锛屼笉瑕佹嬁鍘昏繘娓告垙锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    77|     p.add_argument('--acc-shift', type=float, default=None)  # NEC 鎵嬭儗浠惰浆鍒版柊鎵嬭儗鍚庢部鎵嬪績娉曠嚎鎸�澶氬皯鍘樼背锛堥粯璁わ細閾叉枟 鈭�1銆佹寚铏� 0锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    78|     p.add_argument('--acc-along', type=float, default=4.0)   # 閾叉枟娌挎墜鎸囨柟鍚戞尓澶氬皯鍘樼背锛氭墜鑵曡儗灞堟椂璁╁紑鍓嶈噦锛坈heck_flex锛�0 鈫� 鑳屽眻 30掳 100 瀵广��50掳 353 瀵癸紱4 鈫� 58 / 109锛屾棫鎵嬫槸 52 / 77锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    79|     return p.parse_args(argv)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    82| A = parse()
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    83| CFG = KEYS[A.key]
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    84| SCENE = bpy.context.scene
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    85| SOURCE = {'v3': 'robot_lookdev.py --design v3 --kit --rig锛堝拰鐜拌�� SKM_Robot_v3.fbx 鍚屼竴濂楀缓妯★紝瀵煎嚭鍓嶅�楁父鎴忕増瑙勭煩锛�',
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    86|           'vhi': f"factions/heitie锛坉esigns_heitie '{CFG.get('design')}' 閲嶅缓锛�"}
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    87| STATS = dict(key=A.key, name=CFG['name'], source=CFG.get('src') or SOURCE[CFG['kind']],
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    88|              removed={}, decals=[], notes=[])
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    89| os.makedirs(TMP, exist_ok=True)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    90| os.makedirs(A.out, exist_ok=True)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    93| def log(*a):
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    94|     print('[factions]', A.key, *a, flush=True)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    97| # ---------------------------------------------------------------- v3 楠ㄦ灦锛堝帢绫筹級锛氶�ㄥご澶撮儴锛屾嫙鍚� / 寤烘墜鐢�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    98| def load_v3_heads():
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]    99|     if os.path.normcase(os.path.abspath(bpy.data.filepath)) == os.path.normcase(os.path.abspath(V3_BLEND)):
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   100|         arm = bpy.data.objects['root']      # VHI锛氭墦寮�鐨勫氨鏄� v3 缁戦�ㄥ伐绋嬶紙涓嶈兘浠庡綋鍓嶆枃浠� load锛�
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   207| def game_mods(parts, kit=True):
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   208|     """parts: [[obj, bone, T]]銆傚氨鍦版敼淇�鏀瑰櫒锛涜繑鍥炲垹鎺夌殑鏂囧瓧鐗╀綋锛堝凡璁拌创鑺憋級銆�"""
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   209|     cnt = dict(bevel_seg=0, bevel_small_removed=0, bevel_tiny_removed=0, kit_decimate=0, curve_lowres=0, font_removed=0)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   210|     keep = []
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   211|     for rec in parts:
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   212|         o, bone, T = rec
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   213|         sc = world_scale_cm(o, T)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   214|         if o.type == 'FONT':
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   215|             mw = T @ o.matrix_world
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   216|             nrm = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   217|             record_decal('鍠峰瓧', o.name, bone, mw.translation, nrm, o.data.size * sc, o.data.body)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   218|             cnt['font_removed'] += 1
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   219|             continue
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   220|         for md in list(o.modifiers):
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   221|             if md.type != 'BEVEL':
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   222|                 continue
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   223|             if md.name == '灏忓渾瑙�':
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   224|                 o.modifiers.remove(md)
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   225|                 cnt['bevel_small_removed'] += 1
+[2026.11.02-19.14.03:915][  0]LogPython: Warning: [src]   226|             elif md.width * sc < MIN_BEVEL_CM and md.offset_type in ('OFFSET', 'WIDTH', 'DEPTH'):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   227|                 o.modifiers.remove(md)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   228|                 cnt['bevel_tiny_removed'] += 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   229|             elif md.segments > 1:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   230|                 md.segments = 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   231|                 cnt['bevel_seg'] += 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   232|         if kit and is_kit(o):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   233|             dec = [m for m in o.modifiers if m.type == 'DECIMATE']
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   234|             if dec:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   235|                 dec[-1].ratio = min(dec[-1].ratio, KIT_FINAL)   # 鍘熶欢宸茬粡甯﹀噺闈�锛堢櫧濉� 0.3锛夆啋 鏈�缁� 0.2
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   236|             else:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   237|                 o.modifiers.new('娓告垙鍑忛潰', 'DECIMATE').ratio = KIT_FINAL
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   238|             cnt['kit_decimate'] += 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   239|         if o.type == 'CURVE':
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   240|             cu = o.data
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   241|             if cu.bevel_depth > 0 or cu.bevel_object is not None:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   242|                 cu.resolution_u, cu.bevel_resolution = min(cu.resolution_u, 4), min(cu.bevel_resolution, 1)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   243|             else:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   244|                 cu.resolution_u = min(cu.resolution_u, LOGO_RES)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   245|             cnt['curve_lowres'] += 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   246|         keep.append(rec)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   247|     prev = STATS.get('game_mods', {})          # v3 鍦ㄩ挬瀛愰噷鍏堢畻杩囦竴娆★紝绱�鍔�
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   248|     STATS['game_mods'] = {k: v + prev.get(k, 0) for k, v in cnt.items()}
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   249|     return keep
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   252| # ---------------------------------------------------------------- 鍙�寮�鎵嬫寚鐨勬墜锛坮obot_lookdev.build_grip_hand锛�
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   441|             a, b = fx['at'], fx['no']
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   442|             co = H + k * a[0] + n * a[1] + d * a[2]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   443|             nv = (k * b[0] + n * b[1] + d * b[2]).normalized()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   444|             r = cut_mesh(me, co, nv)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   445|             if r:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   446|                 STATS.setdefault('fixes', []).append(f'{nm}锛坽bone}锛夋墜蹇冧晶鍒囪�掞細{fx["why"]}')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   449| def merge(parts, name):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   450|     """parts: [[obj, bone 鎴� None锛堣嚜甯﹂《鐐圭粍锛�, T锛堢墿浣撲笘鐣� 鈫� v3 楠ㄦ灦绌洪棿鍘樼背锛塢] 鈫� 涓�涓�缃戞牸鐗╀綋锛堜笘鐣� = v3 楠ㄦ灦绌洪棿锛夈��"""
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   451|     dg = bpy.context.evaluated_depsgraph_get()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   452|     color = {}
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   453|     objs = []
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   454|     neg = 0
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   455|     names = ['']
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   456|     for o, bone, T in parts:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   457|         if bone is None:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   458|             me = o.data.copy()             # 宸茬粡钂欏ソ鐨�鐨勭綉鏍硷紙VHI 搴曠洏 / v3锛夛細鐢ㄥ師濮嬫暟鎹�锛屼笉瑕侀�ㄦ灦鍙樺舰鍚庣殑
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   459|         else:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   460|             me = bpy.data.meshes.new_from_object(o.evaluated_get(dg), preserve_all_data_layers=True, depsgraph=dg)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   461|         M = T @ o.matrix_world
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   462|         me.transform(M)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   463|         if M.determinant() < 0:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   464|             neg += 1
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   465|             me.flip_normals()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   466|         if bone is not None:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   467|             apply_fixes(o.name, bone, me)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   468|         # 姣忎釜闈㈣�颁笅鑷�宸辨槸鍝�涓�闆朵欢锛堝悎骞跺悗妫�鏌ヨ剼鏈�鎸夐浂浠跺悕鎶ョ┛妯＄敤锛汧BX 涓嶅甫杩欎釜灞炴�э級
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   469|         names.append(re.sub(r'\.\d{3}$', '', o.name))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   470|         if 'part' in me.attributes:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   471|             me.attributes.remove(me.attributes['part'])
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   472|         me.attributes.new('part', 'INT', 'FACE').data.foreach_set('value', [len(names) - 1] * len(me.polygons))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   473|         ob = bpy.data.objects.new(o.name + '_g', me)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   474|         SCENE.collection.objects.link(ob)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   475|         if bone is not None:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   476|             for g in list(ob.vertex_groups):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   477|                 ob.vertex_groups.remove(g)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   478|             vg = ob.vertex_groups.new(name=bone)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   479|             vg.add(range(len(me.vertices)), 1.0, 'REPLACE')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   480|         for m in me.materials:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   481|             if m is not None:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   482|                 color.setdefault(slot_of(m.name), tuple(m.diffuse_color))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   483|         objs.append(ob)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   484|     if neg:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   485|         STATS['notes'].append(f'{neg} 浠舵槸璐熺缉鏀撅紙闀滃儚锛夛紝宸茬炕娉曠嚎')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   486|     # 鍚堝苟鐩�鏍囷細绌虹綉鏍硷紝UV 灞傛寜 v3 鐨勯『搴忓厛寤哄ソ锛坖oin 鎸夊悕瀛楀悎 UV 灞傦紝灞傞『搴忎互鐩�鏍囦负鍑嗭級
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   487|     tme = bpy.data.meshes.new(name)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   488|     for nm in UV_LAYERS:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   489|         tme.uv_layers.new(name=nm)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   490|     target = bpy.data.objects.new(name, tme)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   491|     SCENE.collection.objects.link(target)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   492|     bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   493|     for ob in objs:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   494|         ob.select_set(True)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   495|     target.select_set(True)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   496|     bpy.context.view_layer.objects.active = target
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   497|     bpy.ops.object.join()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   498|     robot = bpy.context.view_layer.objects.active
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   499|     me = robot.data
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   500|     me['part_names'] = json.dumps(names, ensure_ascii=False)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   501|     # 绱犳潗浠讹紙娑插帇鏉� / 绾跨紗锛夌殑璐村浘 UV 鍦� baked 灞傦紙v3 涔熸槸杩欐牱锛孶VMap 閲屾槸 0锛夛細鍚屾椂鍐欒繘 UVMap锛孶E 鐨� M_WeaponPBR 鐢� UV0
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   502|     extra = [u.name for u in me.uv_layers if u.name not in UV_LAYERS]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   503|     kit_idx = {i for i, m in enumerate(me.materials) if m and slot_of(m.name) in ('MI_Kit_Hydraulics', 'MI_Kit_Pipes')}
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   504|     uv0, uvb = me.uv_layers['UVMap'], me.uv_layers['baked']
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   505|     for p in me.polygons:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   506|         if p.material_index in kit_idx:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   507|             for li in p.loop_indices:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   508|                 uv0.data[li].uv = uvb.data[li].uv
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   509|     for nm in extra:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   510|         me.uv_layers.remove(me.uv_layers[nm])
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   511|     if extra:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   512|         STATS['notes'].append(f'鍘绘帀浜嗗�氫綑鐨� UV 灞� {extra}')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   513|     # 鏉愯川妲斤細鎸� v3 鐨� 12 涓�鍚嶅瓧鍜岄『搴忛噸鎺掞紙鏂板缓鍚屽悕鍗犱綅鏉愯川锛屽彧甯﹁�嗗彛棰滆壊锛沀E 閲屾寜妲藉悕閰� MI锛�
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   514|     unmapped = sorted({m.name for m in me.materials if m and slot_of(m.name) is None})
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   515|     if unmapped:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   516|         STATS['notes'].append(f'娌¤�ゅ嚭鏉ョ殑鏉愯川锛堝綊鍒� Frame锛夛細{unmapped}')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   517|     old = [slot_of(m.name) if m else None for m in me.materials]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   518|     remap = [SLOTS.index(s) if s in SLOTS else 0 for s in old]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   519|     for m in list(bpy.data.materials):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   520|         if m.name in SLOTS:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   521|             m.name = m.name + '_婧�'
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   522|     new = []
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   523|     for s in SLOTS:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   524|         m = bpy.data.materials.new(s)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   525|         m.diffuse_color = color.get(s, (0.5, 0.5, 0.5, 1.0))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   526|         new.append(m)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   527|     idx = [0] * len(me.polygons)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   528|     me.polygons.foreach_get('material_index', idx)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   529|     idx = [remap[i] for i in idx]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   530|     me.materials.clear()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   531|     for m in new:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   532|         me.materials.append(m)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   533|     me.polygons.foreach_set('material_index', idx)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   534|     me.update()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   535|     return robot
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   538| def camo_two_tone(robot):
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   539|     """VHI 鍩庡競鐏拌糠褰╋紙鍘熸潵鏄� Paint 鏉愯川閲岀殑 Voronoi 绋嬪簭绾圭悊锛屾父鎴忛噷娌℃湁锛夛細鍏堟寜闆朵欢锛堣繛閫氬潡锛夊垎涓よ壊鈥斺��
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   540|     绾︿笁鎴愮殑涓绘紗闆朵欢鏀规垚 PaintDark銆傛牸瀛愭寜闆朵欢涓�蹇冿紙浜哄舰鍘樼背锛夊彇 noise.cell锛岀浉閭婚浂浠朵笉浼氫竴鐗囧悓鑹层�傛墜銆佹墜鎸囦笉鍔ㄣ��"""
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   641|         hand_desc = 'build_grip_hand锛坆ulk 1.0锛夛細鎺� Frame銆佹寚 PaintDark銆佹寚鑺� Frame銆佹墜鑳岀敳 Paint锛堝拰 v3 涓�鏍凤級'
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   642|     else:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   643|         drop = [p for p in parts if p[1].startswith(('hand_', 'thumb_up_'))]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   644|         mats = dict(palm=material_by_slot('Frame'), finger=material_by_slot('Frame'), knuckle=material_by_slot('PaintDark'),
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   645|                     back=material_by_slot('Paint'))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   646|         hand_desc = 'build_grip_hand锛坆ulk 1.0锛夛細鎺� / 鎸� Frame锛堢煶澧�锛夈�佹寚鑺� PaintDark锛堝喎鐏帮級銆佹墜鑳岀敳 Paint锛堢摲鐧斤級'
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   647|     if A.old_hand:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   648|         STATS['hand'] = '鍘熸潵鐨勬暣鍧楁墜锛�--old-hand锛屽彧鍋氬�规瘮鍥剧敤锛�'
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   649|     else:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   650|         STATS['removed']['old_hand'] = dict(parts=len(drop), tris=eval_tris([p[0] for p in drop]))
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   651|         parts = [p for p in parts if p not in drop]
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   652|         hands = build_hands(mats)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   653|         STATS['hand'] = hand_desc + (f'锛涗繚鐣欐墜鑳屼欢 {len(acc)} 浠讹紙杞�鍒版柊鎵嬭儗锛�' if CFG['kind'] == 'ds' and acc else '')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   654|         parts += hands
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   655| elif CFG['kind'] == 'v3':
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   656|     # ---- v3锛堟柊绾�杞诲瀷锛夛細鐓х幇琛屽�煎嚭锛坮obot_lookdev.py --design v3 --kit --rig SKM_Manny_Simple.fbx锛夊湪鏈�杩涚▼閲岄噸寤猴紝
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   657|     #      鍦� fit_to_rig 鎶婇浂浠跺悎鎴愮綉鏍间箣鍓嶅�楀悓涓�濂楁父鎴忕増淇�鏀瑰櫒锛堢礌鏉愪欢宸茬粡鏄� v3 鑷�宸辩殑 KIT_LITE锛屼笉鍐嶅噺锛夈��
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   658|     #      鍠峰瓧锛堟枃瀛楃墿浣擄級鍏堟崲鎴愬畾浣嶇┖鐗╀綋锛堟寕鍦ㄥ師鏉ョ殑鐖剁墿浣撲笅锛岃窡鐫�缁戦�ㄨ蛋锛夛紝缁戝畬鍐嶆寜瀹冭�拌创鑺便�俽obot_lookdev.py 鏈�韬�涓嶆敼銆�
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   659|     rl_path = os.path.join(LOOKDEV, 'robot_lookdev.py')
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   660|     src = open(rl_path, encoding='utf-8').read()
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   661|     anchor = "        build_robot_v3()\n        fit_to_rig()"
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   662|     assert anchor in src, 'robot_lookdev.py 鐨� main() 鍙樹簡锛岄挬瀛愯�佹敼'
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   663|     src = src.replace(anchor, "        build_robot_v3()\n        __hook__()\n        fit_to_rig()")
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   664|     markers = []
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   666|     def v3_hook():
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   667|         rig_k = 1.1 / 1.35
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   668|         Tcm = Matrix.Scale(100 * rig_k / 1.1, 4)     # 璁捐�＄┖闂达紙鏍圭墿浣撴斁澶� 1.1锛夆啋 缁戦�ㄥ悗鐨勪汉褰㈠帢绫筹紙杩戜技锛屽彧缁欏�掕�掑�藉害鎹㈢畻鐢�锛�
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   669|         for o in [o for o in bpy.context.scene.objects if o.type == 'FONT']:
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   670|             mk = bpy.data.objects.new('__璐磋姳_' + o.name, None)
+[2026.11.02-19.14.03:916][  0]LogPython: Warning: [src]   671|             bpy.context.scene.collection.objects.link(mk)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   672|             mk.parent = o.parent
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   673|             mk.matrix_parent_inverse = o.matrix_parent_inverse.copy()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   674|             mk.matrix_basis = o.matrix_basis.copy()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   675|             mk['text'], mk['size'] = o.data.body, o.data.size
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   676|             markers.append((mk.name, o.name))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   677|             bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   678|         objs = [[o, 'v3', Tcm] for o in bpy.context.scene.objects if o.type in ('MESH', 'CURVE')]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   679|         game_mods(objs, kit=False)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   680|     saved_argv = sys.argv
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   681|     sys.argv = ['blender', '--', '--design', 'v3', '--kit', '--rig', os.path.join(LOOKDEV, 'rig', 'SKM_Manny_Simple.fbx'),
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   682|                 '--export', os.path.join(TMP, 'NEC_L_robot_lookdev.fbx')]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   683|     try:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   684|         exec(compile(src, rl_path, 'exec'), {'__name__': 'robot_lookdev', '__file__': rl_path, '__hook__': v3_hook})
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   685|     finally:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   686|         sys.argv = saved_argv
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   687|     SCENE = bpy.context.scene
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   688|     arm = next(o for o in SCENE.objects if o.type == 'ARMATURE')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   689|     robot0 = next(o for o in SCENE.objects if o.type == 'MESH' and o.parent == arm)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   690|     T, s, res, missing = fit_to_v3(arm)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   691|     STATS['rig_fit'] = dict(armature=arm.name, scale=round(s, 6), max_residual_cm=round(res, 4), missing_bones=missing)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   692|     assert abs(s - 1) < 1e-4 and res < 0.01 and not missing, '閲嶅缓鐨� v3 楠ㄦ灦鍜岀幇琛岀殑瀵逛笉涓�'
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   693|     for mk_name, font_name in markers:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   694|         mk = bpy.data.objects[mk_name]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   695|         mw = mk.matrix_world                        # 缁戦�ㄥ悗鐨勪汉褰㈢背锛坒it_to_rig 鍙�鎶婇�ㄦ灦鍜岀綉鏍兼斁澶ф垚鍘樼背锛岀┖鐗╀綋杩樺湪绫筹級
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   696|         c = mw.translation * 100
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   697|         nrm = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   698|         sc = sum(abs(x) for x in mw.to_scale()) / 3 * 100
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   699|         b = None
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   700|         q = mk.parent
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   701|         while q is not None and b is None:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   702|             b = SKIN_V3.get(q.name)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   703|             q = q.parent
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   704|         record_decal('鍠峰瓧', font_name, b or 'spine_05', c, nrm, mk['size'] * sc, mk['text'])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   705|     STATS['tris_source'] = 100660          # 鐜拌�� lookdev/rig/SKM_Robot_v3.fbx
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   706|     STATS['removed']['fonts_v3'] = len(markers)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   707|     parts = [[robot0, None, T]]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   708|     STATS['hand'] = 'build_grip_hand锛坆ulk 1.0锛屽拰鐜拌�� v3 鍚屼竴鍙�鎵嬶紱鍊掕�掓敼 1 娈点�佸皬鍦嗚�掑幓鎺夛紝鎵嬫帉鍘氬害涓嶅彉锛�'
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   709| else:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   710|     # ---- VHI锛氬湪 v3 缁戦�ㄥ伐绋嬮噷閲嶅缓澶栧３锛堢収 heitie.py锛�
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   711|     sys.path.insert(0, os.path.join(LOOKDEV, 'factions', 'heitie'))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   712|     import hx_common as H          # noqa: E402
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   713|     import designs_heitie as D     # noqa: E402
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   714|     arm = H.init_rig()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   715|     v3 = next(o for o in SCENE.objects if o.type == 'MESH' and o.name.startswith('SKM_Robot_v3'))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   716|     for o in list(SCENE.objects):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   717|         if o.type == 'EMPTY':
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   718|             bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   719|     spec = D.DESIGNS[CFG['design']]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   720|     H.make_materials(H.PALETTE2 if spec.get('pal2') else H.PALETTE)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   721|     base = H.chassis(v3, drop=spec.get('drop'))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   722|     spec['build']()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   723|     I = Matrix.Identity(4)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   724|     for j, jo in H.JOINT_OBJ.items():
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   725|         bone = H.bone_of_joint(j)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   726|         for o in jo.children_recursive:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   727|             if o.type in ('MESH', 'CURVE', 'FONT') and not o.hide_render:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   728|                 parts.append([o, o.get('bone', bone), I])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   729|     base.data.calc_loop_triangles()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   730|     STATS['tris_source'] = eval_tris([p[0] for p in parts]) + len(base.data.loop_triangles)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   731|     STATS['tris_chassis'] = len(base.data.loop_triangles)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   732|     STATS['rig_fit'] = dict(armature=arm.name, scale=1.0, max_residual_cm=0.0, missing_bones=[])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   733|     # 鏉＄爜銆佸崟浣嶆爣璁帮紙璐寸焊锛夆啋 鍒犳帀锛岃�拌创鑺�
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   734|     sticker = re.compile(r'(鏉＄爜|鏍囪�版�唡鏍囪�颁笁瑙�)')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   735|     groups = {}
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   736|     for p in parts:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   737|         if p[0].type == 'MESH' and sticker.search(p[0].name):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   738|             key = re.sub(r'(搴晐鏉�\d+|妗唡涓夎��)(\.\d+)?$', '', p[0].name)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   739|             groups.setdefault((key, p[1]), []).append(p)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   740|     for (key, bone), ps in groups.items():
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   741|         pts = [p[0].matrix_world @ v.co for p in ps for v in p[0].data.vertices]   # plate2d 鐨勯《鐐圭洿鎺ユ寜鐖剁┖闂村啓锛屽師鐐逛笉鍦ㄨ创绾镐笂
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   742|         c = sum(pts, Vector()) / len(pts)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   743|         mw = ps[0][0].matrix_world
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   744|         ext = max((q - c).length for q in pts) * 2
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   745|         nrm = Vector((0, 0, 1))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   746|         me0 = ps[0][0].data
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   747|         if me0.polygons:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   748|             nrm = (mw.to_3x3() @ max(me0.polygons, key=lambda f: f.area).normal).normalized()
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   749|         record_decal('鏉＄爜' if '鏉＄爜' in key else '鍗曚綅鏍囪��', key, bone, c, nrm, ext)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   750|     drop = [p for ps in groups.values() for p in ps]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   751|     STATS['removed']['stickers'] = dict(parts=len(drop), tris=eval_tris([p[0] for p in drop]))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   752|     parts = [p for p in parts if p not in drop]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   753|     parts.append([base, None, I])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   754|     STATS['hand'] = 'build_grip_hand锛坴3 鏍囧噯搴曠洏鑷�甯︼紝bulk 1.0锛屾帉 Frame銆佹寚 PaintDark銆佹寚鑺� Frame銆佹墜鑳岀敳 Paint 杩峰僵锛�+ 缁村厠鎵樸�屾墜鑳岀敳銆嶏紙PaintDark锛屾寕 hand锛屽湪鎵嬭儗澶栦晶锛�'
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   755|     bpy.data.objects.remove(v3, do_unlink=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   757| n_font = sum(1 for p in parts if p[0].type == 'FONT')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   758| font_tris = eval_tris([p[0] for p in parts if p[0].type == 'FONT'])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   759| parts_game = game_mods([p for p in parts if p[1] is not None]) + [p for p in parts if p[1] is None]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   760| prepare_fixes(parts_game)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   761| STATS['removed']['fonts'] = dict(parts=n_font, tris=font_tris)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   762| robot = merge(parts_game, 'SKM_' + A.key)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   763| if CFG['kind'] == 'vhi' and not A.no_camo:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   764|     camo_two_tone(robot)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   765| # 绌虹殑椤剁偣缁勶紙VHI 搴曠洏浠� v3 鎷锋潵锛屽噺闇囦欢鍒犱簡浣� damper_* 缁勫悕杩樺湪锛夊幓鎺夛紝FBX 閲屽氨涓嶄細鏈夌┖鐨勮挋鐨�绨�
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   766| used = {g.group for v in robot.data.vertices for g in v.groups if g.weight > 1e-6}
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   767| empty_groups = [g.name for g in robot.vertex_groups if g.index not in used]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   768| for nm in empty_groups:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   769|     robot.vertex_groups.remove(robot.vertex_groups[nm])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   770| if empty_groups:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   771|     STATS['notes'].append(f'鍘绘帀浜嗘病鏈夐《鐐圭殑椤剁偣缁� {empty_groups}')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   772| STATS.update(robot_stats(robot))
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   773| log('涓夎�掗潰', STATS['tris'], '锛堝師', STATS['tris_source'], '锛夊潖鏉冮噸椤剁偣', STATS['bad_weight_verts'])
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   774| tmp = os.path.join(TMP, f'{A.key}_{os.getpid()}_mesh.blend')   # 甯﹁繘绋嬪彿锛氬悓涓�鍙板苟琛岃窇鍑犵�嶅弬鏁版椂涓嶄簰鐩歌�嗙洊
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   775| robot.name = robot.data.name = 'SKM_' + A.key
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   776| bpy.data.libraries.write(tmp, {robot}, fake_user=False)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   777| STATS_STAGE1 = json.dumps(STATS, ensure_ascii=False)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   779| # ================================================================ 绗�浜屾�ワ細v3 缁戦�ㄥ伐绋� + 鍘熷皝涓嶅姩鐨� root 楠ㄦ灦 鈫� 瀵煎嚭
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   780| bpy.ops.wm.open_mainfile(filepath=V3_BLEND)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   781| STATS = json.loads(STATS_STAGE1)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   782| SCENE = bpy.context.scene
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   783| for o in list(SCENE.objects):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   784|     if o.type != 'ARMATURE':
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   785|         bpy.data.objects.remove(o, do_unlink=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   786| for m in list(bpy.data.meshes):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   787|     if m.users == 0:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   788|         bpy.data.meshes.remove(m)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   789| for m in list(bpy.data.materials):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   790|     m.name = 'v3鏃�_' + m.name
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   791| arm = next(o for o in SCENE.objects if o.type == 'ARMATURE')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   792| assert arm.name == 'root' and len(arm.data.bones) == len(V3_BONES)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   793| with bpy.data.libraries.load(tmp, link=False) as (src, dst):
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   794|     dst.objects = ['SKM_' + A.key]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   795| robot = dst.objects[0]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   796| SCENE.collection.objects.link(robot)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   797| robot.matrix_world = Matrix.Identity(4)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   798| robot.parent = arm
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   799| robot.matrix_parent_inverse = Matrix.Identity(4)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   800| mod = robot.modifiers.new('Armature', 'ARMATURE')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   801| mod.object = arm
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   802| names = [m.name for m in robot.data.materials]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   803| assert names == SLOTS, names
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   804| assert all(g.name in arm.data.bones for g in robot.vertex_groups), [g.name for g in robot.vertex_groups if g.name not in arm.data.bones]
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   805| SCENE.unit_settings.scale_length = 0.01
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   806| bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   807| arm.select_set(True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   808| robot.select_set(True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   809| bpy.context.view_layer.objects.active = arm
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   810| fbx = os.path.join(A.out, A.key + '.fbx')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   811| bpy.ops.export_scene.fbx(filepath=fbx, use_selection=True, object_types={'ARMATURE', 'MESH'},
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   812|                          add_leaf_bones=False, bake_anim=False, mesh_smooth_type='FACE',
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   813|                          use_armature_deform_only=False, apply_unit_scale=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   814| blend = os.path.join(A.out, A.key + '.blend')
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   815| bpy.context.preferences.filepaths.save_version = 0      # 閲嶈窇瑕嗙洊鏃朵笉鐣� .blend1
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   816| bpy.ops.wm.save_as_mainfile(filepath=blend, copy=True)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   817| STATS['fbx'] = fbx
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   818| STATS['blend'] = blend
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   819| STATS['bones'] = len(arm.data.bones)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   820| STATS['vertex_groups'] = sorted(g.name for g in robot.vertex_groups)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   821| with open(os.path.join(A.out, A.key + '_export.json'), 'w', encoding='utf-8') as f:
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   822|     json.dump(STATS, f, ensure_ascii=False, indent=1)
+[2026.11.02-19.14.03:917][  0]LogPython: Warning: [src]   823| log('瀵煎嚭', fbx, '涓夎��', STATS['tris'])
+[2026.11.02-19.14.03:917][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.14.03:918][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src] #### lookdev/rig/factions/export_factions.py 823 琛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     1| # 闃佃惀鏈轰綋锛堟柊绾� NEC / 鐩镐綅 PHASE / 缁村厠鎵� VHI 脳 杞讳腑閲嶏級瀵煎嚭娓告垙鐗� FBX锛氬拰 v3 鍚屼竴鍓�楠ㄦ灦銆佸帢绫冲埗銆佹瘡涓�椤剁偣鍙�缁欎竴鏍归�ㄥご鏉冮噸 1銆�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     2| #
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     3| # 鐢ㄦ硶锛圔lender 鍛戒护琛岋紝鍙�鐢� CPU锛屼笉娓叉煋锛夛細涓�鍙颁竴娆�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     4| #   NEC 涓� / 閲嶏細闆朵欢鎸傚湪缁戦�ㄧ殑绌虹墿浣撲笅锛堥紟灞卞伐绋嬶紝娓告垙绫筹級
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     5| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_M2.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_M
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     6| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_H1.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_H
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     7| #     锛�10-31 鍑忔洸闈�浠ュ悗鐨勬簮鏂囦欢锛涙敼鍓嶆槸 dingshan/DS_M.blend / DS_HKF.blend锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     8| #   PHASE 杞� / 涓� / 閲嶏細闆朵欢鐩存帴鎸傞�ㄥご锛堢櫧濉斿伐绋嬶紝鍘樼背锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]     9| #     blender -b --factory-startup lookdev/factions/baita/blend/鐧藉�擾L1.blend -P ... -- --key PHASE_L   锛圔M 鈫� PHASE_M銆丠2 鈫� PHASE_H锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    10| #   VHI 杞� / 涓� / 閲嶏細瀛樺ソ鐨� heitie_*.blend 閲屽�栧３宸茬粡鍚堟垚涓�鍧椼�佸垎涓嶅嚭闆朵欢锛堝柗瀛楀垹涓嶆帀锛夛紝鎵�浠ュ湪 v3 缁戦�ㄥ伐绋嬮噷
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    11| #     鎸� designs_heitie 閲嶅缓涓�閬嶏紙鍜� heitie.py --save 鍚屼竴濂楄皟鐢�锛岄潰鏁颁細鏍稿�癸級
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    12| #     blender -b --factory-startup lookdev/rig/SKM_Robot_v3.blend -P ... -- --key VHI_L   锛圴HI_M銆乂HI_H锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    13| #   NEC 杞伙紙v3锛夛細涓嶇敤鎵撳紑宸ョ▼锛屾湰杩涚▼閲岀収 robot_lookdev.py 鐨勭幇琛屽�煎嚭閲嶅缓涓�閬嶏紝瀵煎嚭鍓嶅�楀悓涓�濂楁父鎴忕増瑙勭煩
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    14| #     blender -b --factory-startup -P lookdev/rig/factions/export_factions.py -- --key NEC_L
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    15| #   鍏ㄩ儴锛歱y -3 lookdev/rig/factions/run_export.py
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    16| #
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    17| # 鍋氫簡浠�涔堬紙姣忓彴閮戒竴鏍凤紝瑙勭煩鐓� robot_lookdev.fit_to_rig锛夛細
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    18| #   1. 鍙栭浂浠讹細娌跨埗閾炬壘鍒版寕楠ㄥご鐨勯偅涓�绾э紙parent_type=BONE锛夛紝楠ㄥご灏辨槸杩欎欢鐨勬潈閲嶉��锛涘嚭鍥剧敤鐨勬灙銆佸湴闈�銆佹�氬�欍�乿3 瀵圭収涓嶈�併��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    19| #      缁戝畾濮垮娍锛氶�ㄦ灦鍒囧埌 REST銆傚師宸ョ▼鐨勫崟浣嶏紙榧庡北娓告垙绫� / 鐧藉�斿帢绫� + 鐗╀綋缂╂斁锛夋寜楠ㄥご澶撮儴浣嶇疆鎷熷悎鍒� v3 楠ㄦ灦锛堝帢绫筹級銆�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    20| #   2. 鎵嬶細NEC / PHASE 鍘熸潵鏄�鏁村潡鎵嬶紙鎺� + 涓よ妭鎵嬫寚鎸� hand銆佹媷鎸囨寕 thumb_up锛夆啋 鍒犳帀锛屾崲 robot_lookdev.build_grip_hand 鐨�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    21| #      鍙�寮�鎵嬫寚鎵嬶紙bulk=1.0锛歜ulk 浼氬悓鏃舵敼鎵嬫帉鍘氬害鍜屾寚鑺傚帤搴︼紝C++ 鐨� PalmFront / FingerHalfT 鏄�鎸� 1.0 瀹氱殑锛夛紝鍙�鎹㈡潗璐�锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    22| #      NEC 鎵嬭儗涓婄殑閾叉枟 / 鎸囪檸鍘熸潵鎸夋棫鎵嬶紙鎵嬪績鏈濆墠锛夋憜锛岃浆 90 搴﹀埌鏂版墜鐨勬墜鑳屾柟鍚戯紙-n锛夈�俈HI 鐨勫簳鐩樻湰鏉ュ氨鏄� v3 鐨勬柊鎵嬶紝涓嶅姩銆�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    23| #   3. 娓告垙鐗堝噺闈�锛坉ocs/闃佃惀鏈虹敳/榧庡北閲嶅伐.md銆屾父鎴忕増鍑忛潰鍙傛暟銆嶏紝涓夊�跺悓涓�濂楄�勭煩锛夛細鍊掕�掗兘鏀� 1 娈点�併�屽皬鍦嗚�掋�嶅幓鎺夈��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    24| #      浜哄舰灏哄�� 0.5 姣�绫充互涓嬬殑寰�鍊掕�掑幓鎺夈�佺礌鏉愭恫鍘嬫潌鏈�缁� 0.2锛堝拰 v3 鐨� KIT_LITE 涓�鏍凤級銆佽蒋绠� resolution 4 / 1銆�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    25| #      骞抽潰鏍囪瘑鏇茬嚎 resolution 3锛涘嚑浣曞柗瀛楋紙鏂囧瓧鐗╀綋锛夈�乂HI 鐨勬潯鐮� / 鍗曚綅鏍囪�板垹鎺夛紝浣嶇疆璁拌繘娓呭崟浠ュ悗鍋氳创鑺便��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    26| #   4. 鍚堟垚涓�涓�缃戞牸锛歎V 灞傚拰 v3 涓�鏍凤紙UVMap / baked / UVChannel_1锛岀礌鏉愪欢璐村浘 UV 鍚屾椂鍐欒繘 UVMap锛夈��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    27| #      鏉愯川妲芥寜 v3 鐨� 12 涓�鍚嶅瓧鍜岄『搴忥紙MI_Robot_* + MI_Kit_*锛夛紱VHI 杩峰僵鍏堟寜闆朵欢鍒嗕袱鑹诧紙Paint / PaintDark锛夈��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    28| #   5. 绗�浜屾�ユ墦寮� v3 缁戦�ㄥ伐绋嬶紙lookdev/rig/SKM_Robot_v3.blend锛屽彧璇讳笉瀛橈級锛岀敤瀹冨師灏佷笉鍔ㄧ殑 root 楠ㄦ灦锛�
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    29| #      缃戞牸鎸備笂鍘汇�佺敤 fit_to_rig 涓�鏍风殑 FBX 鍙傛暟瀵煎嚭锛堝満鏅�鍗曚綅 0.01銆乤pply_unit_scale锛夛紱鍙﹀瓨涓�浠界粦濂介�ㄧ殑 .blend锛堟��鏌� / 鎻℃寔鑴氭湰鐢�锛夈��
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    30| import argparse
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    31| import json
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    32| import math
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    33| import os
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    34| import re
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    35| import sys
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    37| import bmesh
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    38| import bpy
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    39| from mathutils import Matrix, Vector, noise
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    41| HERE = os.path.dirname(os.path.abspath(__file__))
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    42| LOOKDEV = os.path.dirname(os.path.dirname(HERE))
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    43| V3_BLEND = os.path.join(LOOKDEV, 'rig', 'SKM_Robot_v3.blend')
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    44| TMP = os.path.join(os.environ.get('TEMP', HERE), 'robotslice_factions')
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    46| KEYS = {
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    47|     'NEC_L': dict(kind='v3', name='鏂扮邯寤鸿�� 杞诲瀷 v3锛堟父鎴忕増閲嶅�硷級'),
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    48|     # 10-31 鍑忔洸闈�锛氫腑鍨嬫崲鏂规�堜簩锛堝叏閮ㄦ柟姝ｅ寲锛夈�侀噸鍨嬫崲鏂规�堜竴锛堝彧鎹㈠ぇ鏇查潰锛夛紱鏀瑰墠鏄� factions/dingshan/DS_M.blend / DS_HKF.blend
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    49|     'NEC_M': dict(kind='ds', src='factions/dingshan/flat/DS_M2.blend', name='鏂扮邯寤鸿�� 涓�鍨嬨�屾寲鎺樻満銆嶏紙鍑忔洸闈㈡柟妗堜簩锛�'),
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    50|     'NEC_H': dict(kind='ds', src='factions/dingshan/flat/DS_H1.blend', name='鏂扮邯寤鸿�� 閲嶅瀷銆岀熆鍗°�嶏紙鍑忔洸闈㈡柟妗堜竴锛�'),
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    51|     'PHASE_L': dict(kind='bt', src='factions/baita/blend/鐧藉�擾L1.blend', name='鐩镐綅鐢靛瓙 杞诲瀷銆屽弻濉斻��'),
+[2026.11.02-19.14.03:918][  0]LogInit: Display: LogPython: Warning: [src]    52|     'PHASE_M': dict(kind='bt', src='factions/baita/blend/鐧藉�擾BM.blend', name='鐩镐綅鐢靛瓙 涓�鍨嬨�孊2銆�'),
