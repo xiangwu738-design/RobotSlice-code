@@ -38,8 +38,8 @@ if mesh:
         log('Cylinder nanite 读不到', e)
 pats = ['D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs/*.log', os.path.join(os.environ.get('LOCALAPPDATA', ''), 'RobotSlice', 'Saved', 'Logs', '*.log')]
 files = sorted({f for p in pats for f in glob.glob(p)}, key=os.path.getmtime)[-1:]
-keys = ('usage flag', 'Default Material', 'DefaultMaterial', 'Tracer', 'M_RobotMaster', 'Cylinder', 'PSO', 'Failed to find', 'Couldn')
-skip = ('.dll', 'LogD3D12RHI', 'LogShaderLibrary', 'LogConfig', 'Precache.GlobalShaders')
+keys = ('usage flag', 'Default Material', 'DefaultMaterial', 'Tracer', 'M_RobotMaster', 'Cylinder', 'Failed to find', 'Couldn', 'ProxyCreation', 'Emissive', 'Weapons/Materials')
+skip = ('PSOPrecacheState', '.dll', 'LogD3D12RHI', 'LogShaderLibrary', 'LogConfig', 'Precache.GlobalShaders')
 for f in files:
     lines = open(f, 'rb').read().decode('utf-8', errors='replace').splitlines()
     hits = [l for l in lines if any(k in l for k in keys) and not any(x in l for x in skip)]
