@@ -1,6 +1,4 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "look_pillars", "script": "tools/ue_pillars_look.py", "seconds": 300},
   {"kind": "py", "name": "look_oldstreet", "script": "tools/ue_oldstreet_look.py", "seconds": 300},
-  {"kind": "gamepy", "name": "grade_pillars", "map": "/Game/Maps/L_Pillars", "script": "tools/grade_shots_pillars.py", "args": ["-MechBeauty"], "seconds": 240},
   {"kind": "gamepy", "name": "grade_oldstreet", "map": "/Game/Maps/L_OldStreet", "script": "tools/grade_shots_oldstreet.py", "args": ["-MechBeauty"], "seconds": 240}
 ]}
