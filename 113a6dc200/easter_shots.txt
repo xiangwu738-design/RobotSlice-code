@@ -1,0 +1,1501 @@
+easter_shots 结束：ok，用时 30 秒，日志行 9997
+[2026.11.02-12.43.13:075][ 33]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:075][ 33]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:075][ 33]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:082][ 34]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:083][ 34]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:084][ 34]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:084][ 34]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:084][ 34]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:092][ 35]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:093][ 35]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:094][ 35]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:094][ 35]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:094][ 35]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:100][ 36]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:100][ 36]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:102][ 36]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:102][ 36]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:102][ 36]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:110][ 37]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BD50) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:112][ 37]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:112][ 37]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:112][ 37]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:112][ 37]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:120][ 38]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:122][ 38]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:123][ 38]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:123][ 38]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:123][ 38]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:130][ 39]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:131][ 39]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:131][ 39]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:131][ 39]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:131][ 39]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:139][ 40]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:140][ 40]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:141][ 40]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:141][ 40]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:141][ 40]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:152][ 41]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:153][ 41]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:155][ 41]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:155][ 41]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:155][ 41]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:162][ 42]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:163][ 42]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:163][ 42]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:163][ 42]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:163][ 42]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:163][ 42]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:163][ 42]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:163][ 42]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:165][ 42]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:165][ 42]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:173][ 43]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:174][ 43]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:175][ 43]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:175][ 43]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:175][ 43]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:186][ 44]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:188][ 44]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:188][ 44]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:188][ 44]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:188][ 44]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:198][ 45]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:200][ 45]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:200][ 45]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:200][ 45]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:200][ 45]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:207][ 46]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:210][ 46]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:210][ 46]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:210][ 46]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:210][ 46]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:218][ 47]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:220][ 47]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:220][ 47]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:220][ 47]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:220][ 47]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:230][ 48]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:232][ 48]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:233][ 48]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:233][ 48]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:233][ 48]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:238][ 49]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:239][ 49]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:239][ 49]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:239][ 49]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:239][ 49]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:251][ 50]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:252][ 50]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:252][ 50]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:252][ 50]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:252][ 50]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:260][ 51]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:261][ 51]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:261][ 51]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:261][ 51]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:261][ 51]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:261][ 51]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:262][ 51]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:262][ 51]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:262][ 51]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:262][ 51]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:269][ 52]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:270][ 52]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:270][ 52]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:271][ 52]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:271][ 52]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:279][ 53]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B0D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:282][ 53]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:283][ 53]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:283][ 53]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:283][ 53]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:286][ 54]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:288][ 54]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:289][ 54]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:289][ 54]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:289][ 54]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:298][ 55]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:299][ 55]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:300][ 55]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:300][ 55]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:300][ 55]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:306][ 56]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:308][ 56]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:308][ 56]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:308][ 56]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:308][ 56]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:316][ 57]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:317][ 57]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:318][ 57]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:318][ 57]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:318][ 57]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:325][ 58]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:327][ 58]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:328][ 58]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:328][ 58]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:328][ 58]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:334][ 59]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:336][ 59]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:336][ 59]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:336][ 59]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:336][ 59]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:344][ 60]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:345][ 60]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:345][ 60]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:345][ 60]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:345][ 60]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:351][ 61]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:353][ 61]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:353][ 61]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:353][ 61]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:353][ 61]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:360][ 62]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:361][ 62]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:361][ 62]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:361][ 62]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:361][ 62]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:368][ 63]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:369][ 63]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:371][ 63]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:371][ 63]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:371][ 63]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:377][ 64]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:378][ 64]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:379][ 64]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:379][ 64]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:379][ 64]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:386][ 65]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:387][ 65]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:388][ 65]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:388][ 65]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:388][ 65]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:396][ 66]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:397][ 66]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:397][ 66]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:397][ 66]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:397][ 66]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:397][ 66]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:397][ 66]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:397][ 66]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:398][ 66]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:398][ 66]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:407][ 67]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:409][ 67]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:410][ 67]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:410][ 67]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:410][ 67]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:414][ 68]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC3411CD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:415][ 68]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:416][ 68]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:416][ 68]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:416][ 68]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:423][ 69]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:424][ 69]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:424][ 69]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:425][ 69]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:425][ 69]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:431][ 70]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:432][ 70]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:432][ 70]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:432][ 70]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:432][ 70]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:440][ 71]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:442][ 71]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:442][ 71]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:442][ 71]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:442][ 71]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:449][ 72]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:451][ 72]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:451][ 72]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:451][ 72]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:451][ 72]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:460][ 73]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:461][ 73]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:461][ 73]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:461][ 73]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:461][ 73]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:470][ 74]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:471][ 74]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:471][ 74]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:471][ 74]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:472][ 74]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:472][ 74]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:472][ 74]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:472][ 74]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:472][ 74]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:472][ 74]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:478][ 75]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:478][ 75]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:478][ 75]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:478][ 75]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:478][ 75]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:487][ 76]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:488][ 76]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:490][ 76]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:490][ 76]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:490][ 76]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:500][ 77]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:502][ 77]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:502][ 77]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:502][ 77]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:502][ 77]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:512][ 78]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B210) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:514][ 78]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:515][ 78]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:515][ 78]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:515][ 78]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:525][ 79]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:526][ 79]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:526][ 79]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:527][ 79]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:527][ 79]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:534][ 80]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:535][ 80]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:535][ 80]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:535][ 80]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:535][ 80]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:541][ 81]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:542][ 81]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:543][ 81]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:543][ 81]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:543][ 81]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:551][ 82]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:552][ 82]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:552][ 82]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:552][ 82]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:552][ 82]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:552][ 82]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:552][ 82]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:553][ 82]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:553][ 82]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:553][ 82]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:559][ 83]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:560][ 83]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:561][ 83]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:561][ 83]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:561][ 83]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:569][ 84]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:570][ 84]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:570][ 84]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:570][ 84]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:570][ 84]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:570][ 84]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:570][ 84]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:571][ 84]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:571][ 84]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:571][ 84]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:579][ 85]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:580][ 85]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:580][ 85]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:580][ 85]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:580][ 85]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:586][ 86]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:587][ 86]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:588][ 86]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:588][ 86]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:588][ 86]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:594][ 87]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:596][ 87]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:596][ 87]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:596][ 87]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:596][ 87]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:596][ 87]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:596][ 87]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:596][ 87]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:597][ 87]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:597][ 87]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:602][ 88]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B490) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:603][ 88]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:604][ 88]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:604][ 88]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:604][ 88]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:612][ 89]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:613][ 89]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:613][ 89]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:613][ 89]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:613][ 89]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:624][ 90]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B350) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:625][ 90]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:626][ 90]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:626][ 90]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:626][ 90]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:631][ 91]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:633][ 91]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:633][ 91]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:633][ 91]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:633][ 91]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:641][ 92]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:642][ 92]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:643][ 92]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:643][ 92]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:643][ 92]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:650][ 93]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:651][ 93]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:651][ 93]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:651][ 93]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:651][ 93]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:660][ 94]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:661][ 94]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:661][ 94]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:661][ 94]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:661][ 94]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:668][ 95]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B490) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:669][ 95]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:670][ 95]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:670][ 95]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:670][ 95]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:676][ 96]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:677][ 96]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:677][ 96]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:677][ 96]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:679][ 96]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:679][ 96]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:679][ 96]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:679][ 96]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:679][ 96]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:679][ 96]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:684][ 97]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:686][ 97]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:686][ 97]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:686][ 97]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:686][ 97]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:693][ 98]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:695][ 98]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:696][ 98]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:696][ 98]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:696][ 98]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:702][ 99]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:703][ 99]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:705][ 99]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:705][ 99]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:705][ 99]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:711][100]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B210) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:712][100]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:712][100]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:712][100]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:712][100]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:712][100]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:712][100]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:712][100]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:712][100]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:712][100]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:723][101]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:724][101]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:726][101]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:726][101]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:726][101]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:726][101]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:726][101]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:726][101]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:726][101]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:726][101]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:730][102]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:731][102]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:731][102]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:731][102]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:731][102]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:731][102]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:731][102]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:731][102]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:731][102]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:731][102]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:738][103]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:740][103]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:740][103]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:740][103]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:740][103]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:740][103]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:740][103]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:740][103]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:740][103]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:740][103]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:747][104]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:749][104]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:749][104]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:749][104]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:749][104]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:749][104]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:749][104]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:749][104]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:749][104]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:749][104]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:756][105]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:757][105]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:758][105]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:758][105]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:758][105]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:758][105]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:758][105]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:758][105]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:758][105]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:758][105]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:766][106]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:768][106]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:768][106]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:768][106]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:768][106]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:768][106]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:768][106]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:768][106]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:768][106]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:768][106]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:774][107]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:775][107]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:775][107]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:776][107]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:776][107]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:776][107]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:776][107]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:776][107]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:776][107]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:776][107]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:784][108]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:785][108]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:786][108]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:786][108]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:786][108]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:786][108]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:786][108]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:786][108]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:786][108]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:786][108]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:792][109]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:793][109]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:793][109]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:793][109]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:793][109]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:793][109]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:793][109]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:793][109]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:793][109]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:793][109]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:803][110]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BFD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:804][110]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:804][110]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:804][110]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:804][110]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:804][110]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:804][110]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:804][110]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:804][110]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:805][110]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:812][111]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B710) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:813][111]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:813][111]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:813][111]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:813][111]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:813][111]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:813][111]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:813][111]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:813][111]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:813][111]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:820][112]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:821][112]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:821][112]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:822][112]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:822][112]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:822][112]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:822][112]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:822][112]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:822][112]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:822][112]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:829][113]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B710) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:831][113]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:831][113]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:831][113]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:831][113]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:831][113]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:831][113]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:831][113]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:831][113]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:831][113]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:838][114]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BFD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:839][114]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:839][114]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:839][114]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:839][114]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:839][114]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:839][114]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:840][114]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:840][114]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:840][114]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:849][115]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B710) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:850][115]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:850][115]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:850][115]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:851][115]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:851][115]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:851][115]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:851][115]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:851][115]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:851][115]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:857][116]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BFD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:858][116]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:858][116]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:858][116]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:858][116]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:858][116]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:858][116]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:858][116]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:858][116]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:858][116]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:865][117]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B710) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:866][117]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:867][117]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:867][117]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:867][117]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:867][117]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:867][117]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:867][117]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:867][117]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:867][117]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:872][118]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:874][118]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:874][118]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:874][118]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:874][118]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:874][118]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:874][118]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:874][118]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:874][118]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:875][118]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:883][119]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:884][119]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:885][119]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:885][119]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:885][119]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:885][119]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:885][119]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:885][119]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:885][119]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:885][119]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:892][120]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:893][120]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:893][120]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:893][120]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:893][120]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:893][120]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:893][120]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:893][120]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:893][120]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:893][120]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:900][121]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:901][121]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:902][121]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:902][121]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:902][121]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:902][121]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:902][121]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:902][121]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:902][121]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:902][121]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:909][122]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B850) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:910][122]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:911][122]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:911][122]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:911][122]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:911][122]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:911][122]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:911][122]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:911][122]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:911][122]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:918][123]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B710) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:919][123]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:919][123]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:919][123]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:919][123]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:919][123]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:919][123]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:919][123]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:919][123]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:919][123]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:928][124]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:929][124]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:930][124]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:930][124]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:930][124]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:930][124]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:930][124]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:930][124]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:930][124]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:930][124]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:936][125]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B210) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:938][125]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:938][125]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:938][125]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:938][125]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:938][125]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:938][125]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:938][125]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:938][125]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:938][125]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:945][126]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:946][126]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:947][126]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:947][126]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:947][126]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:947][126]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:947][126]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:947][126]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:947][126]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:947][126]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:953][127]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:955][127]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:956][127]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:956][127]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:956][127]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:956][127]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:956][127]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:956][127]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:956][127]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:956][127]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:963][128]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:965][128]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:965][128]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:965][128]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:965][128]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:965][128]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:965][128]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:965][128]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:965][128]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:965][128]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:973][129]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:975][129]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:975][129]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:975][129]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:975][129]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:975][129]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:975][129]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:975][129]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:975][129]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:975][129]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:981][130]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:982][130]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:983][130]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:983][130]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:983][130]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:983][130]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:983][130]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:983][130]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:983][130]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:983][130]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:991][131]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.13:992][131]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:992][131]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.13:992][131]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.13:992][131]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.13:992][131]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:992][131]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.13:992][131]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.13:992][131]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.13:992][131]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.13:999][132]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:001][132]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:001][132]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:001][132]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:001][132]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:001][132]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:001][132]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:001][132]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:002][132]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:002][132]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:008][133]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:010][133]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:011][133]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:011][133]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:011][133]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:011][133]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:011][133]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:011][133]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:011][133]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:011][133]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:018][134]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:019][134]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:020][134]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:020][134]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:020][134]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:020][134]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:020][134]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:020][134]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:020][134]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:020][134]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:027][135]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BE90) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:028][135]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:028][135]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:028][135]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:028][135]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:028][135]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:028][135]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:028][135]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:028][135]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:028][135]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:036][136]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:038][136]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:038][136]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:038][136]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:038][136]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:038][136]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:038][136]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:038][136]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:038][136]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:038][136]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:045][137]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74BFD0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:047][137]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:048][137]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:048][137]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:048][137]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:048][137]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:048][137]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:048][137]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:048][137]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:048][137]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:056][138]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:058][138]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:058][138]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:058][138]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:058][138]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:058][138]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:058][138]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:058][138]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:058][138]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:058][138]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:066][139]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:067][139]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:068][139]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:068][139]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:068][139]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:068][139]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:068][139]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:068][139]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:068][139]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:068][139]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:073][140]LogTemp: Display: [beauty] g5_wide 机体位置 X=0.000 Y=0.000 Z=131.750 包围盒中心 X=6.708 Y=-0.000 Z=122.000 半径 191 最近渲染 1
+[2026.11.02-12.43.14:335][140]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:336][140]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:336][140]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:336][140]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:336][140]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:336][140]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:336][140]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:336][140]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:336][140]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:336][140]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:340][141]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:341][141]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:341][141]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:341][141]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:341][141]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:341][141]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:341][141]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:341][141]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:341][141]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:341][141]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:343][142]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A680) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:344][142]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:344][142]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:344][142]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:344][142]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:344][142]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:344][142]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:344][142]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:344][142]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:344][142]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:348][143]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:348][143]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:349][143]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:349][143]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:349][143]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:349][143]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:349][143]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:349][143]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:349][143]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:349][143]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:356][144]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:360][144]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:360][144]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:360][144]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:360][144]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:360][144]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:360][144]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:360][144]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:360][144]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:360][144]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:365][145]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:366][145]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:366][145]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:366][145]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:366][145]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:366][145]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:366][145]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:366][145]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:366][145]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:366][145]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:373][146]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015AC581DE60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:374][146]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:375][146]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:375][146]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:375][146]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:375][146]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:375][146]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:375][146]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:375][146]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:375][146]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:381][147]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:382][147]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:382][147]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:382][147]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:382][147]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:382][147]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:382][147]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:382][147]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:382][147]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:382][147]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:391][148]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:392][148]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:393][148]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:393][148]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:393][148]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:393][148]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:393][148]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:393][148]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:393][148]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:393][148]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:399][149]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:400][149]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:400][149]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:400][149]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:400][149]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:400][149]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:400][149]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:400][149]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:400][149]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:400][149]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:408][150]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:409][150]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:410][150]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:410][150]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:410][150]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:410][150]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:410][150]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:410][150]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:410][150]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:410][150]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:416][151]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:417][151]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:418][151]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:418][151]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:418][151]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:418][151]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:418][151]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:418][151]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:418][151]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:418][151]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:425][152]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B210) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:426][152]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:426][152]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:426][152]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:426][152]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:426][152]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:426][152]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:426][152]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:426][152]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:426][152]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:435][153]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:436][153]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:436][153]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:436][153]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:436][153]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:436][153]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:436][153]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:436][153]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:436][153]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:436][153]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:443][154]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:444][154]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:445][154]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:445][154]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:445][154]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:445][154]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:445][154]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:445][154]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:445][154]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:445][154]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:451][155]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:452][155]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:452][155]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:452][155]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:452][155]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:452][155]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:452][155]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:452][155]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:452][155]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:452][155]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:459][156]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:460][156]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:461][156]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:461][156]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:461][156]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:461][156]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:461][156]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:461][156]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:461][156]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:461][156]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:468][157]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:469][157]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:469][157]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:469][157]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:469][157]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:470][157]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:470][157]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:470][157]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:470][157]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:470][157]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:475][158]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:476][158]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:476][158]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:476][158]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:476][158]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:476][158]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:476][158]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:476][158]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:476][158]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:476][158]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:483][159]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:485][159]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:485][159]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:485][159]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:485][159]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:485][159]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:485][159]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:485][159]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:485][159]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:485][159]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:492][160]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:494][160]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:494][160]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:494][160]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:494][160]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:494][160]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:494][160]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:494][160]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:494][160]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:494][160]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:505][161]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A720) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:507][161]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:507][161]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:507][161]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:507][161]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:507][161]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:507][161]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:507][161]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:507][161]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:507][161]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:514][162]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A810) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:516][162]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:516][162]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:516][162]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:516][162]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:516][162]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:516][162]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:516][162]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:516][162]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:516][162]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:521][163]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA74B490) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:522][163]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:522][163]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:522][163]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:522][163]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:522][163]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:522][163]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:522][163]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:522][163]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:522][163]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:530][164]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA735E60) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:531][164]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:531][164]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:531][164]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:531][164]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:531][164]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:531][164]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:531][164]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:531][164]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:531][164]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:537][165]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:539][165]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:540][165]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:540][165]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:540][165]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:540][165]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:540][165]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:540][165]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:540][165]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:540][165]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:547][166]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:547][166]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:549][166]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:549][166]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:549][166]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:549][166]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:549][166]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:549][166]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:549][166]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:549][166]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:555][167]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:556][167]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:557][167]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:557][167]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:557][167]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:557][167]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:557][167]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:557][167]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:557][167]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:557][167]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:565][168]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A6D0) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:566][168]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:567][168]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:567][168]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:567][168]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:567][168]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:567][168]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:567][168]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:567][168]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:567][168]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:576][169]LogPython: [eastershots] 机体 <Struct 'Vector' (0x0000015ACA71A630) {x: 0.000000, y: 0.000000, z: 131.750008}> yaw 0 地面 0
+[2026.11.02-12.43.14:577][169]LogPython: [eastershots] 摆放出错 Traceback (most recent call last):
+AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
+[2026.11.02-12.43.14:577][169]LogPython: Error: Traceback (most recent call last):
+[2026.11.02-12.43.14:577][169]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 192, in tick
+[2026.11.02-12.43.14:577][169]LogPython: Error:     state['cam'] = spawn(world, unreal.CameraActor, pawn.get_actor_location(), 0)
+[2026.11.02-12.43.14:577][169]LogPython: Error:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:577][169]LogPython: Error:   File "D:/RobotSlice/tools/ue_easter_shots.py", line 58, in spawn
+[2026.11.02-12.43.14:577][169]LogPython: Error:     a = unreal.GameplayStatics.begin_deferred_actor_spawn_from_class(world, cls, tf)
+[2026.11.02-12.43.14:577][169]LogPython: Error:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.43.14:577][169]LogPython: Error: AttributeError: type object 'GameplayStatics' has no attribute 'begin_deferred_actor_spawn_from_class'
