@@ -23,13 +23,13 @@
     "dust_multiplier": 1.0
   },
   "post": {
-    "white_temp": 8600.0,
+    "white_temp": 7200.0,
     "white_tint": 0.03,
     "color_saturation": [
       1.0,
-      0.74,
-      0.86,
-      0.7
+      0.8,
+      0.9,
+      0.74
     ],
     "color_contrast": [
       1.0,
@@ -44,27 +44,27 @@
       1.02
     ],
     "color_gain_highlights": [
-      1.06,
+      1.03,
       1.0,
-      0.88,
+      0.95,
       1.0
     ],
     "color_gain_shadows": [
-      1.04,
+      1.01,
       1.0,
-      0.92,
+      0.97,
       1.0
     ],
     "color_offset_shadows": [
-      0.034,
-      0.028,
-      0.018,
+      0.022,
+      0.02,
+      0.016,
       0.0
     ],
     "color_offset": [
-      0.006,
-      0.005,
       0.003,
+      0.003,
+      0.002,
       0.0
     ],
     "film_toe": 0.6,
@@ -78,9 +78,9 @@
     "local_exposure_highlight_contrast_scale": 0.75,
     "motion_blur_amount": 0.0,
     "color_gain_midtones": [
-      1.05,
       1.0,
-      0.86,
+      1.0,
+      0.97,
       1.0
     ]
   },
@@ -96,5 +96,5 @@
     "mie_anisotropy": 0.75,
     "multi_scattering_factor": 1.0
   },
-  "_说明_调色11-02": "云端调色：基准图里树冠绿得太艳，不像褪色老胶片。原值 color_saturation (1,0.97,0.9,0.76)、white_temp 8200、没有 color_gain_midtones。第一轮 (1,0.86,0.88,0.72) + 中间调 (1.03,1,0.92) 变化太小；第二轮绿通道饱和度再压、中间调更偏暖黄。"
+  "_说明_调色11-02": "云端调色：基准图树冠太绿；第一、二轮压绿 + 中间调偏暖后用户说「颜色过于暖黄」。第三轮：白平衡 8600→7200，中间调几乎不偏，高光 / 暗部的暖偏和暗部抬黄都减半，绿通道饱和度 0.8（比原来低、比第二轮高）。原值见 git 历史（白平衡 8200、gain_highlights (1.06,1,0.88)、gain_shadows (1.04,1,0.92)、offset_shadows (0.034,0.028,0.018)）。"
 }
