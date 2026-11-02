@@ -17,11 +17,55 @@ CFG = json.load(open(f'{ROOT}/tools/easter_run.json', encoding='utf-8'))
 
 
 def find_blender():
+    """找 blender.exe：easter_run.json 的 blender → PATH → 注册表（.blend 的打开方式）→ 常见安装目录 → Steam → C/D/E 盘前三层目录"""
+    if CFG.get('blender') and os.path.exists(CFG['blender']):
+        return CFG['blender']
     b = shutil.which('blender')
     if b:
         return b
-    c = sorted(glob.glob('C:/Program Files/Blender Foundation/Blender */blender.exe') + glob.glob('D:/Program Files/Blender Foundation/Blender */blender.exe') +
-               glob.glob('D:/Blender*/blender.exe') + glob.glob('C:/Blender*/blender.exe'))
+    try:
+        import winreg
+        for root, key in ((winreg.HKEY_CLASSES_ROOT, r'blendfile\shell\open\command'), (winreg.HKEY_CLASSES_ROOT, r'Applications\blender.exe\shell\open\command'),
+                          (winreg.HKEY_CURRENT_USER, r'Software\Classes\blendfile\shell\open\command'),
+                          (winreg.HKEY_LOCAL_MACHINE, r'SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\blender.exe')):
+            try:
+                with winreg.OpenKey(root, key) as k:
+                    v = winreg.QueryValue(k, None)
+                    exe = v.split('"')[1] if v.startswith('"') else v.split(' ')[0]
+                    if exe.lower().endswith('blender.exe') and os.path.exists(exe):
+                        log('注册表里找到', exe)
+                        return exe
+            except OSError:
+                pass
+    except Exception as e:
+        log('读注册表失败', e)
+    pats = []
+    for drive in ('C:', 'D:', 'E:', 'F:'):
+        for pf in ('Program Files', 'Program Files (x86)'):
+            pats.append(f'{drive}/{pf}/Blender Foundation/*/blender.exe')
+            pats.append(f'{drive}/{pf}/Steam/steamapps/common/Blender/blender.exe')
+        pats += [f'{drive}/SteamLibrary/steamapps/common/Blender/blender.exe', f'{drive}/Blender*/blender.exe', f'{drive}/*/Blender*/blender.exe',
+                 f'{drive}/*/Blender Foundation/*/blender.exe']
+    lad = os.environ.get('LOCALAPPDATA', '')
+    if lad:
+        pats.append(f'{lad}/Programs/Blender Foundation/*/blender.exe')
+    c = []
+    for p in pats:
+        c += glob.glob(p)
+    if not c:
+        # 最后一招：各盘前三层目录里找（跳过 Windows 和回收站）
+        for drive in ('C:/', 'D:/', 'E:/'):
+            if not os.path.exists(drive):
+                continue
+            for dirpath, dirnames, filenames in os.walk(drive):
+                depth = dirpath[len(drive):].count(os.sep) + dirpath[len(drive):].count('/')
+                dirnames[:] = [d for d in dirnames if d not in ('Windows', '$Recycle.Bin', 'ProgramData', 'System Volume Information') and not d.startswith('.')]
+                if depth >= 3:
+                    dirnames[:] = []
+                if 'blender.exe' in filenames:
+                    c.append(os.path.join(dirpath, 'blender.exe'))
+    c = sorted(set(x.replace('\\', '/') for x in c))
+    log('找到的 blender.exe 候选', c)
     return c[-1] if c else None
 
 
