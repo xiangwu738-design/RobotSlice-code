@@ -1,0 +1,178 @@
+exit=0
+[2026.11.02-15.13.16:238][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.13.17:085][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.13.17:102][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 17.113 ms
+[2026.11.02-15.13.17:102][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.13.17:129][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 27.088 ms (total: 44.201 ms)
+[2026.11.02-15.13.17:130][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_tracer_check.py
+[2026.11.02-15.13.17:137][  0]LogPython: Warning: [tracer] MI_Tracer <Object '/Game/Weapons/Materials/MI_Tracer.MI_Tracer' (0x0000020E537DA000) Class 'MaterialInstanceConstant'> MaterialInstanceConstant
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer BaseColor <Struct 'LinearColor' (0x0000020D975039A0) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer Emissive <Struct 'LinearColor' (0x0000020D97503A20) {r: 1.000000, g: 0.420000, b: 0.120000, a: 1.000000}>
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   鏍囬噺鍙傛暟 MI_Tracer EmissiveStrength 60.0
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_instanced_static_meshes True
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_nanite True
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_static_lighting False
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_skeletal_mesh True
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster blend_mode <BlendMode.BLEND_OPAQUE: 0>
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster shading_model <MaterialShadingModel.MSM_DEFAULT_LIT: 1>
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster two_sided False
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� used_with_niagara_meshes 璇讳笉鍒� Material: Failed to find property 'used_with_niagara_meshes' for attribute 'used_with_niagara_meshes' on 'Material'
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_niagara_sprites False
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer] 缁ф壙閾� /Game/Weapons/Materials/MI_Tracer.MI_Tracer 鈫� /Game/Robot/Materials/M_RobotMaster.M_RobotMaster
+[2026.11.02-15.13.17:138][  0]LogPython: Warning: [tracer] Cylinder nanite False
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\b_Dreamfield.log 11-02 08:20 1151 琛岋紝鐩稿叧 39 琛�
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:326][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:535][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereo = 0
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobilePlatform = 0
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobilePostprocessing = 1
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiView = 0
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMultiViewportCapable = 1
+[2026.11.02-15.13.17:145][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereoNative = 0
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: ---
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewCoreSupport = 0
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewNative = 0
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereoEnabled = 0
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewEnabled = 0
+[2026.11.02-15.13.17:146][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: --- StereoAspects end ---
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\b_elim.log 11-02 08:23 1556 琛岋紝鐩稿叧 38 琛�
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:648][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:872][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bInstancedStereo = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobilePlatform = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobilePostprocessing = 1
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobileMultiView = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMultiViewportCapable = 1
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bInstancedStereoNative = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: ---
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobileMultiViewCoreSupport = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobileMultiViewNative = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bInstancedStereoEnabled = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: bMobileMultiViewEnabled = 0
+[2026.11.02-15.13.17:150][  0]LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: --- StereoAspects end ---
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\RobotSlice-backup-2026.11.02-13.41.02.log 11-02 14:41 2320 琛岋紝鐩稿叧 38 琛�
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:002][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:337][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:363][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:363][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:363][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:363][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bInstancedStereo = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobilePlatform = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobilePostprocessing = 1
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobileMultiView = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMultiViewportCapable = 1
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bInstancedStereoNative = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: ---
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobileMultiViewCoreSupport = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobileMultiViewNative = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bInstancedStereoEnabled = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: bMobileMultiViewEnabled = 0
+[2026.11.02-15.13.17:155][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.36.13:383][  0]LogInit: FStereoShaderAspects: --- StereoAspects end ---
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\RobotSlice.log 11-02 16:02 18031 琛岋紝鐩稿叧 185 琛�
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | LogWindows: Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:127][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:311][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:333][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:333][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:333][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:333][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bInstancedStereo = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobilePlatform = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobilePostprocessing = 1
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobileMultiView = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMultiViewportCapable = 1
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bInstancedStereoNative = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: ---
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobileMultiViewCoreSupport = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobileMultiViewNative = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bInstancedStereoEnabled = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: bMobileMultiViewEnabled = 0
+[2026.11.02-15.13.17:188][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.35:364][  0]LogInit: FStereoShaderAspects: --- StereoAspects end ---
+[2026.11.02-15.13.17:188][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-15.13.17:188][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-15.13.17:188][  0]LogInit: Display: LogPython: Warning: [tracer] MI_Tracer <Object '/Game/Weapons/Materials/MI_Tracer.MI_Tracer' (0x0000020E537DA000) Class 'MaterialInstanceConstant'> MaterialInstanceConstant
+[2026.11.02-15.13.17:188][  0]LogInit: Display: LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer BaseColor <Struct 'LinearColor' (0x0000020D975039A0) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer Emissive <Struct 'LinearColor' (0x0000020D97503A20) {r: 1.000000, g: 0.420000, b: 0.120000, a: 1.000000}>
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   鏍囬噺鍙傛暟 MI_Tracer EmissiveStrength 60.0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_instanced_static_meshes True
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_nanite True
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_static_lighting False
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_skeletal_mesh True
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster blend_mode <BlendMode.BLEND_OPAQUE: 0>
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster shading_model <MaterialShadingModel.MSM_DEFAULT_LIT: 1>
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster two_sided False
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� used_with_niagara_meshes 璇讳笉鍒� Material: Failed to find property 'used_with_niagara_meshes' for attribute 'used_with_niagara_meshes' on 'Material'
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_niagara_sprites False
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer] 缁ф壙閾� /Game/Weapons/Materials/MI_Tracer.MI_Tracer 鈫� /Game/Robot/Materials/M_RobotMaster.M_RobotMaster
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer] Cylinder nanite False
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\b_Dreamfield.log 11-02 08:20 1151 琛岋紝鐩稿叧 39 琛�
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | LogWindows: Failed to load 'WinPixGpuCapturer.dll' (GetLastError=126)
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | LogConfig: Set CVar [[r.PSOPrecache.GlobalShaders:1]]
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:326][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:535][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:549][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereo = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobilePlatform = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobilePostprocessing = 1
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiView = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMultiViewportCapable = 1
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereoNative = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: ---
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewCoreSupport = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewNative = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bInstancedStereoEnabled = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: bMobileMultiViewEnabled = 0
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.19.35:572][  0]LogInit: FStereoShaderAspects: --- StereoAspects end ---
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\b_elim.log 11-02 08:23 1556 琛岋紝鐩稿叧 38 琛�
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:648][  0]LogD3D12RHI: Shader Model 6.6 atomic64 is supported
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:872][  0]LogD3D12RHI: NVIDIA Shader Execution Reordering interface supported!
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Using IoDispatcher for shader code library Global. Total 11565 unique shaders.
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Cooked Context: Loaded Shared Shader Library Global
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogShaderLibrary: Display: Logical shader library 'Global' has been created as a monolithic library, components 1
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:888][  0]LogInit: Running DelayedAutoRegister Phase ShaderTypesReady
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: --- StereoAspects begin ---
+[2026.11.02-15.13.17:189][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-07.20.15:915][  0]LogInit: FStereoShaderAspects: Platform=PCD3D_SM6 (49)
