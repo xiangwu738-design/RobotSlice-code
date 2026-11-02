@@ -1,0 +1,167 @@
+exit=0
+[2026.11.02-19.12.49:335][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.12.49:870][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.12.49:877][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 8.262 ms
+[2026.11.02-19.12.49:878][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.12.49:894][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 17.002 ms (total: 25.265 ms)
+[2026.11.02-19.12.49:894][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_dump_src.py
+[2026.11.02-19.12.49:896][  0]LogPython: Warning: [src] #### lookdev/rig/factions/export_factions.py 823 琛�
+[2026.11.02-19.12.49:896][  0]LogPython: Warning: [src]     1| # 闃佃惀鏈轰綋锛堟柊绾� NEC / 鐩镐綅 PHASE / 缁村厠鎵� VHI 脳 杞讳腑閲嶏級瀵煎嚭娓告垙鐗� FBX锛氬拰 v3 鍚屼竴鍓�楠ㄦ灦銆佸帢绫冲埗銆佹瘡涓�椤剁偣鍙�缁欎竴鏍归�ㄥご鏉冮噸 1銆�
+[2026.11.02-19.12.49:896][  0]LogPython: Warning: [src]     4| #   NEC 涓� / 閲嶏細闆朵欢鎸傚湪缁戦�ㄧ殑绌虹墿浣撲笅锛堥紟灞卞伐绋嬶紝娓告垙绫筹級
+[2026.11.02-19.12.49:896][  0]LogPython: Warning: [src]     5| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_M2.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_M
+[2026.11.02-19.12.49:896][  0]LogPython: Warning: [src]     6| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_H1.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_H
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]     7| #     锛�10-31 鍑忔洸闈�浠ュ悗鐨勬簮鏂囦欢锛涙敼鍓嶆槸 dingshan/DS_M.blend / DS_HKF.blend锛�
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    13| #   NEC 杞伙紙v3锛夛細涓嶇敤鎵撳紑宸ョ▼锛屾湰杩涚▼閲岀収 robot_lookdev.py 鐨勭幇琛屽�煎嚭閲嶅缓涓�閬嶏紝瀵煎嚭鍓嶅�楀悓涓�濂楁父鎴忕増瑙勭煩
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    14| #     blender -b --factory-startup -P lookdev/rig/factions/export_factions.py -- --key NEC_L
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    20| #   2. 鎵嬶細NEC / PHASE 鍘熸潵鏄�鏁村潡鎵嬶紙鎺� + 涓よ妭鎵嬫寚鎸� hand銆佹媷鎸囨寕 thumb_up锛夆啋 鍒犳帀锛屾崲 robot_lookdev.build_grip_hand 鐨�
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    22| #      NEC 鎵嬭儗涓婄殑閾叉枟 / 鎸囪檸鍘熸潵鎸夋棫鎵嬶紙鎵嬪績鏈濆墠锛夋憜锛岃浆 90 搴﹀埌鏂版墜鐨勬墜鑳屾柟鍚戯紙-n锛夈�俈HI 鐨勫簳鐩樻湰鏉ュ氨鏄� v3 鐨勬柊鎵嬶紝涓嶅姩銆�
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    47|     'NEC_L': dict(kind='v3', name='鏂扮邯寤鸿�� 杞诲瀷 v3锛堟父鎴忕増閲嶅�硷級'),
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    48|     # 10-31 鍑忔洸闈�锛氫腑鍨嬫崲鏂规�堜簩锛堝叏閮ㄦ柟姝ｅ寲锛夈�侀噸鍨嬫崲鏂规�堜竴锛堝彧鎹㈠ぇ鏇查潰锛夛紱鏀瑰墠鏄� factions/dingshan/DS_M.blend / DS_HKF.blend
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    49|     'NEC_M': dict(kind='ds', src='factions/dingshan/flat/DS_M2.blend', name='鏂扮邯寤鸿�� 涓�鍨嬨�屾寲鎺樻満銆嶏紙鍑忔洸闈㈡柟妗堜簩锛�'),
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    50|     'NEC_H': dict(kind='ds', src='factions/dingshan/flat/DS_H1.blend', name='鏂扮邯寤鸿�� 閲嶅瀷銆岀熆鍗°�嶏紙鍑忔洸闈㈡柟妗堜竴锛�'),
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    69| def parse():
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    76|     p.add_argument('--old-hand', action='store_true')       # NEC / PHASE 淇濈暀鍘熸潵鐨勬暣鍧楁墜锛堝嚭鎵嬮儴鏀瑰墠瀵规瘮鐢�锛屼笉瑕佹嬁鍘昏繘娓告垙锛�
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    77|     p.add_argument('--acc-shift', type=float, default=None)  # NEC 鎵嬭儗浠惰浆鍒版柊鎵嬭儗鍚庢部鎵嬪績娉曠嚎鎸�澶氬皯鍘樼背锛堥粯璁わ細閾叉枟 鈭�1銆佹寚铏� 0锛�
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    93| def log(*a):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]    98| def load_v3_heads():
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   116| def fit_to_v3(arm):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   134| def bone_parent_chain(o, arm):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   143| def collect_bone_parts(arm, exclude=()):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   154| def eval_tris(objs):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   169| def ue(v):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   178| def record_decal(kind, name, bone, center, normal, size_cm, text=None):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   189|     if normal.dot(center - P) < 0:
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   190|         normal = -normal
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   192|                                 normal_ue=[round(normal.x, 3), round(-normal.y, 3), round(normal.z, 3)],
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   197| def is_kit(o):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   202| def world_scale_cm(o, T):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   207| def game_mods(parts, kit=True):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   209|     cnt = dict(bevel_seg=0, bevel_small_removed=0, bevel_tiny_removed=0, kit_decimate=0, curve_lowres=0, font_removed=0)
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   216|             nrm = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   225|                 cnt['bevel_small_removed'] += 1
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   228|                 cnt['bevel_tiny_removed'] += 1
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   229|             elif md.segments > 1:
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   230|                 md.segments = 1
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   231|                 cnt['bevel_seg'] += 1
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   238|             cnt['kit_decimate'] += 1
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   241|             if cu.bevel_depth > 0 or cu.bevel_object is not None:
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   242|                 cu.resolution_u, cu.bevel_resolution = min(cu.resolution_u, 4), min(cu.bevel_resolution, 1)
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   253| def load_rl():
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   267| def hand_axes(s):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   271|     d = (hd('middle_01_' + s) - H).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   272|     n = d.cross(hd('pinky_01_' + s) - hd('index_01_' + s)).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   281| def build_hands(mats):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   314| def nec_acc_rotation(s, shift, along=0.0):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   315|     """NEC 鎵嬭儗浠讹紙閾叉枟 / 鎸囪檸锛夛細鏃ф墜鐨勩�屾墜鑳屻�嶆槸楠ㄦ灦 +y锛堟墜蹇冩湞鍓嶏級锛屾柊鎵嬬殑鎵嬭儗鏄� -n銆傜粫鎵嬬殑闀胯酱杞�杩囧幓锛屽啀寰�鎵嬪績鎸� shift 鍘樼背銆�"""
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   319|     y0 = (back - z * back.dot(z)).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   321|     t = (tgt - z * tgt.dot(z)).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   327| def material_by_slot(slot):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   337| def slot_of(mname):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   362|     'NEC_M': [dict(op='cut', match=r'^(鏂楁潌鑺瘄鏂楁潌绔�鏂滅汗)[lr]$', at=(0.0, 2.0, -0.5), no=(0.3, 0.6, 0.74),
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   364|     'NEC_H': [dict(op='cut', match=r'^鍓嶈噦鑺痆lr]$', at=(0.0, 2.0, -0.5), no=(0.3, 0.6, 0.74),
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   370| def mesh_canon(o, T):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   377| def prepare_fixes(parts):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   404| def cut_mesh(me, co, nv):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   418|                 f.smooth = False
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   424| def apply_fixes(name, bone, me):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   443|             nv = (k * b[0] + n * b[1] + d * b[2]).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   449| def merge(parts, name):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   465|             me.flip_normals()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   538| def camo_two_tone(robot):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   583| def robot_stats(robot):
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   666|     def v3_hook():
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   682|                 '--export', os.path.join(TMP, 'NEC_L_robot_lookdev.fbx')]
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   697|         nrm = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   748|             nrm = (mw.to_3x3() @ max(me0.polygons, key=lambda f: f.area).normal).normalized()
+[2026.11.02-19.12.49:897][  0]LogPython: Warning: [src]   812|                          add_leaf_bones=False, bake_anim=False, mesh_smooth_type='FACE',
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src] #### lookdev/factions/dingshan/ds_render.py 292 琛�
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]    91| def game_tris():
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]    98|                 undo.append((md, md.segments, md.show_viewport))
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   102|                     md.segments = 1
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   108|             undo.append((o.data, o.data.resolution_u, o.data.bevel_resolution))
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   109|             o.data.resolution_u, o.data.bevel_resolution = 4, 1
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   113|             a.resolution_u, a.bevel_resolution = b, c
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   115|             a.segments, a.show_viewport = b, c
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   152|     d = Vector(view_dir).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   153|     r = (-d).cross(Vector((0, 0, 1))).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   193|     fwd = (ph - pe).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   195|     up = (up - fwd * up.dot(fwd)).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   233|         d = Vector(VIEW_DIRS[v]).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   252|             d = Vector(VIEW_DIRS[v]).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   256|                 dq = Vector((d.x, d.y, 0.0)).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   270|         d = Vector((-0.92, -0.38, 0.08) if ARGS.pose == 'aim' else (0.78, -0.58, 0.08)).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   273|         dq = Vector((d.x, d.y, 0.0)).normalized()
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src] #### lookdev/factions/dingshan/ds_common.py 1250 琛�
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   123|         bev = self.n('ShaderNodeBevel')
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   301|         p.use_smooth = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   307|         m.segments = segs
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   310|         m.harden_normals = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   338| def box(name, w, d, h, mat, parent=None, loc=(0, 0, 0), rot=(0, 0, 0), bevel=0.012):
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   367|         p.use_smooth = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   372|     m1.segments = 1
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   376|     m2.segments = 2
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   379|     m2.harden_normals = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   383| def cyl(name, r, depth, mat, parent=None, loc=(0, 0, 0), rot=(0, 0, 0), segs=32, r2=None, caps=True, bevel=0.004,
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   386|     bmesh.ops.create_cone(bm, cap_ends=caps, cap_tris=False, segments=segs, radius1=r, radius2=r if r2 is None else r2,
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   402| def tube(name, r_out, r_in, h, mat, parent=None, loc=(0, 0, 0), rot=(0, 0, 0), segs=32, bevel=0.003):
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   418| def prism(name, pts, t, mat, parent=None, loc=(0, 0, 0), rot=(0, 0, 0), plane='YZ', bevel=0.008, chamfer=0.0):
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   442|             p.use_smooth = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   446|         m1.segments = 1
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   450|         m2.segments = 2
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   453|         m2.harden_normals = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   487|     bmesh.ops.create_uvsphere(bm, u_segments=segs[0], v_segments=segs[1], radius=r)
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   517|     m.segments = 2
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   520|     m.harden_normals = True
+[2026.11.02-19.12.49:898][  0]LogPython: Warning: [src]   522|         p.use_smooth = True
+[2026.11.02-19.12.49:898][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.12.49:899][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src] #### lookdev/rig/factions/export_factions.py 823 琛�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]     1| # 闃佃惀鏈轰綋锛堟柊绾� NEC / 鐩镐綅 PHASE / 缁村厠鎵� VHI 脳 杞讳腑閲嶏級瀵煎嚭娓告垙鐗� FBX锛氬拰 v3 鍚屼竴鍓�楠ㄦ灦銆佸帢绫冲埗銆佹瘡涓�椤剁偣鍙�缁欎竴鏍归�ㄥご鏉冮噸 1銆�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]     4| #   NEC 涓� / 閲嶏細闆朵欢鎸傚湪缁戦�ㄧ殑绌虹墿浣撲笅锛堥紟灞卞伐绋嬶紝娓告垙绫筹級
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]     5| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_M2.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_M
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]     6| #     blender -b --factory-startup lookdev/factions/dingshan/flat/DS_H1.blend -P lookdev/rig/factions/export_factions.py -- --key NEC_H
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]     7| #     锛�10-31 鍑忔洸闈�浠ュ悗鐨勬簮鏂囦欢锛涙敼鍓嶆槸 dingshan/DS_M.blend / DS_HKF.blend锛�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    13| #   NEC 杞伙紙v3锛夛細涓嶇敤鎵撳紑宸ョ▼锛屾湰杩涚▼閲岀収 robot_lookdev.py 鐨勭幇琛屽�煎嚭閲嶅缓涓�閬嶏紝瀵煎嚭鍓嶅�楀悓涓�濂楁父鎴忕増瑙勭煩
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    14| #     blender -b --factory-startup -P lookdev/rig/factions/export_factions.py -- --key NEC_L
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    20| #   2. 鎵嬶細NEC / PHASE 鍘熸潵鏄�鏁村潡鎵嬶紙鎺� + 涓よ妭鎵嬫寚鎸� hand銆佹媷鎸囨寕 thumb_up锛夆啋 鍒犳帀锛屾崲 robot_lookdev.build_grip_hand 鐨�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    22| #      NEC 鎵嬭儗涓婄殑閾叉枟 / 鎸囪檸鍘熸潵鎸夋棫鎵嬶紙鎵嬪績鏈濆墠锛夋憜锛岃浆 90 搴﹀埌鏂版墜鐨勬墜鑳屾柟鍚戯紙-n锛夈�俈HI 鐨勫簳鐩樻湰鏉ュ氨鏄� v3 鐨勬柊鎵嬶紝涓嶅姩銆�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    47|     'NEC_L': dict(kind='v3', name='鏂扮邯寤鸿�� 杞诲瀷 v3锛堟父鎴忕増閲嶅�硷級'),
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    48|     # 10-31 鍑忔洸闈�锛氫腑鍨嬫崲鏂规�堜簩锛堝叏閮ㄦ柟姝ｅ寲锛夈�侀噸鍨嬫崲鏂规�堜竴锛堝彧鎹㈠ぇ鏇查潰锛夛紱鏀瑰墠鏄� factions/dingshan/DS_M.blend / DS_HKF.blend
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    49|     'NEC_M': dict(kind='ds', src='factions/dingshan/flat/DS_M2.blend', name='鏂扮邯寤鸿�� 涓�鍨嬨�屾寲鎺樻満銆嶏紙鍑忔洸闈㈡柟妗堜簩锛�'),
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    50|     'NEC_H': dict(kind='ds', src='factions/dingshan/flat/DS_H1.blend', name='鏂扮邯寤鸿�� 閲嶅瀷銆岀熆鍗°�嶏紙鍑忔洸闈㈡柟妗堜竴锛�'),
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    69| def parse():
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    76|     p.add_argument('--old-hand', action='store_true')       # NEC / PHASE 淇濈暀鍘熸潵鐨勬暣鍧楁墜锛堝嚭鎵嬮儴鏀瑰墠瀵规瘮鐢�锛屼笉瑕佹嬁鍘昏繘娓告垙锛�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    77|     p.add_argument('--acc-shift', type=float, default=None)  # NEC 鎵嬭儗浠惰浆鍒版柊鎵嬭儗鍚庢部鎵嬪績娉曠嚎鎸�澶氬皯鍘樼背锛堥粯璁わ細閾叉枟 鈭�1銆佹寚铏� 0锛�
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    93| def log(*a):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]    98| def load_v3_heads():
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   116| def fit_to_v3(arm):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   134| def bone_parent_chain(o, arm):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   143| def collect_bone_parts(arm, exclude=()):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   154| def eval_tris(objs):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   169| def ue(v):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   178| def record_decal(kind, name, bone, center, normal, size_cm, text=None):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   189|     if normal.dot(center - P) < 0:
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   190|         normal = -normal
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   192|                                 normal_ue=[round(normal.x, 3), round(-normal.y, 3), round(normal.z, 3)],
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   197| def is_kit(o):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   202| def world_scale_cm(o, T):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   207| def game_mods(parts, kit=True):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   209|     cnt = dict(bevel_seg=0, bevel_small_removed=0, bevel_tiny_removed=0, kit_decimate=0, curve_lowres=0, font_removed=0)
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   216|             nrm = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   225|                 cnt['bevel_small_removed'] += 1
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   228|                 cnt['bevel_tiny_removed'] += 1
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   229|             elif md.segments > 1:
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   230|                 md.segments = 1
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   231|                 cnt['bevel_seg'] += 1
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   238|             cnt['kit_decimate'] += 1
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   241|             if cu.bevel_depth > 0 or cu.bevel_object is not None:
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   242|                 cu.resolution_u, cu.bevel_resolution = min(cu.resolution_u, 4), min(cu.bevel_resolution, 1)
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   253| def load_rl():
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   267| def hand_axes(s):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   271|     d = (hd('middle_01_' + s) - H).normalized()
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   272|     n = d.cross(hd('pinky_01_' + s) - hd('index_01_' + s)).normalized()
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   281| def build_hands(mats):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   314| def nec_acc_rotation(s, shift, along=0.0):
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   315|     """NEC 鎵嬭儗浠讹紙閾叉枟 / 鎸囪檸锛夛細鏃ф墜鐨勩�屾墜鑳屻�嶆槸楠ㄦ灦 +y锛堟墜蹇冩湞鍓嶏級锛屾柊鎵嬬殑鎵嬭儗鏄� -n銆傜粫鎵嬬殑闀胯酱杞�杩囧幓锛屽啀寰�鎵嬪績鎸� shift 鍘樼背銆�"""
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   319|     y0 = (back - z * back.dot(z)).normalized()
+[2026.11.02-19.12.49:899][  0]LogInit: Display: LogPython: Warning: [src]   321|     t = (tgt - z * tgt.dot(z)).normalized()
