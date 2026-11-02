@@ -1,0 +1,35 @@
+oldstreet_dm 结束：ok，用时 63 秒，日志行 34
+[2026.11.02-15.03.26:842][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-15.03.26:842][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-15.03.26:844][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-15.03.26:844][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-15.03.26:844][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-15.03.27:610][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-15.03.27:610][  0]LogPython: Using Python 3.11.8
+[2026.11.02-15.03.27:650][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.03.28:576][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-15.03.28:577][  0]LogTemp: Display: [easter] 彩蛋调度开在 L_OldStreet
+[2026.11.02-15.03.28:577][  0]LogTemp: Display: [loop] 沿 X 循环：周期 100 米，接缝 ±50 米，中心 X = 0 米
+[2026.11.02-15.03.28:601][  0]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-15.03.28:601][  0]LogTemp: Display: [rules] 团队死斗 · 先到 30 击毁 · 10 分钟（先赢 1 局，每局限时 600 秒）
+[2026.11.02-15.03.28:668][  0]LogTemp: Display: [hudtheme] HUD 主题 → STD（没有机体）
+[2026.11.02-15.03.28:688][  0]LogTemp: Display: [alert] 告警音效 14/14 已加载（/Game/Audio/HUD）
+[2026.11.02-15.03.28:708][  0]LogTemp: Display: [alert] 告警语音 冷静女声：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-15.03.29:643][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-15.03.29:660][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 17.598 ms
+[2026.11.02-15.03.29:660][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-15.03.29:681][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-15.03.29:685][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 24.416 ms (total: 42.014 ms)
+[2026.11.02-15.03.29:690][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-15.03.29:695][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-15.03.29:695][  1]LogTemp: Display: [easter] 老街：地图里没有 EasterDoor 标记，在街边楼面上找了一处，门放在 V(X=2700.00, Y=-831.04, Z=160.00)
+[2026.11.02-15.03.29:696][  1]LogTemp: Display: [easter] 门 在 V(X=2700.00, Y=-831.04, Z=160.00)（占位）
+[2026.11.02-15.03.29:697][  1]LogTemp: Display: [easter] 按钮 在 V(X=2700.00, Y=-861.04, Z=160.00)（占位）
+[2026.11.02-15.03.30:023][ 21]LogTemp: Display: [map] 开拍：活动范围 115×30 米，底图 1536×1024（3×2 块，10.1 厘米/像素），镜头高 34 米（参考地面 0）
+[2026.11.02-15.03.30:568][ 24]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-15.03.30:717][ 25]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-15.03.30:717][ 25]LogTemp: Display: [lobby] 进房间：每队 2 台，AI 强度 1
+[2026.11.02-15.03.30:717][ 25]LogTemp: Display: [music] 无 → 房间 巌戸台分寮
+[2026.11.02-15.03.31:007][ 27]LogTemp: Display: [map] 高度校验：18 个点平均差 126 厘米（几十厘米以内 = 方向和高度都对）
+[2026.11.02-15.03.31:286][ 55]LogTemp: Display: [map] 底图完成：拍摄共 239 毫秒（6 块），从开拍到能用 1.3 秒，贴图 1536×1024（6.0 MB）
+[2026.11.02-15.04.09:758][485]LogTemp: Display: [pilot] 到点退出（-MechQuitAfter）：自己机体 没有，收到服务器移动纠正 -1 次
