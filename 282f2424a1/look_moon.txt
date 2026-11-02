@@ -1,0 +1,19 @@
+exit=0
+[2026.11.02-11.24.38:842][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.24.39:211][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.24.39:219][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.942 ms
+[2026.11.02-11.24.39:219][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.24.39:280][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 61.645 ms (total: 69.588 ms)
+[2026.11.02-11.24.39:280][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_moon_look.py
+[2026.11.02-11.24.39:289][  0]LogPython: Warning: [moonlook] TileF = 140.0
+[2026.11.02-11.24.39:289][  0]LogPython: Warning: [moonlook] FineAmt = 1.35
+[2026.11.02-11.24.39:290][  0]LogPython: Warning: [moonlook] FineNormal = 1.3
+[2026.11.02-11.24.39:290][  0]LogPython: Warning: [moonlook] DetailNormal = 1.25
+[2026.11.02-11.24.39:353][  0]LogPython: Warning: [moonlook] 宸插瓨 /Game/Env/Moon/Materials/MI_Moon_Ground
+[2026.11.02-11.24.39:353][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-11.24.39:353][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-11.24.39:353][  0]LogInit: Display: LogPython: Warning: [moonlook] TileF = 140.0
+[2026.11.02-11.24.39:353][  0]LogInit: Display: LogPython: Warning: [moonlook] FineAmt = 1.35
+[2026.11.02-11.24.39:353][  0]LogInit: Display: LogPython: Warning: [moonlook] FineNormal = 1.3
+[2026.11.02-11.24.39:353][  0]LogInit: Display: LogPython: Warning: [moonlook] DetailNormal = 1.25
+[2026.11.02-11.24.39:353][  0]LogInit: Display: LogPython: Warning: [moonlook] 宸插瓨 /Game/Env/Moon/Materials/MI_Moon_Ground

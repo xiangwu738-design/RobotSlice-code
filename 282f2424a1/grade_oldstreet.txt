@@ -1,0 +1,111 @@
+grade_oldstreet 结束：ok，用时 78 秒，日志行 110
+[2026.11.02-11.25.46:115][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.25.46:115][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-11.25.46:115][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.25.46:115][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-11.25.46:115][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-11.25.46:610][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-11.25.46:610][  0]LogPython: Using Python 3.11.8
+[2026.11.02-11.25.46:635][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.25.47:321][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-11.25.47:322][  0]LogTemp: Display: [easter] 彩蛋调度开在 L_OldStreet
+[2026.11.02-11.25.47:322][  0]LogTemp: Display: [loop] 沿 X 循环：周期 100 米，接缝 ±50 米，中心 X = 0 米
+[2026.11.02-11.25.47:336][  0]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-11.25.47:339][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-11.25.47:340][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.25.47:340][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.25.47:340][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.25.47:343][  0]LogTemp: Display: [ai]  强度 1 喜欢距离 40 米 进攻性 0.30 反应 0.42 提前量 0.23
+[2026.11.02-11.25.47:344][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-11.25.47:344][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-11.25.47:345][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-11.25.47:345][  0]LogTemp: Display: [keys] 键位： 前进=W 后退=S 左移=A 右移=D 跳跃 / 喷射 / 蹬墙=SpaceBar 冲刺 / 滑翔=LeftShift 快速闪避=F 切换射击 / 近战=Q 开火 / 攻击=LeftMouseButton 瞄准 / 格挡=RightMouseButton 肩部装备=E 换弹=R 第一人称=V 大地图（按住）=M 计分板（按住）=Tab 扔核心（夺芯）=G 标点=MiddleMouseButton
+[2026.11.02-11.25.47:371][  0]LogTemp: Display: [hudtheme] HUD 主题 → NEC（自己操控的机体）
+[2026.11.02-11.25.47:380][  0]LogTemp: Display: [alert] 告警音效 14/14 已加载（/Game/Audio/HUD）
+[2026.11.02-11.25.47:389][  0]LogTemp: Display: [alert] 告警语音 冷静女声：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-11.25.47:941][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.25.47:951][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 9.454 ms
+[2026.11.02-11.25.47:951][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.25.47:962][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-11.25.47:964][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 13.345 ms (total: 22.800 ms)
+[2026.11.02-11.25.47:972][  0]LogPython: [osshots] 已挂上逐帧回调，输出 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet
+[2026.11.02-11.25.47:972][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-11.25.47:976][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-11.25.47:976][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.25.47:976][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.25.47:976][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.25.47:987][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-11.25.48:829][ 54]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-11.25.49:031][ 55]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-11.25.50:135][153]LogTemp: Display: [beauty] g1_front 机体位置 X=-200.000 Y=2600.000 Z=131.490 包围盒中心 X=-206.708 Y=2600.000 Z=121.740 半径 191 最近渲染 1
+[2026.11.02-11.25.51:471][205]LogTemp: Display: [easter] 老街：地图里没有 EasterDoor 标记，在街边楼面上找了一处，门放在 V(X=2700.00, Y=-831.04, Z=160.00)
+[2026.11.02-11.25.51:471][205]LogTemp: Display: [easter] 门 在 V(X=2700.00, Y=-831.04, Z=160.00)（占位）
+[2026.11.02-11.25.51:472][205]LogTemp: Display: [easter] 按钮 在 V(X=2700.00, Y=-861.04, Z=160.00)（占位）
+[2026.11.02-11.25.52:475][304]LogPython: [osshots] 画质临时调到史诗，原值 {'sg.ResolutionQuality': 71.0, 'sg.ViewDistanceQuality': 1.0, 'sg.AntiAliasingQuality': 1.0, 'sg.ShadowQuality': 1.0, 'sg.GlobalIlluminationQuality': 1.0, 'sg.ReflectionQuality': 1.0, 'sg.PostProcessQuality': 1.0, 'sg.TextureQuality': 1.
+[2026.11.02-11.25.52:475][304]LogPython: [osshots] 暂停，开始拍
+[2026.11.02-11.25.52:477][304]LogPython: Warning: D:/RobotSlice/tools/ue_oldstreet_shots.py:72: DeprecationWarning: TraceTypeQuery: Enum entry 'TraceTypeQuery.TRACE_TYPE_QUERY1' is deprecated: Use 'TraceTypeQuery.ECC_VISIBILITY'
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 路中 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 人行道 (0.058498263359069824, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 接缝路面 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 接缝前 1 米 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 接缝后 1 米 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 -1 号周期 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 碰撞自检 +1 号周期 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:477][304]LogPython: [osshots] 出生点地面 -25.0 -7.0 (0.058498263359069824, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 出生点地面 -25.0 0.0 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 出生点地面 -25.0 7.0 (0.05850023031234741, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 出生点地面 25.0 -7.0 (0.058498263359069824, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 出生点地面 25.0 0.0 (-8.940696716308594e-07, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 出生点地面 25.0 7.0 (0.05850023031234741, 'Full_Ground')
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 0.0 0.0 -8.940696716308594e-07 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 -2.0 26.0 -0.0025953054428100586 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 -2.0 -22.0 0.058496296405792236 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 42.0 1.0 -8.940696716308594e-07 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 19.0 2.0 -8.940696716308594e-07 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 -21.0 -2.0 0.058498263359069824 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 27.0 34.0 0.058506131172180176 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 -22.0 34.0 0.058506131172180176 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 27.0 -33.0 0.05849432945251465 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 死斗点 -30.0 -33.0 0.05849432945251465 Full_Ground
+[2026.11.02-11.25.52:478][304]LogPython: [osshots] 楼顶 A 14.6 14.0 17.89453849196434 Full_Bld_A
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 E 33.4 14.5 9.071792185306549 Full_Bld_E
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 B 44.8 10.8 16.944200098514557 Full_BldB_Collide
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 F -35.7 20.4 6.970525503158569 Full_Bld_F
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 D 7.7 -15.3 13.714907348155975 Full_Bld_D
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 B 20.3 -10.8 16.944200098514557 Full_BldB_Collide
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 E 31.3 -14.5 9.071792185306549 Full_Bld_E
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 D 44.7 -15.0 13.714907348155975 Full_Bld_D
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 F -34.6 -18.8 6.970525503158569 Full_Bld_F
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 A -14.4 -14.0 17.89453849196434 Full_Bld_A
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 D 15.7 27.8 13.714907348155975 Full_Bld_D
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 A 14.8 41.6 17.89453849196434 Full_Bld_A
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 E -31.4 39.0 9.071792185306549 Full_Bld_E
+[2026.11.02-11.25.52:479][304]LogPython: [osshots] 楼顶 E 13.7 -28.7 9.071792185306549 Full_Bld_E
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 楼顶 D 14.5 -41.8 13.714907348155975 Full_Bld_D
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 楼顶 B -12.0 -23.5 16.944200098514557 Full_BldB_Collide
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 楼顶 D -14.6 -34.2 13.714907348155975 Full_Bld_D
+[2026.11.02-11.25.52:480][304]LogPython: Warning: D:/RobotSlice/tools/ue_oldstreet_shots.py:120: DeprecationWarning: ObjectTypeQuery: Enum entry 'ObjectTypeQuery.OBJECT_TYPE_QUERY5' is deprecated: Use 'ObjectTypeQuery.ECC_VEHICLE'
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 隐形墙 右墙 停在 [0.0, 40.0, 20.0]
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 隐形墙 左墙 停在 [20.0, -40.0, 20.0]
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 隐形墙 封顶 停在 [30.0, 0.0, 40.0]
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 隐形墙 前墙 停在 [149.0, 0.0, 20.0]
+[2026.11.02-11.25.52:480][304]LogPython: [osshots] 隐形墙 后墙 停在 [-149.0, 0.0, 20.0]
+[2026.11.02-11.25.52:551][305]LogTemp: Display: [ui] 3D 渲染精度 71%
+[2026.11.02-11.25.52:627][305]LogPython: [osshots] street_eye 机位 [-22.0, 1.0, 3.2] yaw -2 pitch 0.3 fov 75
+[2026.11.02-11.25.57:457][720]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/street_eye.png 后半段平均帧率 89.8
+[2026.11.02-11.25.59:070][781]LogPython: [osshots] street_back 机位 [24.0, 1.0, 3.2] yaw -178 pitch 0.3 fov 75
+[2026.11.02-11.26.04:069][270]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/street_back.png 后半段平均帧率 99.8
+[2026.11.02-11.26.05:179][338]LogPython: [osshots] cross 机位 [-12.0, -2.0, 4.0] yaw 50 pitch 0.0 fov 78
+[2026.11.02-11.26.10:180][839]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/cross.png 后半段平均帧率 100.2
+[2026.11.02-11.26.11:289][917]LogPython: [osshots] cross_w 机位 [4.0, 3.0, 4.0] yaw -101 pitch 0.0 fov 78
+[2026.11.02-11.26.16:293][469]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/cross_w.png 后半段平均帧率 113.7
+[2026.11.02-11.26.17:418][549]LogPython: [osshots] author 机位 [-12.0, 0.7, 1.4] yaw 2 pitch 5.6 fov 62
+[2026.11.02-11.26.22:425][994]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/author.png 后半段平均帧率 91.7
+[2026.11.02-11.26.23:562][ 66]LogPython: [osshots] high 机位 [-60.0, -24.0, 38.0] yaw 17 pitch -19.0 fov 72
+[2026.11.02-11.26.28:568][551]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/high.png 后半段平均帧率 97.6
+[2026.11.02-11.26.29:706][617]LogPython: [osshots] far_fwd 机位 [0.0, 0.0, 3.2] yaw 0 pitch 0.3 fov 45
+[2026.11.02-11.26.34:716][ 73]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/far_fwd.png 后半段平均帧率 93.7
+[2026.11.02-11.26.35:937][129]LogPython: [osshots] far_back 机位 [0.0, 0.0, 3.2] yaw 180 pitch 0.3 fov 45
+[2026.11.02-11.26.40:937][574]LogPython: [osshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/oldstreet/far_back.png 后半段平均帧率 92.1
+[2026.11.02-11.26.44:132][797]LogPython: [osshots] 窗口分辨率设回 (1440, 810)
+[2026.11.02-11.26.44:132][797]LogPython: [osshots] 完成，帧率 [('street_eye', 89.8), ('street_back', 99.8), ('cross', 100.2), ('cross_w', 113.7), ('author', 91.7), ('high', 97.6), ('far_fwd', 93.7), ('far_back', 92.1)]
