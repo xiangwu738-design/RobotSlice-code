@@ -1,0 +1,27 @@
+exit=0
+[2026.11.02-13.41.27:350][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-13.41.28:144][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.41.28:163][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 19.273 ms
+[2026.11.02-13.41.28:163][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.41.28:186][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 22.039 ms (total: 41.312 ms)
+[2026.11.02-13.41.28:186][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_package_status.py
+[2026.11.02-13.41.28:190][  0]LogPython: Warning: [packstat] 鏈�鏂颁竴娆� 20261102_143118锛屾棩蹇� 0.0 MB锛�10 鍒嗛挓鍓嶆洿鏂�
+[2026.11.02-13.41.28:192][  0]LogPython: Warning: [packstat] 宸茬粨鏉燂紝閫�鍑虹爜 0 锛�0 = 鎴愬姛锛�
+[2026.11.02-13.41.28:192][  0]LogPython: Warning: [packstat] 鍏抽敭琛� 0 鏉★紙鏈�澶� 60锛夛細
+[2026.11.02-13.41.28:193][  0]LogPython: Warning: [packstat] 鏈�鍚� 25 琛岋細
+[2026.11.02-13.41.28:193][  0]LogPython: Warning: [packstat]   | Running AutomationTool...
+[2026.11.02-13.41.28:193][  0]LogPython: Warning: [packstat]   | Using bundled DotNet SDK version: 10.0 win-x64
+[2026.11.02-13.41.28:193][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build/Windows/RobotSlice.exe 11-02 14:34
+[2026.11.02-13.41.28:219][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build\Windows\RobotSlice.exe 11-02 14:34
+[2026.11.02-13.41.28:222][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice/Saved/StagedBuilds\Windows\RobotSlice.exe 11-02 14:34
+[2026.11.02-13.41.28:222][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-13.41.28:222][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鏈�鏂颁竴娆� 20261102_143118锛屾棩蹇� 0.0 MB锛�10 鍒嗛挓鍓嶆洿鏂�
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 宸茬粨鏉燂紝閫�鍑虹爜 0 锛�0 = 鎴愬姛锛�
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鍏抽敭琛� 0 鏉★紙鏈�澶� 60锛夛細
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鏈�鍚� 25 琛岋細
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat]   | Running AutomationTool...
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat]   | Using bundled DotNet SDK version: 10.0 win-x64
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build/Windows/RobotSlice.exe 11-02 14:34
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build\Windows\RobotSlice.exe 11-02 14:34
+[2026.11.02-13.41.28:222][  0]LogInit: Display: LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice/Saved/StagedBuilds\Windows\RobotSlice.exe 11-02 14:34
