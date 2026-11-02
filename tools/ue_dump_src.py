@@ -6,8 +6,8 @@ import unreal
 
 ROOT = 'D:/RobotSlice'
 TARGETS = [
-    ('lookdev/make_shoulder_kits.py', r'^def |^LIB|^KIT|^[A-Z_]+ = |return|libraries|bound|dimensions|size|axis|rot'),
-    ('lookdev/make_shoulder_game.py', r'.'),
+    ('lookdev/make_shoulder_tactical.py', r'.'),
+    ('lookdev/make_shoulder_kits.py', r'.'),
 ]
 import glob as _g
 for _d in ():
@@ -23,6 +23,6 @@ for path, pat in TARGETS:
     log('####', path, len(lines), '行')
     n = 0
     for i, l in enumerate(lines):
-        if re.search(pat, l) and n < 400 and ('make_shoulder_game' not in path or 1 <= i <= 200):
+        if re.search(pat, l) and n < 400 and (('tactical' in path and i < 300) or ('kits' in path and i < 32)):
             log(f'{i + 1:5d}| {l.rstrip()[:230]}')
             n += 1
