@@ -249,6 +249,8 @@ protected:
 	virtual void SimulatedTick(float DeltaSeconds) override;
 	virtual void SmoothClientPosition(float DeltaSeconds) override;
 	virtual bool ClientUpdatePositionAfterServerUpdate() override;
+	/** 11-02 老街循环（MechLoop.h）：每次移动完走出接缝就挪一个周期回来（服务器、本机预测、重放都走这里，结果一样） */
+	virtual void OnMovementUpdated(float DeltaSeconds, const FVector& OldLocation, const FVector& OldVelocity) override;
 	using UCharacterMovementComponent::OnClientCorrectionReceived;
 	virtual void OnClientCorrectionReceived(class FNetworkPredictionData_Client_Character& ClientData, float TimeStamp, FVector NewLocation,
 		FVector NewVelocity, FMovementBaseInterfaceData* NewMovementBaseInterfaceData, FName NewBaseBoneName, bool bHasBase,
@@ -330,6 +332,8 @@ private:
 	FVector OwnBoomBase = FVector::ZeroVector;
 	bool bOwnBoomBase = false;
 	bool bOwnApplied = false;
+	/** 老街循环：本机镜头这一帧为瞬移关掉了镜头延迟，下一帧开回去 */
+	bool bLoopLagRestore = false;
 
 	struct FLateTick : public FTickFunction
 	{

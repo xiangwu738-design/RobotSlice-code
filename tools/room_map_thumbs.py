@@ -18,12 +18,17 @@ JOBS = {
     "L_Pillars": (r"Pillars\final\3_flight.png", None),
     "L_Soviet": (r"Soviet\v8\c0_third_street.png", None),
     "L_Moon": (r"Moon\v9\p_mech_earth.png", None),
+    # 11-02 老旧街道：用 tools/oldstreet_shots.sh 拍的街景（换成实际拍好的那张；源图不存在时跳过，房间页画占位）
+    "L_OldStreet": (r"OldStreet\final\street_fwd.png", None),
     # 测试场：-MechBeauty 拍的远景（不带 HUD，源图存在 SourceAssets/ui_maps/源图），只留场地那块
     "L_Range": (OUT + r"\源图\g5_wide.png", (0.3, 0.2, 0.92, 0.74)),
 }
 
 os.makedirs(OUT, exist_ok=True)
 for name, (src, box) in JOBS.items():
+    if not os.path.exists(os.path.join(ROOT, src)):
+        print(f"跳过 {name}：源图不存在 {src}")
+        continue
     im = Image.open(os.path.join(ROOT, src)).convert("RGB")
     w, h = im.size
     if box:
