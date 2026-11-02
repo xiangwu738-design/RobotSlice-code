@@ -31,6 +31,15 @@ log('blender =', BL, '；py =', PY)
 ok = True
 for step in CFG['steps']:
     kind, script, args = step[0], step[1], step[2:]
+    if kind == 'copy':
+        # 把 tools 下的底子复制到 Inbox（Inbox 不同步）
+        src, dst_dir = f'{ROOT}/{script}', f'{ROOT}/{args[0]}'
+        os.makedirs(dst_dir, exist_ok=True)
+        for f in glob.glob(f'{src}/*'):
+            if os.path.isfile(f):
+                shutil.copy(f, f'{dst_dir}/{os.path.basename(f)}')
+        log('复制', script, '→', args[0], os.listdir(dst_dir))
+        continue
     if kind == 'blender':
         if not BL:
             log('找不到 blender.exe，停')

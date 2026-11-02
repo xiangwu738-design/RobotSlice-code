@@ -1,15 +1,59 @@
 {
   "_说明": "云端驱动彩蛋建模（grade_easter_build.py 读它）：按顺序跑这些步骤，每步一条命令。blender 步骤写 -P 后面的脚本和参数，py 步骤用系统 Python。collect 是跑完要收回来的图（本地测试流程每项最多 12 张）。",
   "steps": [
-    ["blender", "tools/blender_easter_parts.py", "find"],
-    ["blender", "tools/blender_easter_survey.py", "dog"],
-    ["blender", "tools/blender_easter_survey.py", "drone"],
-    ["py", "tools/easter_sheet.py", "Inbox/_easter/survey/dog"],
-    ["py", "tools/easter_sheet.py", "Inbox/_easter/survey/drone"],
-    ["blender", "tools/blender_easter_dog.py"],
-    ["blender", "tools/blender_easter_drone.py"],
-    ["py", "tools/easter_sheet.py", "Inbox/_easter/preview/dog"],
-    ["py", "tools/easter_sheet.py", "Inbox/_easter/preview/drone"]
+    [
+      "copy",
+      "tools/easter_src/dog",
+      "Inbox/_easter/dog"
+    ],
+    [
+      "copy",
+      "tools/easter_src/drone",
+      "Inbox/_easter/drone"
+    ],
+    [
+      "blender",
+      "tools/blender_easter_parts.py",
+      "find"
+    ],
+    [
+      "blender",
+      "tools/blender_easter_survey.py",
+      "dog"
+    ],
+    [
+      "blender",
+      "tools/blender_easter_survey.py",
+      "drone"
+    ],
+    [
+      "py",
+      "tools/easter_sheet.py",
+      "Inbox/_easter/survey/dog"
+    ],
+    [
+      "py",
+      "tools/easter_sheet.py",
+      "Inbox/_easter/survey/drone"
+    ],
+    [
+      "blender",
+      "tools/blender_easter_dog.py"
+    ],
+    [
+      "blender",
+      "tools/blender_easter_drone.py"
+    ],
+    [
+      "py",
+      "tools/easter_sheet.py",
+      "Inbox/_easter/preview/dog"
+    ],
+    [
+      "py",
+      "tools/easter_sheet.py",
+      "Inbox/_easter/preview/drone"
+    ]
   ],
   "collect": [
     "Inbox/_easter/survey/dog_总览.jpg",
@@ -17,5 +61,8 @@
     "Inbox/_easter/preview/dog_总览.jpg",
     "Inbox/_easter/preview/drone_总览.jpg"
   ],
-  "log_files": ["Inbox/_easter/export/PDog_build.json", "Inbox/_easter/export/VDrone_build.json"]
+  "log_files": [
+    "Inbox/_easter/export/PDog_build.json",
+    "Inbox/_easter/export/VDrone_build.json"
+  ]
 }
