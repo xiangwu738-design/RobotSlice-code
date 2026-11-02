@@ -1,4 +1,9 @@
 {"build": false, "tests": [
-  {"kind": "gamepy", "name": "kf_shoulder", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_shoulder.py", "seconds": 900},
-  {"kind": "gamepy", "name": "kf_shoulder_old", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_shoulder_old.py", "seconds": 120}
+  {"kind": "py", "name": "kfsh_copy", "script": "tools/ue_kitfree_shoulder_copy.py", "seconds": 120},
+  {"kind": "py", "name": "import_shoulder", "script": "tools/ue_import_shoulder.py", "seconds": 600},
+  {"kind": "py", "name": "import_shoulder_tactical", "script": "tools/ue_import_shoulder_tactical.py", "seconds": 600},
+  {"kind": "gamepy", "name": "easter_build", "map": "/Game/Maps/L_Range", "script": "tools/grade_easter_build.py", "seconds": 900},
+  {"kind": "py", "name": "easter_import", "script": "tools/ue_easter_import_all.py", "seconds": 600},
+  {"kind": "game", "name": "tactical_test", "map": "/Game/Maps/L_Range?Range", "args": ["-MechTacticalTest", "-MechHour=13", "-MechWeather=Clear"], "seconds": 200},
+  {"kind": "gamepy", "name": "easter_ingame", "map": "/Game/Maps/L_Soviet?Range", "script": "tools/grade_easter_ingame.py", "args": ["-MechInfiniteEnergy", "-MechEasterLog"], "seconds": 180}
 ]}
