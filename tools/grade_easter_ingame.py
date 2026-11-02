@@ -11,7 +11,7 @@ OUT = 'D:/RobotSlice/Saved/Screenshots/EasterIngame'
 os.makedirs(OUT, exist_ok=True)
 log = lambda *a: unreal.log_warning('[easteringame] ' + ' '.join(str(x) for x in a))
 st = {'t0': time.time(), 'phase': 0, 'next': 0.0, 'world': None}
-SHOTS = [('front', -6.0, 0.0), ('up', 12.0, 0.0), ('left', -4.0, -25.0)]
+SHOTS = [('front', -6.0, 0.0), ('up', 12.0, 0.0), ('left', -4.0, -25.0), ('close', -28.0, 0.0)]
 
 
 def world():
@@ -35,11 +35,12 @@ def tick(dt):
         st['phase'], st['next'] = 1, t + 4.0
     elif 1 <= st['phase'] <= len(SHOTS) and t > st['next'] and pawn:
         name, pitch, dyaw = SHOTS[st['phase'] - 1]
-        if name == 'left':
+        if name in ('left', 'close'):
             # 往前挪近一点再拍（狗在面前 8 米）
             loc = pawn.get_actor_location()
             fwd = pawn.get_actor_forward_vector()
-            pawn.set_actor_location(unreal.Vector(loc.x + fwd.x * 400, loc.y + fwd.y * 400, loc.z), False, True)
+            step = 400 if name == 'left' else 350  # close：再往前 3.5 米，低头看狗（看三种颜色）
+            pawn.set_actor_location(unreal.Vector(loc.x + fwd.x * step, loc.y + fwd.y * step, loc.z), False, True)
         yaw = pawn.get_actor_rotation().yaw + dyaw
         pc.set_control_rotation(unreal.Rotator(roll=0.0, pitch=pitch, yaw=yaw))
         unreal.SystemLibrary.execute_console_command(w, f'HighResShot 1920x1080 filename={OUT}/{name}.png')
