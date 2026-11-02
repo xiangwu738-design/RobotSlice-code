@@ -1,4 +1,4 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "tracer_check", "script": "tools/ue_tracer_check.py", "seconds": 180},
-  {"kind": "gamepy", "name": "pillars_net", "map": "/Game/Maps/L_Pillars?Match?Mode=DM?listen", "script": "tools/grade_net_perf.py", "args": ["-MechPerf", "-MechQuitAfter=185"], "seconds": 260}
+  {"kind": "py", "name": "find_media", "script": "tools/ue_find_media.py", "seconds": 240},
+  {"kind": "py", "name": "tracer_check", "script": "tools/ue_tracer_check.py", "seconds": 180}
 ]}
