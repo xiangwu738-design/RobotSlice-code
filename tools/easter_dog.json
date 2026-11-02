@@ -313,62 +313,6 @@
       "glow": true
     },
     {
-      "name": "back_plate",
-      "src": [
-        {
-          "type": "faction",
-          "key": "PHASE_M",
-          "bone": "spine_05"
-        },
-        {
-          "type": "faction",
-          "key": "PHASE_L",
-          "bone": "spine_05"
-        }
-      ],
-      "orient": [
-        [
-          "-Y",
-          "+Z"
-        ],
-        [
-          "+Z",
-          "+X"
-        ]
-      ],
-      "to": "body",
-      "anchor": "top",
-      "inset": 0.3,
-      "fit": "xy",
-      "size": 0.8,
-      "bone": "body",
-      "_": "背甲：相位中型的胸甲，正面朝上、原来的上方朝前"
-    },
-    {
-      "name": "rear_plate",
-      "src": {
-        "type": "faction",
-        "key": "PHASE_L",
-        "bone": "pelvis"
-      },
-      "orient": [
-        [
-          "-Y",
-          "-X"
-        ],
-        [
-          "+Z",
-          "+Z"
-        ]
-      ],
-      "to": "body",
-      "anchor": "back",
-      "inset": 0.4,
-      "fit": "yz",
-      "size": 0.75,
-      "bone": "body"
-    },
-    {
       "name": "thigh",
       "src": {
         "type": "faction",
@@ -532,5 +476,64 @@
   ],
   "pose_frame": -1,
   "_pose_frame": "11-02：Spot Mini 底子默认趴着（自带的 start 动作是站起来），取动作最后一帧（-1）当站姿再烤；底子朝 +Y（glTF 的 -Z 前方，头节点在那边）",
-  "_11-02_比例": "用户：狗的头太大了，按偏真实的比例和形状（Spot 的头就是机身前端略窄的传感器罩，高度和身体差不多）。头 0.8→0.42 倍身宽、贴机身前端略低；脖子 0.55→0.3；眼灯 0.2→0.12；腿不再缩短（0.85→1.0）"
+  "_11-02_比例": "用户：狗的头太大了，按偏真实的比例和形状（Spot 的头就是机身前端略窄的传感器罩，高度和身体差不多）。头 0.8→0.42 倍身宽、贴机身前端略低；脖子 0.55→0.3；眼灯 0.2→0.12；腿不再缩短（0.85→1.0）",
+  "_removed_pieces_11-02": [
+    {
+      "name": "back_plate",
+      "src": [
+        {
+          "type": "faction",
+          "key": "PHASE_M",
+          "bone": "spine_05"
+        },
+        {
+          "type": "faction",
+          "key": "PHASE_L",
+          "bone": "spine_05"
+        }
+      ],
+      "orient": [
+        [
+          "-Y",
+          "+Z"
+        ],
+        [
+          "+Z",
+          "+X"
+        ]
+      ],
+      "to": "body",
+      "anchor": "top",
+      "inset": 0.3,
+      "fit": "xy",
+      "size": 0.8,
+      "bone": "body",
+      "_": "背甲：相位中型的胸甲，正面朝上、原来的上方朝前"
+    },
+    {
+      "name": "rear_plate",
+      "src": {
+        "type": "faction",
+        "key": "PHASE_L",
+        "bone": "pelvis"
+      },
+      "orient": [
+        [
+          "-Y",
+          "-X"
+        ],
+        [
+          "+Z",
+          "+Z"
+        ]
+      ],
+      "to": "body",
+      "anchor": "back",
+      "inset": 0.4,
+      "fit": "yz",
+      "size": 0.75,
+      "bone": "body"
+    }
+  ],
+  "_11-02_比例2": "第二轮站起来以后，背板 / 后板是两块厚装甲，把 Spot 本身的形状整个盖住，像一堆箱子。用户要偏真实的比例和形状 → 去掉这两块（原配置留在 _removed_pieces_11-02），相位的风格靠材质（冷灰 + 青色灯带）和小件（头、眼灯、侧灯带、尾天线、大腿 / 小腿外壳）"
 }
