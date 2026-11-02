@@ -157,6 +157,8 @@ private:
 	void DrawDefense(AMechCharacter* Mech);
 	/** 保卫战肉鸽成长（11-01，实现在 MechHudRun.cpp）：等级和经验条、下方的选卡、按住 Tab 看已拿到的卡、导弹锁杂兵的框 */
 	void DrawRun(AMechCharacter* Mech);
+	/** 11-02 彩蛋（实现在 MechHudEaster.cpp）：无人机 / 机械狗的标记和锁定框、全场提示 */
+	void DrawEaster(AMechCharacter* Mech);
 	/** 蜂群全锁的框（0.2 秒查一次视野） */
 	TArray<TWeakObjectPtr<AActor>> RunMarks;
 	float RunMarksTime = -100.f;

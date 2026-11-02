@@ -704,6 +704,27 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **结果（10-31）**：九台全部导入，骨头 99 根（含 root）和骨架 / v3 名字、父子、顺序一致，绑定姿势差 0；三角面 NEC_L 72,408 / NEC_M 51,290 / NEC_H 22,716（下午换减曲面方案后 41,262 / 18,648） / VHI_L 37,737 / VHI_M 44,572 / VHI_H 39,344 / PHASE_L 31,128 / PHASE_M 30,346 / PHASE_H 28,120。总览 `docs/阵营机体_游戏内总览.jpg`、动作 `docs/阵营机体_游戏内动作.jpg`。头部限位实测（`-MechViewerShots=frames -MechAnimLog`）：维克托中 / 重原始偏航最大 81° → 25°、俯仰 40° → 15°、侧歪 28° → 15°；踝上翘原始最大 62°，相位中 / 重 → 15°、其余 → 35°。`-MechAutoBattle -MechTeam=3`（街道，slomo 2）整场打完不崩，AI 抽到相位重 ×2、新纪中 ×2、相位轻、新纪重；`-MechDuelTest`（-nullrhi）十五项都跑完，打出的数和日志里写的应为值一致；`-MechPerf`（街道 3v3、`-MechInputTest -MechRounds=2`、离屏 1920×1080）每回合六台全重型（`-MechForceFrame=258`）平均 121.8 帧 / 1% 最慢 15 毫秒，全 v3 对照 120.8 帧 / 16 毫秒，没差别（离屏时 GPU 只有 2 毫秒左右，显卡负担没量准）。主菜单展示机体、选配 / 测试场配装页（框架页按企业分三行）、结算场景（`-MechResultsTest`）都按框架显示对的那台。
 - **待用户定 / 没做**：各家同档要不要加小数值差（现在完全一样）；维克托 / 相位六台的型号和名字是草案；维克托迷彩的格子大小 / 三色比例看过再调（材质参数，不用重导）；新纪中 / 重的铲斗 / 指虎换到手背（见 `docs/阵营机甲/新纪_手部附件.png`）、相位重型的肩和中型一样宽、维克托斥候披风擦左臂这些清单里的外形问题没动；贴花（机身型号字）没做；没有 LOD / 法线贴图；九台没在联机里实测（换网格走复制的配装，逻辑同单机）。
 
+## 彩蛋模型流程（11-02）
+
+两种彩蛋敌人的模型（设计见 `docs/本轮待办_20261102.md`「彩蛋」）：**相位电子机械狗**（细长、冷灰、青色点缀，头身比偏大、腿短一点、两盏眼灯、小尾巴天线）、**维克托重工无人机**（军用、方块感、红色点缀）。底子是 Sketchfab 现成模型（Spot Mini、Cyberpunk Drone，放 `Inbox/_easter/dog`、`Inbox/_easter/drone`），外壳用现有机体零件拼、材质沿用机体那套，不是只换涂装，也不现做几何。**状态：脚本写好了，模型还没下载、还没跑过**；下载清单和命令见根目录 `CLOUD_需要用户做.md`。
+
+- **流程**（中间文件都在 `Inbox/_easter/`，每步日志 `Inbox/_easter/logs/<步骤>_<时间>.txt`）：
+  1. `blender -b --factory-startup -P tools/blender_easter_parts.py -- find | <台名> [骨头正则 | @材质正则]`：零件来源普查（阵营机体每根骨头上的零件、按大小编号的散件、组件库 / 肩部 FBX 在哪）。
+  2. `blender -b --factory-startup -P tools/blender_easter_survey.py -- dog|drone [文件] [键=值]`：底子普查（物体、骨架、动作、材质会分到哪个槽）+ 摆到游戏朝向后的图、狗的身体 / 腿分段图、无人机旋翼图 → `survey/<dog|drone>_survey.json`。
+  3. `blender -b --factory-startup -P tools/blender_easter_dog.py [-- 键=值]`、`tools/blender_easter_drone.py`：建模导出 → `export/`（FBX + `*_build.json`），`build/*_build.blend`（可打开手改），`preview/<dog|drone>/`。
+  4. `blender_easter_preview.py -- dog|drone`：从 `build/*.blend` 重拍 + 配置里每套涂装一张；`py -3 tools/easter_sheet.py <图目录>` 拼成 `<目录>_总览.jpg`。
+  5. `UnrealEditor-Cmd RobotSlice.uproject -run=pythonscript -script="D:/RobotSlice/tools/ue_easter_import.py [all|mat|drone|dog|anims]" -AllowCommandletRendering -RenderOffscreen -unattended`（日志 `[easter]`、`Saved/easter_import.txt`）。
+  6. 游戏里看：测试场 `-game -MechBeauty "-ExecCmds=py D:/RobotSlice/tools/ue_easter_shots.py"`（机体前面 4 只狗 + 4 架无人机各一套涂装，旋翼转、狗播走路，5 张截图 `Saved/Screenshots/Easter`）。
+- **参数全在 `tools/easter_dog.json` / `easter_drone.json`**（命令行 `键=值` 临时改，`pieces.3.size=0.7` 这种点路径也行）：朝向（`forward` 默认按物体 / 骨头名猜前后，猜不出用 `-Y` = Sketchfab glTF 惯例）、尺寸、腿缩短、身体底 / 膝盖高度、旋翼怎么找、材质分槽规则、零件表 `pieces`、动作名对应 `anims`、涂装表 `liveries`。共用代码 `tools/easter_blender_lib.py`。
+- **尺寸**：狗底子前后长 1.5 米（真 Spot 约 1.1 米 × 1.36 ≈ 机体比人放大的 1.35 倍，背高到机体大腿根），腿 × 0.85，加上头和尾巴会再长一些（实际尺寸看 `PDog_build.json` 的 `size_m`）；无人机旋翼尖到尖 1.6 米（约机体身高的 2/3，比肩上的浮空无人机大一圈，一群飞过来不挡视野）。
+- **做法**：底子烤成世界坐标、按「每个高度切片前后占得多满」找出身体（最满的那段），身体底以下按前后左右分四条腿、按膝盖高度分上下段；腿往身体底方向压短。底子带骨架时，每段对应「这段顶点主要跟着动的那根底子骨头」，关节位置用底子骨头，动作逐帧把旋转烤到新骨架上（身体的水平位移去掉，原地动作）。外壳零件按 `pieces` 依次取：`faction`（`lookdev/rig/factions/<台>.blend`，零件整块挂一根骨头，按主骨头 / 材质 / 散件挑：大小 / 最细长 / 最圆 / 编号）、`kit`（机甲组件库 .blend，资产名或 `blend_asset_survey.py` 的编号）、`fbx`（如肩部武器 `Inbox/_肩部候选/游戏模型*`），每块可以写几个备选来源；按目标盒子（身体、某段腿、前面摆好的零件）等比缩放、贴在某个面上（陷进去 `inset`），可左右镜像。默认：狗 = 相位轻型的头（头宽 = 身体宽 0.8）+ 脖子、两盏最圆的灯 / 镜头当眼睛、最细长的骨架件当 0.4 米尾巴天线（往后上翘 35°，尖上一盏灯）、相位中型胸甲当背甲、骨盆甲当尾甲、大腿 / 小腿甲套四条腿、两侧青灯带；无人机 = 维克托中型胸甲当顶甲、重型炮塔头当机头传感器、轻型肩甲当两侧护甲、肩部武器 FBX（没有就用重型前臂）当腹下吊舱、两侧红灯条、尾灯。
+- **资源约定（代码按这个写）**：
+  - 朝向：两种都是 UE 网格空间 **+X 朝前**、+Z 上（不像 SK_Mannequin 那样朝 +Y，组件不用转 -90°）。狗原点在脚底中心，无人机原点在机身中心。
+  - `/Game/Easter/Drone/SM_VDrone_Body`：插槽 `Rotor_FL` / `Rotor_FR` / `Rotor_BL` / `Rotor_BR`（桨毂，FL = 前左）、`Muzzle`（吊舱最前面，朝 +X），旋转都是 0；简单碰撞是一个盒子（FBX 的 `UCX_`，导入脚本兜底补），不含旋翼；关 Nanite。`SM_VDrone_Rotor`：原点在桨毂、绕本地 Z 转，无碰撞，四个插槽共用（对角两个反着转好看）。
+  - `/Game/Easter/Dog/SK_PDog`（骨架 `SK_PDog_Skeleton`、物理资产 `SK_PDog_PhysicsAsset`，关 Nanite）：骨头 `root`（原点）→ `body`（身体中心）→ `head`（转动中心在头的后下方，歪头转它）、`tail_antenna`（从根到尖，摇尾巴转它）、`leg_{fl,fr,bl,br}_upper`（髋 → 膝）→ `_lower`（膝 → 脚）。零件全是刚性绑定（每个顶点只跟一根骨头）。骨头本地轴是 Blender 默认（Y 沿骨头），**代码改骨头请用组件空间**。骨头位置（UE 坐标）在 `Inbox/_easter/export/PDog_build.json`。动作 `A_PDog_Idle` / `Walk` / `Run` / `Sit` 只有底子带对应动作才有（`root_speed_mps` = 原动作的前进速度，参考用），没有就走程序化步态。
+  - 材质槽 `Shell`（涂装外壳）/ `Frame`（深石墨灰骨架件）/ `Accent`（品牌色件和灯），某个槽没有面时 UE 会丢掉这个槽，按槽名找要能处理缺槽。母材质 `/Game/Easter/Materials/M_EasterLivery`：**代码只需要设 `PaintA`、`PaintB`、`Accent`（向量）和 `AccentGlow`（标量）**，三个槽都设同样的值就行（实例里的 `PaintAmount` / `AccentAmount` 决定每个槽用哪个颜色：Shell 用涂装、Frame 固定石墨灰、Accent 用 Accent）；灯 = 顶点色 R 为 1 的面（眼睛、灯带、尾灯）发 Accent × AccentGlow 的光（带白天补偿），其余 Accent 面只是品牌色漆。**随机涂装只换 PaintA / PaintB，Accent 保持品牌色**（相位 `#3CC8DC`、维克托 `#C23A2E`，和肩部无人机一样）。维克托的 Shell 实例开了折线迷彩（`PatternMix` 1，同 `M_RobotCamo`：PaintA 主色、PaintB 暗色块），相位是纯色（0）。涂装表（各 8 套，十六进制 sRGB）在两个 json 的 `liveries`。实例 `MI_Easter_{PDog,VDrone}_{Shell,Frame,Accent}`。
+- **待用户 / 没做**：模型没下载；脚本没在 Blender 5.x / UE 5.8 里跑过（所有脚本过了 `py_compile`）；组件库 .blend 的位置和资产编号仓库里查不到（README 只写了「机甲 #452」这种），所以默认零件全用阵营机体，组件库留成 `kit` 来源、跑 `blender_easter_parts.py find` 找；肩部武器 FBX 的文件名不确定，按 `(?i)missile|artillery|gun|launcher|smoke` 匹配。没有 LOD。
+
 ## 地图
 
 | 地图 | 内容 | 生成脚本 |
@@ -1140,6 +1161,30 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **坑**：① Blender 里 `me.materials.clear()` 会把面的 material_index 清零，只能原地替换。② 母材质默认贴图和采样类型对不上时编译失败，整栋楼变灰格子（日志 `Failed to compile Material`）。③ FBX 只有一个网格时 UE 按文件名命名（`SVS_Garages`，不是 `SM_SVS_Garages`）。④ 楼是空壳，竖直射线看不出墙。⑤ `T_Snow_0x_R` 是 TC_DEFAULT 非 sRGB，采样类型要 Linear Color。⑥ Poly Haven 的 snow_02 有一道道深色裂纹，大面积铺很假。
 - **测试结果（11-02）**：`perf`（3v3 按键驾驶，1600×900 离屏，编辑器 -game）平均 121.4 帧，最慢 1% 12 毫秒，最慢一帧 48 毫秒；环境截图 1920×1080 各机位 115–135 帧（别的代理也在跑时的数）。`missing usage flag` 0 条。`battle`（团队死斗 3v3 全 AI，slomo 2，150 秒）没崩、没掉出地图，24 个 DMSpawn 候选，重生离敌人 83–139 米，只打出 5 次击毁（场子大，AI 碰面慢）；高度 74% 在地面。贴图 302 张，冬季包 73 张 4K 限到 2K，估算约 440 MiB（`ue_texture_budget.py` 读的是源尺寸，仍显示 803 MiB）。
 - **还没做 / 待定**：用户没飞过；小地图、开场镜头、进 MechMaps 和打包；严寒规则；路牌、电话亭没放（路牌是模块件没拼，电话亭只有 .dae，Blender 5.2 读不了）。
+
+## 彩蛋（11-02）
+
+用户定的内容见 `docs/本轮待办_20261102.md`「彩蛋」。代码：`MechEaster.h/.cpp`（调度、触发、子弹爆炸、控制台）、`MechEasterBot.h/.cpp`（无人机 / 机械狗）、`MechEasterProp.h/.cpp`（压力板、门、按钮）、`MechHudEaster.cpp`（锁定框、标记、全场提示）。不接肉鸽。
+
+- **两种敌人**：维克托重工的无人机（旋翼代码转，机身随速度前倾）、相位电子的机械狗（四条腿：有动作片段就播，没有就按骨头名代码摆步态，头歪、尾巴天线摇）。生成时按种子随机彩色涂装（12 组主 / 副色），品牌色点缀固定（无人机红、狗青）。
+- **和机器人敌人一样**：头顶红色倒三角（小一号）、准星附近能锁定（锁定框、导弹锁定进度、血条、距离，框右上角多一个品牌色小菱形）、导弹能追（没锁机体时，刚发射的导弹找准星 24° 内的彩蛋敌人追）。子弹、刀、导弹爆炸都打得到（碰撞球照保卫战杂兵：WorldDynamic + `MechShootable` / `MechGrunt` 标签）。**机体锁定优先**：锁着机体时不锁它们。
+- **规则**：只伤玩家机体（含人机，不分队伍；木桩不算），打掉不算击杀、不算积分；被它们打爆算「场地」（没人拿分）。回合结束清场（苏联的狗留着）。联机：服务器算，位置 15 次/秒同步；老街狗群只同步一次起跑参数，各端按服务器时间算位置。
+- **数值**（`MechEaster.h` 的 `MechEaster::` 常量）：无人机 520 血（步枪 6 枪），在场 90 秒后飞走；武器：机枪（5 发一串，每发 80）/ 火箭（650，半径 4.5 米，慢慢拐弯，侧闪甩得掉）/ 榴弹（720，半径 5.2 米，抛物线）/ 火炮（520，半径 3.2 米）。狗群 36 只、每只 300 血，起跑 9 米/秒，每 3.2 秒速度乘 e，到 300 米/秒（约 11 秒、跑 930 米 ≈ 9 圈循环街）「光速」消失；被撞 = 200 × 当前速度 ÷ 15 米/秒（同一只狗 1 秒内只撞一次）。
+- **四张图**：
+  - 荒野与废墟 `L_Nature`：塔顶压力板 → 10 架无人机（每架随机一种肩部武器）。
+  - 石林 `L_Pillars`：山顶压力板 → 7 架无人机（只用机枪）。
+  - 苏联 `L_Soviet`：开局 4 只友好的机械狗在中院玩：滑梯（走到梯子脚 → 爬上去 → 滑下来）、跷跷板（两头各一只一上一下）、长椅 / 秋千旁蹲着、溜达。队友色标记，打不坏、不能锁定，被打就往反方向跑开。
+  - 老街 `L_OldStreet`：打破一扇门（700 血）→ 门后露出红色按钮 → 打中按钮 1.5 秒后狗群从上游冲过来（沿 X 循环，`MechLoop.h`）。
+  - 压力板整场一次（团队淘汰的多局也只一次），踩下后全场提示（HUD 上方一条，5 秒）。其他地图没有彩蛋（行为不变）。
+- **开关**：房间「规则」里「彩蛋」开 / 关（默认开，训练场不显示；存在 GameUserSettings.ini `[MechRoom] Easter`）。直接进图（不是从房间开的）一律开。
+- **测试开关**：`-MechEasterOff` 关掉；`-MechEasterLog` 每 2 秒一行 `[easter]` 状态（还有导弹追谁、狗撞到谁）；`-MechEasterTest=drones|guns|dogs|stampede|plate|door` 开打 4 秒后在第一台机体面前触发一次（任何地图都行）；`-MechEasterPlaceholder` 模型没到时用引擎方块代替（只为测逻辑，别打进正式版）。
+- **控制台**（房主 / 单机，按 `~`）：`mech.Easter.Drones [台数] [gun|rocket|grenade|cannon|mix]`、`mech.Easter.Dogs [只数]`、`mech.Easter.Stampede [只数]`、`mech.Easter.Plate`（当作压力板被踩）、`mech.Easter.Door`（打破门 + 打中按钮）、`mech.Easter.Clear`、`mech.Easter.Info`（日志列出压力板 / 门 / 按钮 / 狗玩的地方的坐标）。
+- **位置（不改 .umap 也能用；摆了标记就按标记）**：
+  - 压力板：地图里带 `EasterPlate` 标签的 actor（空点 TargetPoint 或者一块自己的模型；可选标签 `Radius=<厘米>`，默认 260）。**没有标记时**：荒野 = 场地范围里最高的那栋废墟（带 `Nature` 标签的静态网格，`ue_build_nature.py` 摆的）楼顶最高的一块平地；石林 = 场地范围里最高的一块平地（40×40 粗找 + 30 米内细找，四邻高度差 1.5 米内才算平地）。**用户要检查**：进图跑 `mech.Easter.Info` 看日志里压力板的坐标，飞过去看它在不在想要的「塔顶 / 山顶」、站不站得上去；不满意就在那里摆一个 `EasterPlate` 点。
+  - 苏联：带 `EasterDogSpot` 标签的 actor（`Kind=Slide|Seesaw|Sit`、`Len=<厘米>`、`Height=<厘米>`；滑梯的点放在**梯子顶**、朝向 = 滑下去的方向；跷跷板的点放在中心、朝向 = 板子方向）。**没有标记时**按网格名找 `SVS_Slide` / `SVS_Seesaw` / `SVS_Bench` / `SVS_Swings`（`soviet_plan.py`），滑梯的梯子先当在模型 +X（或 +Y）那头，**如果狗是从滑道往上爬、从梯子滑下来，就在梯子顶摆一个 `EasterDogSpot` 点（Kind=Slide）**。都找不到就按 `soviet_plan.py` 的坐标。
+  - 老街：要打破的门 = 带 `EasterDoor` 标签的 actor（用户在某栋楼的门上摆一块门板模型，或空点；代码在它前面放一个打得中的盒子，门破了把它藏起来、关掉碰撞），门后按钮 = `EasterButton`（没有就放在门板中间往里 30 厘米，红色圆钮）。**没有标记时**：在循环中心 +27 米处从街中线往两边打水平射线找楼面，贴一扇占位门（引擎方块，2×3.2 米）。**用户要检查 / 建议摆**：在想要的那扇门上摆 `EasterDoor`（和 `EasterButton`），占位门只是能玩。
+- **资源**（建模那边出，代码按路径软加载；缺了就不生成、日志一行「缺无人机模型 / 缺机械狗模型」，打包不受影响）：`/Game/Easter/Drone/SM_VDrone_Body`（插槽 `Rotor_FL/FR/BL/BR`、`Muzzle`，+X 朝前，原点在机身中心）、`SM_VDrone_Rotor`（绕局部 Z 转）、`/Game/Easter/Dog/SK_PDog`（骨头 `root body head tail_antenna leg_{fl,fr,bl,br}_{upper,lower}`，+X 朝前，原点在脚底）、可选 `A_PDog_Idle/Walk/Run/Sit`（Idle、Walk、Run 三个都有才播片段）、`/Game/Easter/Materials/M_EasterLivery`（`PaintA` `PaintB` `Accent` 颜色、`AccentGlow` 亮度）。**打包要进包**：`Config/DefaultGame.ini` 的 `DirectoriesToAlwaysCook` 要加 `/Game/Easter`（代码按路径加载，没有地图引用）。
+- **还没做 / 已知**：人机不会打无人机（只被打）；小地图、屏幕外箭头不画它们；彩蛋导弹不等锁定进度（锁定框的进度只是显示）；机体和它们不相撞（穿过去）；苏联的狗走直线、只避开挡路的墙；狗群穿过街上的道具。
 
 ## 素材收件箱
 

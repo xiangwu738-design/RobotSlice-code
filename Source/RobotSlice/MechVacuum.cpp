@@ -65,13 +65,26 @@ void UMechVacuum::ScanDomes()
 	}
 	if (Domes.Num() == 0)
 	{
-		// 默认：原点的大穹顶，地面高度从上往下打一条射线找（里面地面；玻璃没有碰撞）
+		// 默认：原点的大穹顶。11-02 实测：中心往下打第一下打中的是穹顶顶上的结构（35.8 米），不是地面（玻璃没有碰撞，但顶上的骨架有）。
+		// 所以中心那一下当顶，地面取穹顶外墙外 15 米处的地面，顶高 = 两者之差
 		FDome D;
-		FHitResult Hit;
 		FCollisionQueryParams Params(SCENE_QUERY_STAT(MechVacuumFloor), false);
-		if (World->LineTraceSingleByObjectType(Hit, FVector(0.f, 0.f, 50000.f), FVector(0.f, 0.f, -50000.f), FCollisionObjectQueryParams(ECC_WorldStatic), Params))
+		const FCollisionObjectQueryParams Objects(ECC_WorldStatic);
+		FHitResult Top, Ground;
+		const bool bTop = World->LineTraceSingleByObjectType(Top, FVector(0.f, 0.f, 50000.f), FVector(0.f, 0.f, -50000.f), Objects, Params);
+		const float Out = D.Radius + 1500.f;
+		const bool bGround = World->LineTraceSingleByObjectType(Ground, FVector(Out, 0.f, 50000.f), FVector(Out, 0.f, -50000.f), Objects, Params);
+		if (bGround)
 		{
-			D.Center = Hit.ImpactPoint;
+			D.Center = FVector(0.f, 0.f, Ground.ImpactPoint.Z);
+			if (bTop && Top.ImpactPoint.Z - Ground.ImpactPoint.Z > 900.f)
+			{
+				D.Height = Top.ImpactPoint.Z - Ground.ImpactPoint.Z + 200.f;
+			}
+		}
+		else if (bTop)
+		{
+			D.Center = FVector(0.f, 0.f, Top.ImpactPoint.Z - D.Height);
 		}
 		Domes.Add(D);
 	}

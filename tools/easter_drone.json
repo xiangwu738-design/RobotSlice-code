@@ -1,0 +1,97 @@
+{
+  "_说明": "维克托无人机 SM_VDrone_Body / SM_VDrone_Rotor 的参数（tools/blender_easter_drone.py 读）。写法和 easter_dog.json 一样（零件 / 摆法见那边的 _零件 / _摆法）。长度单位米。",
+  "_坐标": "摆好以后：朝 +X、左 +Y、上 +Z，包围盒中心在原点（飞行物，Actor 原点 = 机身中心）。旋翼 FL = 前左 (+X,+Y)、FR = 前右 (+X,-Y)、BL、BR。",
+
+  "base_file": "",
+  "forward": "auto",
+  "forward_fallback": "-Y",
+  "up": "+Z",
+  "exclude_objects": "(?i)ground|floor|backdrop|plane\\b|shadow|^cam|light",
+  "auto_remove_ground": true,
+
+  "target_span_m": 1.6,
+  "_target_span_m": "旋翼尖到旋翼尖 1.6 米：机体 2.4–2.6 米高，无人机约机体身高的 2/3 宽，一群飞过来不挡视野、锁定框和机器人一样大小也不显得空；比挂在机体肩上的浮空无人机大一圈，一眼看出是敌人",
+  "base_max_tris": 30000,
+
+  "rotor_objects": "",
+  "_rotor_objects": "空 = 自动（物体名含 prop/rotor/blade/fan…，没有就按形状：四个角上扁平、不是圆环的散件）。自动不对：写旋翼物体名的正则，或写 rotor_hubs_m",
+  "rotor_hubs_m": null,
+  "_rotor_hubs_m": "例 {\"FL\":[0.55,0.55,0.12],\"FR\":[0.55,-0.55,0.12],\"BL\":[-0.55,0.55,0.12],\"BR\":[-0.55,-0.55,0.12]}（摆好以后的坐标，看 survey 的旋翼图），配 rotor_radius_m",
+  "rotor_radius_m": 0.3,
+  "rotor_master": "FL",
+  "rotor_scale": 1.0,
+  "rotor_slot": "Frame",
+  "allow_missing_rotors": true,
+
+  "muzzle_m": null,
+  "muzzle_piece": "weapon",
+  "muzzle_at": [1, 0, 0],
+  "collision_inset": 0.92,
+
+  "faction_blend": "lookdev/rig/factions/{key}.blend",
+  "kit_dirs": ["Inbox", "lookdev", "SourceAssets"],
+  "kit_survey_dirs": ["Inbox/_kit_survey", "lookdev/kit/survey", "docs/组件库"],
+
+  "base_slot_rules": [
+    ["(?i)glow|emiss|light|led|lamp|neon|eye|screen|lens", "Accent", true],
+    ["@emission", "Accent", true],
+    ["(?i)black|dark|rubber|joint|frame|carbon|chrome|steel|metal|motor|bolt|gear|prop|blade|rotor", "Frame", false],
+    ["@textured", "Shell", false],
+    ["@bright", "Shell", false],
+    [".*", "Frame", false]
+  ],
+  "piece_slot_rules": [
+    ["MI_Robot_(Glow|Lamp)", "Accent", true],
+    ["MI_Robot_Lens", "Accent", true],
+    ["MI_Robot_(Accent|Hazard)", "Accent", false],
+    ["MI_Robot_(Paint|PaintDark|PaintCamo|Stencil|Label|Plastic|Ink)", "Shell", false],
+    [".*", "Frame", false]
+  ],
+
+  "pieces": [
+    {"name": "top_armor",
+     "src": [{"type": "faction", "key": "VHI_M", "bone": "spine_05"}, {"type": "faction", "key": "VHI_H", "bone": "spine_05"}],
+     "orient": [["-Y", "+Z"], ["+Z", "+X"]],
+     "to": "body", "anchor": "top", "inset": 0.3, "fit": "xy", "size": 0.7,
+     "_": "顶甲：维克托中型「铁壁」的胸甲，正面朝上（方块感）"},
+    {"name": "sensor_head",
+     "src": [{"type": "faction", "key": "VHI_H", "bone": "head"}, {"type": "faction", "key": "VHI_M", "bone": "head"}],
+     "orient": [["-Y", "+X"], ["+Z", "+Z"]],
+     "to": "body", "anchor": "front", "at": [1, 0, -0.2], "push": [0.4, 0, 0], "fit": "y", "size": 0.35,
+     "_": "机头传感器：维克托重型「突击炮」的下沉炮塔头"},
+    {"name": "side_armor",
+     "src": [{"type": "faction", "key": "VHI_L", "bone": "upperarm_l"}, {"type": "faction", "key": "VHI_L", "bone": "clavicle_l"}],
+     "orient": [["+X", "+Y"], ["+Z", "+Z"]],
+     "to": "body", "anchor": "left", "inset": 0.35, "fit": "x", "size": 0.4, "mirror": "y",
+     "_": "两侧护甲：维克托轻型「斥候」的肩甲，外侧朝外，左右镜像"},
+    {"name": "weapon",
+     "src": [{"type": "fbx", "path": "Inbox/_肩部候选/游戏模型*/*.fbx", "pick": "(?i)missile|artillery|gun|launcher|smoke"},
+             {"type": "faction", "key": "VHI_H", "bone": "lowerarm_r", "orient": [["-X", "+X"], ["+Z", "+Z"]]}],
+     "to": "body", "anchor": "bottom", "at": [0.3, 0, -1], "inset": 0.25, "fit": "x", "size": 0.55,
+     "_": "腹下武器吊舱：先找肩部武器的 FBX（导弹巢 / 火炮之类，长度方向 +X），没有就用维克托重型的前臂；枪口 Muzzle 在它最前面中心"},
+    {"name": "strip",
+     "src": [{"type": "faction", "key": "VHI_L", "material": "MI_Robot_Glow", "pick": "longest"},
+             {"type": "faction", "key": "VHI_M", "material": "MI_Robot_Glow", "pick": "longest"},
+             {"type": "faction", "key": "VHI_H", "material": "MI_Robot_Glow", "pick": "longest"}],
+     "long": "+X", "to": "body", "anchor": "left", "at": [0, 1, 0.4], "push": [0, 0.15, 0], "fit": "x", "size": 0.5,
+     "mirror": "y", "slot": "Accent", "glow": true,
+     "_": "维克托红灯条：机身两侧各一条（随机涂装时不变色）"},
+    {"name": "tail_lights",
+     "src": [{"type": "faction", "key": "VHI_L", "material": "MI_Robot_(Glow|Lens|Lamp)", "pick": "roundest"},
+             {"type": "faction", "key": "VHI_M", "material": "MI_Robot_(Glow|Lens|Lamp)", "pick": "roundest"}],
+     "to": "body", "anchor": "back", "at": [-1, 0.35, 0.3], "push": [0, 0, 0], "abs_m": 0.07, "mirror": "y", "slot": "Accent", "glow": true}
+  ],
+
+  "preview_colors": {"Shell": "#4b5048", "Frame": "#2e3236", "Accent": "#c23a2e"},
+  "material": {"PaintA": "#4b5048", "PaintB": "#2f3330", "Accent": "#c23a2e", "AccentGlow": 8.0, "Frame": "#2e3236"},
+  "liveries": [
+    {"name": "维克托军灰", "PaintA": "#4b5048", "PaintB": "#2f3330", "Accent": "#c23a2e"},
+    {"name": "沙漠", "PaintA": "#b39b72", "PaintB": "#6b5a40", "Accent": "#c23a2e"},
+    {"name": "城市灰", "PaintA": "#6e757c", "PaintB": "#3d4248", "Accent": "#c23a2e"},
+    {"name": "北极", "PaintA": "#d0d4d6", "PaintB": "#7b8288", "Accent": "#c23a2e"},
+    {"name": "海军蓝", "PaintA": "#2f4058", "PaintB": "#1c2634", "Accent": "#c23a2e"},
+    {"name": "警戒橙", "PaintA": "#d0782f", "PaintB": "#2b2f33", "Accent": "#c23a2e"},
+    {"name": "丛林", "PaintA": "#4f6b3a", "PaintB": "#2c3a22", "Accent": "#c23a2e"},
+    {"name": "黑色行动", "PaintA": "#1f2226", "PaintB": "#3b3f44", "Accent": "#c23a2e"}
+  ]
+}
