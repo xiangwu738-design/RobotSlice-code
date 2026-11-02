@@ -1,0 +1,352 @@
+exit=0
+[2026.11.02-19.41.48:279][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.41.48:668][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.41.48:675][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.566 ms
+[2026.11.02-19.41.48:675][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.41.48:690][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 15.165 ms (total: 22.731 ms)
+[2026.11.02-19.41.48:690][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_dump_src.py
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src] #### lookdev/make_shoulder_tactical.py 319 琛�
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     1| """骞跺叆鑲╅儴鐨勫洓浠惰�呭�囩殑鏃犱汉鏈烘満韬� + 鍦伴浄鏈�浣擄紙11-01锛岀敤鎴凤細銆岃ˉ鍏ㄥ墿涓嬬殑瑁呭�囨ā鍨嬨�嶏級銆傚仛娉曞悓 make_shoulder_game.py锛氭満鐢茬粍浠跺簱闆朵欢鎷艰�� + 灏戦噺绋嬪簭鐢熸垚浠躲��
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     2| SM_BurstPack 绱ф�ヨ劚绂伙紙鎺ㄨ繘鍖咃級銆丼M_LaunchSpring 寮瑰皠鍗囩┖锛堝脊灏勫櫒锛夈�丼M_ShockRing 闇囪崱娉�锛堢幆褰㈠彂鐢熷櫒锛夈�丼M_MineLayer 鍦伴浄锛堝竷闆峰櫒锛夈�丼M_Mine 鍦颁笂鐨勯浄銆�
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     3| 娌� +X 鏈濆墠锛岀背鍒讹紙Blender 鎸夌背锛孎BX apply_unit_scale锛屽�艰繘 UE 鏄�鍘樼背锛屽拰 make_shoulder_game.py 鍚屼竴鏉¤矾锛泃ools/ue_import_shoulder_tactical.py 鎵撳昂瀵告牳瀵癸級銆�
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     4| 鏈鸿韩鏈�闀胯竟绾� 58 鍘樼背锛圲MechShoulderComponent::CacheDroneMesh 缁熶竴鍒� 58锛岃繖閲屽仛鍒板樊涓嶅�氾紝缂╂斁鎺ヨ繎 1锛屽�佸帤鍜屽埆鐨勬棤浜烘満涓�鑷达級銆�
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     5| 鏉愯川妲藉悕鐓ф棫锛圡I_Robot_PaintDark / Frame / Accent / Glow锛夛紝鐢� tools/ue_drone_materials.py 鎸� M_DronePBR 鐨勫疄渚嬨��
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     6| blender -b --factory-startup -P lookdev/make_shoulder_tactical.py -- 杈撳嚭鐩�褰� [鍙�瀵艰繖鍑犱釜锛岄�楀彿鍒嗛殧]"""
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     7| import bpy, bmesh, sys, os, math
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]     8| from mathutils import Vector, Matrix
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    10| sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    11| import make_shoulder_kits as K
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    13| ARGV = sys.argv[sys.argv.index('--') + 1:]
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    14| OUT = os.path.abspath(ARGV[0])
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    15| ONLY = ARGV[1].split(',') if len(ARGV) > 1 else None
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    16| os.makedirs(OUT, exist_ok=True)
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    17| sc = bpy.context.scene
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    18| for o in list(sc.objects):
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    19|     bpy.data.objects.remove(o)
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    21| PAINT, FRAME, ACCENT, GLOW = 'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow'
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    24| def mat(name):
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    25|     return bpy.data.materials.get(name) or bpy.data.materials.new(name)
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    28| def use(ob, matname, at=Matrix(), ratio=None):
+[2026.11.02-19.41.48:693][  0]LogPython: Warning: [src]    29|     """鏀捐繘鍦烘櫙銆佺儤杩涘彉鎹�銆佹崲鎴愪竴涓�鏉愯川妲斤紱ratio 缁欎簡灏卞噺闈�"""
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    30|     if ob.name not in sc.collection.objects:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    31|         sc.collection.objects.link(ob)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    32|     bpy.context.view_layer.objects.active = ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    33|     if ob.type == 'CURVE':
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    34|         bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    35|         ob.select_set(True)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    36|         bpy.ops.object.convert(target='MESH')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    37|         ob = bpy.context.active_object
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    38|     ob.data.transform(at @ ob.matrix_world)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    39|     ob.matrix_world = Matrix()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    40|     if ratio:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    41|         mod = ob.modifiers.new('d', 'DECIMATE')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    42|         mod.ratio = ratio
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    43|         bpy.context.view_layer.objects.active = ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    44|         bpy.ops.object.modifier_apply(modifier='d')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    45|     ob.data.materials.clear()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    46|     ob.data.materials.append(mat(matname))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    47|     return ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    50| def lib(library, name, length, rot=(0, 0, 0), axis=1, matname=PAINT, at=Matrix(), ratio=None):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    51|     """鍙栦竴浠堕浂浠讹細杞�濂姐�佸眳涓�銆乤xis 鏂瑰悜鐨勯暱搴︾缉鏀惧埌 length 绫�"""
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    52|     ob, sz = K.part(library, name, rot=rot, size=length, axis=axis)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    53|     return use(ob, matname, at, ratio), sz
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    56| def lib_x(library, name, length, matname=PAINT, at=Matrix(), ratio=None, thin_front=True):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    57|     """鏈�闀跨殑杞磋浆鍒� X锛泃hin_front锛氱粏鐨勪竴澶存湞 +X锛堝惁鍒欑矖鐨勪竴澶存湞 +X锛�"""
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    58|     ob, sz = K.part(library, name)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    59|     me = ob.data
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    60|     ax = max(range(3), key=lambda i: sz[i])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    61|     if ax == 1:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    62|         me.transform(Matrix.Rotation(-math.pi / 2, 4, 'Z'))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    63|     elif ax == 2:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    64|         me.transform(Matrix.Rotation(math.pi / 2, 4, 'Y'))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    65|     xs = [v.co.x for v in me.vertices]
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    66|     lo, hi = min(xs), max(xs)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    67|     span = hi - lo
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    68|     ext = lambda sel: max((math.hypot(v.co.y, v.co.z) for v in sel), default=0.0)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    69|     front = ext([v for v in me.vertices if v.co.x > hi - 0.12 * span])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    70|     back = ext([v for v in me.vertices if v.co.x < lo + 0.12 * span])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    71|     if (front > back) == thin_front:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    72|         me.transform(Matrix.Rotation(math.pi, 4, 'Z'))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    73|     me.transform(Matrix.Scale(length / span, 4))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    74|     return use(ob, matname, at, ratio)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    77| def box(size, loc, matname, bevel=0.0):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    78|     bpy.ops.mesh.primitive_cube_add(size=1, location=loc)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    79|     ob = bpy.context.active_object
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    80|     ob.scale = size
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    81|     bpy.ops.object.transform_apply(scale=True)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    82|     if bevel:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    83|         m = ob.modifiers.new('b', 'BEVEL')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    84|         m.width = bevel
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    85|         m.segments = 2
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    86|         bpy.ops.object.modifier_apply(modifier='b')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    87|     ob.data.materials.append(mat(matname))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    88|     return ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    91| def cyl(r, depth, loc=(0, 0, 0), axis='Z', matname=PAINT, r2=None, segs=24, bevel=0.0):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    92|     rot = {'Z': (0, 0, 0), 'X': (0, math.pi / 2, 0), 'Y': (math.pi / 2, 0, 0)}[axis]
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    93|     if r2 is None:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    94|         bpy.ops.mesh.primitive_cylinder_add(radius=r, depth=depth, vertices=segs, location=loc, rotation=rot)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    95|     else:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    96|         bpy.ops.mesh.primitive_cone_add(radius1=r, radius2=r2, depth=depth, vertices=segs, location=loc, rotation=rot)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    97|     ob = bpy.context.active_object
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    98|     bpy.ops.object.transform_apply(rotation=True)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]    99|     if bevel:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   100|         m = ob.modifiers.new('b', 'BEVEL')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   101|         m.width = bevel
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   102|         m.segments = 2
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   103|         m.limit_method = 'ANGLE'
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   104|         bpy.ops.object.modifier_apply(modifier='b')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   105|     ob.data.materials.append(mat(matname))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   106|     return ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   109| def ring(r, tube, z=0.0, matname=GLOW, segs=64):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   110|     pts = [(r * math.cos(a), r * math.sin(a), z) for a in [i / segs * math.tau for i in range(segs + 1)]]
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   111|     return use(K.poly_tube('ring', [pts], tube, (1, 1, 1), res=4), matname)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   114| def lathe(name, prof, matname, at=Matrix(), segs=28):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   115|     """缁� X 杞磋浆涓�鍦堬細prof 鏄� (x, 鍗婂緞) 鎶樼嚎锛屽ご灏惧崐寰� 0 灏佸彛锛堝柗鍙ｉ噷闈㈢殑鍐呭�佹硶绾夸篃鏈濆�栭湶锛�"""
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   116|     bm = bmesh.new()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   117|     rings = []
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   118|     for x, r in prof:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   119|         if r <= 0.0:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   120|             rings.append([bm.verts.new((x, 0, 0))])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   121|         else:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   122|             rings.append([bm.verts.new((x, r * math.cos(i / segs * math.tau), r * math.sin(i / segs * math.tau))) for i in range(segs)])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   123|     for a, b in zip(rings, rings[1:]):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   124|         if len(a) == 1:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   125|             for i in range(segs):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   126|                 bm.faces.new((a[0], b[i], b[(i + 1) % segs]))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   127|         elif len(b) == 1:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   128|             for i in range(segs):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   129|                 bm.faces.new((a[i], b[0], a[(i + 1) % segs]))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   130|         else:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   131|             for i in range(segs):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   132|                 bm.faces.new((a[i], b[i], b[(i + 1) % segs], a[(i + 1) % segs]))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   133|     bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   134|     me = bpy.data.meshes.new(name)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   135|     bm.to_mesh(me)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   136|     bm.free()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   137|     return use(bpy.data.objects.new(name, me), matname, at)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   140| def export(name, objs, smooth_angle=35):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   141|     bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   142|     for o in objs:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   143|         o.select_set(True)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   144|     bpy.context.view_layer.objects.active = objs[0]
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   145|     if len(objs) > 1:
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   146|         bpy.ops.object.join()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   147|     ob = bpy.context.active_object
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   148|     ob.name = ob.data.name = name
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   149|     bpy.ops.object.shade_smooth_by_angle(angle=math.radians(smooth_angle))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   150|     bpy.ops.export_scene.fbx(filepath=os.path.join(OUT, name + '.fbx'), use_selection=True, object_types={'MESH'},
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   151|                              apply_unit_scale=True, mesh_smooth_type='FACE')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   152|     ob.data.calc_loop_triangles()
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   153|     lo = Vector([min(v.co[i] for v in ob.data.vertices) for i in range(3)])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   154|     hi = Vector([max(v.co[i] for v in ob.data.vertices) for i in range(3)])
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   155|     print(f'[tactical] {name} 灏哄�� {(hi - lo).x * 100:.1f}x{(hi - lo).y * 100:.1f}x{(hi - lo).z * 100:.1f} 鍘樼背 涓夎�� {len(ob.data.loop_triangles)} '
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   156|           f'鑼冨洿 x {lo.x * 100:.1f}..{hi.x * 100:.1f} y {lo.y * 100:.1f}..{hi.y * 100:.1f} z {lo.z * 100:.1f}..{hi.z * 100:.1f} 妲� {[m.name for m in ob.data.materials]}')
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   157|     ob.hide_set(True)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   158|     ob.hide_render = True
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   159|     return ob
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   162| def want(name):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   163|     return ONLY is None or name in ONLY
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   166| def T(x=0.0, y=0.0, z=0.0):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   167|     return Matrix.Translation((x, y, z))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   170| # ---------------------------------------------------------------- 绱ф�ヨ劚绂伙細鎺ㄨ繘鍖呫�備袱鍙版帹杩涘櫒鏂滅潃骞舵帓锛堝柗鍙ｆ湞鍚庝笅鏂癸紝鍍忓柗姘旇儗鍖咃紝浠庡摢涓�瑙掑害閮界湅寰楀埌鍠峰彛锛夛紝涓�闂翠竴鍧楄儗鍖呭す浣�
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   171| if want('SM_BurstPack'):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   172|     objs = []
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   173|     L, gap = 0.5, 0.098
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   174|     R = Matrix.Rotation(math.radians(-58), 4, 'Y')  # +X锛堝ご锛夊線涓婂墠鏂圭繕锛屽柗鍙ｆ湞鍚庝笅鏂�
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   175|     for s in (-1, 1):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   176|         objs.append(lib_x('鏋�鐐�', 'engine_4', L, PAINT, R @ T(0, s * gap, 0), ratio=0.1))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   177|         # 鍠峰彛锛氬�栧�� 鈫� 鍙ｆ部 鈫� 鍐呭�佹敹鍒板枆閮�锛涘枆閮ㄤ竴鍦堝彂鍏夛紙闃熶紞鑹诧級
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   178|         at = R @ T(-L / 2 + 0.012, s * gap, 0)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   179|         objs.append(lathe('bell', [(0.0, 0.0), (0.0, 0.05), (-0.07, 0.078), (-0.075, 0.073), (-0.018, 0.034), (-0.018, 0.0)], FRAME, at))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   180|         objs.append(use(cyl(0.033, 0.006, (-0.02, 0, 0), 'X', GLOW, segs=20), GLOW, at))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   181|     # 鑳屽寘锛氱粍浠跺簱鐨勬澘鐢� + 涓�闂翠竴鍧楋紙澶瑰湪涓ゅ彴鎺ㄨ繘鍣ㄤ腑闂达級
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   182|     plate, _ = lib('鏋�鐐�', 'b3', 0.2, rot=(math.pi / 2, 0, 0), axis=1, matname=FRAME, at=R @ T(0.03, 0, 0.0), ratio=0.2)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   183|     objs.append(plate)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   184|     objs.append(use(box((0.3, 0.075, 0.1), (0.0, 0, 0.012), FRAME, bevel=0.008), FRAME, R))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   185|     for x in (-0.14, 0.14):  # 涓ら亾绠�
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   186|         objs.append(use(box((0.024, 0.32, 0.05), (x, 0, 0.0), FRAME, bevel=0.004), FRAME, R))
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   187|     objs.append(use(box((0.12, 0.03, 0.008), (0.03, 0, 0.066), ACCENT), ACCENT, R))  # 鑳屽寘涓婁竴閬撶浉浣嶉潚璇嗗埆鏉�
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   188|     objs.append(box((0.13, 0.11, 0.05), (0.03, 0, -0.17), FRAME, bevel=0.005))  # 瀹夎�呮灦
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   189|     export('SM_BurstPack', objs)
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   191| # ---------------------------------------------------------------- 寮瑰皠鍗囩┖锛氬脊灏勫櫒銆傜珫鐫�鐨勫ぇ寮圭哀 + 瀵煎悜鏌� + 椤朵笂涓�鍧楀脊灏勬澘锛屼竴鐪兼槸銆屽脊銆�
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   192| if want('SM_LaunchSpring'):
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   193|     objs = []
+[2026.11.02-19.41.48:694][  0]LogPython: Warning: [src]   194|     H = 0.5
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   195|     base_z, top_z = -H / 2 + 0.03, H / 2 - 0.03
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   196|     R = 0.115
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   197|     # 寮圭哀锛�4 鍦堝崐绮楅挗涓�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   198|     n = 220
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   199|     z0, z1 = base_z + 0.03, top_z - 0.03
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   200|     pts = [(R * math.cos(i / n * 4.5 * math.tau), R * math.sin(i / n * 4.5 * math.tau), z0 + (z1 - z0) * i / n) for i in range(n + 1)]
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   201|     objs.append(use(K.poly_tube('spring', [pts], 0.016, (1, 1, 1), res=4), PAINT))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   202|     # 涓�闂存椿濉烇細绮楃几 + 缁嗘潌
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   203|     objs.append(cyl(0.062, 0.2, (0, 0, base_z + 0.13), 'Z', FRAME, segs=24, bevel=0.004))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   204|     objs.append(cyl(0.035, H - 0.1, (0, 0, 0), 'Z', FRAME, segs=20))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   205|     # 鍥涙牴瀵煎悜鏌�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   206|     for a in (45, 135, 225, 315):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   207|         x, y = 0.15 * math.cos(math.radians(a)), 0.15 * math.sin(math.radians(a))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   208|         objs.append(cyl(0.014, H - 0.04, (x, y, 0), 'Z', FRAME, segs=12))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   209|     # 搴曞骇鍜屽脊灏勬澘锛氱粍浠跺簱鐨勫甫缁撴瀯鍦嗙洏
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   210|     disc, _ = lib('鏋�鐐�', 'a5', 0.42, axis=0, matname=PAINT, at=T(0, 0, base_z), ratio=0.3)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   211|     objs.append(disc)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   212|     top, _ = lib('鏋�鐐�', 'a5', 0.38, axis=0, matname=PAINT, at=Matrix.Rotation(math.pi, 4, 'X') @ T(0, 0, -top_z), ratio=0.3)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   213|     objs.append(top)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   214|     # 鏉夸笂涓夊潡缁村厠鎵樼孩璀︾ず鍧�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   215|     for a in (0, 120, 240):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   216|         c, s_ = math.cos(math.radians(a)), math.sin(math.radians(a))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   217|         b = box((0.012, 0.075, 0.032), (0, 0, 0), ACCENT)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   218|         b.data.transform(T(0.193 * c, 0.193 * s_, top_z - 0.012) @ Matrix.Rotation(math.radians(a), 4, 'Z'))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   219|         objs.append(b)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   220|     objs.append(box((0.13, 0.11, 0.05), (-0.03, 0, base_z - 0.04), FRAME, bevel=0.005))  # 瀹夎�呮灦
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   221|     export('SM_LaunchSpring', objs)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   223| # ---------------------------------------------------------------- 闇囪崱娉�锛氱幆褰㈠彂鐢熷櫒銆傜幆闈㈡按骞筹紙鍐插嚮娉㈡湞鍥涘懆鏁ｅ紑锛屽拰绔栫潃鐨勬姢鐩句竴鐪煎垎寮�锛夛紝鍐呭�栦袱鍦堢嚎鍦� + 鍙戝厜鐜� + 涓�闂存牳蹇�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   224| if want('SM_ShockRing'):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   225|     objs = []
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   226|     D = 0.56
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   227|     outer, _ = lib('鏋�鐐�', 'a1', D, axis=0, matname=PAINT)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   228|     objs.append(outer)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   229|     inner, _ = lib('鏋�鐐�', 'a1', D * 0.56, axis=0, matname=FRAME, at=T(0, 0, 0.012))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   230|     objs.append(inner)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   231|     objs.append(ring(D * 0.385, 0.011, 0.0))  # 涓ゅ湀涔嬮棿鐨勫彂鍏夌幆锛堥槦浼嶈壊锛�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   232|     # 鏍稿績锛氱粍浠跺簱鐨勫彂鍔ㄦ満褰撶嚎鍦堟煴锛岀珫鐫�绌胯繃涓�闂�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   233|     core = lib_x('鏋�鐐�', 'engine_5', 0.24, PAINT, Matrix.Rotation(math.pi / 2, 4, 'Y') @ T(0, 0, 0), ratio=0.03, thin_front=False)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   234|     objs.append(core)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   235|     # 杈愭潯鍜屽�栧湀涓婄殑 6 涓�鍙戝皠澶�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   236|     for i in range(6):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   237|         a = i / 6 * math.tau + math.pi / 6
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   238|         b = box((D * 0.28, 0.034, 0.022), (0, 0, 0), FRAME)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   239|         b.data.transform(Matrix.Rotation(a, 4, 'Z') @ T(D * 0.27, 0, 0))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   240|         objs.append(b)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   241|         # 闅斾竴涓�鍙戝皠澶存槸缁村厠鎵樼孩
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   242|         c = cyl(0.03, 0.05, (0, 0, 0), 'X', ACCENT if i % 2 == 0 else FRAME, r2=0.018, segs=14)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   243|         c.data.transform(Matrix.Rotation(a, 4, 'Z') @ T(D * 0.5 + 0.012, 0, 0))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   244|         objs.append(c)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   245|     objs.append(box((0.12, 0.11, 0.05), (-0.02, 0, -0.145), FRAME, bevel=0.005))  # 瀹夎�呮灦
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   246|     export('SM_ShockRing', objs)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   249| # ---------------------------------------------------------------- 鍦伴浄鏈�浣擄細鎵佸渾鐩� + 涓�闂村彂鍏夊ご锛堥槦浼嶈壊锛�+ 涓�鍦堟柊绾�姗欙紝韬哄湪鍦颁笂銆傚師鐐瑰湪搴曢潰涓�蹇冿紝鍗婂緞 22 鍘樼背
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   250| def mine_parts(r=0.22, h=0.075, at=Matrix(), detail=True, glow=True):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   251|     parts = []
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   252|     parts.append(use(cyl(r, h * 0.62, (0, 0, h * 0.31), 'Z', PAINT, r2=r * 0.92, segs=32), PAINT, at))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   253|     if detail:
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   254|         top, _ = lib('鏋�鐐�', 'a5', r * 1.75, axis=0, matname=FRAME, at=at @ T(0, 0, h * 0.62 + 0.002), ratio=0.25)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   255|         parts.append(top)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   256|     else:
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   257|         parts.append(use(cyl(r * 0.84, h * 0.2, (0, 0, h * 0.72), 'Z', FRAME, r2=r * 0.74, segs=28), FRAME, at))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   258|     parts.append(use(cyl(r * 1.02, h * 0.16, (0, 0, h * 0.2), 'Z', ACCENT, segs=32), ACCENT, at))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   259|     parts.append(use(cyl(r * 0.2, h * 0.32, (0, 0, h * 0.86), 'Z', FRAME, r2=r * 0.16, segs=16), FRAME, at))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   260|     if glow:
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   261|         parts.append(use(cyl(r * 0.13, h * 0.1, (0, 0, h * 1.06), 'Z', GLOW, r2=r * 0.07, segs=12), GLOW, at))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   262|     return parts
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   265| if want('SM_Mine'):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   266|     export('SM_Mine', mine_parts())
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   268| # ---------------------------------------------------------------- 鍦伴浄锛氬竷闆峰櫒銆備笂闈�涓�涓�甯︾粨鏋勭殑澶栧３锛岃倸瀛愬簳涓嬮湶鍑轰竴鎺掓憺鐫�鐨勯浄锛堣酱鏈� X锛屽儚涓�鍗风‖甯侊級锛屾灦鍦ㄤ袱鏍规墭杞ㄤ笂
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   269| if want('SM_MineLayer'):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   270|     objs = []
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   271|     hull, _ = lib('绉戝够鏈烘��', 'scifi_kitbash_piece_03', 0.56, rot=(0, 0, -math.pi / 2), axis=0, matname=PAINT, at=T(0, 0, 0.085), ratio=0.5)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   272|     objs.append(hull)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   273|     # 鎵樿建锛氶浄鐨勪笅闈㈠乏鍙充袱鏍癸紝鍓嶅悗鍚勪竴鍧楀悐鏉胯繛鍒板�栧３
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   274|     for s in (-1, 1):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   275|         objs.append(box((0.5, 0.016, 0.018), (0.0, s * 0.05, -0.19), FRAME, bevel=0.003))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   276|     for x in (-0.25, 0.25):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   277|         objs.append(box((0.018, 0.13, 0.16), (x, 0, -0.115), FRAME, bevel=0.003))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   278|     # 浜旈�楅浄绔栫潃鎽烇紝鍜屽湴涓婄殑闆峰悓涓�涓�鏍峰瓙锛堢缉灏忋�佺渷闈�锛�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   279|     stand = Matrix.Rotation(math.pi / 2, 4, 'Y')
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   280|     for i in range(5):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   281|         objs += mine_parts(0.082, 0.04, T(-0.18 + i * 0.09, 0, -0.115) @ stand, detail=False, glow=False)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   282|     objs.append(box((0.08, 0.03, 0.008), (0.14, 0, 0.155), ACCENT))  # 椤朵笂涓�閬撴柊绾�姗欒瘑鍒�鏉�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   283|     objs.append(box((0.13, 0.11, 0.03), (0.0, 0, -0.215), FRAME, bevel=0.005))  # 瀹夎�呮灦
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   284|     export('SM_MineLayer', objs)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   286| # ---------------------------------------------------------------- 棰勮�堬紙Workbench锛屾寜鏉愯川妲戒笂鑹诧級锛岀‘璁ゅ舰鐘�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   287| COL = {PAINT: (0.3, 0.33, 0.36), FRAME: (0.14, 0.15, 0.16), ACCENT: (0.81, 0.37, 0.11), GLOW: (0.2, 0.85, 1.0)}
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   288| for m, c in COL.items():
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   289|     mat(m).diffuse_color = (*c, 1)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   290| sc.render.engine = 'BLENDER_WORKBENCH'
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   291| sh = sc.display.shading
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   292| sh.light, sh.color_type, sh.show_cavity, sh.show_shadows = 'STUDIO', 'MATERIAL', True, True
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   293| sh.background_type, sh.background_color = 'VIEWPORT', (0.16, 0.17, 0.19)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   294| sc.render.resolution_x, sc.render.resolution_y = 700, 500
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   295| cam_data = bpy.data.cameras.new('cam')
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   296| cam_data.lens = 55
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   297| cam = bpy.data.objects.new('cam', cam_data)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   298| sc.collection.objects.link(cam)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   299| sc.camera = cam
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]   300| for o in sc.objects:
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src] #### lookdev/make_shoulder_kits.py 275 琛�
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     1| """鑲╅儴姝﹀櫒锛氶挬鐖�銆佹崟鑾风綉鐨勭礌鏉愭嫾瑁呮牱瀛愶紙鍙�鐪嬪舰鐘讹紝Workbench 娓叉煋锛夈��
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     2| 闆朵欢浠庢満鐢茬粍浠跺簱閲屽彇锛堢紪鍙疯�� Inbox/_鏈虹敳缁勪欢棰勮��/<搴�>/_survey.json锛夛紝缃戞槸杩欓噷绋嬪簭鐢熸垚鐨勶紙绱犳潗搴撳拰 Poly Haven 閮芥病鏈夌綉锛夈��
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     3| blender -b --factory-startup -P lookdev/make_shoulder_kits.py -- 杈撳嚭鐩�褰�"""
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     4| import bpy, bmesh, sys, os, math, random
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     5| from mathutils import Vector, Matrix, Euler, noise
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     7| LIB = 'D:/RobotSlice/Inbox/鏈虹敳缁勪欢5000+/'
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]     9| STEEL, DARK, CABLE, NETC, ORANGE, STAND = (0.47, 0.49, 0.52), (0.28, 0.29, 0.31), (0.1, 0.1, 0.11), (0.14, 0.15, 0.16), (0.81, 0.37, 0.11), (0.58, 0.6, 0.63)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    12| def part(lib, name, rot=(0, 0, 0), size=None, axis=1, color=STEEL):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    13|     """杩藉姞涓�浠剁礌鏉愶細鐑樿繘鑷�韬�鍙樻崲銆佷腑蹇冩斁鍘熺偣銆佹寜 rot 杞�濂斤紝鍐嶆寜 axis 鏂瑰悜鐨勯暱搴︾缉鏀惧埌 size 绫�"""
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    14|     with bpy.data.libraries.load(LIB + lib + '.blend', link=False) as (src, dst):
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    15|         dst.objects = [name]
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    16|     ob = dst.objects[0]
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    17|     me = ob.data.copy()
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    18|     mw, p = ob.matrix_basis.copy(), ob.parent
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    19|     while p is not None:
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    20|         mw = p.matrix_basis @ mw
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    21|         p = p.parent
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    22|     me.transform(Euler(rot).to_matrix().to_4x4() @ mw)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    23|     lo = Vector([min(v.co[i] for v in me.vertices) for i in range(3)])
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    24|     hi = Vector([max(v.co[i] for v in me.vertices) for i in range(3)])
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    25|     me.transform(Matrix.Translation(-(lo + hi) / 2))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    26|     s = size / (hi - lo)[axis] if size else 1.0
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    27|     me.transform(Matrix.Scale(s, 4))
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    28|     new = bpy.data.objects.new(name, me)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    29|     new.color = (*color, 1)
+[2026.11.02-19.41.48:695][  0]LogPython: Warning: [src]    30|     return new, (hi - lo) * s
+[2026.11.02-19.41.48:695][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.41.48:695][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src] #### lookdev/make_shoulder_tactical.py 319 琛�
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     1| """骞跺叆鑲╅儴鐨勫洓浠惰�呭�囩殑鏃犱汉鏈烘満韬� + 鍦伴浄鏈�浣擄紙11-01锛岀敤鎴凤細銆岃ˉ鍏ㄥ墿涓嬬殑瑁呭�囨ā鍨嬨�嶏級銆傚仛娉曞悓 make_shoulder_game.py锛氭満鐢茬粍浠跺簱闆朵欢鎷艰�� + 灏戦噺绋嬪簭鐢熸垚浠躲��
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     2| SM_BurstPack 绱ф�ヨ劚绂伙紙鎺ㄨ繘鍖咃級銆丼M_LaunchSpring 寮瑰皠鍗囩┖锛堝脊灏勫櫒锛夈�丼M_ShockRing 闇囪崱娉�锛堢幆褰㈠彂鐢熷櫒锛夈�丼M_MineLayer 鍦伴浄锛堝竷闆峰櫒锛夈�丼M_Mine 鍦颁笂鐨勯浄銆�
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     3| 娌� +X 鏈濆墠锛岀背鍒讹紙Blender 鎸夌背锛孎BX apply_unit_scale锛屽�艰繘 UE 鏄�鍘樼背锛屽拰 make_shoulder_game.py 鍚屼竴鏉¤矾锛泃ools/ue_import_shoulder_tactical.py 鎵撳昂瀵告牳瀵癸級銆�
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     4| 鏈鸿韩鏈�闀胯竟绾� 58 鍘樼背锛圲MechShoulderComponent::CacheDroneMesh 缁熶竴鍒� 58锛岃繖閲屽仛鍒板樊涓嶅�氾紝缂╂斁鎺ヨ繎 1锛屽�佸帤鍜屽埆鐨勬棤浜烘満涓�鑷达級銆�
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     5| 鏉愯川妲藉悕鐓ф棫锛圡I_Robot_PaintDark / Frame / Accent / Glow锛夛紝鐢� tools/ue_drone_materials.py 鎸� M_DronePBR 鐨勫疄渚嬨��
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     6| blender -b --factory-startup -P lookdev/make_shoulder_tactical.py -- 杈撳嚭鐩�褰� [鍙�瀵艰繖鍑犱釜锛岄�楀彿鍒嗛殧]"""
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     7| import bpy, bmesh, sys, os, math
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]     8| from mathutils import Vector, Matrix
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]    10| sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]    11| import make_shoulder_kits as K
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]    13| ARGV = sys.argv[sys.argv.index('--') + 1:]
+[2026.11.02-19.41.48:695][  0]LogInit: Display: LogPython: Warning: [src]    14| OUT = os.path.abspath(ARGV[0])
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    15| ONLY = ARGV[1].split(',') if len(ARGV) > 1 else None
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    16| os.makedirs(OUT, exist_ok=True)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    17| sc = bpy.context.scene
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    18| for o in list(sc.objects):
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    19|     bpy.data.objects.remove(o)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    21| PAINT, FRAME, ACCENT, GLOW = 'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow'
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    24| def mat(name):
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    25|     return bpy.data.materials.get(name) or bpy.data.materials.new(name)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    28| def use(ob, matname, at=Matrix(), ratio=None):
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    29|     """鏀捐繘鍦烘櫙銆佺儤杩涘彉鎹�銆佹崲鎴愪竴涓�鏉愯川妲斤紱ratio 缁欎簡灏卞噺闈�"""
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    30|     if ob.name not in sc.collection.objects:
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    31|         sc.collection.objects.link(ob)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    32|     bpy.context.view_layer.objects.active = ob
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    33|     if ob.type == 'CURVE':
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    34|         bpy.ops.object.select_all(action='DESELECT')
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    35|         ob.select_set(True)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    36|         bpy.ops.object.convert(target='MESH')
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    37|         ob = bpy.context.active_object
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    38|     ob.data.transform(at @ ob.matrix_world)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    39|     ob.matrix_world = Matrix()
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    40|     if ratio:
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    41|         mod = ob.modifiers.new('d', 'DECIMATE')
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    42|         mod.ratio = ratio
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    43|         bpy.context.view_layer.objects.active = ob
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    44|         bpy.ops.object.modifier_apply(modifier='d')
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    45|     ob.data.materials.clear()
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    46|     ob.data.materials.append(mat(matname))
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    47|     return ob
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    50| def lib(library, name, length, rot=(0, 0, 0), axis=1, matname=PAINT, at=Matrix(), ratio=None):
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    51|     """鍙栦竴浠堕浂浠讹細杞�濂姐�佸眳涓�銆乤xis 鏂瑰悜鐨勯暱搴︾缉鏀惧埌 length 绫�"""
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    52|     ob, sz = K.part(library, name, rot=rot, size=length, axis=axis)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    53|     return use(ob, matname, at, ratio), sz
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    56| def lib_x(library, name, length, matname=PAINT, at=Matrix(), ratio=None, thin_front=True):
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    57|     """鏈�闀跨殑杞磋浆鍒� X锛泃hin_front锛氱粏鐨勪竴澶存湞 +X锛堝惁鍒欑矖鐨勪竴澶存湞 +X锛�"""
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    58|     ob, sz = K.part(library, name)
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    59|     me = ob.data
+[2026.11.02-19.41.48:696][  0]LogInit: Display: LogPython: Warning: [src]    60|     ax = max(range(3), key=lambda i: sz[i])
