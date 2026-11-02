@@ -1,0 +1,135 @@
+exit=0
+[2026.11.02-15.19.20:569][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.19.21:128][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.19.21:139][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 10.694 ms
+[2026.11.02-15.19.21:139][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.19.21:155][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 17.248 ms (total: 27.942 ms)
+[2026.11.02-15.19.21:155][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_tracer_check.py
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer] MI_Tracer <Object '/Game/Weapons/Materials/MI_Tracer.MI_Tracer' (0x0000013AF3D4F800) Class 'MaterialInstanceConstant'> MaterialInstanceConstant
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer BaseColor <Struct 'LinearColor' (0x0000013B2F2AB9A0) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer Emissive <Struct 'LinearColor' (0x0000013B2F2AB9E0) {r: 1.000000, g: 0.420000, b: 0.120000, a: 1.000000}>
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   鏍囬噺鍙傛暟 MI_Tracer EmissiveStrength 60.0
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_instanced_static_meshes True
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_nanite True
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_static_lighting False
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_skeletal_mesh True
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster blend_mode <BlendMode.BLEND_OPAQUE: 0>
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster shading_model <MaterialShadingModel.MSM_DEFAULT_LIT: 1>
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster two_sided False
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� used_with_niagara_meshes 璇讳笉鍒� Material: Failed to find property 'used_with_niagara_meshes' for attribute 'used_with_niagara_meshes' on 'Material'
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_niagara_sprites False
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer] 缁ф壙閾� /Game/Weapons/Materials/MI_Tracer.MI_Tracer 鈫� /Game/Robot/Materials/M_RobotMaster.M_RobotMaster
+[2026.11.02-15.19.21:160][  0]LogPython: Warning: [tracer] Cylinder nanite False
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\RobotSlice.log 11-02 16:02 18031 琛岋紝鐩稿叧 353 琛�
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1633530832 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1389061281 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 853296137 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 195948854 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 758003301 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new compute PSO: 4089058298 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 244749455 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 607129278 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1572212747 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 3460111095 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 2110166719 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1452607166 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new compute PSO: 3217117980 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new compute PSO: 3556986078 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 2366345844 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 3759848627 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 1142940516 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 440354576 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 3729233333 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 92315905 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 1695767551 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 612552170 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 2983643578 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 80858211 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 63124271 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3319736850 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3209690668 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3083178804 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3377589182 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3779571617 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new compute PSO: 2164850706 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1852689759 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1710521888 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 2925156170 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1156664151 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1468239754 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 2111249735 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:316][  1]LogRHI: Display: Encountered a new graphics PSO: 2469921806 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:316][  1]LogRHI: Display: Encountered a new graphics PSO: 3019932034 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 3439575345 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 1551574069 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 4249922912 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 186636300 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 4115441496 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 797400511 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 132479706 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 2872347710 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:189][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 3312255784 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 2474041877 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 2555770016 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 3573527822 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:366][  1]LogRHI: Display: Encountered a new graphics PSO: 3390127741 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:695][ 23]LogRHI: Display: Encountered a new graphics PSO: 3287409095 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:695][ 23]LogRHI: Display: Encountered a new graphics PSO: 1093636188 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.41:569][254]LogRHI: Display: Encountered a new graphics PSO: 2237898254 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.41:569][254]LogRHI: Display: Encountered a new graphics PSO: 564257618 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.41:570][254]LogRHI: Display: Encountered a new graphics PSO: 4083598617 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.51:410][  7]LogRHI: Display: Encountered a new graphics PSO: 3375398309 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.51:410][  7]LogRHI: Display: Encountered a new graphics PSO: 93052875 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPython: Warning: [tracer]   | [2026.11.02-13.47.51:410][  7]LogRHI: Display: Encountered a new graphics PSO: 3228235678 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-15.19.21:190][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer] MI_Tracer <Object '/Game/Weapons/Materials/MI_Tracer.MI_Tracer' (0x0000013AF3D4F800) Class 'MaterialInstanceConstant'> MaterialInstanceConstant
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer BaseColor <Struct 'LinearColor' (0x0000013B2F2AB9A0) {r: 0.000000, g: 0.000000, b: 0.000000, a: 1.000000}>
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   鍚戦噺鍙傛暟 MI_Tracer Emissive <Struct 'LinearColor' (0x0000013B2F2AB9E0) {r: 1.000000, g: 0.420000, b: 0.120000, a: 1.000000}>
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   鏍囬噺鍙傛暟 MI_Tracer EmissiveStrength 60.0
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_instanced_static_meshes True
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_nanite True
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_static_lighting False
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_skeletal_mesh True
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster blend_mode <BlendMode.BLEND_OPAQUE: 0>
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster shading_model <MaterialShadingModel.MSM_DEFAULT_LIT: 1>
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster two_sided False
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� used_with_niagara_meshes 璇讳笉鍒� Material: Failed to find property 'used_with_niagara_meshes' for attribute 'used_with_niagara_meshes' on 'Material'
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   姣嶆潗璐� M_RobotMaster used_with_niagara_sprites False
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer] 缁ф壙閾� /Game/Weapons/Materials/MI_Tracer.MI_Tracer 鈫� /Game/Robot/Materials/M_RobotMaster.M_RobotMaster
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer] Cylinder nanite False
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer] 鎵撳寘鐗堟棩蹇� D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs\RobotSlice.log 11-02 16:02 18031 琛岋紝鐩稿叧 353 琛�
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1633530832 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1389061281 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 853296137 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 195948854 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 758003301 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new compute PSO: 4089058298 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 244749455 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 607129278 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1572212747 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 3460111095 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 2110166719 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:209][  1]LogRHI: Display: Encountered a new graphics PSO: 1452607166 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new compute PSO: 3217117980 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new compute PSO: 3556986078 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 2366345844 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 3759848627 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 1142940516 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 440354576 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 3729233333 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 92315905 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 1695767551 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 612552170 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 2983643578 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:210][  1]LogRHI: Display: Encountered a new graphics PSO: 80858211 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 63124271 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3319736850 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3209690668 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3083178804 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3377589182 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 3779571617 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new compute PSO: 2164850706 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1852689759 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 1710521888 (PSOPrecacheState: Missed)
+[2026.11.02-15.19.21:190][  0]LogInit: Display: LogPython: Warning: [tracer]   | [2026.11.02-13.47.37:211][  1]LogRHI: Display: Encountered a new graphics PSO: 2925156170 (PSOPrecacheState: Missed)

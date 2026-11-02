@@ -1,0 +1,11 @@
+exit=0
+[2026.11.02-15.19.05:705][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.19.06:341][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.19.06:353][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 11.041 ms
+[2026.11.02-15.19.06:353][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.19.06:372][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 19.623 ms (total: 30.664 ms)
+[2026.11.02-15.19.06:372][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_find_media.py
+[2026.11.02-15.19.06:378][  0]LogPython: Warning: [media] 瑙嗛�戠浉鍏宠祫婧� 0 涓�
+[2026.11.02-15.19.06:378][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-15.19.06:378][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-15.19.06:378][  0]LogInit: Display: LogPython: Warning: [media] 瑙嗛�戠浉鍏宠祫婧� 0 涓�
