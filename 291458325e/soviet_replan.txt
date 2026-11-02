@@ -1,0 +1,31 @@
+exit=0
+[2026.11.02-11.38.25:179][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.38.25:673][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.38.25:696][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 22.802 ms
+[2026.11.02-11.38.25:696][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.38.25:698][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 1.163 ms (total: 23.965 ms)
+[2026.11.02-11.38.25:698][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_soviet_replan.py
+[2026.11.02-11.38.25:733][  0]LogPython: Warning: [replan] 杩愯�� C:\Users\ASUS\AppData\Local\Programs\Python\Launcher\py.EXE -3 -I D:/RobotSlice/tools/soviet_plan.py
+[2026.11.02-11.38.27:614][  0]LogPython: Warning: [replan] plan | [plan] Team0 锟斤拷锟斤拷锟斤拷锟角� 16.6 锟斤拷
+[2026.11.02-11.38.27:614][  0]LogPython: Warning: [replan] plan | [plan] Team1 锟斤拷锟斤拷锟斤拷锟角� 18.0 锟斤拷
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 锟斤拷锟接筹拷锟斤拷锟姐互锟洁看锟矫硷拷锟斤拷2 锟阶高ｏ拷锟斤拷 False 锟斤拷20 锟阶高ｏ拷 False
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 锟斤拷锟斤拷锟斤拷锟� 66000 锟缴达（锟斤拷锟芥） 57384 87%
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 锟斤拷锟解： 锟斤拷
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 锟斤拷锟� Counter({'winter': 158, 'bldg': 152, 'prop': 77, 'kprop': 62, 'light': 36}) 锟斤拷锟斤拷楼 21 远锟斤拷楼 131
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 锟斤拷锟竭ｏ拷2 锟阶高ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷全锟斤拷 True 锟较筹拷锟斤拷 True 锟斤拷锟斤拷锟� True 锟斤拷锟斤拷锟� True 锟斤拷院锟斤拷锟斤拷 False 锟斤拷锟斤拷 True
+[2026.11.02-11.38.27:615][  0]LogPython: Warning: [replan] plan | [plan] 写锟斤拷 D:/RobotSlice/Inbox/_k62/锟斤拷锟斤拷.png (1520, 1200)
+[2026.11.02-11.38.28:074][  0]LogPython: Warning: [replan] 鍦伴潰閬�缃╁凡閲嶅��
+[2026.11.02-11.38.28:807][  0]LogPython: Warning: [replan] L_Soviet 宸查噸寤�
+[2026.11.02-11.38.28:807][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-11.38.28:807][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] 杩愯�� C:\Users\ASUS\AppData\Local\Programs\Python\Launcher\py.EXE -3 -I D:/RobotSlice/tools/soviet_plan.py
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] Team0 锟斤拷锟斤拷锟斤拷锟角� 16.6 锟斤拷
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] Team1 锟斤拷锟斤拷锟斤拷锟角� 18.0 锟斤拷
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 锟斤拷锟接筹拷锟斤拷锟姐互锟洁看锟矫硷拷锟斤拷2 锟阶高ｏ拷锟斤拷 False 锟斤拷20 锟阶高ｏ拷 False
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 锟斤拷锟斤拷锟斤拷锟� 66000 锟缴达（锟斤拷锟芥） 57384 87%
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 锟斤拷锟解： 锟斤拷
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 锟斤拷锟� Counter({'winter': 158, 'bldg': 152, 'prop': 77, 'kprop': 62, 'light': 36}) 锟斤拷锟斤拷楼 21 远锟斤拷楼 131
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 锟斤拷锟竭ｏ拷2 锟阶高ｏ拷锟斤拷锟斤拷锟斤拷锟斤拷全锟斤拷 True 锟较筹拷锟斤拷 True 锟斤拷锟斤拷锟� True 锟斤拷锟斤拷锟� True 锟斤拷院锟斤拷锟斤拷 False 锟斤拷锟斤拷 True
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] plan | [plan] 写锟斤拷 D:/RobotSlice/Inbox/_k62/锟斤拷锟斤拷.png (1520, 1200)
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] 鍦伴潰閬�缃╁凡閲嶅��
+[2026.11.02-11.38.28:807][  0]LogInit: Display: LogPython: Warning: [replan] L_Soviet 宸查噸寤�
