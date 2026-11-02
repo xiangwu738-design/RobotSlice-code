@@ -150,6 +150,20 @@ void FMechSettings::Load()
 			UE_LOG(LogTemp, Display, TEXT("[sens] 旧灵敏度 %.3f 倍率（引擎 yaw 缩放 %.2f）→ CS2 灵敏度 %.3f"), Old, OldYawScale, MouseSensitivity);
 			GConfig->SetInt(Section, TEXT("SensVersion"), 2, GGameUserSettingsIni);
 			ZoomSensitivityRatio = 0.3f;
+			SensVersion = 2;
+		}
+		// 11-02 开镜灵敏度独立：瞄准、开镜各自一个 CS2 数字。旧设置按以前的手感换算（瞄准 x0.6、开镜 x 开镜倍率）
+		if (SensVersion < 3)
+		{
+			AimSensitivity = MouseSensitivity * 0.6f;
+			ScopeSensitivity = MouseSensitivity * ZoomSensitivityRatio;
+			UE_LOG(LogTemp, Display, TEXT("[sens] 开镜灵敏度独立：瞄准 %.3f、开镜 %.3f（由主灵敏度 %.3f 换算）"), AimSensitivity, ScopeSensitivity, MouseSensitivity);
+			GConfig->SetInt(Section, TEXT("SensVersion"), 3, GGameUserSettingsIni);
+		}
+		else
+		{
+			GConfig->GetFloat(Section, TEXT("AimSensitivity"), AimSensitivity, GGameUserSettingsIni);
+			GConfig->GetFloat(Section, TEXT("ScopeSensitivity"), ScopeSensitivity, GGameUserSettingsIni);
 		}
 	}
 	GConfig->GetBool(Section, TEXT("InvertY"), bInvertY, GGameUserSettingsIni);
@@ -211,6 +225,8 @@ void FMechSettings::Load()
 	}
 	MouseSensitivity = FMath::Clamp(MouseSensitivity, 0.01f, 100.f);
 	ZoomSensitivityRatio = FMath::Clamp(ZoomSensitivityRatio, 0.05f, 3.f);
+	AimSensitivity = FMath::Clamp(AimSensitivity, 0.01f, 100.f);
+	ScopeSensitivity = FMath::Clamp(ScopeSensitivity, 0.01f, 100.f);
 	FieldOfView = FMath::Clamp(FieldOfView, 70.f, 110.f);
 	MasterVolume = FMath::Clamp(MasterVolume, 0.f, 1.f);
 	AlertVolume = FMath::Clamp(AlertVolume, 0.f, 1.f);
@@ -224,7 +240,9 @@ void FMechSettings::Save() const
 {
 	GConfig->SetFloat(Section, TEXT("MouseSensitivity"), MouseSensitivity, GGameUserSettingsIni);
 	GConfig->SetFloat(Section, TEXT("ZoomSensitivityRatio"), ZoomSensitivityRatio, GGameUserSettingsIni);
-	GConfig->SetInt(Section, TEXT("SensVersion"), 2, GGameUserSettingsIni);
+	GConfig->SetFloat(Section, TEXT("AimSensitivity"), AimSensitivity, GGameUserSettingsIni);
+	GConfig->SetFloat(Section, TEXT("ScopeSensitivity"), ScopeSensitivity, GGameUserSettingsIni);
+	GConfig->SetInt(Section, TEXT("SensVersion"), 3, GGameUserSettingsIni);
 	GConfig->SetBool(Section, TEXT("InvertY"), bInvertY, GGameUserSettingsIni);
 	GConfig->SetFloat(Section, TEXT("FieldOfView"), FieldOfView, GGameUserSettingsIni);
 	GConfig->SetFloat(Section, TEXT("MasterVolume"), MasterVolume, GGameUserSettingsIni);

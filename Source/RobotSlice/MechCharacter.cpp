@@ -610,8 +610,11 @@ void AMechCharacter::DoLook(float Yaw, float Pitch)
 		PitchK = FMath::Max(0.01f, FMath::Abs(LookPC->GetDeprecatedInputPitchScale()));
 		PRAGMA_ENABLE_DEPRECATION_WARNINGS
 	}
-	const float Base = S.MouseSensitivity * FMechSettings::DegreesPerCount / FMechSettings::LookEngineExtra;
-	const float Mode = bScope ? S.ZoomSensitivityRatio * MechWeapons::ScopeLookScale(AimFriction) : bArty ? 0.4f : (Combat && Combat->IsAiming() ? 0.6f : 1.f) * AimFriction;
+	// 11-02 开镜灵敏度独立：腰射 / 右键瞄准 / 狙击开镜各用各的 CS2 数字（设置里三项），火炮架设照旧按主灵敏度 x0.4
+	const bool bAim = Combat && Combat->IsAiming();
+	const float Sens = bScope ? S.ScopeSensitivity : bArty ? S.MouseSensitivity : bAim ? S.AimSensitivity : S.MouseSensitivity;
+	const float Base = Sens * FMechSettings::DegreesPerCount / FMechSettings::LookEngineExtra;
+	const float Mode = bScope ? MechWeapons::ScopeLookScale(AimFriction) : bArty ? 0.4f : AimFriction;
 	Super::DoLook(Yaw * Base * Mode / YawK, Pitch * Base * Mode / PitchK * (S.bInvertY ? -1.f : 1.f));
 }
 

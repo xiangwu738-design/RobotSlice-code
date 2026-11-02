@@ -1020,8 +1020,14 @@ TSharedRef<SWidget> SMechMenu::MakeControlTab()
 		]
 		+ SVerticalBox::Slot().AutoHeight()
 		[
-			MechKit::Row(INVTEXT("开镜灵敏度倍率"), INVTEXT("相当于 CS2 的 zoom_sensitivity_ratio：狙击开镜时在灵敏度上再乘这个数"),
-				MechSettingsUI::NumberBox([]() { return FMechSettings::Get().ZoomSensitivityRatio; }, [](float V) { FMechSettings::Get().ZoomSensitivityRatio = FMath::Clamp(V, 0.05f, 3.f); FMechSettings::Get().Save(); }),
+			MechKit::Row(INVTEXT("瞄准灵敏度"), INVTEXT("右键瞄准时用这个数（和上面同一种数字，独立设置，改鼠标灵敏度不跟着变）"),
+				MechSettingsUI::NumberBox([]() { return FMechSettings::Get().AimSensitivity; }, [](float V) { FMechSettings::Get().AimSensitivity = FMath::Clamp(V, 0.01f, 100.f); FMechSettings::Get().Save(); }),
+				NameW)
+		]
+		+ SVerticalBox::Slot().AutoHeight()
+		[
+			MechKit::Row(INVTEXT("开镜灵敏度"), INVTEXT("狙击枪开镜时用这个数（独立设置，改鼠标灵敏度不跟着变）"),
+				MechSettingsUI::NumberBox([]() { return FMechSettings::Get().ScopeSensitivity; }, [](float V) { FMechSettings::Get().ScopeSensitivity = FMath::Clamp(V, 0.01f, 100.f); FMechSettings::Get().Save(); }),
 				NameW)
 		]
 		+ SVerticalBox::Slot().AutoHeight()

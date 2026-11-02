@@ -434,7 +434,7 @@ private:
 	 *  转向是连续的快速转身（有角加速度上限、快对准时缓出） */
 	void DriveMelee(const FMove& S, float Reach, float DeltaTime);
 	/** 朝 WantYaw 转（度/秒上限 MaxRate），角速度 MeleeYawRate 有加速度上限 */
-	void TurnToward(float WantYaw, float MaxRate, float DeltaTime);
+	void TurnToward(float WantYaw, float MaxRate, float DeltaTime, float Accel = 16000.f);
 	void LaunchOneMissile();
 	void MeleeStrikeAuthority();
 	/** 服务器（11-01 拼刀，这台的刀砍下、够得着 Victim 时）：算不算拼刀，算就结算（两刀作废、弹开）并返回 true */

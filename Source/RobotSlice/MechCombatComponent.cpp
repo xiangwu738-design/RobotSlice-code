@@ -2676,6 +2676,7 @@ void UMechCombatComponent::DriveMelee(const FMove& S, float Reach, float Dt)
 	bool bHasWantYaw = Ctrl != nullptr;
 	float WantYaw = Ctrl ? Ctrl->GetControlRotation().Yaw : 0.f;
 	float TurnRate = 720.f;
+	float TurnAccel = 16000.f;
 	if (MeleeTime < S.StrikeAt)
 	{
 		FVector Dir = LungeDir.GetSafeNormal2D();
@@ -2751,21 +2752,25 @@ void UMechCombatComponent::DriveMelee(const FMove& S, float Reach, float Dt)
 		{
 			Move->Velocity.Z *= FMath::Exp(-10.f * Dt);
 		}
+		// 11-02 用户：近战命中之后立刻转回镜头方向。以前砍下后最快 720°/秒、角加速度 16000°/秒² 慢慢转回去，看着像还黏在敌人身上；
+		// 现在最快 2400°/秒、起转加速度 64000°/秒²，基本一下就对齐（最后十几度仍按比例收，不硬切）
+		TurnRate = 2400.f;
+		TurnAccel = 64000.f;
 	}
 	if (bHasWantYaw)
 	{
-		TurnToward(WantYaw, TurnRate, Dt);
+		TurnToward(WantYaw, TurnRate, Dt, TurnAccel);
 	}
 }
 
-void UMechCombatComponent::TurnToward(float WantYaw, float MaxRate, float Dt)
+void UMechCombatComponent::TurnToward(float WantYaw, float MaxRate, float Dt, float Accel)
 {
 	AMechCharacter* Mech = GetMech();
 	const float Yaw = Mech->GetActorRotation().Yaw;
 	const float Delta = FMath::FindDeltaAngleDegrees(Yaw, WantYaw);
 	// 想要的角速度：离得远按上限转，快对准时按比例收（缓出，时间常数约 0.07 秒）；角速度本身按加速度上限变（缓入，0 → 1260 约 0.08 秒）
-	const float WantRate = FMath::Clamp(Delta * 14.f, -MaxRate, MaxRate);
-	MeleeYawRate = FMath::FInterpConstantTo(MeleeYawRate, WantRate, Dt, 16000.f);
+	const float WantRate = FMath::Clamp(Delta * (Accel > 16000.f ? 30.f : 14.f), -MaxRate, MaxRate);
+	MeleeYawRate = FMath::FInterpConstantTo(MeleeYawRate, WantRate, Dt, Accel);
 	float Step = MeleeYawRate * Dt;
 	if (Step * Delta > 0.f && FMath::Abs(Step) > FMath::Abs(Delta))
 	{
