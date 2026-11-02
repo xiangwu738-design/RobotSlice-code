@@ -47,14 +47,46 @@ def finish():
         log('  客户端|', l.strip()[:220])
 
 
+def host_hitches():
+    """主机自己的日志里 stat dumphitches 打的卡顿明细（LogStats，测试结果只收 LogTemp/LogPython，所以转一道）"""
+    logs = [os.path.join(LOGDIR, f) for f in os.listdir(LOGDIR) if f.endswith('.log') and 'NetPerfClient' not in f]
+    if not logs:
+        return
+    hl = max(logs, key=os.path.getmtime)
+    try:
+        text = open(hl, 'rb').read().decode('utf-8', errors='replace').splitlines()
+    except OSError as e:
+        log('读不到主机日志', e)
+        return
+    out = []
+    grab = 0
+    for l in text:
+        if 'hitch' in l.lower() and 'LogStats' in l:
+            grab = 40
+        if grab > 0:
+            grab -= 1
+            if 'LogStats' in l or 'LogTemp' not in l:
+                out.append(l.strip())
+    log(f'主机日志 {os.path.basename(hl)}：卡顿明细 {len(out)} 行（最多 150）')
+    for l in out[:150]:
+        log('  主机|', l[:240])
+
+
 def tick(dt):
     if st['done']:
         return
     t = time.time() - st['t0']
+    if not st.get('stats') and t > 3:
+        st['stats'] = True
+        w = unreal.find_object(None, '/Game/Maps/L_Pillars.L_Pillars')  # 只用石林测；换图要改这里
+        for cmd in ('t.HitchFrameTimeThreshold 50', 'stat dumphitches'):
+            unreal.SystemLibrary.execute_console_command(w, cmd)
+        log('开了 stat dumphitches（超过 50 毫秒的帧打明细）')
     if st['proc'] is None and t > 8:
         start_client()
     if st['proc'] is not None and t > CLIENT_SECONDS + 20:
         finish()
+        host_hitches()
         unreal.unregister_slate_post_tick_callback(h)
 
 
