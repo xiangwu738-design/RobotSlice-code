@@ -144,6 +144,52 @@
       "_": "头比身体宽的 0.8（头身比偏大 = 可爱）；head 骨头的转动中心在头的后下方（脖子），代码歪头就转它"
     },
     {
+      "name": "muzzle",
+      "src": [
+        {
+          "type": "faction",
+          "key": "PHASE_L",
+          "bone": "^(foot_l|ball_l)$"
+        },
+        {
+          "type": "faction",
+          "key": "PHASE_M",
+          "bone": "^(foot_l|ball_l)$"
+        },
+        {
+          "type": "faction",
+          "key": "PHASE_L",
+          "bone": "^hand_l$"
+        }
+      ],
+      "orient": [
+        [
+          "-Y",
+          "+X"
+        ],
+        [
+          "+Z",
+          "+Z"
+        ]
+      ],
+      "to": "head_shell",
+      "anchor": "front",
+      "at": [
+        1,
+        0,
+        -0.4
+      ],
+      "push": [
+        0.45,
+        0,
+        0
+      ],
+      "fit": "y",
+      "size": 0.6,
+      "bone": "head",
+      "_": "11-02 用户：头部把狗嘴做出来，不要一个球。取相位机体的脚掌（前窄后宽的楔形），朝前装在头前端偏下、伸出去半截，宽度是头宽的 0.6"
+    },
+    {
       "name": "neck",
       "src": [
         {
