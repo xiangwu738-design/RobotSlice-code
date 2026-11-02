@@ -119,7 +119,7 @@ def hydraulics_t1():
     cyl(bm, (X(1.72), -0.10, 0), (X(1.72), 0.10, 0), 0.075, segs=16)
     cyl(bm, (X(1.72), -0.1345, 0), (X(1.72), 0.1345, 0), 0.035, segs=10)
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
-    return _finish(bm, '液压杆（自建）', material('MI_Kit_Hydraulics', (0.42, 0.44, 0.46), 0.85, 0.38))
+    return _finish(bm, '液压杆（自建）', material('MI_Kit_Hydraulics', (0.25, 0.26, 0.27), 0.85, 0.38))  # 和原件在预览里的灰度一样（原件 diffuse 0.25）
 
 
 def _catmull(pts, n):
