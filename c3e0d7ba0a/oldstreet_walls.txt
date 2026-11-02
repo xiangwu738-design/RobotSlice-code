@@ -1,0 +1,43 @@
+exit=0
+[2026.11.02-12.15.34:519][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-12.15.35:268][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.15.35:282][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 13.827 ms
+[2026.11.02-12.15.35:282][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.15.35:308][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 26.308 ms (total: 40.136 ms)
+[2026.11.02-12.15.35:308][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_oldstreet_walls.py
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 澧� Wall_Right Y 41.0 鈫� 8.6 绫�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 澧� Wall_Left Y -41.0 鈫� -8.6 绫�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鑼冨洿鐐� MechArena ['MechArena', 'HalfX=5000', 'HalfY=760', 'OldStreet']
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鑼冨洿鐐� OldStreetBounds ['OldStreetBounds', 'PeriodX=10000', 'SeamX=5000', 'HalfY=760', 'CeilZ=4000', 'OldStreet']
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� TeamSpawn0 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� TeamSpawn1 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn1 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn2 Y 26.0 鈫� 5.1
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn3 Y -22.0 鈫� -5.1
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn4 Y 1.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn5 Y 2.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn6 Y -2.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn7 Y 34.0 鈫� 5.1
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn8 Y 34.0 鈫� 5.1
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn9 Y -33.0 鈫� -5.1
+[2026.11.02-12.15.35:460][  0]LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn10 Y -33.0 鈫� -5.1
+[2026.11.02-12.15.35:527][  0]LogPython: Warning: [oswalls] 宸插瓨
+[2026.11.02-12.15.35:527][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-12.15.35:527][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 澧� Wall_Right Y 41.0 鈫� 8.6 绫�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 澧� Wall_Left Y -41.0 鈫� -8.6 绫�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鑼冨洿鐐� MechArena ['MechArena', 'HalfX=5000', 'HalfY=760', 'OldStreet']
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鑼冨洿鐐� OldStreetBounds ['OldStreetBounds', 'PeriodX=10000', 'SeamX=5000', 'HalfY=760', 'CeilZ=4000', 'OldStreet']
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� TeamSpawn0 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� TeamSpawn1 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn1 Y 0.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn2 Y 26.0 鈫� 5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn3 Y -22.0 鈫� -5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn4 Y 1.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn5 Y 2.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐� DMSpawn6 Y -2.0 涓嶇敤鎸�
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn7 Y 34.0 鈫� 5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn8 Y 34.0 鈫� 5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn9 Y -33.0 鈫� -5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 鍑虹敓鐐规尓鍥炶�楅噷 DMSpawn10 Y -33.0 鈫� -5.1
+[2026.11.02-12.15.35:527][  0]LogInit: Display: LogPython: Warning: [oswalls] 宸插瓨
