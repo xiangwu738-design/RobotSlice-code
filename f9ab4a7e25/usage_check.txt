@@ -1,0 +1,13 @@
+exit=0
+[2026.11.02-15.24.14:491][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.24.15:123][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.24.15:136][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 14.045 ms
+[2026.11.02-15.24.15:136][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.24.15:161][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 23.368 ms (total: 37.413 ms)
+[2026.11.02-15.24.15:161][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_check_usage.py
+[2026.11.02-15.24.15:163][  0]LogPython: Warning: [usagecheck] /Game/Weapons/Materials/M_BladeGhost nanite=True ism=False 鏂囦欢 11-02 16:22
+[2026.11.02-15.24.15:163][  0]LogPython: Warning: [usagecheck] /Game/Robot/Materials/M_RobotMaster nanite=True ism=True 鏂囦欢 10-29 10:06
+[2026.11.02-15.24.15:163][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-15.24.15:163][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-15.24.15:163][  0]LogInit: Display: LogPython: Warning: [usagecheck] /Game/Weapons/Materials/M_BladeGhost nanite=True ism=False 鏂囦欢 11-02 16:22
+[2026.11.02-15.24.15:163][  0]LogInit: Display: LogPython: Warning: [usagecheck] /Game/Robot/Materials/M_RobotMaster nanite=True ism=True 鏂囦欢 10-29 10:06
