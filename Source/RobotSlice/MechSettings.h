@@ -45,6 +45,10 @@ struct FMechSettings
 	 *  ZoomSensitivityRatio 对应 zoom_sensitivity_ratio：狙击开镜时再乘这个倍率。 */
 	float MouseSensitivity = 8.f;
 	float ZoomSensitivityRatio = 0.3f;
+	/** 11-02 用户：开镜灵敏度独立。右键瞄准、狙击开镜各一个独立的 CS2 数字（不再是主灵敏度的倍率，改主灵敏度不跟着变）。
+	 *  旧设置迁移（SensVersion < 3）：瞄准 = 主灵敏度 x 0.6（以前写死的），开镜 = 主灵敏度 x ZoomSensitivityRatio。ZoomSensitivityRatio 只留着迁移用 */
+	float AimSensitivity = 4.8f;
+	float ScopeSensitivity = 2.4f;
 	/** CS2 灵敏度 1 = 每计数多少度 */
 	static constexpr float DegreesPerCount = 0.022f;
 	/** 引擎里除了 InputYawScale 以外，每个鼠标计数进到 DoLook 时要乘的倍数 = 增强输入的 Mouse2D 轴灵敏度 0.07（实测 -MechLookCalib：注入 100 计数，DoLook 收到 7.0） */
