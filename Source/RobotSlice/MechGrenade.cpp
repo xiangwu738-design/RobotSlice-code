@@ -1,4 +1,5 @@
 #include "MechGrenade.h"
+#include "MechLoop.h"
 
 #include "Components/CapsuleComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
@@ -191,7 +192,7 @@ void AMechGrenade::Tick(float DeltaSeconds)
 		}
 		const UCapsuleComponent* Cap = M->GetCapsuleComponent();
 		const float Half = Cap->GetScaledCapsuleHalfHeight() * 0.7f;
-		const FVector C = M->GetActorLocation();
+		const FVector C = MechLoop::Near(GetWorld(), M->GetActorLocation(), Pos);  // 老街循环：按离弹道最近的那份
 		FVector OnPath, OnBody;
 		if (const UMechShoulderComponent* S = M->GetShoulder(); S && S->IsShieldUp())
 		{
@@ -259,7 +260,7 @@ void AMechGrenade::Detonate(const FVector& At, const FVector& Normal, AMechChara
 			}
 			// 到机体胶囊中线的距离
 			const float Half = M->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
-			const FVector C = M->GetActorLocation();
+			const FVector C = MechLoop::Near(GetWorld(), M->GetActorLocation(), At);  // 老街循环
 			const float D = FMath::Max(0.f, FVector::Dist(At, FMath::ClosestPointOnSegment(At, C - FVector(0.f, 0.f, Half), C + FVector(0.f, 0.f, Half)))
 				- M->GetCapsuleComponent()->GetScaledCapsuleRadius());
 			if (M == Direct || D < Radius)

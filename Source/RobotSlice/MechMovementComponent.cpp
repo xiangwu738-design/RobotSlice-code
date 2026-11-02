@@ -1,5 +1,6 @@
 #include "MechMovementComponent.h"
 #include "MechMapRules.h"
+#include "MechLoop.h"
 
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
@@ -591,8 +592,10 @@ void UMechMovementComponent::NoteArrival(float Error)
 	}
 }
 
-void UMechMovementComponent::AddInterpSample(double T, const FVector& Loc, const FQuat& Rot, const FVector& Vel, bool bFalling)
+void UMechMovementComponent::AddInterpSample(double T, const FVector& InLoc, const FQuat& Rot, const FVector& Vel, bool bFalling)
 {
+	// 老街循环（MechLoop.h）：收到的位置按上一个位置展开成连续的（过接缝瞬移一个周期不算传送，回放照常平滑），整段缓冲都过了接缝再一起挪回来
+	const FVector Loc = InterpSamples.Num() > 0 ? MechLoop::Near(GetWorld(), InLoc, InterpSamples.Last().Loc) : InLoc;
 	if (InterpSamples.Num() > 0)
 	{
 		FInterpSample& Last = InterpSamples.Last();
@@ -671,6 +674,18 @@ void UMechMovementComponent::AddInterpSample(double T, const FVector& Loc, const
 	if (Drop > 0)
 	{
 		InterpSamples.RemoveAt(0, Drop, EAllowShrinking::No);
+	}
+	if (InterpSamples.Num() > 0)
+	{
+		const float Shift = MechLoop::WrapShift(GetWorld(), InterpSamples[0].Loc.X, MechLoop::Period(GetWorld()) * 0.25f);
+		if (Shift != 0.f)
+		{
+			for (FInterpSample& Sample : InterpSamples)
+			{
+				Sample.Loc.X += Shift;
+			}
+			InterpShownLoc.X += Shift;
+		}
 	}
 }
 
@@ -996,7 +1011,7 @@ bool UMechMovementComponent::ClientUpdatePositionAfterServerUpdate()
 	{
 		bOwnCorrectionPending = false;
 		// 重放完旧移动以后的位置和纠正前画面上的位置差多少；差 8 米以上当传送，直接跳过去
-		const FVector Off = OwnShownBefore - UpdatedComponent->GetComponentLocation();
+		const FVector Off = MechLoop::Delta(GetWorld(), UpdatedComponent->GetComponentLocation(), OwnShownBefore);  // 老街循环：按最近的那份算
 		OwnCorrectionOffset = Off.SizeSquared() < FMath::Square(800.f) ? Off : FVector::ZeroVector;
 	}
 	return bResult;
@@ -1004,7 +1019,35 @@ bool UMechMovementComponent::ClientUpdatePositionAfterServerUpdate()
 
 void UMechMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
+	// 老街循环（MechLoop.h）：本机操控的机体这一帧瞬移了一个周期（自己走出接缝、或被服务器纠正过去）→ 镜头延迟关一帧、通知渲染这是镜头切换
+	AMechCharacter* LoopMech = Cast<AMechCharacter>(CharacterOwner);
+	USpringArmComponent* LoopBoom = LoopMech && LoopMech->IsLocallyControlled() ? LoopMech->GetCameraBoom() : nullptr;
+	if (bLoopLagRestore)
+	{
+		bLoopLagRestore = false;
+		if (LoopBoom)
+		{
+			LoopBoom->bEnableCameraLag = true;
+		}
+	}
+	const bool bLoop = LoopBoom && UpdatedComponent && MechLoop::IsActive(GetWorld());
+	const float LoopX0 = bLoop ? float(UpdatedComponent->GetComponentLocation().X) : 0.f;
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if (bLoop && UpdatedComponent && FMath::Abs(UpdatedComponent->GetComponentLocation().X - LoopX0) > MechLoop::Period(GetWorld()) * 0.5f)
+	{
+		if (LoopBoom->bEnableCameraLag)
+		{
+			LoopBoom->bEnableCameraLag = false;
+			bLoopLagRestore = true;
+		}
+		if (MechLoop::CutOn())
+		{
+			if (APlayerController* LoopPC = Cast<APlayerController>(LoopMech->GetController()); LoopPC && LoopPC->PlayerCameraManager)
+			{
+				LoopPC->PlayerCameraManager->SetGameCameraCutThisFrame();
+			}
+		}
+	}
 	if (!CharacterOwner || CharacterOwner->GetLocalRole() != ROLE_AutonomousProxy)
 	{
 		return;
@@ -1048,6 +1091,31 @@ void UMechMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 		Boom->SetRelativeLocation(OwnBoomBase + Local);
 	}
 	bOwnApplied = !OwnCorrectionOffset.IsZero();
+}
+
+void UMechMovementComponent::OnMovementUpdated(float DeltaSeconds, const FVector& OldLocation, const FVector& OldVelocity)
+{
+	Super::OnMovementUpdated(DeltaSeconds, OldLocation, OldVelocity);
+	// 老街循环（MechLoop.h）：走出接缝 3 米就挪一个周期回来。放根运动（钩爪拉、紧急脱离、弹射——按世界坐标定终点）时先不挪，放完再挪
+	if (!UpdatedComponent || !CharacterOwner || !MechLoop::IsActive(GetWorld()))
+	{
+		return;
+	}
+	const FVector Loc = UpdatedComponent->GetComponentLocation();
+	const float Shift = CurrentRootMotion.HasActiveRootMotionSources() ? 0.f : MechLoop::WrapShift(GetWorld(), Loc.X, MechLoop::MechMargin);
+	if (Shift != 0.f)
+	{
+		UpdatedComponent->SetWorldLocation(Loc + FVector(Shift, 0.f, 0.f), false, nullptr, ETeleportType::TeleportPhysics);
+	}
+	if (AMechCharacter* Mech = Cast<AMechCharacter>(CharacterOwner))
+	{
+		Mech->OnLoopWrapped(Shift);  // 镜像胶囊每次移动完都跟上（没挪也调，Shift = 0）
+	}
+	if (Shift != 0.f && MechLoop::LogOn() && !CharacterOwner->bClientUpdating)
+	{
+		UE_LOG(LogTemp, Display, TEXT("[loop] %s 过接缝：X %.0f → %.0f 米（%s）"), *CharacterOwner->GetName(), Loc.X / 100.f, (Loc.X + Shift) / 100.f,
+			CharacterOwner->HasAuthority() ? TEXT("服务器") : TEXT("本机预测"));
+	}
 }
 
 // ---------------------------------------------------------------- 真实对局诊断（-MechNetDiag，10-31）

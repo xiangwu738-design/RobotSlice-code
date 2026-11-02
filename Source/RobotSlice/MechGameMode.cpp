@@ -1,4 +1,5 @@
 #include "MechGameMode.h"
+#include "MechLoop.h"
 #include "MechMapRules.h"
 
 #include "Camera/CameraActor.h"
@@ -2253,6 +2254,13 @@ void AMechGameMode::StartPlay()
 	{
 		Hour = 13.f;  // 夺芯灰盒：白天晴天
 		WeatherName = TEXT("Clear");
+	}
+	if (GetWorld()->GetMapName().EndsWith(TEXT("L_OldStreet")))
+	{
+		// 11-02 老旧街道：「A 老胶片午后」，暖黄、褪色（调色在地图的后期体积里）；测试场也用这个，不然画面不对。
+		// 这张图名字里有 Street，以前的 Contains("Street") 会把它当成赛博朋克街道（夜里下雨），现在那几处都改成了 EndsWith("L_Street")
+		Hour = 16.3f;
+		WeatherName = TEXT("Haze");
 	}
 	FParse::Value(FCommandLine::Get(), TEXT("MechHour="), Hour);
 	FParse::Value(FCommandLine::Get(), TEXT("MechWeather="), WeatherName);
@@ -5511,7 +5519,7 @@ void AMechGameMode::DMTick(float DeltaSeconds)
 			{
 				if (M && M != Fresh && !M->GetHealth()->IsDead() && M->GetTeam() != Fresh->GetTeam())
 				{
-					Nearest = FMath::Min(Nearest, static_cast<float>(FVector::Dist(M->GetActorLocation(), Fresh->GetActorLocation())));
+					Nearest = FMath::Min(Nearest, static_cast<float>(MechLoop::Dist(GetWorld(), M->GetActorLocation(), Fresh->GetActorLocation())));
 				}
 			}
 			UE_LOG(LogTemp, Display, TEXT("[dm]   离最近的活着的敌人 %.0f 米，保护 %.0f 秒"), Nearest / 100.f, MechRules::SpawnGuardTime);
@@ -5754,7 +5762,7 @@ FTransform AMechGameMode::PickDMSpawn(const AMechCharacter* For) const
 			{
 				continue;
 			}
-			const float D = FVector::Dist(C, M->GetActorLocation());
+			const float D = MechLoop::Dist(GetWorld(), C, M->GetActorLocation());
 			MinAny = FMath::Min(MinAny, D);
 			if (M->GetTeam() == Team)
 			{
@@ -5763,7 +5771,7 @@ FTransform AMechGameMode::PickDMSpawn(const AMechCharacter* For) const
 			}
 			MinEnemy = FMath::Min(MinEnemy, D);
 			FHitResult Hit;
-			if (!bSeen && D < 9000.f && !GetWorld()->LineTraceSingleByObjectType(Hit, C + FVector(0.f, 0.f, 180.f), M->GetActorLocation() + FVector(0.f, 0.f, 80.f),
+			if (!bSeen && D < 9000.f && !GetWorld()->LineTraceSingleByObjectType(Hit, C + FVector(0.f, 0.f, 180.f), MechLoop::Near(GetWorld(), M->GetActorLocation(), C) + FVector(0.f, 0.f, 80.f),
 				FCollisionObjectQueryParams(ECC_WorldStatic), Params))
 			{
 				bSeen = true;  // 有敌人看得见这一点

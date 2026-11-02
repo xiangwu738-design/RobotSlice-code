@@ -723,7 +723,8 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 
 ### 月球基地（L_Moon，11-02）
 
-定位：补「所有地图移动手感都一样」的空缺，低重力，跳得高、落得慢。没有改 C++，低重力只用地图 WorldSettings 的全局重力（`bGlobalGravitySet` + `GlobalGravityZ = -327`，1/3 地球重力）。启动 `月球基地飞行.bat`（`?Range` + `-MechInfiniteEnergy`）。还没进 `MechMaps` 表、ini、打包.bat。穹顶外真空听不到声音的规则还没写。成图和布局图：`docs/月球基地_20261102/`（`总览.jpg`、`布局俯视图.png`）。
+定位：补「所有地图移动手感都一样」的空缺，低重力，跳得高、落得慢。低重力只用地图 WorldSettings 的全局重力（`bGlobalGravitySet` + `GlobalGravityZ = -327`，1/3 地球重力）。启动 `月球基地飞行.bat`（`?Range` + `-MechInfiniteEnergy`）。已进 `MechMaps`、ini、打包.bat。
+- **真空静音（11-02，`MechVacuum.h/.cpp`）**：本机听者在大穹顶外时，所有已加载的衰减设置改成 9 米内照常、再 3 米降到 0、越远越闷（低通），自己机体贴身的声音还在，远处的枪声、爆炸听不见；进穹顶恢复。界面、通报、音乐（2D）不受影响。离开地图一定还原。穹顶默认按原点、半径 62 米、顶高 30 米的半球算（顶高是估的，不对就在地图里放带 `MoonAir` 标签的点，标签 `Radius=` `Height=` 厘米）。`-MechVacuumLog` 打进出，`-MechVacuumOff` 关掉。成图和布局图：`docs/月球基地_20261102/`（`总览.jpg`、`布局俯视图.png`）。
 
 - **地形**：`Inbox/_moon_nasa/dtm/NAC_DTM_APOLLO17_2M.TIF`（金牛-利特罗山谷，2 米/像素）里 (9.964, 33.212) 公里处的天然盆地（`tools/moon_dtm_pick.py` 按「中央够平、四周都有高地」打分挑的），1009×1009 格、2016 米见方，水平 1:1、高度 ×2。Landscape 由脚本走 Datasmith 的地形导入（`ue_moon_landscape.py`，只在这一步命令行临时开 `-EnablePlugins=DatasmithImporter,DatasmithContent`，导完清掉 Datasmith 留下的东西，平时不用开插件）。基地范围去掉低频起伏（东边本来比西边高），小起伏留 70%，建筑占地压平。Landscape **不投影**：它画影子用的 LOD 比屏幕上的粗，会在自己身上落下一块块黑斑。
 - **远景**：整张高程图（16 米一格）做成不碰撞的 Nanite 网格 `SM_Moon_FarTerrain`，放大倍数往外逐渐减小（1.6 公里内 2 倍 → 15 公里 1 倍 → 28 公里 0.6 倍）；高程图以外是补的粗网格 `SM_Moon_FarFill`（真实数据翻过去、模糊、8 公里内落回谷底，只为了不露出数据边界的断面，**不是真实地形**）。
@@ -992,7 +993,7 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
   - 墙面和原图还差在两处。一是原图那块最显眼的大阴影，是对面那面墙投下来的；我们只有一面墙，没有这块。二是原图是 Cycles 渲染，凹凸更锐、更细。
   - 注意：第一版和墙面三轮的截图（`before_detail` / `d4` / `d6` 和那几张对比图）是按编辑器 -game 当时的画质拍的。那时用户自己把编辑器画质调到了全最低档，阴影是关的，和正常画质下看到的不一样。第二版起截图脚本临时用史诗画质拍（`v2_before` 是用史诗画质重拍的第一版）。
 
-### 老旧街道（L_OldStreet，11-02，第一阶段：只有场景和画面，循环代码还没做，不在地图表里）
+### 老旧街道（L_OldStreet，11-02：场景 + 循环代码，死斗）
 
 用户要的娱乐图：「地图本身看上去是无限老旧街道相接，但实际上只有一个」，机体和子弹沿街循环。风格选「A 老胶片午后：暖黄、褪色」。总览 `docs/老旧街道_20261102/总览_老旧街道_第一阶段.jpg`，平面 `平面布局.png`，瞬移实测 `瞬移实测_*.jpg`。
 
@@ -1001,7 +1002,14 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **接缝**：地面重切成整块矩形，沿街 UV 整除周期（路 18 张、人行道 36 张），路缘、护桩按整除周期的间距排。楼可以跨接缝，所有周期完全相同。没有风（树不开 WPO）、没有云和云影（世界坐标的，瞬移会跳）、没有随机物、没有点声源。这张图关了运动模糊（后期体积）。
 - **流程**：`py -3 -I tools/oldstreet_layout.py`（布局表，改地图改它）→ `py -3 -I tools/oldstreet_textures.py` → `blender -b Inbox/_oldstreet/老旧街道.blend -P tools/blender_oldstreet_export.py -- Inbox/_oldstreet/export [网格名]` → `tools/ue_oldstreet_import.py [tex] [mat] [mesh]`（`OS_ONLY=` 只导几个）→ `tools/ue_build_oldstreet.py`（整张重建）。调色改 `tools/oldstreet_look.json`。街景贴片：`OS_SHOTS_TABLE=backdrop OS_SHOTS_EXEC="showflag.Fog 0;showflag.VolumetricFog 0;showflag.Vignette 0;showflag.Grain 0" tools/oldstreet_shots.sh backdrop` → `tools/oldstreet_backdrop_tex.py` → `tools/ue_oldstreet_backdrop.py`。跑 UE 用 `bash tools/oldstreet_ue_run.sh "说明" 命令`（拿锁放锁）。
 - **截图 / 实测**：`tools/oldstreet_shots.sh 目录 16.3`（`tools/ue_oldstreet_shots.py`，带碰撞和出生点自检）；瞬移：`tools/oldstreet_seam_variants.sh 组名`（`ue_oldstreet_seamtest.py` + `oldstreet_seam_compare.py`）。
-- **进图**：`UnrealEditor.exe RobotSlice.uproject "/Game/Maps/L_OldStreet?Range" -game -MechHour=16.3 -MechWeather=Haze`。不带这两个参数是夜里下雨：`MechGameMode.cpp` 按 `GetMapName().Contains("Street")` 判街道图，L_OldStreet 也中招，下一阶段要改。
+- **进图**：`UnrealEditor.exe RobotSlice.uproject "/Game/Maps/L_OldStreet?Range" -game`（GameMode 按地图名设 16.3 点、Haze，测试场也是）。房间里选「老旧街道」只有死斗（`MechMaps`），已进 `MapsToCook`；**打包.bat 不在仓库里，要自己加 L_OldStreet**。
+- **循环代码（11-02，`MechLoop.h/.cpp`，说明写在头文件开头）**：读 `OldStreetBounds` 点的 `PeriodX` / `SeamX`，别的图没有这个点，全部照旧。
+  - 机体走出接缝 3 米挪一个周期（`UMechMovementComponent::OnMovementUpdated`，服务器 / 本机预测 / 重放同一套）；放钩爪、紧急脱离、弹射这类根运动时先不挪。本机镜头瞬移那帧关一次镜头延迟、`SetGameCameraCutThisFrame`（`-MechLoopNoCut` 不切，对比用）。别人机体的插值缓冲按上一个位置展开，整段过了接缝再一起挪回来，不卡。
+  - 镜像碰撞：每台机体 ±周期 各一个和本体一样的胶囊（组件属于机体），子弹、刀、爆炸、导弹、机体互相推挤跨接缝都对。命中点 / 受击方向在 `ReceiveHit` / `OnHealthHit` / `ClassifyHit` 里挪回本体旁边。
+  - 镜像画面：`AMechLoopGhosts`（有画面的那端开局自动放）把每台机体的骨骼网格（跟随本体姿势）和静态网格（武器、喷焰、护盾…）在 ±1、±2 个周期各画一份，离镜头 260 米外不画。喷焰的粒子特效、灯光没有镜像。
+  - 子弹飞出接缝半个周期挪回来接着飞（会从背后回来），曳光按离镜头最近的那份画；导弹同样挪，追离自己最近的镜像胶囊。手雷、地雷没挪（飞不了那么远）。
+  - 「谁在哪个方向、多远」一律 `MechLoop::Near`：玩家锁定 / 导弹锁定 / 辅助瞄准、刀的突进和击退、AI 选目标 / 瞄准 / 视线 / 走位（沿街方向不算出界）、死斗重生点离敌人多远、钩爪 / 网 / 震荡波 / 烟幕、HUD 锁定框 / 头顶名字 / 屏幕外箭头 / 受击红弧 / 告警、小地图图标。
+  - **没做 / 已知**：小地图底图只有一个周期，接缝外是界外压暗（图标位置是对的）；烟幕、导弹、手雷本身没有镜像画面，离接缝远的那头看会在半个周期处跳一下；没编译过（云端没有 UE），要本地编译、跑 `"/Game/Maps/L_OldStreet?Match?Mode=DM" -game -MechAutoBattle -MechLoopLog` 看 `[loop]`。
 - **坑**：① 原包叶子贴图是生成的 UV 格子（作者 EEVEE 里的黑碎片就是它），用 K059 的树叶图集裁一块，原包每片叶子 UV 铺满 0–1，换到复叶那格。② 连续每帧 `Shot` 截的图颜色是坏的（品红），暂停时运动模糊一直拖着：瞬移实测要不暂停、每次瞬移只截一张。
 
 ### 原版峡谷（L_MegaCanyon，11-01）
@@ -1171,4 +1179,4 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **化境（原双手刀）**：Reach 520；首击 ×1.4、每打中一刀 −0.1、最低 ×0.7、2.5 秒没打中恢复；打中失衡中的敌人再 ×1.5（所有制造商统一 ×1.5，无同厂追加；用户本轮修订）；没有击退（`OnHealthHit` 里攻击者是出招中的双手刀就不推）；弹反整套删了（`TryParry`、`ParryWindow`、AI 卡点弹反）。日志 `[huajing]`；`-MechForceMelee=0` 让 AI 都用它。
 - 狙击枪伤害 1100；烟雾弹 20 秒、烟里敌人每秒 20 点（`AMechSmoke::Tick`，服务器，算给放烟的人）；地雷有 10 秒冷却，同厂再 ×0.85；同厂加成数值见 `MechWeapons.h` 的 `Own*`。
 - **街道隐形墙**：`tools/ue_street_walls.py`，L_Street 地面平面四边往里 1 米处四面 BlockingVolume（只挡 Pawn），旧图备份在 `D:/归档/RobotSlice_街道空气墙_20261102/`。
-- 苏联板楼 / 月球基地进了 `MechMaps`（Elim | DM）、`MapsToCook`、`打包.bat`，缩略图 `tools/room_map_thumbs.py` + `ue_import_map_thumbs.py`。注意：以后加 L_OldStreet 时，代码里 `GetMapName().Contains("Street")`（MechCharacter / MechGameMode 共 5 处）会误命中它。
+- 苏联板楼 / 月球基地进了 `MechMaps`（Elim | DM）、`MapsToCook`、`打包.bat`，缩略图 `tools/room_map_thumbs.py` + `ue_import_map_thumbs.py`。原来误命中老街的 `Contains("Street")` 已全部改成 `EndsWith("L_Street")`。老街（死斗）11-02 进表和 `MapsToCook`，缩略图任务里的源图路径是占位（源图不存在会跳过）。

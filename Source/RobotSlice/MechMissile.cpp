@@ -1,4 +1,5 @@
 #include "MechMissile.h"
+#include "MechLoop.h"
 #include "MechGrunt.h"
 #include "MechRun.h"
 #include "MechSmoke.h"
@@ -178,13 +179,18 @@ void AMechMissile::Tick(float DeltaSeconds)
 	{
 		return;
 	}
+	// 11-02 老街循环（MechLoop.h）：飞出接缝半个周期挪回来（服务器挪，各端按同步来的位置跳过去）
+	if (const float LoopShift = MechLoop::WrapShift(GetWorld(), GetActorLocation().X, MechLoop::ProjectileMargin(GetWorld())); LoopShift != 0.f)
+	{
+		SetActorLocation(GetActorLocation() + FVector(LoopShift, 0.f, 0.f), false, nullptr, ETeleportType::TeleportPhysics);
+	}
 	// 追踪段：沿机头方向持续加速；有目标且目标还活着就开追踪
 	if (Age > ArmTime)
 	{
 		const FVector Fwd = Movement->Velocity.GetSafeNormal();
 		Movement->Velocity = (Movement->Velocity + Fwd * Thrust * DeltaSeconds).GetClampedToMaxSize(Movement->MaxSpeed);
 		// 穿过烟幕（或目标在烟里）：干扰箔片把导弹的导引头骗掉，永久丢失目标，出了烟也不再追（10-30 烟雾弹加强）
-		if (Target && AMechSmoke::BlocksLine(GetWorld(), GetActorLocation(), Target->GetActorLocation()))
+		if (Target && AMechSmoke::BlocksLine(GetWorld(), GetActorLocation(), MechLoop::Near(GetWorld(), Target->GetActorLocation(), GetActorLocation())))
 		{
 			UE_LOG(LogTemp, Display, TEXT("[missile] 被烟幕干扰，丢失目标 %s"), *Target->DisplayName);
 			Target = nullptr;
@@ -195,11 +201,15 @@ void AMechMissile::Tick(float DeltaSeconds)
 			Movement->HomingTargetComponent = Target->GetCapsuleComponent();
 			Movement->bIsHomingProjectile = true;
 		}
+		if (bAlive && MechLoop::IsActive(GetWorld()))
+		{
+			Movement->HomingTargetComponent = Target->GetLoopNearestCapsule(GetActorLocation());  // 老街循环：追离自己最近的那份（镜像胶囊）
+		}
 		else if (!bAlive)
 		{
 			Movement->bIsHomingProjectile = false;
 		}
-		if (bAlive && FVector::Dist(GetActorLocation(), Target->GetActorLocation()) < ProximityFuse)
+		if (bAlive && MechLoop::Dist(GetWorld(), GetActorLocation(), Target->GetActorLocation()) < ProximityFuse)
 		{
 			UE_LOG(LogTemp, Display, TEXT("[missile] 近炸 %s 飞行 %.2f 秒"), Shooter ? *Shooter->DisplayName : TEXT("?"), Age);
 			Explode(GetActorLocation());
@@ -300,7 +310,7 @@ void AMechMissile::Explode(const FVector& At)
 		}
 		Done.Add(Mech);
 		const UCapsuleComponent* Cap = Mech->GetCapsuleComponent();
-		const FVector C = Mech->GetActorLocation();
+		const FVector C = MechLoop::Near(GetWorld(), Mech->GetActorLocation(), At);  // 老街循环：炸到的可能是镜像胶囊
 		const float Half = Cap->GetScaledCapsuleHalfHeight() - Cap->GetScaledCapsuleRadius();
 		const float Skin = FMath::Max(0.f, FVector::Dist(At, FMath::ClosestPointOnSegment(At, C - FVector(0.f, 0.f, Half), C + FVector(0.f, 0.f, Half)))
 			- Cap->GetScaledCapsuleRadius());

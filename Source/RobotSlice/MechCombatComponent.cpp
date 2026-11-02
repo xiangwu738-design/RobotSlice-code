@@ -1,5 +1,6 @@
 #include "MechMapRules.h"
 #include "MechCombatComponent.h"
+#include "MechLoop.h"
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -42,6 +43,12 @@
 
 namespace
 {
+	/** 11-02 老街循环（MechLoop.h）：A 离 Ref 最近的那一份（不循环的图 = A 自己的位置）。锁定、瞄准、突进、击退都按它算方向和距离 */
+	FVector LoopImg(const AActor* A, const FVector& Ref)
+	{
+		return MechLoop::Near(A->GetWorld(), A->GetActorLocation(), Ref);
+	}
+
 	// 武器模型里的关键点（模型坐标，厘米，未缩放；枪口在 MechWeapons 里各把自己的）
 	const FVector BladeTrailAt(75.f, 0.f, 0.f);  // 刀光挂在刀身中段
 	const FVector PodTubes[4] = {FVector(26.f, -7.f, -6.f), FVector(26.f, 7.f, 6.f), FVector(26.f, 7.f, -6.f), FVector(26.f, -7.f, 6.f)};
@@ -877,7 +884,7 @@ void UMechCombatComponent::StartMove(EMechMelee Move)
 	LungeDir = Mech->GetActorForwardVector().GetSafeNormal2D();
 	if (Target && !Target->GetHealth()->IsDead())
 	{
-		const FVector To = Target->GetActorLocation() - Mech->GetActorLocation();
+		const FVector To = LoopImg(Target, Mech->GetActorLocation()) - Mech->GetActorLocation();
 		if (To.Size() < LungeRange(Move))
 		{
 			const bool b3D = FMath::Abs(To.Z) > Lunge3DHeight && (To.Z > 0.f || Mech->GetCharacterMovement()->IsFalling());
@@ -1077,7 +1084,7 @@ void UMechCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 	// 枪臂指向：玩家对着准星（子弹也打准星），AI 对着锁定的目标
 	const FVector Muzzle = GetMuzzle();
 	const bool bAimTarget = !Mech->IsPlayerControlled() && Target && !Target->GetHealth()->IsDead();
-	const FVector AimPoint = bAimTarget ? Target->GetActorLocation() + FVector(0.f, 0.f, 30.f) : GetFreeAimPoint();
+	const FVector AimPoint = bAimTarget ? LoopImg(Target, Mech->GetActorLocation()) + FVector(0.f, 0.f, 30.f) : GetFreeAimPoint();
 	AimDir = AimOverride.IsNearlyZero() ? (AimPoint - Muzzle).GetSafeNormal() : AimOverride.GetSafeNormal();
 	// 摆姿势用的瞄准点：枪管要指着子弹真正去的地方（开火时辅助瞄准会把子弹拉向目标，枪管不跟着就像子弹从枪侧面歪出去）。
 	// 方向从胸口算、不从枪口算：枪口跟着上身转，从枪口算的方向又去转上身，贴着墙时一直来回抖。
@@ -1175,11 +1182,11 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 		FHitResult Hit;
 		FCollisionQueryParams Params(SCENE_QUERY_STAT(MechLockLOS), false, Mech);
 		Params.AddIgnoredActor(Other);
-		if (GetWorld()->LineTraceSingleByObjectType(Hit, ViewLoc, Other->GetActorLocation(), FCollisionObjectQueryParams(ECC_WorldStatic), Params))
+		if (GetWorld()->LineTraceSingleByObjectType(Hit, ViewLoc, LoopImg(Other, ViewLoc), FCollisionObjectQueryParams(ECC_WorldStatic), Params))
 		{
 			return false;
 		}
-		if (AMechSmoke::BlocksLine(GetWorld(), ViewLoc, Other->GetActorLocation()))
+		if (AMechSmoke::BlocksLine(GetWorld(), ViewLoc, LoopImg(Other, ViewLoc)))
 		{
 			// 隔着烟幕锁不定：记下来，HUD 在它身上画干扰框
 			JammedTarget = const_cast<AMechCharacter*>(Other);
@@ -1199,7 +1206,7 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 		return;
 	}
 	auto AngleTo = [&](const AMechCharacter* Other) {
-		const FVector To = (Other->GetActorLocation() - ViewLoc).GetSafeNormal();
+		const FVector To = (LoopImg(Other, ViewLoc) - ViewLoc).GetSafeNormal();
 		return FMath::RadiansToDegrees(FMath::Acos(FMath::Clamp(To | ViewDir, -1.f, 1.f)));
 	};
 
@@ -1207,7 +1214,7 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 	{
 		// 玩家：已锁的目标还在放宽的范围里就保持，否则在中心锥里挑角度最小的
 		AMechCharacter* Keep = nullptr;
-		if (Target && AngleTo(Target) < LockKeepCone && FVector::Dist(Target->GetActorLocation(), ViewLoc) < LockRange && Visible(Target))
+		if (Target && AngleTo(Target) < LockKeepCone && FVector::Dist(LoopImg(Target, ViewLoc), ViewLoc) < LockRange && Visible(Target))
 		{
 			Keep = Target;
 		}
@@ -1221,7 +1228,7 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 				continue;
 			}
 			const float A = AngleTo(Other);
-			if (A < BestAngle && FVector::Dist(Other->GetActorLocation(), ViewLoc) < LockRange && Visible(Other))
+			if (A < BestAngle && FVector::Dist(LoopImg(Other, ViewLoc), ViewLoc) < LockRange && Visible(Other))
 			{
 				Best = Other;
 				BestAngle = A;
@@ -1239,7 +1246,7 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 	}
 
 	// 导弹锁定：目标在锁定锥里、看得见、够近就逐渐锁上
-	const bool bHolding = Target && FVector::Dist(Target->GetActorLocation(), ViewLoc) < LockRange &&
+	const bool bHolding = Target && FVector::Dist(LoopImg(Target, ViewLoc), ViewLoc) < LockRange &&
 		(bForcedTarget || AngleTo(Target) < LockKeepCone) && Visible(Target);
 	MissileLock = bHolding ? FMath::Min(1.f, MissileLock + DeltaTime / (MissileLockTime * FrameLockScale)) : FMath::Max(0.f, MissileLock - DeltaTime * 2.f);
 }
@@ -1301,7 +1308,7 @@ FVector UMechCombatComponent::AssistedAimDir(const FVector& From, float Speed, b
 	}
 	const FVector Lead = (ComputeAimPoint(From, Speed) - From).GetSafeNormal();
 	const float Deg = FMath::RadiansToDegrees(FMath::Acos(FMath::Clamp(Free | Lead, -1.f, 1.f)));
-	const float Dist = FMath::Max(FVector::Dist(From, Target->GetActorLocation()), 1.f);
+	const float Dist = FMath::Max(FVector::Dist(From, LoopImg(Target, From)), 1.f);
 	const float Cone = FMath::Clamp(FMath::RadiansToDegrees(FMath::Atan(MechWeapons::AimAssistRadius / Dist)), MechWeapons::AimAssistMinCone, MechWeapons::AimAssistMaxCone);
 	const float X = FMath::Clamp(Deg / Cone, 0.f, 1.f);
 	const float Pull = MechWeapons::AimAssistStrength * (1.f - X * X);
@@ -1312,7 +1319,7 @@ FVector UMechCombatComponent::ComputeAimPoint(const FVector& From, float Speed) 
 {
 	if (Target && !Target->GetHealth()->IsDead())
 	{
-		FVector P = Target->GetActorLocation() + FVector(0.f, 0.f, 30.f);
+		FVector P = LoopImg(Target, From) + FVector(0.f, 0.f, 30.f);
 		const float Dist = FVector::Dist(From, P);
 		const float T = Dist / FMath::Max(Speed, 1.f);
 		P += Target->GetVelocity() * T * LeadAccuracy;
@@ -1898,8 +1905,8 @@ FVector UMechCombatComponent::ScopeMagnetDir(const FVector& From, const FVector&
 		{
 			continue;
 		}
-		const float Dist = FVector::Dist(From, Other->GetActorLocation());
-		if (Dist > LockRange || ((Other->GetActorLocation() - From) | Free) <= 0.f)
+		const float Dist = FVector::Dist(From, LoopImg(Other, From));
+		if (Dist > LockRange || ((LoopImg(Other, From) - From) | Free) <= 0.f)
 		{
 			continue;
 		}
@@ -2037,7 +2044,7 @@ void UMechCombatComponent::UpdateBullets(float DeltaTime)
 		if (B.RunHoming.IsValid())
 		{
 			const FVector Cur = B.Vel.GetSafeNormal();
-			const FVector Want = (B.RunHoming->GetActorLocation() - B.Pos).GetSafeNormal();
+			const FVector Want = (LoopImg(B.RunHoming.Get(), B.Pos) - B.Pos).GetSafeNormal();
 			const float Ang = FMath::Acos(FMath::Clamp(Cur | Want, -1.f, 1.f));
 			if (Ang > KINDA_SMALL_NUMBER)
 			{
@@ -2049,7 +2056,7 @@ void UMechCombatComponent::UpdateBullets(float DeltaTime)
 		{
 			// 匕首追踪：飞行方向每秒最多往目标拐 Turn 度，速度大小不变；已经飞过头（背对目标）就不再拐
 			const FVector Cur = B.Vel.GetSafeNormal();
-			const FVector Want = (B.Homing->GetActorLocation() + FVector(0.f, 0.f, 30.f) - B.Pos).GetSafeNormal();
+			const FVector Want = (LoopImg(B.Homing.Get(), B.Pos) + FVector(0.f, 0.f, 30.f) - B.Pos).GetSafeNormal();
 			const float Ang = FMath::Acos(FMath::Clamp(Cur | Want, -1.f, 1.f));
 			if (Ang > KINDA_SMALL_NUMBER && Ang < PI * 0.6f)
 			{
@@ -2143,14 +2150,14 @@ void UMechCombatComponent::UpdateBullets(float DeltaTime)
 					if (Dealt > 0.f)
 					{
 						ConfirmHit(Victim, bDirect, Kind, Dealt, Hit.ImpactPoint, Part);
-						const float KnifeDist = FVector::Dist(Victim->GetActorLocation(), Mech->GetActorLocation());
+						const float KnifeDist = FVector::Dist(LoopImg(Victim, Mech->GetActorLocation()), Mech->GetActorLocation());
 						if (B.bKnife && KnifeDist < MechWeapons::KnifeCloseRange)
 						{
 							// 11-01 用户：击退随距离线性衰减，贴脸最大，到 KnifeCloseRange 正好没有
 							const UMechCombatComponent* KnifeTarget = Victim->GetCombat();
 							const float PushSpeed = MechWeapons::KnifeCloseKnockback * (1.f - KnifeDist / MechWeapons::KnifeCloseRange)
 								* (KnifeTarget && KnifeTarget->IsGuarding() ? 0.2f : 1.f);
-							MulticastKnifePush(Victim, (Victim->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal2D() * PushSpeed);
+							MulticastKnifePush(Victim, (LoopImg(Victim, Mech->GetActorLocation()) - Mech->GetActorLocation()).GetSafeNormal2D() * PushSpeed);
 						}
 						if (Run && !B.bKnife)
 						{
@@ -2214,6 +2221,7 @@ void UMechCombatComponent::UpdateBullets(float DeltaTime)
 		}
 		B.Traveled += B.Vel.Size() * DeltaTime;
 		B.Pos = Next;
+		B.Pos.X += MechLoop::WrapShift(GetWorld(), B.Pos.X, MechLoop::ProjectileMargin(GetWorld()));  // 老街循环：飞出接缝半个周期挪回来，接着飞
 		B.Life -= DeltaTime;
 		if (B.Life <= 0.f)
 		{
@@ -2234,8 +2242,16 @@ void UMechCombatComponent::UpdateTracers()
 	TArray<FTransform> Lines;
 	TArray<FTransform> KnifeXf;
 	TArray<FTransform> StreakXf[2];
-	for (const FMechBullet& B : Bullets)
+	const bool bLoop = MechLoop::IsActive(GetWorld());
+	const FVector LoopView = bLoop ? MechLoop::ViewLocation(GetWorld()) : FVector::ZeroVector;
+	for (const FMechBullet& BSim : Bullets)
 	{
+		// 老街循环：按离本机镜头最近的那一份画（子弹本身的位置不动）
+		FMechBullet B = BSim;
+		if (bLoop)
+		{
+			B.Pos = MechLoop::Near(GetWorld(), B.Pos, LoopView);
+		}
 		const FVector Dir = B.Vel.GetSafeNormal();
 		if (B.bKnife)
 		{
@@ -2322,7 +2338,7 @@ void UMechCombatComponent::LaunchOneMissile()
 	{
 		Run->ModifyMissile(FMath::Abs(SalvoSize() - PendingMissiles), RunAim, MechAim, ThisDamage, ThisImpact, ThisRadius, ThisScale, ThisStagger);
 	}
-	const FVector LockPoint = RunAim ? RunAim->GetActorLocation() : MechAim ? MechAim->GetActorLocation() : FVector::ZeroVector;
+	const FVector LockPoint = RunAim ? LoopImg(RunAim, Mech->GetActorLocation()) : MechAim ? LoopImg(MechAim, Mech->GetActorLocation()) : FVector::ZeroVector;
 	const bool bAimLocked = RunAim != nullptr || MechAim != nullptr;
 	// 导弹巢是浮空无人机：判定用的发射管位置按无人机的理想位置（胶囊 + 瞄准方向，不带弹簧延迟）朝目标算，服务器上确定；
 	// 各端画面上的无人机带弹簧延迟，发射特效和导弹刚出现时从本机看到的发射管出（MulticastMissileLaunch、AMechMissile::BeginPlay）
@@ -2368,7 +2384,7 @@ void UMechCombatComponent::MulticastMissileLaunch_Implementation(FVector_NetQuan
 	{
 		UMechShoulderComponent* S = Mech->GetShoulder();
 		const AMechCharacter* T = Target.Get();
-		const FVector Dir = T && !T->GetHealth()->IsDead() ? (T->GetActorLocation() - S->GetDroneLocation()).GetSafeNormal() : GetPoseAimDirection();
+		const FVector Dir = T && !T->GetHealth()->IsDead() ? (LoopImg(T, S->GetDroneLocation()) - S->GetDroneLocation()).GetSafeNormal() : GetPoseAimDirection();
 		S->OnDroneFired(Dir);
 		At = S->VisualPoint(Dir, PodTubes[Tube % 4]);
 		FxRot = Dir.Rotation();
@@ -2509,7 +2525,7 @@ void UMechCombatComponent::UpdateMelee(float DeltaTime)
 			{
 				// 10-30 玩家：突进改成向着敌人、三维的——目标在上方 / 下方（高差超过 Lunge3DHeight）也直接冲过去，
 				// 地面冲空中目标切成空中状态、冲刺中不受重力；高差不大时还是水平冲（平地上不往上跳）
-				const FVector To = Target->GetActorLocation() - Mech->GetActorLocation();
+				const FVector To = LoopImg(Target, Mech->GetActorLocation()) - Mech->GetActorLocation();
 				const float Dist = To.Size();
 				if (Dist < LungeRange(MeleeMove))
 				{
@@ -2668,7 +2684,7 @@ void UMechCombatComponent::DriveMelee(const FMove& S, float Reach, float Dt)
 		float Dist = 0.f;
 		if (Target && !Target->GetHealth()->IsDead())
 		{
-			const FVector To = Target->GetActorLocation() - Mech->GetActorLocation();
+			const FVector To = LoopImg(Target, Mech->GetActorLocation()) - Mech->GetActorLocation();
 			Dist = To.Size();
 			if (Dist < LungeRange(MeleeMove))
 			{
@@ -2834,7 +2850,7 @@ void UMechCombatComponent::MeleeStrikeAuthority()
 		UMechCombatComponent* VC = Victim->GetCombat();
 		bSwingLanded = true;
 		const bool bDirect = Victim->GetHealth()->IsStaggered();
-		const FVector At = (Victim->GetActorLocation() + Mech->GetActorLocation()) * 0.5f + FVector(0.f, 0.f, 40.f);
+		const FVector At = (LoopImg(Victim, Mech->GetActorLocation()) + Mech->GetActorLocation()) * 0.5f + FVector(0.f, 0.f, 40.f);
 		// 告诉对方的格挡：是谁砍的（双方都要格挡反馈）、是不是钝器（打在格挡上直接破防）
 		if (VC)
 		{
@@ -2862,7 +2878,7 @@ void UMechCombatComponent::MeleeStrikeAuthority()
 		if (Dealt > 0.f)
 		{
 			bHuajingHit = true;
-			ConfirmHit(Victim, bDirect, EMechHitKind::Blade, Dealt, Victim->GetActorLocation() + FVector(0.f, 0.f, 60.f));
+			ConfirmHit(Victim, bDirect, EMechHitKind::Blade, Dealt, LoopImg(Victim, Mech->GetActorLocation()) + FVector(0.f, 0.f, 60.f));
 			if (!bBlocked)
 			{
 				// 双刀割裂：给对方挂一层（受到伤害增加），快刀连斩：给自己叠一层（出刀更快、移速略升）；挡住的不算
@@ -2943,7 +2959,7 @@ bool UMechCombatComponent::TryBladeClash(AMechCharacter* Victim)
 		return false;
 	}
 	// 两人大致面对面：侧面、背后砍过去是砍人，不是拼刀
-	const FVector To = (Victim->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal2D();
+	const FVector To = (LoopImg(Victim, Mech->GetActorLocation()) - Mech->GetActorLocation()).GetSafeNormal2D();
 	const float Cone = FMath::Cos(FMath::DegreesToRadians(MechWeapons::ClashAngle));
 	if (FVector::DotProduct(Mech->GetActorForwardVector().GetSafeNormal2D(), To) < Cone
 		|| FVector::DotProduct(Victim->GetActorForwardVector().GetSafeNormal2D(), -To) < Cone)
@@ -2976,7 +2992,7 @@ void UMechCombatComponent::SettleClash(AMechCharacter* Victim, bool bGuard)
 			*Victim->DisplayName, VC->GetBlade().Name, static_cast<int32>(VC->MeleeMove), VC->GetMeleeStrikeAt() - VC->MeleeTime,
 			bKnockMe ? *Mech->DisplayName : TEXT(""), bKnockIt ? *Victim->DisplayName : TEXT(""));
 	}
-	const FVector At = (Mech->GetActorLocation() + Victim->GetActorLocation()) * 0.5f + FVector(0.f, 0.f, 60.f);
+	const FVector At = (Mech->GetActorLocation() + LoopImg(Victim, Mech->GetActorLocation())) * 0.5f + FVector(0.f, 0.f, 60.f);
 	auto Settle = [&At](UMechCombatComponent* C, AMechCharacter* Self, AMechCharacter* Other, bool bKnock, bool bFx) {
 		C->bMeleeHitDone = true;  // 这一刀不再结算（还没砍下的那一方）
 		C->bSwingLanded = true;
@@ -3003,7 +3019,7 @@ void UMechCombatComponent::MulticastClash_Implementation(FVector_NetQuantize At,
 		return;
 	}
 	const bool bKnocked = (Flags & ClashFlagKnocked) != 0;
-	FVector Away = Other ? (Mech->GetActorLocation() - Other->GetActorLocation()).GetSafeNormal2D() : FVector::ZeroVector;
+	FVector Away = Other ? (Mech->GetActorLocation() - LoopImg(Other, Mech->GetActorLocation())).GetSafeNormal2D() : FVector::ZeroVector;
 	if (Away.IsNearlyZero())
 	{
 		Away = -Mech->GetActorForwardVector().GetSafeNormal2D();  // 正好叠在一起 / 对方这一端还没有：朝身后弹
@@ -3143,7 +3159,7 @@ void UMechCombatComponent::PlayClashFx(const FVector& Mid, AMechCharacter* Other
 			Spark = Cross;
 		}
 	}
-	const FVector Axis = Other ? (Other->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal() : Mech->GetActorForwardVector();
+	const FVector Axis = Other ? (LoopImg(Other, Mech->GetActorLocation()) - Mech->GetActorLocation()).GetSafeNormal() : Mech->GetActorForwardVector();
 	const FVector Side = FVector::CrossProduct(Axis, FVector::UpVector).GetSafeNormal();
 	// 一大团：两束金属火花朝两侧喷（比弹反的 2.8 大），中间一团刀光爆点（和弹反一样 0.9；放大了黑烟太多，看着像爆炸不像金属相撞）；主要的火星在 OnClash 里
 	if (HitMechFX)
@@ -3187,7 +3203,7 @@ bool UMechCombatComponent::TryBlock(const FVector& From, float& Damage, float& I
 	{
 		return false;
 	}
-	const FVector To = (From - Mech->GetActorLocation()).GetSafeNormal2D();
+	const FVector To = MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), From).GetSafeNormal2D();  // 老街循环
 	if (FVector::DotProduct(Mech->GetActorForwardVector().GetSafeNormal2D(), To) < FMath::Cos(FMath::DegreesToRadians(GuardAngle)))
 	{
 		return false;  // 侧面、背后挡不住
@@ -3237,7 +3253,7 @@ void UMechCombatComponent::MulticastBlocked_Implementation(FVector_NetQuantize A
 	{
 		SinceBlock = 0.f;
 	}
-	const FVector Spark = Mech->GetActorLocation() + (At - Mech->GetActorLocation()).GetSafeNormal() * 160.f + FVector(0.f, 0.f, 60.f);
+	const FVector Spark = Mech->GetActorLocation() + MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), At).GetSafeNormal() * 160.f + FVector(0.f, 0.f, 60.f);
 	static const float SparkSize[3] = {1.6f, 2.8f, 2.4f};
 	static const float LightLevel[3] = {3500.f, 9000.f, 6000.f};
 	static const FLinearColor LightColor[3] = {FLinearColor(0.7f, 0.85f, 1.f), FLinearColor(1.f, 0.9f, 0.6f), FLinearColor(1.f, 0.32f, 0.15f)};
@@ -3289,7 +3305,7 @@ void UMechCombatComponent::MulticastBlocked_Implementation(FVector_NetQuantize A
 	// 双方：顿帧、镜头冲击、HUD 提示（挡的一方 = Mech，砍的一方 = By）
 	static const float Stop[3] = {0.05f, 0.1f, 0.07f};
 	const float Now = GetWorld()->GetTimeSeconds();
-	const FVector Toward = (By->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal2D();
+	const FVector Toward = (LoopImg(By, Mech->GetActorLocation()) - Mech->GetActorLocation()).GetSafeNormal2D();
 	BlockFxTime = Now;
 	BlockFxKind = Kind;
 	bBlockFxDefender = true;

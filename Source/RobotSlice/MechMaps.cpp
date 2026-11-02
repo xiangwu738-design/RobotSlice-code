@@ -19,9 +19,11 @@ namespace MechMaps
 			{TEXT("/Game/Maps/L_Dreamfield"), TEXT("梦核旷野"), Elim | DM | Defense},
 			// 11-02 石柱山水：偏空战的图，飞行增强 + 落水损毁（规则在 MechMapRules.h，只按地图名和地图里的 WaterKill 标记生效）
 			{TEXT("/Game/Maps/L_Pillars"), TEXT("石柱山水"), Elim | DM},
-			// 11-02 苏联板楼、月球基地进表（老街循环代码还没做，这次不加）
+			// 11-02 苏联板楼、月球基地进表
 			{TEXT("/Game/Maps/L_Soviet"), TEXT("苏联板楼"), Elim | DM},
 			{TEXT("/Game/Maps/L_Moon"), TEXT("月球基地"), Elim | DM},
+			// 11-02 老旧街道：一维循环的娱乐图（MechLoop.h：沿街无限循环，机体、子弹走出接缝从另一头回来），只开死斗
+			{TEXT("/Game/Maps/L_OldStreet"), TEXT("老旧街道"), DM},
 			// 11-02 用户：「加入一个训练场联机模式，人们可以在这个训练场开启友伤」：房间里选这张 = 训练场模式
 			{TEXT("/Game/Maps/L_Range"), TEXT("训练场"), Training},
 		};

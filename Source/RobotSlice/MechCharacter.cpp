@@ -1,6 +1,7 @@
 #include "MechCharacter.h"
 #include "GameFramework/InputSettings.h"
 #include "MechMapRules.h"
+#include "MechLoop.h"
 #include "MechRun.h"
 #include "MechSettings.h"
 #include "MechComms.h"
@@ -614,8 +615,10 @@ void AMechCharacter::DoLook(float Yaw, float Pitch)
 	Super::DoLook(Yaw * Base * Mode / YawK, Pitch * Base * Mode / PitchK * (S.bInvertY ? -1.f : 1.f));
 }
 
-EMechHitPart AMechCharacter::ClassifyHit(const FVector& From, const FVector& Dir) const
+EMechHitPart AMechCharacter::ClassifyHit(const FVector& InFrom, const FVector& Dir) const
 {
+	// 老街循环：打中的可能是 ±周期 处的镜像胶囊，命中点按网格（画面上的那份）挪到最近的那份再算
+	const FVector From = MechLoop::Near(GetWorld(), InFrom, GetMesh()->GetComponentLocation());
 	// 各段骨头当成粗细不同的胶囊（半径按模板人形尺寸，再乘机体缩放）。子弹那条线先穿进哪段就算打中哪个部位；
 	// 一段都没穿进（擦着胶囊边过去）就算离得最近的那段（按各自粗细折算）
 	struct FSeg
@@ -674,8 +677,9 @@ EMechHitPart AMechCharacter::ClassifyHit(const FVector& From, const FVector& Dir
 	return bEntered ? Entered : Nearest;
 }
 
-float AMechCharacter::ReceiveHit(float Damage, float Impact, AActor* Attacker, const FVector& At, EMechHitKind Kind, float StaggerScale)
+float AMechCharacter::ReceiveHit(float Damage, float Impact, AActor* Attacker, const FVector& InAt, EMechHitKind Kind, float StaggerScale)
 {
+	const FVector At = MechLoop::Near(GetWorld(), InAt, GetActorLocation());  // 老街循环：打中镜像胶囊时命中点挪回本体旁边（护盾、格挡、受击方向按它）
 	if (!HasAuthority() || Health->IsDead())
 	{
 		return 0.f;
@@ -696,6 +700,75 @@ float AMechCharacter::ReceiveHit(float Damage, float Impact, AActor* Attacker, c
 		GM->RecordHit(Cast<AMechCharacter>(Attacker), this, Dealt, Kind, !bWasBroken && Health->IsStaggered() && !Health->IsStunned());
 	}
 	return Dealt;
+}
+
+void AMechCharacter::OnLoopWrapped(float Shift)
+{
+	UpdateLoopCapsules();
+}
+
+USceneComponent* AMechCharacter::GetLoopNearestCapsule(const FVector& From) const
+{
+	USceneComponent* Best = GetCapsuleComponent();
+	double BestD = FVector::DistSquared(Best->GetComponentLocation(), From);
+	for (UCapsuleComponent* C : LoopCapsules)
+	{
+		if (C && FVector::DistSquared(C->GetComponentLocation(), From) < BestD)
+		{
+			Best = C;
+			BestD = FVector::DistSquared(C->GetComponentLocation(), From);
+		}
+	}
+	return Best;
+}
+
+void AMechCharacter::UpdateLoopCapsules()
+{
+	UWorld* World = GetWorld();
+	if (!MechLoop::IsActive(World))
+	{
+		return;
+	}
+	UCapsuleComponent* Main = GetCapsuleComponent();
+	const float P = MechLoop::Period(World);
+	if (LoopCapsules.Num() == 0)
+	{
+		for (int32 i = 0; i < 2; ++i)
+		{
+			UCapsuleComponent* C = NewObject<UCapsuleComponent>(this, i == 0 ? TEXT("LoopCapsuleFwd") : TEXT("LoopCapsuleBack"));
+			C->SetUsingAbsoluteLocation(true);
+			C->SetUsingAbsoluteRotation(true);
+			C->SetUsingAbsoluteScale(true);
+			C->SetCapsuleSize(Main->GetUnscaledCapsuleRadius(), Main->GetUnscaledCapsuleHalfHeight());
+			C->SetCollisionProfileName(Main->GetCollisionProfileName());
+			C->SetCollisionObjectType(Main->GetCollisionObjectType());
+			C->SetCollisionResponseToChannels(Main->GetCollisionResponseToChannels());
+			C->SetGenerateOverlapEvents(false);
+			C->SetCanEverAffectNavigation(false);
+			C->SetHiddenInGame(true);
+			C->SetupAttachment(Main);
+			C->RegisterComponent();
+			LoopCapsules.Add(C);
+		}
+	}
+	for (int32 i = 0; i < LoopCapsules.Num(); ++i)
+	{
+		UCapsuleComponent* C = LoopCapsules[i];
+		if (!C)
+		{
+			continue;
+		}
+		if (C->GetCollisionEnabled() != Main->GetCollisionEnabled())
+		{
+			C->SetCollisionEnabled(Main->GetCollisionEnabled());  // 倒地时本体关了碰撞，镜像也关
+		}
+		const FVector Scale = Main->GetComponentScale();
+		if (!C->GetComponentScale().Equals(Scale))
+		{
+			C->SetWorldScale3D(Scale);
+		}
+		C->SetWorldLocationAndRotation(Main->GetComponentLocation() + FVector(i == 0 ? P : -P, 0.f, 0.f), Main->GetComponentQuat());
+	}
 }
 
 void AMechCharacter::HitStop(float Seconds)
@@ -1082,6 +1155,7 @@ void AMechCharacter::QuickBoost()
 
 void AMechCharacter::Tick(float DeltaSeconds)
 {
+	UpdateLoopCapsules();  // 11-02 老街循环（不循环的图上什么都不做）
 	{
 		// -MechLookCalib：灵敏度实测。开局 3 秒后给本机玩家注入 100 个鼠标计数（走真实输入路径 PlayerInput → 增强输入 → DoLook → 控制器），量视角转了多少度
 		static const bool bCalib = FParse::Param(FCommandLine::Get(), TEXT("MechLookCalib"));
@@ -1750,6 +1824,7 @@ void AMechCharacter::UpdateCameraShake(float DeltaSeconds)
 
 void AMechCharacter::OnHealthHit(float Damage, float Impact, AActor* Attacker, FVector At, bool bDirect)
 {
+	At = MechLoop::Near(GetWorld(), At, GetActorLocation());  // 老街循环
 	LastHitFrom = At - GetActorLocation();
 	LastHitAttacker = Attacker;
 	if (bTrainingDummy)
@@ -2195,7 +2270,7 @@ void AMechCharacter::OnHealthDied(AActor* Killer)
 	GetMesh()->SetAllBodiesSimulatePhysics(true);
 	GetMesh()->SetSimulatePhysics(true);
 	GetMesh()->WakeAllRigidBodies();
-	const FVector Push = Killer ? (At - Killer->GetActorLocation()).GetSafeNormal2D() : -GetActorForwardVector();
+	const FVector Push = Killer ? MechLoop::Delta(GetWorld(), Killer->GetActorLocation(), At).GetSafeNormal2D() : -GetActorForwardVector();
 	GetMesh()->AddImpulseToAllBodiesBelow(Push * 600.f + FVector(0.f, 0.f, 250.f), TEXT("pelvis"), true, true);
 	ThrusterLight->SetIntensity(0.f);
 	ThrusterLeft->SetVisibility(false);

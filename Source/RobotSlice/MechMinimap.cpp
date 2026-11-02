@@ -1,4 +1,5 @@
 #include "MechMinimap.h"
+#include "MechLoop.h"
 #include "MechSettings.h"
 
 #include "Async/Async.h"
@@ -687,7 +688,7 @@ void AMechHUD::UpdateSpotting(AMechCharacter* Mech, int32 MyTeam)
 		}
 	}
 	auto Clear = [this](const FVector& From, AActor* Ignore, AMechCharacter* Foe) {
-		const FVector To = Foe->GetActorLocation() + FVector(0.f, 0.f, 60.f);
+		const FVector To = MechLoop::Near(GetWorld(), Foe->GetActorLocation(), From) + FVector(0.f, 0.f, 60.f);  // 老街循环
 		FHitResult Hit;
 		FCollisionQueryParams Query(SCENE_QUERY_STAT(MechMapSpot), false, Ignore);
 		Query.AddIgnoredActor(Foe);
@@ -705,10 +706,10 @@ void AMechHUD::UpdateSpotting(AMechCharacter* Mech, int32 MyTeam)
 			MapSpots.Remove(Foe);
 			continue;
 		}
-		const FVector At = Foe->GetActorLocation();
+		const FVector At = MechLoop::Near(GetWorld(), Foe->GetActorLocation(), Eye);  // 老街循环：离自己镜头最近的那份
 		// 刚被打中（我方谁打的都算）、离任一队友 35 米内
 		bool bSeen = Now - Foe->GetLastDamagedTime() < 0.4f;
-		bSeen = bSeen || Friends.ContainsByPredicate([&At](const AMechCharacter* F) { return FVector::Dist(F->GetActorLocation(), At) < 3500.f; });
+		bSeen = bSeen || Friends.ContainsByPredicate([&At](const AMechCharacter* F) { return MechLoop::Dist(F->GetWorld(), F->GetActorLocation(), At) < 3500.f; });
 		// 自己的镜头：视野里、250 米内、没被挡、没隔着烟
 		if (!bSeen && FVector::Dist(Eye, At) < 25000.f && FVector::DotProduct((At - Eye).GetSafeNormal(), Fwd) > CosView)
 		{
@@ -718,7 +719,7 @@ void AMechHUD::UpdateSpotting(AMechCharacter* Mech, int32 MyTeam)
 		for (int32 k = 0; !bSeen && k < Friends.Num(); ++k)
 		{
 			AMechCharacter* F = Friends[k];
-			if (F != Mech && FVector::Dist(F->GetActorLocation(), At) < 10000.f)
+			if (F != Mech && MechLoop::Dist(GetWorld(), F->GetActorLocation(), At) < 10000.f)
 			{
 				bSeen = Clear(F->GetActorLocation() + FVector(0.f, 0.f, 90.f), F, Foe);
 			}
@@ -842,7 +843,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 		}
 		if (Other->IsTrainingDummy())
 		{
-			Add(FMechMapIcon::Dummy, Other->GetActorLocation(), Dim).Alpha = 0.6f;
+			Add(FMechMapIcon::Dummy, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Dim).Alpha = 0.6f;
 			continue;
 		}
 		const bool bDead = Other->GetHealth()->IsDead();
@@ -852,7 +853,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 			{
 				continue;
 			}
-			FMechMapIcon& I = Add(bDead ? FMechMapIcon::AllyDown : FMechMapIcon::Ally, Other->GetActorLocation(), Ally);
+			FMechMapIcon& I = Add(bDead ? FMechMapIcon::AllyDown : FMechMapIcon::Ally, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Ally);
 			I.Yaw = Other->GetActorRotation().Yaw;
 			I.Label = Other->DisplayName;
 			I.bEdge = !bDead;
@@ -866,7 +867,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 		const float Age = Now - S->Time;
 		if (Age < 0.45f)
 		{
-			FMechMapIcon& I = Add(FMechMapIcon::Enemy, Other->GetActorLocation(), Enemy);
+			FMechMapIcon& I = Add(FMechMapIcon::Enemy, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Enemy);
 			I.Yaw = Other->GetActorRotation().Yaw;
 		}
 		else if (Age < 3.5f)
@@ -1346,7 +1347,7 @@ void AMechHUD::DrawNames(AMechCharacter* Mech)
 		}
 		FNameVis& V = NameVis.FindOrAdd(Other);
 		const bool bAlly = Other->GetTeam() == Mech->GetTeam();
-		const FVector Body = Other->GetActorLocation() + FVector(0.f, 0.f, 60.f);
+		const FVector Body = MechLoop::Near(GetWorld(), Other->GetActorLocation(), Eye) + FVector(0.f, 0.f, 60.f);  // 老街循环
 		const float Dist = FVector::Dist(Eye, Body);
 		if (Now >= V.NextCheck)
 		{
@@ -1369,7 +1370,7 @@ void AMechHUD::DrawNames(AMechCharacter* Mech)
 			continue;
 		}
 		FVector2D P;
-		if (!UGameplayStatics::ProjectWorldToScreen(PlayerOwner, Other->GetActorLocation() + FVector(0.f, 0.f, 230.f), P))
+		if (!UGameplayStatics::ProjectWorldToScreen(PlayerOwner, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Eye) + FVector(0.f, 0.f, 230.f), P))
 		{
 			continue;
 		}

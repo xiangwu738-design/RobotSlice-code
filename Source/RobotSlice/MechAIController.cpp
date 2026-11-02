@@ -1,5 +1,6 @@
 #include "MechAIController.h"
 #include "MechMapRules.h"
+#include "MechLoop.h"
 #include "MechDefense.h"
 #include "MechGameState.h"
 #include "MechRules.h"
@@ -280,7 +281,7 @@ AMechCharacter* AMechAIController::PickTarget(AMechCharacter* Self) const
 			continue;
 		}
 		// 近的优先，看得见的再优先一点，残血的也优先一点
-		float Score = FVector::Dist(Other->GetActorLocation(), Self->GetActorLocation());
+		float Score = FVector::Dist(MechLoop::Near(GetWorld(), Other->GetActorLocation(), Self->GetActorLocation()), Self->GetActorLocation());
 		Score *= HasLineOfSight(Self, Other) ? 0.7f : 1.f;
 		Score *= 0.6f + 0.4f * Other->GetHealth()->GetAPFraction();
 		// 死斗刚重生、还在保护中的（打了不掉血）往后排
@@ -303,7 +304,7 @@ bool AMechAIController::HasLineOfSight(AMechCharacter* Self, AMechCharacter* Oth
 	FCollisionQueryParams Params(SCENE_QUERY_STAT(MechAILOS), false, Self);
 	Params.AddIgnoredActor(Other);
 	const FVector From = Self->GetActorLocation() + FVector(0.f, 0.f, 80.f);
-	const FVector To = Other->GetActorLocation() + FVector(0.f, 0.f, 40.f);
+	const FVector To = MechLoop::Near(GetWorld(), Other->GetActorLocation(), From) + FVector(0.f, 0.f, 40.f);
 	return !GetWorld()->LineTraceSingleByObjectType(Hit, From, To, FCollisionObjectQueryParams(ECC_WorldStatic), Params)
 		&& !AMechSmoke::BlocksLine(GetWorld(), From, To);  // 隔着烟幕看不见
 }
@@ -421,7 +422,7 @@ void AMechAIController::Tick(float DeltaSeconds)
 	}
 
 	const FVector Me = Self->GetActorLocation();
-	const FVector ToTarget = Target->GetActorLocation() - Me;
+	const FVector ToTarget = MechLoop::Delta(GetWorld(), Me, Target->GetActorLocation());
 	// 11-02 空战图（石柱山水）按直线距离算（对手在头顶 60 米不算贴脸）；别的图和原来一样按水平距离
 	const bool bAirMap = MechMapRules::FlightFor(GetWorld()).bAirMap;
 	const float Dist = bAirMap ? ToTarget.Size() : ToTarget.Size2D();
@@ -431,7 +432,7 @@ void AMechAIController::Tick(float DeltaSeconds)
 
 	// 瞄准：看向目标，带一点随时间变化的手抖
 	const float T = GetWorld()->GetTimeSeconds() + AimNoiseSeed;
-	FRotator Look = (Target->GetActorLocation() + FVector(0.f, 0.f, 30.f) - (Me + FVector(0.f, 0.f, 100.f))).Rotation();
+	FRotator Look = (MechLoop::Near(GetWorld(), Target->GetActorLocation(), Me) + FVector(0.f, 0.f, 30.f) - (Me + FVector(0.f, 0.f, 100.f))).Rotation();
 	Look.Yaw += FMath::PerlinNoise1D(T * 0.7f) * 2.f;
 	Look.Pitch += FMath::PerlinNoise1D(T * 0.9f + 50.f) * 1.5f;
 	if (bCoreMoving && !bSee && !CoreDir.IsNearlyZero())
@@ -503,7 +504,11 @@ void AMechAIController::Tick(float DeltaSeconds)
 	{
 		Move = Toward + Side * 0.4f;  // 看不见就往目标那边绕
 	}
-	const FVector FromCenter = Me - ArenaCenter;
+	FVector FromCenter = Me - ArenaCenter;
+	if (MechLoop::IsActive(GetWorld()))
+	{
+		FromCenter.X = 0.f;  // 老街循环：沿街（X）没有边，只看两侧
+	}
 	if (FMath::Abs(FromCenter.X) > ArenaExtent.X || FMath::Abs(FromCenter.Y) > ArenaExtent.Y)
 	{
 		Move += -FromCenter.GetSafeNormal2D() * 1.5f;  // 出场地了，往回走
@@ -625,7 +630,7 @@ void AMechAIController::Tick(float DeltaSeconds)
 	bool bDodge = false;
 	for (TActorIterator<AMechMissile> It(GetWorld()); It; ++It)
 	{
-		if (It->GetTarget() == Self && FVector::Dist(It->GetActorLocation(), Me) < 1800.f)
+		if (It->GetTarget() == Self && MechLoop::Dist(GetWorld(), It->GetActorLocation(), Me) < 1800.f)
 		{
 			bDodge = true;
 			break;
@@ -1040,7 +1045,7 @@ bool AMechAIController::HighTick(AMechCharacter* Self, AMechCharacter* Target, b
 	const FVector Me = Self->GetActorLocation();
 	const float HalfH = Self->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
 	const FVector Feet = Me - FVector(0.f, 0.f, HalfH);
-	const FVector TFeet = Target->GetActorLocation() - FVector(0.f, 0.f, HalfH);
+	const FVector TFeet = MechLoop::Near(GetWorld(), Target->GetActorLocation(), Me) - FVector(0.f, 0.f, HalfH);
 	const float MyH = Feet.Z - HG->FloorZ();
 	const bool bGround = Self->GetCharacterMovement()->IsMovingOnGround();
 	const FVector Toward = (TFeet - Feet).GetSafeNormal2D();
@@ -1118,7 +1123,7 @@ bool AMechAIController::HighTick(AMechCharacter* Self, AMechCharacter* Target, b
 			{
 				continue;
 			}
-			const FVector Away = Me - It->GetActorLocation();
+			const FVector Away = -MechLoop::Delta(GetWorld(), Me, It->GetActorLocation());
 			const float D = Away.Size2D();
 			if (D > 1.f && D < 1200.f)
 			{
@@ -1488,8 +1493,8 @@ void AMechAIController::PickPerches(AMechCharacter* Self, AMechCharacter* Target
 	const TArray<int32>& Perches = HG->PerchNodes();
 	const float HalfH = Self->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
 	const FVector Feet = Self->GetActorLocation() - FVector(0.f, 0.f, HalfH);
-	const FVector TFeet = Target->GetActorLocation() - FVector(0.f, 0.f, HalfH);
-	const FVector TChest = Target->GetActorLocation() + FVector(0.f, 0.f, 40.f);
+	const FVector TFeet = MechLoop::Near(GetWorld(), Target->GetActorLocation(), Feet) - FVector(0.f, 0.f, HalfH);
+	const FVector TChest = MechLoop::Near(GetWorld(), Target->GetActorLocation(), Feet) + FVector(0.f, 0.f, 40.f);
 	// 队友已经占着 / 正要去的高点：别扎堆
 	TArray<FVector, TInlineAllocator<4>> Claimed;
 	for (TActorIterator<AMechAIController> It(GetWorld()); It; ++It)

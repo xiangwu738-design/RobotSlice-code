@@ -224,7 +224,17 @@ protected:
 	/** 画面问题复现测试（-MechFallTest / -MechTracerTest，MechVisualTest.cpp）要按跳跃、闪避、改镜头 */
 	friend struct FMechVisualTest;
 
+	/** 11-02 老街循环（MechLoop.h）：移动组件刚把这台挪了一个周期（Shift 厘米，沿 X）；镜像胶囊跟着摆 */
+	void OnLoopWrapped(float Shift);
+	/** 老街循环：本体胶囊和两个镜像胶囊里离 From 最近的那个（导弹追踪用）；不循环的图 = 本体胶囊 */
+	class USceneComponent* GetLoopNearestCapsule(const FVector& From) const;
+
 private:
+	/** 老街循环：±周期 处和本体一样的胶囊（属于这台机体，子弹 / 刀 / 爆炸 / 别的机体碰到它 = 碰到这台）；不循环的图上没有 */
+	UPROPERTY()
+	TArray<TObjectPtr<class UCapsuleComponent>> LoopCapsules;
+	void UpdateLoopCapsules();
+
 	void BoostStarted();
 	void BoostEnded();
 	void QuickBoost();

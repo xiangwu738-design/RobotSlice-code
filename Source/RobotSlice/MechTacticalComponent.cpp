@@ -1,4 +1,5 @@
 #include "MechTacticalComponent.h"
+#include "MechLoop.h"
 
 #include "Camera/PlayerCameraManager.h"
 #include "Components/CapsuleComponent.h"
@@ -665,7 +666,7 @@ void UMechTacticalComponent::ShockBlast()
 		// 到对方胶囊中线的距离再减半径（球形范围：头顶高架上的够不着）
 		const UCapsuleComponent* Cap = M->GetCapsuleComponent();
 		const float MHalf = Cap->GetScaledCapsuleHalfHeight();
-		const FVector MC = M->GetActorLocation();
+		const FVector MC = MechLoop::Near(GetWorld(), M->GetActorLocation(), C);  // 老街循环
 		const float D = FMath::Max(0.f, FVector::Dist(C, FMath::ClosestPointOnSegment(C, MC - FVector(0.f, 0.f, MHalf), MC + FVector(0.f, 0.f, MHalf))) - Cap->GetScaledCapsuleRadius());
 		if (D >= ShockReach())
 		{
@@ -705,7 +706,7 @@ void UMechTacticalComponent::ShockBlast()
 	// 范围里敌人的地雷：一起扫掉（地雷的反制之一）
 	for (TActorIterator<AMechMine> It(GetWorld()); It; ++It)
 	{
-		if (It->IsActive() && It->GetTeam() != Mech->GetTeam() && FVector::Dist(It->GetActorLocation(), C) < ShockReach() + 150.f)
+		if (It->IsActive() && It->GetTeam() != Mech->GetTeam() && MechLoop::Dist(GetWorld(), It->GetActorLocation(), C) < ShockReach() + 150.f)
 		{
 			It->Break(true);
 		}
@@ -1008,13 +1009,14 @@ void UMechTacticalComponent::AIThink(AMechCharacter* Target, bool bSeeTarget, fl
 		{
 			continue;
 		}
-		const float D = FVector::Dist(E->GetActorLocation(), Me);
+		const FVector EAt = MechLoop::Near(GetWorld(), E->GetActorLocation(), Me);  // 老街循环
+		const float D = FVector::Dist(EAt, Me);
 		if (D > 3000.f)
 		{
 			continue;
 		}
 		++Near;
-		Sum += E->GetActorLocation();
+		Sum += EAt;
 		Closest = FMath::Min(Closest, D);
 		if (D < ShockReach() * 0.85f)
 		{
@@ -1053,12 +1055,13 @@ void UMechTacticalComponent::AIThink(AMechCharacter* Target, bool bSeeTarget, fl
 	case EMechShoulder::Mine:
 		if (Target && bSeeTarget)
 		{
-			const float D = FVector::Dist2D(Target->GetActorLocation(), Me);
+			const FVector TAt = MechLoop::Near(GetWorld(), Target->GetActorLocation(), Me);  // 老街循环
+			const float D = FVector::Dist2D(TAt, Me);
 			const float TargetHalf = Target->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
 			if (D > 800.f && D < MineRange && FMath::FRand() < 0.5f)
 			{
 				// 中距离：扔到他脚下（带一点提前量，飞行约 0.6 秒）
-				Pressed(FVector::ZeroVector, Target->GetActorLocation() + Target->GetVelocity() * 0.6f - FVector(0.f, 0.f, TargetHalf));
+				Pressed(FVector::ZeroVector, TAt + Target->GetVelocity() * 0.6f - FVector(0.f, 0.f, TargetHalf));
 			}
 			else if (DamageWindow > 300.f && D < 2500.f)
 			{
