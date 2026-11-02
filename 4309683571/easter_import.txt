@@ -1,0 +1,11 @@
+exit=0
+[2026.11.02-19.47.58:498][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.47.58:887][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.47.58:894][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.627 ms
+[2026.11.02-19.47.58:894][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.47.58:995][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 102.311 ms (total: 109.938 ms)
+[2026.11.02-19.47.58:995][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_easter_import_all.py
+[2026.11.02-19.47.59:933][  0]LogPython: Warning: D:/RobotSlice/tools/ue_easter_import.py:370: DeprecationWarning: EditorStaticMeshLibrary: Function 'get_simple_collision_count' on 'EditorStaticMeshLibrary' is deprecated: The Editor Scripting Utilities Plugin is deprecated - Use the function in Stat
+[2026.11.02-19.48.00:790][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.48.00:790][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.48.00:790][  0]LogInit: Display: LogPython: Warning: D:/RobotSlice/tools/ue_easter_import.py:370: DeprecationWarning: EditorStaticMeshLibrary: Function 'get_simple_collision_count' on 'EditorStaticMeshLibrary' is deprecated: The Editor Scripting Utilities Plugin is deprecated - Use th

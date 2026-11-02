@@ -1,0 +1,17 @@
+exit=0
+[2026.11.02-19.46.46:877][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.46.47:226][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.46.47:233][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.308 ms
+[2026.11.02-19.46.47:233][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.46.47:243][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 10.080 ms (total: 17.388 ms)
+[2026.11.02-19.46.47:243][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_kitfree_shoulder_copy.py
+[2026.11.02-19.46.47:338][  0]LogPython: Warning: [kfshcopy] 澶囦唤 D:/RobotSlice/Inbox/_鑲╅儴鍊欓��/娓告垙妯″瀷 鈫� D:/褰掓。/RobotSlice_鑲╅儴鍘荤粍浠跺墠_20261102/娓告垙妯″瀷
+[2026.11.02-19.46.47:352][  0]LogPython: Warning: [kfshcopy] 娓告垙妯″瀷 鎹�浜� 12 涓� FBX
+[2026.11.02-19.46.47:396][  0]LogPython: Warning: [kfshcopy] 澶囦唤 D:/RobotSlice/Inbox/_鑲╅儴鍊欓��/娓告垙妯″瀷_鎴樻湳 鈫� D:/褰掓。/RobotSlice_鑲╅儴鍘荤粍浠跺墠_20261102/娓告垙妯″瀷_鎴樻湳
+[2026.11.02-19.46.47:407][  0]LogPython: Warning: [kfshcopy] 娓告垙妯″瀷_鎴樻湳 鎹�浜� 5 涓� FBX
+[2026.11.02-19.46.47:407][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.46.47:407][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.46.47:407][  0]LogInit: Display: LogPython: Warning: [kfshcopy] 澶囦唤 D:/RobotSlice/Inbox/_鑲╅儴鍊欓��/娓告垙妯″瀷 鈫� D:/褰掓。/RobotSlice_鑲╅儴鍘荤粍浠跺墠_20261102/娓告垙妯″瀷
+[2026.11.02-19.46.47:407][  0]LogInit: Display: LogPython: Warning: [kfshcopy] 娓告垙妯″瀷 鎹�浜� 12 涓� FBX
+[2026.11.02-19.46.47:407][  0]LogInit: Display: LogPython: Warning: [kfshcopy] 澶囦唤 D:/RobotSlice/Inbox/_鑲╅儴鍊欓��/娓告垙妯″瀷_鎴樻湳 鈫� D:/褰掓。/RobotSlice_鑲╅儴鍘荤粍浠跺墠_20261102/娓告垙妯″瀷_鎴樻湳
+[2026.11.02-19.46.47:407][  0]LogInit: Display: LogPython: Warning: [kfshcopy] 娓告垙妯″瀷_鎴樻湳 鎹�浜� 5 涓� FBX

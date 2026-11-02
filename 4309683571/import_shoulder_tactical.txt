@@ -1,0 +1,13 @@
+exit=0
+[2026.11.02-19.47.11:277][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.47.11:653][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.47.11:661][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.566 ms
+[2026.11.02-19.47.11:661][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.47.11:678][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 17.667 ms (total: 25.233 ms)
+[2026.11.02-19.47.11:678][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_import_shoulder_tactical.py
+[2026.11.02-19.47.13:263][  0]LogPython: Warning: [dronemat] SM_Blade 杩樻槸榛樿�ゆ潗璐�锛歔'MI_Robot_Chrome', 'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow']
+[2026.11.02-19.47.13:271][  0]LogPython: Warning: [dronemat] SM_Rifle 杩樻槸榛樿�ゆ潗璐�锛歔'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Glow', 'MI_Robot_Chrome', 'MI_Robot_Nozzle', 'MI_Robot_Accent']
+[2026.11.02-19.47.13:363][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.47.13:363][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.47.13:363][  0]LogInit: Display: LogPython: Warning: [dronemat] SM_Blade 杩樻槸榛樿�ゆ潗璐�锛歔'MI_Robot_Chrome', 'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow']
+[2026.11.02-19.47.13:363][  0]LogInit: Display: LogPython: Warning: [dronemat] SM_Rifle 杩樻槸榛樿�ゆ潗璐�锛歔'MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Glow', 'MI_Robot_Chrome', 'MI_Robot_Nozzle', 'MI_Robot_Accent']

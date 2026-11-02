@@ -1,0 +1,539 @@
+easter_build 结束：ok，用时 33 秒，日志行 538
+[2026.11.02-19.47.25:658][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.47.25:658][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-19.47.25:658][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.47.25:658][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-19.47.25:658][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-19.47.26:066][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-19.47.26:066][  0]LogPython: Using Python 3.11.8
+[2026.11.02-19.47.26:089][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.47.26:463][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-19.47.26:472][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-19.47.26:476][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-19.47.26:477][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.47.26:477][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.47.26:477][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.47.26:481][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-19.47.26:482][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-19.47.26:482][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-19.47.26:543][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-19.47.26:926][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-19.47.26:944][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.47.26:951][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 6.892 ms
+[2026.11.02-19.47.26:951][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.47.26:958][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-19.47.26:964][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 13.673 ms (total: 20.565 ms)
+[2026.11.02-19.47.26:978][  0]LogPython: Warning: [eastrun] blender = D:/SteamLibrary/steamapps/common/Blender/blender.exe ；py = C:\Users\ASUS\AppData\Local\Programs\Python\Launcher\py.EXE
+[2026.11.02-19.47.26:980][  0]LogPython: Warning: [eastrun] 复制 tools/easter_src/dog → Inbox/_easter/dog ['scene.gltf']
+[2026.11.02-19.47.26:982][  0]LogPython: Warning: [eastrun] 复制 tools/easter_src/drone → Inbox/_easter/drone ['drone.glb']
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun] == tools/blender_easter_survey.py dog 退出码 0，3 秒
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY loweLeg4.001：父 upperLeg4.001，位置 [7.5, -12.5114, 7.0363]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg：父 leg1，位置 [-5.0, 7.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg2：父 leg2，位置 [-7.0, 7.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg2.001：父 leg2.001，位置 [5.0, 7.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg3：父 leg3，位置 [-5.0, -6.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg3.001：父 leg3.001，位置 [-5.0, -6.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg4：父 leg4，位置 [5.0, -6.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   EMPTY upperLeg4.001：父 leg4.001，位置 [5.0, -6.0, 12.5]，缩放 [1.0, 1.0, 1.0]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   动作 animation.spot_mini.start：帧 [0.0, 216.0]（9.00 秒），曲线 64，骨头 0，物体通道 ['location', 'rotation_quaternion', 'scale']，槽 ['loweLeg', 'upperLeg', 'leg1', 'loweLeg2.001', 'upperLeg2.001', 'leg2.001', 'loweLeg3.001', 'upperLeg3.001', 
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   材质 spot_mini.png：贴图 ['Image_0']，自发光 False，底色亮度 0.80 → Shell [@textured]
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 底子原始包围盒（Blender 单位）(-9.0, -13.1614, 0.0139)..(9.0, 12.7752, 15.5) 尺寸 (18.0, 25.9366, 15.4861)，场景单位 ×1.0
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 前方 +Y（config）、上方 +Z；前后长度 25.9366 → 1.0 米，缩放 ×3.8556
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   （内部单位厘米：底子按米算的话等于放大 0.039 倍）
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 摆好以后包围盒 (-0.50, -0.35, -0.00)..(0.50, 0.35, 0.60) 尺寸 (1.00, 0.69, 0.60) 米
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 底子工作网格 73 个，共 2628 顶点、876 三角
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:01.875  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_front34.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_front34.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:01.984  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_side.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_side.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.062  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_front.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_front.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.156  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_top.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_top.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.250  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_rear34.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_rear34.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 高度剖面（上→下，越密 = 这一高度前后占得越满）：|   ..:..    .       .                        .. |
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 身体底 0.498 米、身体顶 0.560 米、膝盖 0.249 米；身体盒 (-0.43, -0.35, 0.50)..(0.50, 0.35, 0.60) 尺寸 (0.93, 0.69, 0.10) 米
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 分段（面数）：{'leg_br_upper': 107, 'leg_fl_upper': 105, 'body': 162, 'leg_fr_upper': 106, 'leg_bl_upper': 108, 'leg_fl_lower': 70, 'leg_fr_lower': 70, 'leg_bl_lower': 74, 'leg_br_lower': 74}
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.375  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_分段_front34.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_分段_front34.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.468  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_分段_side.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_分段_side.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | 00:02.578  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\dog\dog_分段_top.png'
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/dog/dog_分段_top.png
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 拼图清单 Inbox/_easter/survey/dog/_sheet.json（8 张）→ 跑 py -3 tools/easter_sheet.py Inbox/_easter/survey/dog
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 普查结果 Inbox/_easter/survey/dog_survey.json；游戏尺寸包围盒 (-0.50, -0.35, -0.00)..(0.50, 0.35, 0.60) 尺寸 (1.00, 0.69, 0.60) 米
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | [easter] 日志在 D:\RobotSlice\Inbox\_easter\logs\survey_dog_1102_204727.txt
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   | Blender quit
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   ERR | D:\RobotSlice\tools\blender_easter_survey.py:95: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+[2026.11.02-19.47.30:186][  0]LogPython: Warning: [eastrun]   ERR |   if m.use_nodes and m.node_tree:
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun] == tools/blender_easter_survey.py drone 退出码 0，3 秒
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter] 摆好以后包围盒 (-0.54, -0.80, -0.15)..(0.54, 0.80, 0.15) 尺寸 (1.07, 1.60, 0.30) 米
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter] 底子工作网格 27 个，共 8801 顶点、4946 三角
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | 00:01.406  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_front34.png'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_front34.png
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | 00:01.500  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_side.png'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_side.png
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | 00:01.578  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_front.png'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_front.png
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | 00:01.672  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_top.png'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_top.png
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | 00:01.766  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_rear34.png'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_rear34.png
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter] 旋翼查找：散件 1954 块，跨度 1.60 米，名字正则 '^Object_(39|41|43)$'
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   旋翼 FL（按名字）：桨毂 (0.21, 0.64, 0.10) 米，直径 0.13 米，散件 10 块
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   旋翼 FR（按名字）：桨毂 (0.21, -0.64, 0.10) 米，直径 0.13 米，散件 10 块
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   旋翼 BL（按名字）：桨毂 (-0.21, 0.45, 0.10) 米，直径 0.13 米，散件 10 块
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   旋翼 BR（按名字）：桨毂 (-0.40, -0.58, 0.10) 米，直径 0.13 米，散件 10 块
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]   另有 475 个在角上的圆环（当涵道，留在机身上）
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (0.30, -0.56, 0.06) 直径 0.47 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (-0.30, 0.51, 0.06) 直径 0.47 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (-0.30, -0.51, 0.06) 直径 0.47 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (0.30, 0.56, 0.06) 直径 0.47 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (-0.30, -0.51, 0.11) 直径 0.44 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (0.30, 0.56, 0.11) 直径 0.44 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (-0.30, 0.51, 0.11) 直径 0.44 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_36 中心 (0.30, -0.56, 0.11) 直径 0.44 扁 True 圆环 True 在角上 True 名字命中 False 三角 42
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_55 中心 (-0.01, 0.14, 0.07) 直径 0.34 扁 True 圆环 False 在角上 False 名字命中 False 三角 12
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_55 中心 (-0.01, -0.14, 0.07) 直径 0.34 扁 True 圆环 False 在角上 False 名字命中 False 三角 12
+[2026.11.02-19.47.32:899][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_16 中心 (-0.00, 0.11, -0.07) 直径 0.29 扁 True 圆环 False 在角上 False 名字命中 False 三角 8
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter]     散件 Object_16 中心 (-0.00, 0.15, -0.07) 直径 0.29 扁 True 圆环 False 在角上 False 名字命中 False 三角 12
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | 00:01.906  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_旋翼_front34.png'
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_旋翼_front34.png
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | 00:02.000  render           | Saved: 'D:\RobotSlice\Inbox\_easter\survey\drone\drone_旋翼_top.png'
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/survey/drone/drone_旋翼_top.png
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter] 拼图清单 Inbox/_easter/survey/drone/_sheet.json（7 张）→ 跑 py -3 tools/easter_sheet.py Inbox/_easter/survey/drone
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter] 普查结果 Inbox/_easter/survey/drone_survey.json；游戏尺寸包围盒 (-0.54, -0.80, -0.15)..(0.54, 0.80, 0.15) 尺寸 (1.07, 1.60, 0.30) 米
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | [easter] 日志在 D:\RobotSlice\Inbox\_easter\logs\survey_drone_1102_204731.txt
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   | Blender quit
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   ERR | D:\RobotSlice\tools\blender_easter_survey.py:95: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+[2026.11.02-19.47.32:900][  0]LogPython: Warning: [eastrun]   ERR |   if m.use_nodes and m.node_tree:
+[2026.11.02-19.47.33:759][  0]LogPython: Warning: [eastrun] == tools/easter_sheet.py Inbox/_easter/survey/dog 退出码 0，1 秒
+[2026.11.02-19.47.33:759][  0]LogPython: Warning: [eastrun]   | D:\RobotSlice\Inbox\_easter\survey\dog_����.jpg (1944, 1672) 0.18 MB ��8 �ţ�
+[2026.11.02-19.47.34:412][  0]LogPython: Warning: [eastrun] == tools/easter_sheet.py Inbox/_easter/survey/drone 退出码 0，1 秒
+[2026.11.02-19.47.34:412][  0]LogPython: Warning: [eastrun]   | D:\RobotSlice\Inbox\_easter\survey\drone_����.jpg (1944, 1648) 0.16 MB ��7 �ţ�
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun] == tools/blender_easter_dog.py  退出码 0，4 秒
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   腿 bl（分段盒子）：髋 (-0.24, 0.23, 0.50) 膝 (-0.25, 0.29, 0.25) 脚 (-0.25, 0.29, -0.00) 米
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   腿 br（分段盒子）：髋 (-0.24, -0.23, 0.50) 膝 (-0.25, -0.29, 0.25) 脚 (-0.25, -0.29, -0.00) 米
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.282  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_零件_front34.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_零件_front34.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.375  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_零件_side.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_零件_side.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.469  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_零件_top.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_零件_top.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 骨架 12 根：['root', 'body', 'head', 'tail_antenna', 'leg_fl_upper', 'leg_fl_lower', 'leg_fr_upper', 'leg_fr_lower', 'leg_bl_upper', 'leg_bl_lower', 'leg_br_upper', 'leg_br_lower']
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 按部位分色（头 Accent / 腿 Frame / 身体 Shell）：面数 {'头': 1051, '腿': 11220, '身体': 270, '发光（不动）': 348}，槽序号 {'Shell': 0, 'Frame': 1, 'Accent': 2}
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 合并：SK_PDog 22868 三角，包围盒 (-0.65, -0.35, -0.00)..(0.85, 0.35, 0.93) 尺寸 (1.50, 0.71, 0.93) 米
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 头 / 身体：头高 0.36 米、身体高 0.10 米（比 3.75）；头宽 / 身体宽 0.42
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 底子没有骨架：不导动作（代码用程序化步态）
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.657  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_front34.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_front34.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.750  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_side.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_side.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.844  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_front.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_front.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:02.922  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_top.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_top.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:03.016  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_rear34.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_rear34.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:03.125  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_摆姿势_front34.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_摆姿势_front34.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | 00:03.204  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\dog\dog_摆姿势_side.png'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/dog/dog_摆姿势_side.png
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 拼图清单 Inbox/_easter/preview/dog/_sheet.json（10 张）→ 跑 py -3 tools/easter_sheet.py Inbox/_easter/preview/dog
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | FBX export starting... 'D:\\RobotSlice\\Inbox\\_easter\\export\\SK_PDog.fbx'
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | export finished in 0.0411 sec.
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 导出 Inbox/_easter/export/SK_PDog.fbx（0.83 MB）
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 报告 Inbox/_easter/export/PDog_build.json
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | Info: Saved copy as "PDog_build.blend"
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 存了 Inbox/_easter/build/PDog_build.blend（用 Blender 打开可以手动检查 / 改）
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 完成：SK_PDog 22868 三角，动作 0 个；下一步 py -3 tools/easter_sheet.py Inbox/_easter/preview/dog，再跑 UE 导入
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | [easter] 日志在 D:\RobotSlice\Inbox\_easter\logs\dog_1102_204735.txt
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.38:499][  0]LogPython: Warning: [eastrun]   | Blender quit
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun] == tools/blender_easter_drone.py  退出码 0，4 秒
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]     tail_lights_mirror 三角 12，分槽 {'Shell': 0, 'Frame': 0, 'Accent': 12, 'glow': 12}，骨头 body
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:01.765  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_零件_front34.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_零件_front34.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:01.859  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_零件_top.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_零件_top.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.094  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_零件_front.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_零件_front.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 枪口 Muzzle（零件 weapon）：(0.32, 0.00, -0.17) 米
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 机身 19534 三角，旋翼 20 三角 × 4；机身盒 (-0.57, -0.96, -0.22)..(0.83, 0.96, 0.36) 尺寸 (1.40, 1.93, 0.57) 米
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.219  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_front34.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_front34.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.312  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_front.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_front.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.406  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_side.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_side.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.500  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_top.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_top.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.594  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_rear34.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_rear34.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.687  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_旋翼_front34.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_旋翼_front34.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | 00:02.765  render           | Saved: 'D:\RobotSlice\Inbox\_easter\preview\drone\drone_旋翼_pz.png'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter]   预览 Inbox/_easter/preview/drone/drone_旋翼_pz.png
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 拼图清单 Inbox/_easter/preview/drone/_sheet.json（10 张）→ 跑 py -3 tools/easter_sheet.py Inbox/_easter/preview/drone
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | FBX export starting... 'D:\\RobotSlice\\Inbox\\_easter\\export\\SM_VDrone_Body.fbx'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | export finished in 0.0305 sec.
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 导出 Inbox/_easter/export/SM_VDrone_Body.fbx（0.97 MB）
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | FBX export starting... 'D:\\RobotSlice\\Inbox\\_easter\\export\\SM_VDrone_Rotor.fbx'
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | export finished in 0.0043 sec.
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 导出 Inbox/_easter/export/SM_VDrone_Rotor.fbx（0.02 MB）
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 报告 Inbox/_easter/export/VDrone_build.json：插槽 {'Rotor_FL': [21.2, -64.01, 10.18], 'Rotor_FR': [21.2, 64.01, 10.18], 'Rotor_BL': [-21.02, -44.58, 10.18], 'Rotor_BR': [-39.82, 58.38, 10.18], 'Muzzle': [32.23, -0.0, -17.12]}
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | Info: Saved copy as "VDrone_build.blend"
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 存了 Inbox/_easter/build/VDrone_build.blend（用 Blender 打开可以手动检查 / 改）
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 完成；下一步 py -3 tools/easter_sheet.py Inbox/_easter/preview/drone，再跑 UE 导入
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | [easter] 日志在 D:\RobotSlice\Inbox\_easter\logs\drone_1102_204739.txt
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   |
+[2026.11.02-19.47.42:128][  0]LogPython: Warning: [eastrun]   | Blender quit
+[2026.11.02-19.47.42:786][  0]LogPython: Warning: [eastrun] == tools/easter_sheet.py Inbox/_easter/preview/dog 退出码 0，1 秒
+[2026.11.02-19.47.42:786][  0]LogPython: Warning: [eastrun]   | D:\RobotSlice\Inbox\_easter\preview\dog_����.jpg (1944, 2188) 0.2 MB ��10 �ţ�
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun] == tools/easter_sheet.py Inbox/_easter/preview/drone 退出码 0，1 秒
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]   | D:\RobotSlice\Inbox\_easter\preview\drone_����.jpg (1944, 2188) 0.2 MB ��10 �ţ�
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun] == Inbox/_easter/export/PDog_build.json（前 3000 字）
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]    {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "asset": "/Game/Easter/Dog/SK_PDog",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "fbx": "SK_PDog.fbx",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "source": "Inbox/_easter/dog/scene.gltf",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "note": "坐标 = UE 网格空间厘米 (x 前, y 右, z 上)",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "scale_from_source": 3.85556,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "forward": "+Y",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "leg_length_scale": 1.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "tris": 22868,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "size_m": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      1.499,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      0.709,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      0.927
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "box_ue_cm": {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      "min": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       -64.68,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       -35.47,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       -0.0
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      "max": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       85.25,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       35.47,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       92.71
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]     "bones": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "root",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": null,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        0.0
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        15.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        0.0
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "body",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "root",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        3.62,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        54.89
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        40.72,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        54.89
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "head",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        44.18,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        43.45
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        64.13,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        70.54
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "tail_antenna",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -36.89,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        58.02
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -61.68,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        91.83
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "leg_fl_upper",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        23.53,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -18.88,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        49.76
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        24.12
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "leg_fl_lower",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "leg_fl_upper",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        24.12
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        -0.0
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "name": "leg_fr_upper",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        23.53,
+[2026.11.02-19.47.43:487][  0]LogPython: Warning: [eastrun]        18.88,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        49.76
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.12
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "name": "leg_fr_lower",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "parent": "leg_fr_upper",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.12
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        14.15,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -0.0
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "name": "leg_bl_upper",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.01,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -23.13,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        49.76
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.84
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "name": "leg_bl_lower",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "parent": "leg_bl_upper",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.84
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -0.0
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "name": "leg_br_upper",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "parent": "body",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.01,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        23.13,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        49.76
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.84
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "name": "leg_br_lower",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "parent": "leg_br_upper",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "head": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.84
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "tail": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -24.55,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        28.92,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -0.0
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      }
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "slots": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Shell": 288,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Frame": 19812,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Accent": 2768
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "boxes": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "leg_br_upper": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "min": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -50.0,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        11.57,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.97
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "max": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        1.99,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        34.7,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        49.54
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "leg_br_lower": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "min": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -49.62,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.68,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -0.0
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "max": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        0.53,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        33.16,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.84
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "body": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "min": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -42.77,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -34.7,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        50.07
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "max": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        50.0,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        34.7,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        59.71
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "leg_fl_upper": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "min": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        4.73,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -34.7,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.97
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "max": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        42.33,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        -3.06,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        47.52
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "leg_fr_upper": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "min": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        4.73,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        3.06,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        24.97
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       "max": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        42.33,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        34.7,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]        47.52
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "leg_bl
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun] == Inbox/_easter/export/VDrone_build.json（前 3000 字）
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]    {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "body": "/Game/Easter/Drone/SM_VDrone_Body",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "rotor": "/Game/Easter/Drone/SM_VDrone_Rotor",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "source": "Inbox/_easter/drone/drone.glb",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "note": "坐标 = UE 网格空间厘米 (x 前, y 右, z 上)；插槽旋转都是 0（Muzzle 朝 +X）",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "scale_from_source": 226.79936,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "forward": "+Y",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "tris_body": 19534,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "tris_rotor": 20,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "rotor_diameter_cm": 12.81,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "rotor_master": "FL",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "size_m": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      1.4,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      1.929,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      0.572
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "sockets": {
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Rotor_FL": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       21.2,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -64.01,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       10.18
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Rotor_FR": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       21.2,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       64.01,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       10.18
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Rotor_BL": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -21.02,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -44.58,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       10.18
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Rotor_BR": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -39.82,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       58.38,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       10.18
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      ],
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "Muzzle": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       32.23,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -0.0,
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]       -17.12
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      ]
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     },
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     "rotor_found": [
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "BL",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "BR",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "FL",
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]      "FR"
+[2026.11.02-19.47.43:488][  0]LogPython: Warning: [eastrun]     ],
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]     "muzzle_from": "零件 weapon",
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]     "slots": {
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]      "Shell": 10766,
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]      "Frame": 7764,
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]      "Accent": 1004
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]     },
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]     "warnings": []
+[2026.11.02-19.47.43:489][  0]LogPython: Warning: [eastrun]    }
+[2026.11.02-19.47.43:493][  0]LogPython: Warning: [eastrun] 收回 Inbox/_easter/survey/dog_总览.jpg
+[2026.11.02-19.47.43:499][  0]LogPython: Warning: [eastrun] 收回 Inbox/_easter/survey/drone_总览.jpg
+[2026.11.02-19.47.43:503][  0]LogPython: Warning: [eastrun] 收回 Inbox/_easter/preview/dog_总览.jpg
+[2026.11.02-19.47.43:507][  0]LogPython: Warning: [eastrun] 收回 Inbox/_easter/preview/drone_总览.jpg
+[2026.11.02-19.47.43:507][  0]LogPython: Warning: [eastrun] 完成
+[2026.11.02-19.47.43:509][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-19.47.43:519][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-19.47.43:519][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.47.43:519][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.47.43:519][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.47.43:521][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=8.20, Z=11.35) → 缩放 0.71
+[2026.11.02-19.47.43:845][ 13]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-19.47.43:871][ 14]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
