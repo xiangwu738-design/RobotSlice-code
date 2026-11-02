@@ -6,9 +6,7 @@ import unreal
 
 ROOT = 'D:/RobotSlice'
 TARGETS = [
-    ('lookdev/rig/factions/export_factions.py', r'smooth|sharp|normal|Normal|bevel|Bevel|decimat|Decimat|WEIGHTED|weighted|mesh_smooth_type|use_auto|split|auto_smooth|harden|segments|def |dingshan|NEC'),
-    ('lookdev/factions/dingshan/ds_render.py', r'def game_tris|segments|smooth|sharp|normal|WEIGHTED|bevel'),
-    ('lookdev/factions/dingshan/ds_common.py', r'smooth|sharp|WEIGHTED|weighted|harden|Bevel|bevel\(|segments|def box|def cyl|def tube|def prism'),
+    ('lookdev/rig/factions/export_factions.py', r'.'),   # 全文（823 行）
 ]
 log = lambda *a: unreal.log_warning('[src] ' + ' '.join(str(x) for x in a))
 for path, pat in TARGETS:
@@ -20,6 +18,6 @@ for path, pat in TARGETS:
     log('####', path, len(lines), '行')
     n = 0
     for i, l in enumerate(lines):
-        if re.search(pat, l) and n < 160:
+        if re.search(pat, l) and n < 900 and (i < 100 or 205 <= i < 252 or 440 <= i < 540 or i >= 640):
             log(f'{i + 1:5d}| {l.rstrip()[:230]}')
             n += 1
