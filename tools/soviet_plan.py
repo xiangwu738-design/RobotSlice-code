@@ -80,7 +80,7 @@ bldg('MD_E', -128, 79, 0, note='北排西')
 bldg('MD_I', -80, 76, 0, note='北排西二')
 bldg('MD_B', 0, 82, 0, note='北排中：两座塔之间能穿过去（空中连桥）')
 bldg('MD_J', 78, 82, 0, note='北排东二')
-bldg('MD_C', 127, 79, 0, note='北排东：带烟囱，50 米')
+bldg('MD_E', 127, 79, 0, note='北排东（11-02 用户：住宅区不该有工业烟囱 → 带烟囱的 MD_C 换成和北排西一样的 MD_E）')
 # ---------------------------------------------------------------- 中间三个大院（y -38..38）
 # 西 / 东大院：出生广场。靠横街一侧竖一栋 MD_F（40×17×26，中间有个腾空的门洞），挡住两队出生点的对视
 bldg('MD_F', -69, 0, 90, note='西大院东墙：门洞在 5~10 米高')
@@ -204,16 +204,16 @@ def ring_ok(x, y):
     return True
 
 
-LG = ['LG_A', 'LG_B', 'LG_C', 'LG_D', 'LG_F', 'LG_G', 'LG_H', 'LG_I', 'LG_J']
+LG = ['LG_A', 'LG_B', 'LG_C', 'LG_D', 'LG_F', 'LG_G', 'LG_I', 'LG_J']  # 11-02 去掉 LG_H（大烟囱）
 # ① 紧贴边界：场地四周一圈（高楼当墙）
 N_RING = [('LG_I', -88, 136, 0), ('LG_B', 16, 141, 0), ('LG_J', 106, 150, 90), ('LG_G', -142, 133, 90), ('LG_A', 180, 128, 180),
-          ('LG_H', -185, 25, 90), ('LG_F', -190, -18, 90)]
+          ('LG_G', -185, 25, 90), ('LG_F', -190, -18, 90)]
 for i, x, y, yaw in N_RING:
     bldg(i, x, y, yaw, far=True)
 bldg('LG_C', -175, 80, 0, far=True)
 # ② 长街延伸段：路两边继续排楼（场外 170~520 米），视线尽头是雾里的楼
 rng = random.Random(622)
-seq = ['MD_E', 'MD_J', 'MD_H', 'LG_B', 'MD_C', 'MD_A', 'MD_D', 'LG_G', 'MD_I', 'LG_H', 'MD_B', 'LG_I']
+seq = ['MD_E', 'MD_J', 'MD_H', 'LG_B', 'MD_E', 'MD_A', 'MD_D', 'LG_G', 'MD_I', 'LG_I', 'MD_B', 'LG_I']  # 11-02 去掉带烟囱的 MD_C、LG_H
 xc = 200.0
 k = 0
 while xc < 640:
@@ -235,7 +235,8 @@ for radius, count, offs in ((330, 16, 0.0), (520, 22, 0.13), (780, 26, 0.31), (1
         y += rng.uniform(-25, 25)
         if not ring_ok(x, y):
             continue
-        items.append({'kind': 'bldg', 'id': rng.choice(LG), 'x': x, 'y': y, 'yaw': rng.uniform(0, 360), 'far': True, 'very_far': radius > 500, 'note': ''})
+        # 11-02 用户：楼和街没有关系 → 外圈也按街道方向摆（0 / 90 / 180 / 270 度），不再随便转
+        items.append({'kind': 'bldg', 'id': rng.choice(LG), 'x': x, 'y': y, 'yaw': rng.choice((0.0, 90.0, 180.0, 270.0)), 'far': True, 'very_far': radius > 500, 'note': ''})
 
 # ---------------------------------------------------------------- 出生点
 TEAM = {'Team0': (-135.0, 0.0, 0.0), 'Team1': (135.0, 0.0, 180.0)}
