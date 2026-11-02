@@ -1,0 +1,33 @@
+exit=0
+[2026.11.02-13.31.18:307][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-13.31.18:925][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.31.18:936][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 10.455 ms
+[2026.11.02-13.31.18:936][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.31.18:949][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 13.238 ms (total: 23.694 ms)
+[2026.11.02-13.31.18:950][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_package_launch.py
+[2026.11.02-13.31.18:958][  0]LogPython: Warning: [pack] 鎵撳寘.bat锛堢紪鐮� utf-8-sig锛夊師鏂囷細
+[2026.11.02-13.31.18:958][  0]LogPython: Warning: [pack]     1| @echo off
+[2026.11.02-13.31.18:958][  0]LogPython: Warning: [pack]     2| rem Package a standalone Windows build (Development) into D:\RobotSlice_Build\Windows (run RobotSlice.exe there).
+[2026.11.02-13.31.18:958][  0]LogPython: Warning: [pack]     3| rem Cooks only the battle maps (street, nature, range, valley core, tech park, city, dreamfield, pillars) plus the folders listed in Config\DefaultGame.ini. First run takes a long time (shader compile).
+[2026.11.02-13.31.18:958][  0]LogPython: Warning: [pack]     4| call "D:\EPIC\UE_5.8\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -project="%~dp0RobotSlice.uproject" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -archive -archivedirectory="D:\RobotSlice_Build"
+[2026.11.02-13.31.18:959][  0]LogPython: Warning: [pack] MapsToCook锛� 9 寮� L_Street L_Nature L_Range L_TechPark L_Dreamfield L_Pillars L_Soviet L_Moon L_OldStreet
+[2026.11.02-13.31.18:959][  0]LogPython: Warning: [pack] -map= 鎹㈡垚 9 寮犲浘锛�1 澶勶級
+[2026.11.02-13.31.18:961][  0]LogPython: Warning: [pack] 鍚�鍔ㄥけ璐� 鑴辩�讳綔涓氬�硅薄 [WinError 5] 鎷掔粷璁块棶銆�
+[2026.11.02-13.31.18:973][  0]LogPython: Warning: [pack] 宸插湪鐙�绔嬭繘绋嬪紑璺� pid 67912 
+[2026.11.02-13.31.18:973][  0]LogPython: Warning: [pack] 鏃ュ織 D:\RobotSlice\Saved\CloudPackage\package_20261102_143118.log
+[2026.11.02-13.31.18:973][  0]LogPython: Warning: [pack] 缁撴潫鏍囪�� D:\RobotSlice\Saved\CloudPackage\done_20261102_143118.txt
+[2026.11.02-13.31.38:974][  0]LogPython: Warning: [pack] 20 绉掑悗杩樺湪璺戯紝姝ｅ父
+[2026.11.02-13.31.38:974][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-13.31.38:974][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 鎵撳寘.bat锛堢紪鐮� utf-8-sig锛夊師鏂囷細
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack]     1| @echo off
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack]     2| rem Package a standalone Windows build (Development) into D:\RobotSlice_Build\Windows (run RobotSlice.exe there).
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack]     3| rem Cooks only the battle maps (street, nature, range, valley core, tech park, city, dreamfield, pillars) plus the folders listed in Config\DefaultGame.ini. First run takes a long time (shader compile).
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack]     4| call "D:\EPIC\UE_5.8\Engine\Build\BatchFiles\RunUAT.bat" BuildCookRun -project="%~dp0RobotSlice.uproject" -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -archive -archivedirectory="D:
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] MapsToCook锛� 9 寮� L_Street L_Nature L_Range L_TechPark L_Dreamfield L_Pillars L_Soviet L_Moon L_OldStreet
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] -map= 鎹㈡垚 9 寮犲浘锛�1 澶勶級
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 鍚�鍔ㄥけ璐� 鑴辩�讳綔涓氬�硅薄 [WinError 5] 鎷掔粷璁块棶銆�
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 宸插湪鐙�绔嬭繘绋嬪紑璺� pid 67912 
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 鏃ュ織 D:\RobotSlice\Saved\CloudPackage\package_20261102_143118.log
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 缁撴潫鏍囪�� D:\RobotSlice\Saved\CloudPackage\done_20261102_143118.txt
+[2026.11.02-13.31.38:974][  0]LogInit: Display: LogPython: Warning: [pack] 20 绉掑悗杩樺湪璺戯紝姝ｅ父
