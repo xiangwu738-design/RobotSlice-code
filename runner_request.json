@@ -1,3 +1,3 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "tracer_check", "script": "tools/ue_tracer_check.py", "seconds": 180}
+  {"kind": "py", "name": "fix_usage", "script": "tools/ue_fix_material_usage.py", "seconds": 400}
 ]}
