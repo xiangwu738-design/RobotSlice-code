@@ -431,7 +431,15 @@ def import_drone(mats):
 
 def fix_sockets(mesh, want):
     """插槽：FBX 的 SOCKET_ 空物体进来了就核对位置、把旋转清零；没进来就按 Blender 报告补"""
-    have = {str(s.get_editor_property('socket_name')): s for s in mesh.get_editor_property('sockets')}
+    # UE 5.8：StaticMesh 的 sockets 属性是 protected，Python 读不了 → 按名字一个个 find_socket
+    have = {}
+    for n in set(list(want.keys()) + ['Rotor_FL', 'Rotor_FR', 'Rotor_BL', 'Rotor_BR', 'Muzzle']):
+        try:
+            found = mesh.find_socket(n)
+        except Exception:
+            found = None
+        if found:
+            have[n] = found
     for name, p in want.items():
         loc = unreal.Vector(*p)
         s = have.get(name)
