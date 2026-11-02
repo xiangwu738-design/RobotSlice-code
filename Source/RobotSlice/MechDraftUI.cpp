@@ -2579,6 +2579,14 @@ void SMechDraftScreen::MakeExtraRoomRows(const TSharedRef<SVerticalBox>& Rules)
 			const AMechGameState* GS = GetGS();
 			return GS && GS->bRoomMode && MechRoom::IsTraining(GS->Room);
 		})];
+	// 11-02 彩蛋（MechEaster.h）：荒野 / 石林的压力板、苏联的机械狗、老街的狗群，所有模式都有，默认开；训练场没有彩蛋，不显示
+	Rules->AddSlot().AutoHeight()[MakeRoomRow(INVTEXT("彩蛋"), INVTEXT("压力板、无人机群、机械狗"),
+		MechKit::Switch([this]() { return RoomNow().bEaster; }, [this](bool b) { ChangeRoom([b](FMechRoomSettings& R) { R.bEaster = b; }); }),
+		[this]() { return RoomNow().bEaster ? INVTEXT("开") : INVTEXT("关"); },
+		[this]() {
+			const AMechGameState* GS = GetGS();
+			return GS && GS->bRoomMode && !MechRoom::IsTraining(GS->Room);
+		})];
 }
 
 // ---------------------------------------------------------------- 等待页（从房间开的场，进图后等人）
