@@ -1,0 +1,8 @@
+exit=0
+[2026.11.02-11.11.11:403][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.11.12:628][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.11.12:637][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 9.374 ms
+[2026.11.02-11.11.12:637][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.11.12:650][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 12.729 ms (total: 22.103 ms)
+[2026.11.02-11.11.12:650][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_pillars_look.py
+[2026.11.02-11.11.13:212][  0]LogPythonScriptCommandlet: Display: Python script executed successfully

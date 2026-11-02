@@ -1,0 +1,63 @@
+grade_pillars 结束：ok，用时 72 秒，日志行 62
+[2026.11.02-11.11.38:521][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.11.38:521][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-11.11.38:521][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.11.38:521][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-11.11.38:521][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-11.11.38:967][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-11.11.38:967][  0]LogPython: Using Python 3.11.8
+[2026.11.02-11.11.38:990][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.11.39:645][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-11.11.39:646][  0]LogTemp: Display: [easter] 彩蛋调度开在 L_Pillars
+[2026.11.02-11.11.39:664][  0]LogTemp: Display: [lighting] 时间 10.50 天气 Clear
+[2026.11.02-11.11.39:666][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-11.11.39:667][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.11.39:667][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.11.39:667][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.11.39:669][  0]LogTemp: Display: [ai]  强度 1 喜欢距离 43 米 进攻性 0.62 反应 0.48 提前量 0.41
+[2026.11.02-11.11.39:670][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-11.11.39:670][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-11.11.39:671][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=117.446 Y=101.854 Z=149.812
+[2026.11.02-11.11.39:671][  0]LogTemp: Display: [keys] 键位： 前进=W 后退=S 左移=A 右移=D 跳跃 / 喷射 / 蹬墙=SpaceBar 冲刺 / 滑翔=LeftShift 快速闪避=F 切换射击 / 近战=Q 开火 / 攻击=LeftMouseButton 瞄准 / 格挡=RightMouseButton 肩部装备=E 换弹=R 第一人称=V 大地图（按住）=M 计分板（按住）=Tab 扔核心（夺芯）=G 标点=MiddleMouseButton
+[2026.11.02-11.11.39:707][  0]LogTemp: Display: [hudtheme] HUD 主题 → NEC（自己操控的机体）
+[2026.11.02-11.11.39:717][  0]LogTemp: Display: [alert] 告警音效 14/14 已加载（/Game/Audio/HUD）
+[2026.11.02-11.11.39:717][  0]LogTemp: Display: [water] 水面 0 厘米，落水深度 60 厘米，整张图
+[2026.11.02-11.11.39:729][  0]LogTemp: Display: [alert] 告警语音 冷静女声：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-11.11.40:226][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.11.40:234][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 7.982 ms
+[2026.11.02-11.11.40:234][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.11.40:242][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-11.11.40:248][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 14.870 ms (total: 22.853 ms)
+[2026.11.02-11.11.40:258][  0]LogPython: [plshots] 已挂上逐帧回调，输出 D:/RobotSlice/Saved/Screenshots/Grade/pillars
+[2026.11.02-11.11.40:259][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-11.11.40:263][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-11.11.40:263][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.11.40:263][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.11.40:263][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.11.40:270][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-11.11.40:987][ 48]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-11.11.41:065][ 49]LogTemp: Display: [lighting] 时间 10.50 天气 Clear
+[2026.11.02-11.11.42:306][152]LogTemp: Display: [beauty] g1_front 机体位置 X=-16920.000 Y=-18984.000 Z=383.717 包围盒中心 X=-16923.768 Y=-18989.550 Z=373.967 半径 191 最近渲染 1
+[2026.11.02-11.11.43:610][195]LogTemp: Display: [easter] 压力板 在 V(X=-18007.69, Y=-11300.00, Z=372.43)（占位）
+[2026.11.02-11.11.44:528][300]LogPython: [plshots] 画质临时调到史诗，原值 {'sg.ResolutionQuality': 71.0, 'sg.ViewDistanceQuality': 1.0, 'sg.AntiAliasingQuality': 1.0, 'sg.ShadowQuality': 1.0, 'sg.GlobalIlluminationQuality': 1.0, 'sg.ReflectionQuality': 1.0, 'sg.PostProcessQuality': 1.0, 'sg.TextureQuality': 1.
+[2026.11.02-11.11.44:528][300]LogPython: [plshots] 暂停；出生后机体位置（米，水面 0） [-169.2, 189.8, 3.8]
+[2026.11.02-11.11.44:687][301]LogPython: [plshots] 2_overview 机位 [-70.0, -55.0, 55.0] yaw -41.2 pitch -26.5 fov 62
+[2026.11.02-11.11.44:688][302]LogTemp: Display: [ui] 3D 渲染精度 71%
+[2026.11.02-11.11.49:505][797]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/2_overview.png 后半段平均帧率 113.2
+[2026.11.02-11.11.51:177][881]LogPython: [plshots] 3_flight 机位 [26.0, -30.0, 15.0] yaw -130.1 pitch -10.3 fov 78
+[2026.11.02-11.11.56:178][378]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/3_flight.png 后半段平均帧率 98.7
+[2026.11.02-11.11.57:263][453]LogPython: [plshots] 4_mid 机位 [-1.0, -24.0, 7.0] yaw -45.0 pitch 0.0 fov 70
+[2026.11.02-11.12.02:275][942]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/4_mid.png 后半段平均帧率 98.7
+[2026.11.02-11.12.03:327][ 14]LogPython: [plshots] 5_close 机位 [17.6, -13.5, 7.2] yaw 180.0 pitch -3.2 fov 75
+[2026.11.02-11.12.08:332][507]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/5_close.png 后半段平均帧率 102.9
+[2026.11.02-11.12.09:449][579]LogPython: [plshots] 6_low_water 机位 [-6.0, -34.0, 2.2] yaw -73.0 pitch 2.0 fov 72
+[2026.11.02-11.12.14:452][ 80]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/6_low_water.png 后半段平均帧率 98.2
+[2026.11.02-11.12.15:562][150]LogPython: [plshots] 7_island 机位 [-20.0, 24.0, 4.2] yaw -135.0 pitch -10.8 fov 70
+[2026.11.02-11.12.20:574][590]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/7_island.png 后半段平均帧率 83.5
+[2026.11.02-11.12.21:685][665]LogPython: [plshots] 8_mech_spawn 机位 [-30.4, 34.2, 2.5] yaw 49.0 pitch 3.7 fov 72
+[2026.11.02-11.12.26:700][ 97]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/8_mech_spawn.png 后半段平均帧率 87.2
+[2026.11.02-11.12.27:853][165]LogPython: [plshots] 10_between 机位 [22.0, -24.0, 6.0] yaw -129.3 pitch 1.0 fov 75
+[2026.11.02-11.12.32:856][647]LogPython: [plshots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/pillars/10_between.png 后半段平均帧率 98.1
+[2026.11.02-11.12.36:006][922]LogPython: [plshots] 画质改回原值
+[2026.11.02-11.12.36:006][922]LogPython: [plshots] 窗口分辨率设回 (1440, 810)
+[2026.11.02-11.12.36:006][922]LogPython: [plshots] 完成，帧率 [('2_overview', 113.2), ('3_flight', 98.7), ('4_mid', 98.7), ('5_close', 102.9), ('6_low_water', 98.2), ('7_island', 83.5), ('8_mech_spawn', 87.2), ('10_between', 98.1)]
