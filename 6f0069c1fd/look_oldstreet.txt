@@ -1,0 +1,8 @@
+exit=0
+[2026.11.02-11.20.07:472][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.20.07:870][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.20.07:878][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 8.004 ms
+[2026.11.02-11.20.07:878][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.20.07:937][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 59.389 ms (total: 67.394 ms)
+[2026.11.02-11.20.07:937][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_oldstreet_look.py
+[2026.11.02-11.20.08:083][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
