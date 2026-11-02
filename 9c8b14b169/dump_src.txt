@@ -1,0 +1,608 @@
+exit=0
+[2026.11.02-19.22.54:113][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.22.54:472][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.22.54:480][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.379 ms
+[2026.11.02-19.22.54:480][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.22.54:492][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 12.074 ms (total: 19.454 ms)
+[2026.11.02-19.22.54:492][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_dump_src.py
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src] #### lookdev/factions/baita/baita_build.py 213 琛�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     1| # 鐧藉�旂�戞妧澶栧３鏂规�堬細寤烘ā + 鍑哄浘銆�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     2| # blender -b D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend -P D:/RobotSlice/lookdev/factions/baita/baita_build.py -- \
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     3| #     --scheme A|B|C|v3 [--views front,side,back,34,dyn,cmp,sil] [--engine auto|cpu|gpu|workbench] [--samples 48]
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     4| #     [--out D:/.../renders] [--save]
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     5| # 瑙嗚�掞細front/side/back 姝ｄ氦绔欏Э銆�34 閫忚�嗘枩渚х珯濮裤�乨yn 鍔ㄦ�侊紙娓告垙鍔ㄤ綔 Aim_CC 绔�鍏呰兘姝ユ灙锛岀孩闃熺伅鑹茬ず鎰忥級銆�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     6| #       cmp 鍜� v3 鏍囧噯搴曠洏骞舵帓锛堟�ｄ氦姝ｉ潰锛夈�乻il 绾�榛戝壀褰憋紙姝ｉ潰 / 渚ч潰 / 鏂滀晶锛岀粰鍓�褰卞�规瘮鍥剧敤锛夈��
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     7| # 娉ㄦ剰锛氭墦寮�鐨勬槸娓告垙楠ㄦ灦鏂囦欢锛岃剼鏈�浠庝笉淇濆瓨瀹冿紱--save 鍙﹀瓨鍒� factions/baita/blend/銆�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     8| import argparse
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]     9| import json
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    10| import math
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    11| import os
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    12| import sys
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    14| import bpy
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    15| from mathutils import Matrix, Vector
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    17| sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    18| import baita_common as C  # noqa: E402
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    19| import importlib  # noqa: E402
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    20| import baita_schemes as SCH  # noqa: E402
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    22| argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    23| ap = argparse.ArgumentParser()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    24| ap.add_argument('--scheme', default='A')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    25| ap.add_argument('--views', default='front,side,back,34,dyn,cmp,sil')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    26| ap.add_argument('--engine', default='auto')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    27| ap.add_argument('--samples', type=int, default=48)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    28| ap.add_argument('--out', default=os.path.join(C.HERE, 'renders'))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    29| ap.add_argument('--suffix', default='')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    30| ap.add_argument('--save', action='store_true')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    31| ap.add_argument('--res', default='800x1000')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    32| ap.add_argument('--dynpose', default='Rifle/Aim_CC.fbx:12')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    33| A = ap.parse_args(argv)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    34| os.makedirs(A.out, exist_ok=True)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    35| views = A.views.split(',')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    36| engine = A.engine
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    37| if engine == 'auto':
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    38|     engine = 'cpu' if C.user_busy() else 'gpu'
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    39| print('[baita] 鏂规��', A.scheme, '寮曟搸', engine)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    41| C.setup_scene()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    42| C.make_materials('cyan')
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    43| if A.scheme != 'v3':
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    44|     MOD = importlib.import_module('scheme_' + A.scheme.lower())
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    45|     MOD.build()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    46| else:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    47|     MOD = None
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    48| objs = C.scheme_objects() if A.scheme != 'v3' else [C.V3MESH]
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    49| print('[baita] 闆朵欢', len(C.PARTS), '缃戞牸', len(objs))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    51| # 鍠峰彛浣嶇疆锛堣繘娓告垙瑕佹敼鍠风劙鎸傜偣锛夛細缁戝畾濮垮娍銆侀�ㄦ灦鏈�缂╂斁锛堝帢绫筹級锛屽彇鍠囧彮鍙ｅ�栨部涓�蹇冣�斺�斿拰 README銆屾帹杩涘櫒鍠风劙銆嶉噷 v3 鐨� NozzleMouthMesh 鍚屼竴涓�閲忔硶銆�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    52| # Blender (x, y, z) 杩� UE 鏄� (x, -y, z)銆�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    53| NOZ = []
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    54| if A.scheme != 'v3':
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    55|     bpy.context.view_layer.update()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    56|     for holder, r in C.RL['NOZZLES']:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    57|         mw = holder.matrix_world
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    58|         dvec = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    59|         mouth = mw.translation + dvec * (1.3 * r)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    60|         NOZ.append(dict(name=holder.name, bone=holder.parent_bone, radius_cm=round(r, 2),
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    61|                         ue_mouth_cm=[round(mouth.x, 2), round(-mouth.y, 2), round(mouth.z, 2)],
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    62|                         ue_dir=[round(dvec.x, 3), round(-dvec.y, 3), round(dvec.z, 3)]))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    63|     for n in NOZ:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    64|         print('[baita] 鍠峰彛', n)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    65| # 鍘樼背 鈫� 绫筹紙鍚�娓告垙 1.35 鍊嶏級
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    66| for a in (C.ARM, C.V3ARM):
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    67|     a.scale = (C.CM2M,) * 3
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    68| floor, wall = C.setup_studio()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    69| C.stand_pose(C.ARM)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    70| ST = getattr(MOD, 'STANCE', 0) if MOD else 0
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    71| if ST:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    72|     # 绔欒窛锛氫袱鑵垮悇寰�澶栧紶 ST 搴︺�佽剼鎺岃浆鍥炴按骞筹紙鍙�鏄�濮垮娍锛岄�ㄦ灦涓嶅彉锛�
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    73|     for side, sg in (('l', -1), ('r', 1)):
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    74|         C.rot_bone(C.ARM, 'thigh_' + side, (0, 1, 0), ST * sg)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    75|         C.rot_bone(C.ARM, 'foot_' + side, (0, 1, 0), -ST * sg)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    76| C.stand_pose(C.V3ARM)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    77| bpy.context.view_layer.update()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    79| info = {'scheme': A.scheme}
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    80| if A.scheme != 'v3':
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    81|     info['tris'] = C.tri_count(objs)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    82|     lo, hi = C.world_zrange(objs)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    83|     info['height_m'] = round(hi - lo, 3)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    84|     dg = bpy.context.evaluated_depsgraph_get()
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    85|     xs = [(o.matrix_world @ Vector(c)).x for o in objs for c in o.evaluated_get(dg).bound_box]
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    86|     info['width_m'] = round(max(xs) - min(xs), 3)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    87|     info['kit'] = sorted(set(C.KIT_USED))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    88|     by_bone = {}
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    89|     for ob, bone in C.PARTS:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    90|         by_bone[bone] = by_bone.get(bone, 0) + 1
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    91|     info['parts_by_bone'] = by_bone
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    92|     info['parts'] = len(C.PARTS)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    93|     info['nozzles'] = NOZ
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    94| lo3, hi3 = C.world_zrange([C.V3MESH])
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    95| info['v3_height_m'] = round(hi3 - lo3, 3)
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    96| print('[baita] 淇℃伅', json.dumps(info, ensure_ascii=False))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    98| res = tuple(int(v) for v in A.res.split('x'))
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]    99| tag = A.scheme + A.suffix
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]   102| def show(scheme=True, v3=False):
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]   103|     for o in objs:
+[2026.11.02-19.22.54:493][  0]LogPython: Warning: [src]   104|         o.hide_render = not scheme
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   105|     if A.scheme != 'v3':
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   106|         C.V3MESH.hide_render = not v3
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   109| def shot(view):
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   110|     if view in ('front', 'side', 'back'):
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   111|         pos = {'front': (0, -7.5, 1.25), 'side': (7.5, 0, 1.25), 'back': (0, 7.5, 1.25)}[view]
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   112|         C.camera('鐩告満_' + view, pos, (0, 0, 1.25), ortho=2.75)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   113|     elif view == '34':
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   114|         C.camera('鐩告満_34', (3.1, -4.7, 1.62), (0, 0, 1.18), lens=50)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   117| ORTHO_H = 2.75
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   119| if A.scheme != 'v3':
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   120|     C.setup_engine(engine, A.samples, res)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   121|     show(True, False)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   122|     for v in ('front', 'side', 'back', '34'):
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   123|         if v in views:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   124|             shot(v)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   125|             C.render(os.path.join(A.out, f'{tag}_{v}.png'))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   127|     if 'cmp' in views:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   128|         # 鍜� v3 骞舵帓锛歷3 鍦ㄥ彸杈� 1.15 绫炽�佹偿妯℃潗璐�锛涙�ｄ氦姝ｉ潰锛屽�戒竴浜�
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   129|         C.clay_v3()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   130|         C.V3ARM.location.x = 1.15
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   131|         bpy.context.view_layer.update()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   132|         show(True, True)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   133|         r = C.SCENE.render
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   134|         r.resolution_x, r.resolution_y = int(res[1] * 1.1), res[1]
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   135|         C.camera('鐩告満_cmp', (0.575, -7.5, 1.25), (0.575, 0, 1.25), ortho=ORTHO_H * 1.1)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   136|         C.render(os.path.join(A.out, f'{tag}_cmp.png'))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   137|         r.resolution_x, r.resolution_y = res
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   138|         info['cmp'] = {'ortho_h': ORTHO_H, 'cam_z': 1.25, 'scheme_top': round(C.world_zrange(objs)[1], 3),
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   139|                        'v3_top': round(C.world_zrange([C.V3MESH])[1], 3)}
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   140|         C.V3ARM.location.x = 0
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   141|         show(True, False)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   143| # 鍓�褰憋細绾�榛戯紝鐧藉簳锛學orkbench 骞冲厜
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   144| if 'sil' in views:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   145|     show(True, False) if A.scheme != 'v3' else None
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   146|     if A.scheme == 'v3':
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   147|         C.V3MESH.hide_render = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   148|         C.V3ARM.location.x = 0
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   149|     floor.hide_render = True
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   150|     wall.hide_render = True
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   151|     r = C.SCENE.render
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   152|     r.engine = 'BLENDER_WORKBENCH'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   153|     sh = C.SCENE.display.shading
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   154|     sh.light = 'FLAT'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   155|     sh.color_type = 'SINGLE'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   156|     sh.single_color = (0, 0, 0)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   157|     sh.background_type = 'VIEWPORT'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   158|     sh.background_color = (1, 1, 1)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   159|     sh.show_cavity = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   160|     sh.show_shadows = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   161|     sh.show_object_outline = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   162|     C.SCENE.display.render_aa = '16'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   163|     C.SCENE.view_settings.view_transform = 'Standard'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   164|     C.SCENE.view_settings.look = 'None'
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   165|     r.resolution_x, r.resolution_y = 600, 900
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   166|     r.film_transparent = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   167|     for v, pos, target, kw in (('front', (0, -12, 1.25), (0, 0, 1.25), dict(ortho=2.75)),
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   168|                                ('side', (12, 0, 1.25), (0, 0, 1.25), dict(ortho=2.75)),
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   169|                                ('34', (3.1, -4.7, 1.62), (0, 0, 1.18), dict(lens=50))):
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   170|         C.camera('鍓�褰盻' + v, pos, target, **kw)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   171|         C.render(os.path.join(A.out, f'sil_{tag}_{v}.png'))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   172|     floor.hide_render = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   173|     wall.hide_render = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   175| # 鍔ㄦ�侊細娓告垙鍔ㄤ綔鐨勪竴甯� + 鍏呰兘姝ユ灙锛岀孩闃熺伅鑹�
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   176| if 'dyn' in views and A.scheme != 'v3':
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   177|     fbx, fr = A.dynpose.rsplit(':', 1)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   178|     path = fbx if os.path.isabs(fbx) else os.path.join(os.path.dirname(C.LOOKDEV), 'Inbox', '_retarget_pick', fbx)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   179|     C.anim_pose(C.ARM, path, fr)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   180|     C.ARM.location.z = 0
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   181|     bpy.context.view_layer.update()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   182|     gun = SCH.hold_gun(C.ARM)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   183|     dyn_objs = objs + ([gun] if gun else [])
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   184|     C.ground(C.ARM, dyn_objs)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   185|     C.set_glow(C.GLOW['red'])
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   186|     C.setup_engine(engine, A.samples, res)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   187|     show(True, False)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   188|     if gun:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   189|         gun.hide_render = False
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   190|     # 闀滃ご鎸夋灙鍙ｆ柟鍚戞憜锛氬湪鏋�鍙ｆ柟鍚戝乏鍓� 38 搴︺�佺暐浣庡�勭湅鑳稿彛锛屼汉鐗╂湞闀滃ご杩欒竟绔�鏋�
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   191|     bpy.context.view_layer.update()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   192|     chest = C.ARM.matrix_world @ C.ARM.pose.bones['spine_05'].head
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   193|     if gun:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   194|         d = gun.matrix_world.to_3x3() @ Vector((1, 0, 0))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   195|     else:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   196|         d = C.ARM.matrix_world.to_3x3() @ Vector((0, -1, 0))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   197|     d.z = 0
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   198|     d.normalize()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   199|     fwd = (C.ARM.matrix_world.to_3x3() @ (C.ARM.pose.bones['spine_05'].matrix.to_3x3() @ C.ARM.data.bones['spine_05'].matrix_local.to_3x3().inverted() @ Vector((0, -1, 0))))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   200|     fwd.z = 0
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   201|     fwd.normalize()
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   202|     side = (fwd + d).normalized()      # 鏈轰綋鑳稿彛鏈濆悜鍜屾灙鍙ｆ柟鍚戠殑瑙掑钩鍒嗙嚎锛氭棦鐪嬪緱鍒版�ｉ潰锛屾灙鍙堟湞闀滃ご杩欒竟
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   203|     tgt = Vector((chest.x, chest.y, 1.18)) + d * 0.35
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   204|     print('[baita] dyn d', tuple(round(v, 2) for v in d), 'chest', tuple(round(v, 2) for v in chest), 'hips', tuple(round(v, 2) for v in C.ARM.matrix_world @ C.ARM.pose.bones['pelvis'].head))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   205|     C.camera('鐩告満_dyn', tgt + side * 2.75 + Vector((0, 0, -0.55)), tgt + Vector((0, 0, -0.08)), lens=30)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   206|     C.render(os.path.join(A.out, f'{tag}_dyn.png'))
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   208| json.dump(info, open(os.path.join(A.out, f'{tag}_info.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   209| if A.save:
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   210|     d = os.path.join(C.HERE, 'blend')
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   211|     os.makedirs(d, exist_ok=True)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   212|     bpy.ops.wm.save_as_mainfile(filepath=os.path.join(d, f'鐧藉�擾{tag}.blend'), copy=True)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]   213| print('[baita] 瀹屾垚', tag)
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src] #### lookdev/factions/baita/baita_common.py 879 琛�
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]     8| import json
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]     9| import math
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]    10| import os
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]    11| import subprocess
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]    12| import sys
+[2026.11.02-19.22.54:495][  0]LogPython: Warning: [src]    14| import bmesh
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    15| import bpy
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    16| from mathutils import Matrix, Vector
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    23| # ---------------------------------------------------------------- 鍊熺敤 robot_lookdev.py 閲岀殑鍑芥暟锛堝彧璇伙紝涓嶆敼瀹冿級
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    25| _RL_PATH = os.path.join(LOOKDEV, 'robot_lookdev.py')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    30|     assert src.endswith('main()'), 'robot_lookdev.py 鏈�灏句笉鏄� main()锛屽姞杞芥柟寮忚�佹敼'
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    34|     ns = {'__name__': 'robot_lookdev', '__file__': _RL_PATH}
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    36|         exec(compile(src, _RL_PATH, 'exec'), ns)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    42| RL = _load_rl()
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    43| lin = RL['lin']
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    44| sock = RL['sock']
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   420|     ob = RL['cyl'](name, r, w, mat, None, (loc[0] * sx, loc[1], loc[2]), rot, segs=segs, r2=r2, bevel=bevel)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   426|     ob = RL['tube'](name, r_out, r_in, w, mat, None, (loc[0] * sx, loc[1], loc[2]), rot, segs=segs, bevel=bevel)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   431|     ob = RL['sphere'](name, r, mat, None, (loc[0] * sx, loc[1], loc[2]), scale)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   437|     ob = RL['tbox'](name, w, d, w1 if w1 is not None else w, d1 if d1 is not None else d, h, mat, None,
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   444|     """浜岀淮杞�寤撴尋鍑猴紙robot_lookdev.prism锛夈�俻lane='YZ' 杞�寤撳湪渚ц�嗛潰锛屾部 x 鎸ゅ嚭鍘� t銆�"""
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   445|     ob = RL['prism'](name, pts, t, mat, None, (loc[0] * sx, loc[1], loc[2]), (rot[0], rot[1] * sx, rot[2] * sx), plane=plane,
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   451|     ob = RL['text'](name, body, size, mat, None, (loc[0] * sx, loc[1], loc[2]), (rot[0], rot[1] * sx, rot[2] * sx))
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   493|     holder = RL['nozzle'](name, None, (loc[0] * sx, loc[1], loc[2]), tuple(d), r)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   508|     a = RL['cyl'](name, r, 0.16, mat or M['frame'], None, tuple(p), segs=12, bevel=0.05, quat=q)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   510|     b = RL['cyl'](name + '瀛�', r * 0.45, 0.12, M['plastic'], None, tuple(p + n.normalized() * 0.04), segs=6, bevel=0.0, quat=q)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   516|     b = RL['MB'](name)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   586|     b = RL['MB'](name)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   595|     b = RL['MB'](name)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   619|         'nozzle': RL['nozzle_material']('Nozzle'),
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   622|     # robot_lookdev 鐨勫嚱鏁扮敤鍒扮殑鍏跺畠閿�锛屾槧灏勫洖涓婇潰杩欏嚑涓�妲斤紙鍙�鐢ㄦ父鎴忛噷鏈夌殑妲藉悕锛�
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   628|     RL['M'].clear()
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   629|     RL['M'].update(M)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   642|     clay = RL['MB']('v3瀵圭収娉ユā')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   660|     """绱犳潗浠舵部 p1鈫抪2 鎽嗭紙鍊� robot_lookdev.kit_span锛屽潗鏍囨寜鍘樼背锛夛紝璁颁笅鐢ㄤ簡鍝�浠躲��"""
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   665|     ob = RL['kit_span'](lib_obj, lib, None, p1, p2, v, axes=((0, 1, 0), (1, 0, 0)), thick=thick, mat=mat, decimate=decimate)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   718| def scheme_objects():
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   824|     b = RL['MB']('妫氭媿鍦伴潰')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   833|     """闃村ぉ妫氭媿锛歳obot_lookdev 鐨勯槾澶╁ぉ鍏夛紙涓嶅姞闆撅級+ 娣辩伆鍦伴潰 + 涓�鍦堟繁鐏板姬褰㈠�欙紙椤朵笂鏁炲紑锛屽厜浠庝笂闈㈡极涓嬫潵锛�
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   839|     wall = RL['MB']('妫氬��')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   855|     RL['build_lighting'](fog=False)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src] #### lookdev/robot_lookdev.py 2157 琛�
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    17|     p.add_argument('--out', default='')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    18|     p.add_argument('--shots', default='hero,side,back,env')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    19|     p.add_argument('--samples', type=int, default=128)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    20|     p.add_argument('--res', default='1600x900')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    21|     p.add_argument('--accent', default='orange')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    22|     p.add_argument('--tag', default='v1')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    23|     p.add_argument('--blend', action='store_true')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    24|     p.add_argument('--pose', default='idle')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    25|     p.add_argument('--design', default='v1')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    26|     p.add_argument('--turn', action='store_true')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    27|     p.add_argument('--rig', default='')      # 妯℃澘浜哄舰楠ㄦ灦 FBX锛氭妸鏈轰綋缁戜笂鍘诲�煎嚭
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    28|     p.add_argument('--export', default='')
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    29|     p.add_argument('--kit', action='store_true')  # v3 鍔犵礌鏉愬寘缁嗚妭锛氭満鐢�2 鐨勬恫鍘嬫潌 / 绾跨紗銆佹満姊伴浂浠剁殑鍑忛渿寮圭哀
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    30|     p.add_argument('--kit-lite', action='store_true')  # 绱犳潗浠舵寜娓告垙鐢ㄧ殑闈㈡暟鍑忛潰锛�--rig 瀵煎嚭鏃惰嚜鍔ㄥ紑锛�
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    31|     p.add_argument('--head-drop', type=float, default=None)  # v3 澶村３鐩稿�硅浆鍔ㄤ腑蹇冨線涓嬫矇澶氬皯锛堝ご鐨勫崟浣嶏級锛屼笉缁欏氨鐢� HEAD_DROP
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    33|     p.add_argument('--hand', default='grip', choices=('grip', 'old'))
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    70|         self.m = bpy.data.materials.new(name)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]    99|     def math(self, op, a, b=0.0, clamp=False):
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   417|     box(name + '搴�', w, 0.003, h, M['label'], holder, (0, 0, 0), bevel=0.0008)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   418|     text(name + '瀛�', body, h * 0.55, M['ink'], holder, (0, -0.0022, 0), (90, 0, 0))
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   448|     rod(name + '缂哥瓛', p1, mid, r, M['frame'], parent)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   449|     rod(name + '娲诲�炴潌', p1 + (p2 - p1) * 0.5, p2, r_rod, M['chrome'], parent, segs=20)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   451|         r * 1.12, M['frame'], parent)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   453|         cyl(f'{name}鑰硔i}', r * 0.95, r * 1.4, M['frame'], parent, tuple(p), (0, 90, 0), segs=20)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   468|     ob.data.materials.append(mat or M['rubber'])
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   476|         cyl(f'{name}{i}', r, h, M['frame'], parent, tuple(p1.lerp(p2, t)), rot, segs=6, bevel=0.0015)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   501|     bell = cyl(name + '鍠囧彮鍙�', r * 0.62, r * 1.3, M['nozzle'], holder, (0, 0, r * 0.65), r2=r,
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   507|     cyl(name + '鍠夐儴', r * 0.6, 0.01, M['plastic'], holder, (0, 0, 0.012), segs=40)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   508|     cyl(name + '搴у湀', r * 0.82, 0.05, M['frame'], holder, (0, 0, -0.02), segs=40)
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   511|         cyl(f'{name}铻烘爴{i}', 0.008, 0.012, M['frame'], holder,
+[2026.11.02-19.22.54:496][  0]LogPython: Warning: [src]   519|     box(name + '妗�', w + 0.03, depth, h + 0.03, M['frame'], parent, (cx, cy + 0.006, cz), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   522|         box(f'{name}鍙剁墖{i}', w, 0.012, h / n * 0.55, M['paint_dark'], parent, (cx, cy - 0.012, z),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   546|     tbox('楠ㄧ泦鍧�', 0.46 * kW, 0.30, 0.54 * kW, 0.36, 0.20, M['frame'], pelvis)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   547|     plate('鍓嶈�欑敳', 0.30 * kW, 0.08, 0.38 * kW, 0.09, 0.22, M['paint'], pelvis, (0, -0.215, -0.05), (10, 0, 0), panel=(0, -1, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   548|     plate('鍚庤�欑敳', 0.34 * kW, 0.08, 0.40 * kW, 0.08, 0.20, M['paint_dark'], pelvis, (0, 0.21, -0.03), (-8, 0, 0), panel=(0, 1, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   550|         plate('渚ц�欑敳', 0.08, 0.30, 0.08, 0.34, 0.24, M['paint'], pelvis, ((0.33 - 0.27 * (1 - kW)) * sx, 0, -0.06),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   553|     cyl('鑵板叧鑺�', 0.17 * kW, 0.12, M['frame'], pelvis, (0, 0, 0.14), segs=40)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   557|     tbox('韬�骞查�ㄦ灦', 0.58 * kW, 0.42, 0.70, 0.50, 0.50, M['frame'], torso, (0, 0, 0.25))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   559|         plate('鑳哥敳', 0.31, 0.10, 0.375, 0.12, 0.30, M['paint'], torso, (0.166 * sx, -0.265, 0.355), (-8, 0, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   562|         plate('渚х敳', 0.09, 0.46, 0.09, 0.54, 0.40, M['paint'], torso, (sb * sx, 0.0, 0.26),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   566|         plate(f'鑵圭敳{i}', (0.44 + i * 0.04) * kW, 0.08, (0.46 + i * 0.04) * kW, 0.08, 0.075, M['paint_dark'], torso,
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   568|     box('鑲╂灦', 1.00 * D['yoke'], 0.36, 0.12, M['frame'], torso, (0, 0.04, 0.50), bevel=0.02)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   569|     plate('鑲╂灦鐩栨澘', 0.62, 0.40, 0.56, 0.36, 0.06, M['paint'], torso, (0, 0.07, 0.585), panel=(0, 0, 1))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   570|     text('鑳稿彛缂栧彿', 'HX-07', 0.055, M['stencil'], torso, (0.17, -0.3295, 0.40), (88, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   572|     box('鑳稿彛璀︾ず鏉�', 0.12, 0.004, 0.03, M['hazard'], torso, (-0.20, -0.3285, 0.255), (-2, 0, 0), bevel=0.001)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   573|     cyl('鑳哥伅缃�', 0.032, 0.05, M['frame'], torso, (-0.30, -0.30, 0.47), (90, 0, 0), segs=24)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   574|     cyl('鑳哥伅', 0.022, 0.006, M['lamp'], torso, (-0.30, -0.327, 0.47), (90, 0, 0), segs=24)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   577|     plate('鑳屽寘', 0.60, 0.26, 0.64, 0.28, 0.52, M['paint_dark'], torso, (0, 0.37, 0.27), panel=(0, 1, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   583|         box(f'鏁ｇ儹鐗噞i}', 0.50, 0.012, 0.07, M['frame'], torso, (0, 0.26 + i * 0.033, 0.565), bevel=0.002)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   584|     plate('鍠峰彛鎶ょ僵椤�', 0.66, 0.20, 0.66, 0.20, 0.05, M['paint'], torso, (0, 0.57, 0.36), (-12, 0, 0), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   585|     plate('鍠峰彛涓�闅�', 0.05, 0.10, 0.05, 0.10, 0.22, M['frame'], torso, (0, 0.53, 0.22), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   587|     box('鑳屽寘璀︾ず鏉�', 0.50, 0.02, 0.04, M['hazard'], torso, (0, 0.51, 0.04), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   590|     cyl('棰�', 0.09, 0.10, M['frame'], torso, (0, -0.10, 0.52))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   592|     tbox('澶村３', 0.34, 0.34, 0.29, 0.28, 0.19, M['paint'], head, (0, 0.0, 0.095), top_off=(0, 0.02), bevel=0.02)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   593|     plate('鐪夌敳', 0.35, 0.08, 0.32, 0.06, 0.06, M['paint_dark'], head, (0, -0.175, 0.165), (-22, 0, 0), chamfer=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   594|     box('闈㈢僵鍑规Ы', 0.25, 0.04, 0.07, M['plastic'], head, (0, -0.155, 0.07), bevel=0.006)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   595|     cyl('涓婚暅澶�', 0.036, 0.05, M['lens'], head, (-0.06, -0.175, 0.07), (90, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   596|     cyl('涓婚暅澶存��', 0.044, 0.02, M['frame'], head, (-0.06, -0.162, 0.07), (90, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   597|     cyl('涓婚暅澶村厜鐐�', 0.010, 0.004, M['glow'], head, (-0.06, -0.201, 0.07), (90, 0, 0), segs=16)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   599|         cyl(f'鍓�闀滃ご{i}', r, 0.04, M['lens'], head, (x, -0.17, z), (90, 0, 0), segs=20)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   601|         plate('棰婄敳', 0.05, 0.20, 0.05, 0.18, 0.12, M['paint_dark'], head, (0.165 * sx, -0.02, 0.06), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   602|     box('澶撮《鑹叉潯', 0.05, 0.22, 0.012, M['accent'], head, (0.07, 0.02, 0.175), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   603|     rod('澶╃嚎', (-0.12, 0.06, 0.16), (-0.15, 0.10, 0.40), 0.006, M['frame'], head, segs=8)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   609|         cyl(f'{side}鑲╁叧鑺�', 0.13, 0.16, M['frame'], sh, (0, 0, 0), (0, 90, 0), segs=40)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   611|         plate(f'{side}鑲╃敳', pw0, pd0, pw1, pd1, ph, M['accent'], sh, (pcx * sx, 0, pcz),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   613|         box(f'{side}鑲╃敳璀︾ず鏉�', pw0, pd0, pband, M['hazard'], sh, (pcx * sx, 0, pcz - ph / 2 - pband / 2), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   617|         text(f'{side}鑲╃紪鍙�', '07', pts, M['stencil'], holder, (0, 0, 0), (90, 0, 90 * sx))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   620|         tbox(f'{side}涓婅噦', 0.15, 0.17, 0.17, 0.19, 0.30, M['frame'], sh, (0.06 * sx, 0, -0.27))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   621|         plate(f'{side}涓婅噦鐢�', 0.07, 0.22, 0.07, 0.24, 0.24, M['paint'], sh, (0.165 * sx, 0, -0.27),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   625|         cyl(f'{side}鑲樺叧鑺�', 0.09, 0.22, M['frame'], el, (0, 0, 0), (0, 90, 0), segs=40)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   626|         plate(f'{side}鑲樼敳', 0.20, 0.08, 0.18, 0.06, 0.14, M['paint_dark'], el, (0, 0.11, 0.0), (-10, 0, 0), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   627|         plate(f'{side}鍓嶈噦', 0.27, 0.31, 0.22, 0.26, 0.38, M['paint'], el, (0, 0, -0.25), panel=(sx, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   628|         box(f'{side}鍓嶈噦搴曠敳', 0.18, 0.05, 0.30, M['frame'], el, (0, 0.165, -0.25))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   632|         cyl(f'{side}鑵曞叧鑺�', 0.065, 0.17, M['frame'], wr, (0, 0, 0), (0, 90, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   633|         plate(f'{side}鎵嬫帉', 0.17, 0.15, 0.15, 0.13, 0.13, M['frame'], wr, (0, 0, -0.085), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   635|             tbox(f'{side}鎵嬫寚鏍箋i}', 0.045, 0.05, 0.042, 0.048, 0.07, M['paint_dark'], wr, (x, -0.03, -0.18), (10, 0, 0), bevel=0.007)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   636|             tbox(f'{side}鎵嬫寚灏杮i}', 0.04, 0.045, 0.036, 0.04, 0.06, M['paint_dark'], wr, (x, -0.05, -0.24), (32, 0, 0), bevel=0.007)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   637|         tbox(f'{side}鎷囨寚', 0.045, 0.05, 0.04, 0.045, 0.10, M['paint_dark'], wr, (0.08 * sx, -0.03, -0.13), (0, -25 * sx, 0), bevel=0.007)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   642|     plate('鏈哄專', 0.12, 0.56, 0.12, 0.54, 0.17, M['paint_dark'], gun, (0, -0.13, 0.08), panel=(1, 0, 0), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   643|     plate('鎶ゆ湪', 0.10, 0.36, 0.10, 0.36, 0.11, M['frame'], gun, (0, -0.58, 0.085), chamfer=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   645|         box(f'鎶ゆ湪鏁ｇ儹瀛攞i}', 0.102, 0.03, 0.045, M['plastic'], gun, (0, -0.49 - i * 0.06, 0.085), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   646|     rod('鏋�绠�', (0, -0.76, 0.085), (0, -1.06, 0.085), 0.03, M['frame'], gun)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   647|     plate('鍒堕��鍣�', 0.085, 0.13, 0.085, 0.13, 0.085, M['frame'], gun, (0, -1.10, 0.085), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   649|         box(f'鍒堕��鍣ㄥ紑瀛攞i}', 0.087, 0.016, 0.05, M['plastic'], gun, (0, -1.065 - i * 0.032, 0.085), bevel=0.002)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   650|     plate('寮瑰專', 0.08, 0.12, 0.08, 0.14, 0.24, M['paint_dark'], gun, (0, -0.12, -0.10), (12, 0, 0), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   651|     box('鎻℃妸', 0.06, 0.07, 0.13, M['plastic'], gun, (0, 0.10, -0.03), (-12, 0, 0), bevel=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   652|     plate('鏋�鎵�', 0.09, 0.24, 0.08, 0.22, 0.13, M['paint'], gun, (0, 0.29, 0.07), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   653|     box('鐬勫叿', 0.06, 0.12, 0.06, M['frame'], gun, (0, -0.18, 0.195), bevel=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   654|     cyl('鐬勫叿闀滅墖', 0.018, 0.01, M['lens'], gun, (0, -0.242, 0.195), (90, 0, 0), segs=16)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   655|     box('鏋�韬�鑹叉潯', 0.122, 0.12, 0.035, M['accent'], gun, (0, -0.27, 0.135), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   656|     text('鏋�韬�缂栧彿', 'RG-3', 0.035, M['stencil'], gun, (0.064, -0.06, 0.07), (90, 0, 90))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   663|         cyl(f'{side}楂嬪叧鑺�', 0.12, 0.22 * kW, M['frame'], hip, (0, 0, 0), (0, 90, 0), segs=40)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   664|         tbox(f'{side}澶ц吙', 0.24, 0.26, 0.28, 0.30, 0.38 * kT, M['frame'], hip, (0, 0, -0.24 * kT))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   665|         plate(f'{side}澶ц吙鍓嶇敳', 0.31, 0.10, 0.33, 0.10, 0.38 * kT, M['paint'], hip, (0, -0.165, -0.22 * kT), (-5, 0, 0), panel=(0, -1, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   666|         plate(f'{side}澶ц吙澶栫敳', 0.10, 0.34, 0.10, 0.38, 0.36 * kT, M['paint'], hip, (0.175 * sx, 0.0, -0.22 * kT), panel=(sx, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   667|         plate(f'{side}澶ц吙鍐呯敳', 0.06, 0.28, 0.06, 0.30, 0.30 * kT, M['paint_dark'], hip, (-0.15 * sx, 0.0, -0.24 * kT), chamfer=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   670|         cyl(f'{side}鑶濆叧鑺�', 0.105, 0.28, M['frame'], kn, (0, 0, 0), (0, 90, 0), segs=40)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   671|         plate(f'{side}鎶よ啙', 0.25, 0.12, 0.22, 0.10, 0.22, M['paint'], kn, (0, -0.12, 0.02), (10, 0, 0), chamfer=0.025)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   672|         tbox(f'{side}灏忚吙', 0.22, 0.24, 0.27, 0.30, 0.54 * kS, M['frame'], kn, (0, 0.02, -0.33 * kS))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   673|         plate(f'{side}灏忚吙鍓嶇敳', 0.27, 0.09, 0.33, 0.11, 0.50 * kS, M['accent'], kn, (0, -0.17, -0.31 * kS), (-4, 0, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   675|         box(f'{side}灏忚吙璀︾ず鏉�', 0.275, 0.095, 0.05, M['hazard'], kn, (0, -0.175, -0.535 * kS), (-4, 0, 0), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   676|         plate(f'{side}灏忚吙渚х敳', 0.09, 0.32, 0.09, 0.36, 0.42 * kS, M['paint'], kn, (0.17 * sx, 0.02, -0.30 * kS), panel=(sx, 0, 0))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   677|         plate(f'{side}灏忚吙鍐呯敳', 0.06, 0.26, 0.06, 0.30, 0.36 * kS, M['paint_dark'], kn, (-0.15 * sx, 0.02, -0.30 * kS), chamfer=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   678|         plate(f'{side}灏忚吙鍚庣僵', 0.18, 0.12, 0.18, 0.12, 0.20, M['paint_dark'], kn, (0, 0.17, -0.16 * kS), chamfer=0.015)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   682|         cyl(f'{side}韪濆叧鑺�', 0.08, 0.24, M['frame'], an, (0, 0, 0), (0, 90, 0), segs=32)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   683|         plate(f'{side}鑴�', 0.40, 0.68, 0.33, 0.52, 0.14, M['paint_dark'], an, (0, -0.07, -0.13), chamfer=0.03)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   684|         plate(f'{side}鑴氬皷', 0.38, 0.15, 0.34, 0.10, 0.10, M['paint'], an, (0, -0.38, -0.15), (6, 0, 0), chamfer=0.02)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   685|         box(f'{side}鑴氳窡', 0.28, 0.13, 0.12, M['frame'], an, (0, 0.25, -0.14))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   686|         box(f'{side}闉嬪簳', 0.41, 0.70, 0.03, M['rubber'], an, (0, -0.07, -0.185), bevel=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   825|     tbox('楠ㄧ泦鍧�', 0.26, 0.20, 0.30, 0.22, 0.14, M['frame'], pelvis)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   826|     plate('鍓嶈�嗙敳', 0.10, 0.04, 0.14, 0.05, 0.14, M['paint'], pelvis, (0, -0.125, -0.03), (8, 0, 0), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   827|     plate('鍚庤叞鐢�', 0.16, 0.04, 0.20, 0.04, 0.12, M['paint_dark'], pelvis, (0, 0.12, 0.0), (-8, 0, 0), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   829|         plate('鑳�鐢�', 0.035, 0.18, 0.035, 0.22, 0.16, M['paint'], pelvis, (0.185 * sx, 0, -0.04), (0, -14 * sx, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   831|         if not ARGS.kit:  # --kit 鏃舵崲鎴愮礌鏉愬寘鐨勬恫鍘嬫潌
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   835|     cyl('鑵版煴', 0.065, 0.16, M['frame'], pelvis, (0, 0, 0.13), segs=32)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   836|     plate('鑵圭敳', 0.14, 0.03, 0.16, 0.03, 0.08, M['paint_dark'], pelvis, (0, -0.08, 0.15), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   840|     tbox('韬�骞查�ㄦ灦', 0.24, 0.20, 0.44, 0.30, 0.38, M['frame'], torso, (0, 0, 0.19))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   842|         plate('鑳哥敳', 0.20, 0.035, 0.24, 0.04, 0.26, M['paint'], torso, (0.105 * sx, -0.165, 0.25), (-10, 0, 14 * sx),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   844|         plate('渚х敳', 0.03, 0.18, 0.03, 0.24, 0.24, M['paint_dark'], torso, (0.20 * sx, 0.0, 0.22), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   845|     box('鑳稿彛鑹叉潯', 0.022, 0.012, 0.22, M['accent'], torso, (0, -0.19, 0.25), (-10, 0, 0), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   846|     text('鑳稿彛缂栧彿', '07', 0.045, M['stencil'], torso, (0.12, -0.215, 0.31), (80, 0, 14))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   847|     box('鑲╂灦', 0.62, 0.12, 0.05, M['frame'], torso, (0, 0.0, 0.35), bevel=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   848|     plate('棰嗙敳', 0.36, 0.26, 0.30, 0.22, 0.04, M['paint'], torso, (0, 0.02, 0.40), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   851|     plate('鎺ㄨ繘鍖�', 0.20, 0.12, 0.24, 0.14, 0.30, M['paint_dark'], torso, (0, 0.20, 0.22), chamfer=0.015,
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   856|         plate('鑳岀考', 0.02, 0.24, 0.02, 0.07, 0.34, M['paint'], wing, (0, 0, 0.17), chamfer=0.006)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   857|         box('鑳岀考灏�', 0.022, 0.06, 0.05, M['accent'], wing, (0, 0.03, 0.31), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   864|     tbox('澶村３', 0.15, 0.19, 0.12, 0.15, 0.11, M['paint'], head, (0, 0, 0.055 + hz), top_off=(0, 0.02), bevel=0.012)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   865|     box('闈㈢僵', 0.155, 0.02, 0.035, M['lens'], head, (0, -0.094, 0.06 + hz), bevel=0.006)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   866|     box('闈㈢僵鍏夊甫', 0.10, 0.004, 0.004, M['glow'], head, (0, -0.105, 0.06 + hz), bevel=0.0)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   867|     plate('涓嬮��', 0.11, 0.05, 0.12, 0.05, 0.035, M['paint_dark'], head, (0, -0.08, 0.012 + hz), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   868|     plate('澶撮硩', 0.012, 0.10, 0.012, 0.04, 0.08, M['accent'], head, (0.04, 0.03, 0.15 + hz), (-25, 0, 0), chamfer=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   870|         cyl('鑰充紶鎰熷櫒', 0.025, 0.02, M['frame'], head, (0.078 * sx, 0.01, 0.06 + hz), (0, 90, 0), segs=20)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   876|         cyl(f'{side}鑲╁叧鑺�', 0.065, 0.10, M['frame'], sh, (0, 0, 0), (0, 90, 0), segs=32)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   877|         plate(f'{side}鑲╃敳', 0.15, 0.24, 0.12, 0.20, 0.035, M['paint'], sh, (0.05 * sx, 0, 0.075), (0, 20 * sx, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   879|         box(f'{side}鑲╃敳鑹茶竟', 0.02, 0.24, 0.036, M['accent'], sh, (0.125 * sx, 0, 0.049), (0, 20 * sx, 0), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   880|         tbox(f'{side}涓婅噦', 0.08, 0.09, 0.07, 0.08, 0.30, M['frame'], sh, (0, 0, -0.19))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   881|         plate(f'{side}涓婅噦鐢�', 0.03, 0.12, 0.03, 0.10, 0.22, M['paint'], sh, (0.055 * sx, 0, -0.19), chamfer=0.008,
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   884|         cyl(f'{side}鑲樺叧鑺�', 0.05, 0.10, M['frame'], el, (0, 0, 0), (0, 90, 0), segs=24)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   885|         plate(f'{side}鍓嶈噦', 0.10, 0.12, 0.12, 0.14, 0.30, M['paint'], el, (0, 0, -0.18), chamfer=0.012,
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   887|         if not ARGS.kit:  # --kit 鏃舵崲鎴愮礌鏉愬寘鐨勬恫鍘嬫潌
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   892|             cyl(f'{side}鑵曞叧鑺�', 0.035, 0.08, M['frame'], wr, (0, 0, 0), (0, 90, 0), segs=20)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   893|             plate(f'{side}鎵嬫帉', 0.085, 0.07, 0.08, 0.065, 0.08, M['frame'], wr, (0, 0, -0.05), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   895|                 tbox(f'{side}鎵嬫寚鏍箋i}', 0.022, 0.025, 0.02, 0.023, 0.05, M['paint_dark'], wr, (x, -0.018, -0.115), (12, 0, 0), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   896|                 tbox(f'{side}鎵嬫寚灏杮i}', 0.02, 0.022, 0.018, 0.02, 0.04, M['paint_dark'], wr, (x, -0.03, -0.16), (30, 0, 0), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   897|             tbox(f'{side}鎷囨寚', 0.022, 0.025, 0.02, 0.022, 0.06, M['paint_dark'], wr, (0.05 * sx, -0.02, -0.08), (0, -25 * sx, 0), bevel=0.004)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   904|     plate('鏈哄專', 0.07, 0.42, 0.07, 0.40, 0.11, M['paint_dark'], gun, (0, -0.10, 0.05), chamfer=0.01, panel=(1, 0, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   906|     plate('鎶ゆ湪', 0.06, 0.26, 0.06, 0.26, 0.07, M['frame'], gun, (0, -0.42, 0.055), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   907|     rod('鏋�绠�', (0, -0.55, 0.06), (0, -0.80, 0.06), 0.018, M['frame'], gun)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   908|     box('鏋�鍙�', 0.05, 0.07, 0.045, M['frame'], gun, (0, -0.82, 0.06), bevel=0.006)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   909|     plate('寮瑰專', 0.05, 0.08, 0.05, 0.09, 0.16, M['paint_dark'], gun, (0, -0.08, -0.07), (10, 0, 0), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   910|     box('鎻℃妸', 0.04, 0.05, 0.09, M['plastic'], gun, (0, 0.07, -0.02), (-12, 0, 0), bevel=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   911|     plate('鏋�鎵�', 0.05, 0.18, 0.05, 0.16, 0.08, M['paint'], gun, (0, 0.22, 0.05), chamfer=0.01)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   912|     box('鐬勫叿', 0.04, 0.08, 0.04, M['frame'], gun, (0, -0.14, 0.125), bevel=0.006)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   913|     box('鏋�韬�鑹叉潯', 0.072, 0.06, 0.02, M['accent'], gun, (0, -0.20, 0.085), bevel=0.003)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   919|         cyl(f'{side}楂嬪叧鑺�', 0.07, 0.12, M['frame'], hip, (0, 0, 0), (0, 90, 0), segs=32)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   920|         tbox(f'{side}澶ц吙', 0.11, 0.13, 0.15, 0.17, 0.52, M['frame'], hip, (0, 0, -0.30))
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   921|         plate(f'{side}澶ц吙鍓嶇敳', 0.12, 0.035, 0.16, 0.04, 0.42, M['paint'], hip, (0, -0.105, -0.28), (-4, 0, 0),
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   923|         plate(f'{side}澶ц吙澶栫敳', 0.03, 0.12, 0.03, 0.16, 0.36, M['paint_dark'], hip, (0.09 * sx, 0, -0.26), chamfer=0.008)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   924|         if not ARGS.kit:  # --kit 鏃舵崲鎴愮礌鏉愬寘鐨勬恫鍘嬫潌
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   927|         cyl(f'{side}鑶濆叧鑺�', 0.06, 0.15, M['frame'], kn, (0, 0, 0), (0, 90, 0), segs=32)
+[2026.11.02-19.22.54:497][  0]LogPython: Warning: [src]   928|         plate(f'{side}鎶よ啙', 0.10, 0.06, 0.07, 0.04, 0.12, M['accent'], kn, (0, -0.07, 0.02), (14, 0, 0), chamfer=0.015)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   929|         tbox(f'{side}灏忚吙', 0.07, 0.09, 0.12, 0.15, 0.58, M['frame'], kn, (0, 0.01, -0.33))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   930|         plate(f'{side}灏忚吙鍓嶇敳', 0.08, 0.03, 0.13, 0.04, 0.52, M['paint'], kn, (0, -0.09, -0.30), (-3, 0, 0),
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   932|         plate(f'{side}灏忚吙槌�', 0.02, 0.16, 0.02, 0.05, 0.30, M['paint_dark'], kn, (0, 0.12, -0.20), (-25, 0, 0), chamfer=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   933|         if not ARGS.kit:  # --kit 鏃舵崲鎴愮礌鏉愬寘鐨勬恫鍘嬫潌
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   937|         cyl(f'{side}韪濆叧鑺�', 0.045, 0.11, M['frame'], an, (0, 0, 0), (0, 90, 0), segs=24)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   938|         plate(f'{side}鑴�', 0.13, 0.36, 0.10, 0.26, 0.07, M['paint_dark'], an, (0, -0.05, -0.09), chamfer=0.015)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   939|         plate(f'{side}鑴氬皷', 0.11, 0.12, 0.08, 0.08, 0.05, M['paint'], an, (0, -0.26, -0.10), (4, 0, 0), chamfer=0.012)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   940|         box(f'{side}鑴氳窡', 0.08, 0.06, 0.07, M['frame'], an, (0, 0.15, -0.09), bevel=0.008)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   941|         box(f'{side}闉嬪簳', 0.135, 0.44, 0.02, M['rubber'], an, (0, -0.07, -0.13), bevel=0.005)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   944|     if ARGS.kit:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   950|     if ARGS.rig:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]   954|     if ARGS.kit:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1009|     NECK_SEAT.append((tube('棰堝骇鐜�', 0.058, 0.044, 0.020, M['paint_dark'], torso, segs=36), n1, -0.011))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1010|     sphere('棰堢悆', 0.034, M['frame'], n1)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1013|     col = cyl('棰堟煴', 0.031, L, M['frame'], n1, segs=8, r2=0.026, bevel=0.003)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1021|     NECK_FIT.append((cyl('妞庣幆', 0.039, 0.008, M['paint'], n1, segs=8, bevel=0.002), n1, head, 0.36, None, 0.0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1114|     mt = {'palm': M['frame'], 'finger': M['paint_dark'], 'knuckle': M['frame'], 'back': M['paint']}
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1203|     return ARGS.kit_lite or bool(ARGS.rig)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1346|     COIL['rod'] = piece(True, COIL_PIN_ROD, 1, '鍑忛渿娲诲�炴潌')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1347|     COIL['barrel'] = piece(False, COIL_PIN_BARREL, -1, '鍑忛渿缂哥瓛')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1386|     for p in me.polygons:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1387|         p.use_smooth = True
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1388|     me.materials.append(M['accent'])
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1389|     COIL['spring'] = me
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1390|     COIL['spring_len'] = (hi - lo).x / dia
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1391|     return COIL
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1392| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1393| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1394| def kit_coilover(name, bone, parent_a, anchor_a, parent_b, anchor_b, thick=1.0):
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1395|     """璺ㄥ叧鑺傜殑鍑忛渿锛氱几绛掞紙甯﹀脊绨э級鎸� parent_a銆侀攢瀛斿湪 anchor_a锛涙椿濉炴潌鎸� parent_b銆侀攢瀛斿湪 anchor_b銆�
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1396|     涓ゆ�靛悇璺熷悇鐨勯�ㄥご锛屾憜瀹屽Э鍔垮悗 aim_kit_pairs() 璁╁畠浠�浜掔浉瀵瑰噯锛堟父鎴忛噷涔熻�佹瘡甯ц繖鏍峰�瑰噯锛屽叧鑺備竴寮�娲诲�炴潌灏卞湪缂哥瓛閲屼几缂╋級銆�
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1397|     bone锛氬�煎嚭鏃剁粰杩欎袱娈靛悇鍔犱竴鏍瑰皬楠ㄥご <bone>_a锛堢几绛掞紝鎸� parent_a 鐨勯�ㄥご锛夈��<bone>_b锛堟椿濉炴潌锛夛紝UMechMeshComponent 姣忓抚鎶婂畠浠�浜掔浉瀵瑰噯銆�"""
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1398|     C = kit_coilover_meshes()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1399|     barrel = place(bpy.data.objects.new(name + '缂哥瓛', C['barrel'].copy()), parent_a, anchor_a, (0, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1400|     rod = place(bpy.data.objects.new(name + '娲诲�炴潌', C['rod'].copy()), parent_b, anchor_b, (0, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1401|     # 寮圭哀濂楀湪缂哥瓛涓婏紙缂哥瓛灞�閮�锛氶攢瀛� 0锛岀几鍙� COIL_PIN_BARREL - COIL_CUT = 0.81锛夛紝浠庨攢瀛斿骇寰�鍚� 0.10 鍒扮几鍙ｅ墠 0.05锛屽�栧緞 0.32
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1402|     spring = place(bpy.data.objects.new(name + '寮圭哀', C['spring'].copy()), barrel, (0.10, 0, 0), (0, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1403|     spring.scale = ((COIL_PIN_BARREL - COIL_CUT - 0.15) / C['spring_len'], 0.32, 0.32)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1404|     if kit_ratio('spring') < 1.0:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1405|         spring.modifiers.new('鍑忛潰', 'DECIMATE').ratio = kit_ratio('spring')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1406|     barrel['kit_bone'], rod['kit_bone'] = bone.replace('#', 'a'), bone.replace('#', 'b')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1407|     if kit_ratio('coilover') < 1.0:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1408|         for ob in (barrel, rod):
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1409|             ob.modifiers.new('鍑忛潰', 'DECIMATE').ratio = kit_ratio('coilover')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1410|     KIT_PAIRS.append((barrel, Vector(anchor_a), rod, Vector(anchor_b), thick))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1411|     return barrel, rod
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1412| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1413| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1414| def aim_kit_pairs():
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1415|     """璺ㄥ叧鑺傚噺闇囩殑涓ゆ�典簰鐩稿�瑰噯锛氱几绛掍粠鑷�宸辩殑閿�瀛旀寚鍚戞椿濉炴潌鐨勯攢瀛旓紝娲诲�炴潌鍙嶈繃鏉ワ紱閿�杞村彇缂哥瓛閭ｆ牴楠ㄥご鐨� X锛堝叧鑺傝酱锛夈��
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1416|     闀垮害鎸変袱閿�瀛斿綋鍓嶇殑璺濈�诲畾锛氳�呭ソ鏃朵袱閿�瀛旂浉璺� (1.72-0.13) - 浣欓噺锛岀缉鏀� = 璺濈�� / 杩欎釜闀垮害銆�"""
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1417|     from mathutils import Matrix
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1418|     bpy.context.view_layer.update()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1419|     full = COIL_PIN_BARREL - COIL_PIN_ROD - COIL_SLACK
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1420|     for barrel, a, rod, b, thick in KIT_PAIRS:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1421|         pa = barrel.parent.matrix_world @ a
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1422|         pb = rod.parent.matrix_world @ b
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1423|         d = pb - pa
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1424|         k = d.length / full
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1425|         pin = (barrel.parent.matrix_world.to_3x3() @ Vector((1, 0, 0))).normalized()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1426|         for ob, p, x_dir in ((barrel, pa, d), (rod, pb, -d)):
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1427|             x = x_dir.normalized()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1428|             y = (pin - x * pin.dot(x)).normalized()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1429|             ob.matrix_world = Matrix.Translation(p) @ Matrix((x, y, x.cross(y))).transposed().to_4x4() @ \
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1430|                 Matrix.Diagonal((k, k * thick, k * thick, 1.0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1431|     bpy.context.view_layer.update()
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1432| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1433| 
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1434| def add_kit(pelvis, torso, arms, legs):
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1538|     cyl('楠ㄧ泦鏍�', 0.13, 0.15, M['frame'], pelvis, (0, 0, 0), segs=32).scale = (1, 0.75, 1)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1539|     shell('鍓嶈�嗙敳', 0.10, 0.12, 80, 90, 0.14, 0.022, M['paint'], pelvis, (0, -0.125, -0.03), (10, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1540|     shell('鍚庤叞鐢�', 0.12, 0.13, 100, 110, 0.12, 0.02, M['paint_dark'], pelvis, (0, 0.125, 0.0), (-8, 0, 180))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1543|         shell('鑳�鐢�', 0.11, 0.12, 120, 110, 0.18, 0.022, M['paint'], holder, (0, 0, 0), (0, 0, 90 * sx))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1547|     cyl('鑵版煴', 0.06, 0.16, M['frame'], pelvis, (0, 0, 0.13), segs=32)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1549|         shell(f'鑵圭敳{i}', 0.085 + 0.01 * i, 0.09 + 0.01 * i, 120, 120, 0.05, 0.018, M['paint_dark'], pelvis,
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1554|     cyl('鑳歌厰楠ㄦ灦', 0.12, 0.38, M['frame'], torso, (0, 0, 0.19), r2=0.21, segs=36).scale = (1, 0.7, 1)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1555|     shell('鑳哥敳', 0.15, 0.23, 130, 140, 0.27, 0.03, M['paint'], torso, (0, -0.155, 0.255), lean=-0.03)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1556|     tbox('鑳稿彛鑹叉潯', 0.012, 0.012, 0.022, 0.012, 0.25, M['accent'], torso, (0, -0.177, 0.255), (6.3, 0, 0), bevel=0.003)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1557|     text('鑳稿彛缂栧彿', '07', 0.045, M['stencil'], torso, (0.10, -0.152, 0.31), (96, 0, 30))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1558|     shell('鑳岀敳', 0.17, 0.21, 110, 110, 0.26, 0.025, M['paint_dark'], torso, (0, 0.155, 0.24), (0, 0, 180))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1559|     rod('鑲╂灦', (-0.33, 0, 0.35), (0.33, 0, 0.35), 0.03, M['frame'], torso, segs=20)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1560|     prism('棰嗙敳', [(-0.17, -0.10), (0.17, -0.10), (0.13, 0.12), (-0.13, 0.12)], 0.03, M['paint'], torso,
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1564|     cyl('鎺ㄨ繘鍖�', 0.10, 0.30, M['paint_dark'], torso, (0, 0.21, 0.22), r2=0.085, segs=32).scale = (1.15, 0.65, 1)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1568|         prism('鑳岀考', [(-0.03, 0.0), (0.05, 0.0), (0.03, 0.22), (-0.01, 0.34), (-0.04, 0.26)], 0.018, M['paint'], wing,
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1570|         prism('鑳岀考灏�', [(0.0, 0.27), (0.025, 0.25), (-0.01, 0.345), (-0.035, 0.29)], 0.02, M['accent'], wing, bevel=0.004)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1573|     cyl('棰�', 0.045, 0.07, M['frame'], torso, (0, -0.02, 0.42), segs=24)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1575|     cyl('澶存牳', 0.09, 0.11, M['paint'], head, (0, 0.01, 0.06), r2=0.075, segs=36).scale = (1, 1.15, 1)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1576|     shell('闈㈢僵', 0.095, 0.092, 120, 120, 0.04, 0.012, M['lens'], head, (0, -0.095, 0.055))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1577|     box('闈㈢僵鍏夊甫', 0.08, 0.004, 0.004, M['glow'], head, (0, -0.098, 0.055), bevel=0.0)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1578|     shell('鐪夌敳', 0.10, 0.09, 140, 130, 0.03, 0.015, M['paint_dark'], head, (0, -0.105, 0.09), (-15, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1579|     shell('涓嬮��', 0.085, 0.095, 120, 130, 0.035, 0.015, M['paint_dark'], head, (0, -0.09, 0.018))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1580|     prism('澶村啝', [(-0.07, 0.0), (0.08, 0.0), (0.11, 0.03), (-0.03, 0.045)], 0.014, M['accent'], head, (0, 0.0, 0.112))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1582|         cyl('鑰充紶鎰熷櫒', 0.03, 0.025, M['frame'], head, (0.09 * sx, 0.01, 0.06), (0, 90, 0), segs=24)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1588|         sphere(f'{side}鑲╁叧鑺�', 0.07, M['frame'], sh)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1590|         shell(f'{side}鑲╃敳', 0.11, 0.105, 120, 110, 0.26, 0.025, M['paint'], ph, (0, 0, 0), (-90, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1591|         shell(f'{side}鑲╃敳鑹茶竟', 0.112, 0.107, 16, 16, 0.262, 0.026, M['accent'], ph, (0, 0, 0), (-90, 0, 0), c=50 * sx,
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1593|         cyl(f'{side}涓婅噦楠�', 0.045, 0.30, M['frame'], sh, (0, 0, -0.19), r2=0.05, segs=24)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1594|         shell(f'{side}涓婅噦鐢�', 0.075, 0.075, 150, 150, 0.22, 0.02, M['paint'], sh, (0.075 * sx, 0, -0.20), (0, 0, 90 * sx))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1597|         sphere(f'{side}鑲樺叧鑺�', 0.052, M['frame'], el)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1598|         cyl(f'{side}鍓嶈噦楠�', 0.04, 0.30, M['frame'], el, (0, 0, -0.18), r2=0.045, segs=24)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1599|         shell(f'{side}鍓嶈噦鐢�', 0.075, 0.085, 210, 200, 0.28, 0.022, M['paint'], el, (0.066 * sx, -0.046, -0.18),
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1603|         sphere(f'{side}鑵曞叧鑺�', 0.038, M['frame'], wr)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1604|         plate(f'{side}鎵嬫帉', 0.09, 0.075, 0.085, 0.07, 0.085, M['frame'], wr, (0, 0, -0.055), chamfer=0.012)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1606|             tbox(f'{side}鎵嬫寚鏍箋i}', 0.024, 0.027, 0.022, 0.025, 0.055, M['paint_dark'], wr, (x, -0.02, -0.125), (12, 0, 0), bevel=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1607|             tbox(f'{side}鎵嬫寚灏杮i}', 0.022, 0.024, 0.019, 0.021, 0.045, M['paint_dark'], wr, (x, -0.033, -0.175), (30, 0, 0), bevel=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1608|         tbox(f'{side}鎷囨寚', 0.024, 0.027, 0.021, 0.024, 0.065, M['paint_dark'], wr, (0.055 * sx, -0.022, -0.088), (0, -25 * sx, 0), bevel=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1613|     plate('鏈哄專', 0.07, 0.42, 0.07, 0.40, 0.11, M['paint_dark'], gun, (0, -0.10, 0.05), chamfer=0.01, panel=(1, 0, 0),
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1615|     plate('鎶ゆ湪', 0.06, 0.26, 0.06, 0.26, 0.07, M['frame'], gun, (0, -0.42, 0.055), chamfer=0.008)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1616|     rod('鏋�绠�', (0, -0.55, 0.06), (0, -0.80, 0.06), 0.018, M['frame'], gun)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1617|     box('鏋�鍙�', 0.05, 0.07, 0.045, M['frame'], gun, (0, -0.82, 0.06), bevel=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1618|     plate('寮瑰專', 0.05, 0.08, 0.05, 0.09, 0.16, M['paint_dark'], gun, (0, -0.08, -0.07), (10, 0, 0), chamfer=0.008)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1619|     box('鎻℃妸', 0.04, 0.05, 0.09, M['plastic'], gun, (0, 0.07, -0.02), (-12, 0, 0), bevel=0.008)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1620|     plate('鏋�鎵�', 0.05, 0.18, 0.05, 0.16, 0.08, M['paint'], gun, (0, 0.22, 0.05), chamfer=0.01)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1621|     box('鐬勫叿', 0.04, 0.08, 0.04, M['frame'], gun, (0, -0.14, 0.125), bevel=0.006)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1622|     box('鏋�韬�鑹叉潯', 0.072, 0.06, 0.02, M['accent'], gun, (0, -0.20, 0.085), bevel=0.003)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1628|         sphere(f'{side}楂嬪叧鑺�', 0.075, M['frame'], hip)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1629|         cyl(f'{side}澶ц吙楠�', 0.065, 0.50, M['frame'], hip, (0, 0, -0.30), r2=0.08, segs=28)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1630|         shell(f'{side}澶ц吙鍓嶇敳', 0.095, 0.11, 150, 150, 0.44, 0.028, M['paint'], hip, (0, -0.115, -0.28), (-3, 0, 0))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1631|         shell(f'{side}澶ц吙澶栫敳', 0.10, 0.11, 70, 70, 0.34, 0.022, M['paint_dark'], hip, (0.11 * sx, 0.01, -0.26),
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1635|         sphere(f'{side}鑶濆叧鑺�', 0.065, M['frame'], kn)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1637|               M['accent'], kn, (0, -0.06, 0.01), bevel=0.01)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1638|         cyl(f'{side}灏忚吙楠�', 0.045, 0.58, M['frame'], kn, (0, 0.01, -0.33), r2=0.06, segs=28)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1639|         shell(f'{side}灏忚吙鍓嶇敳', 0.07, 0.095, 150, 150, 0.54, 0.026, M['paint'], kn, (0, -0.085, -0.31), (-2, 0, 0),
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1641|         shell(f'{side}灏忚吙鑲�', 0.065, 0.08, 130, 130, 0.30, 0.022, M['paint_dark'], kn, (0, 0.085, -0.20), (0, 0, 180))
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1643|               M['paint'], kn, (0, 0.075, -0.25), bevel=0.005)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1646|         sphere(f'{side}韪濆叧鑺�', 0.048, M['frame'], an)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1648|               0.13, M['paint_dark'], an, bevel=0.012)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1649|         prism(f'{side}闉嬪簳', [(0.125, -0.14), (-0.33, -0.14), (-0.36, -0.115), (0.125, -0.115)], 0.135, M['rubber'], an,
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1652|               M['paint'], an, (0, 0, 0.012), bevel=0.01)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1685|     bpy.ops.import_scene.fbx(filepath=ARGS.rig, automatic_bone_orientation=False)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1731|     if ARGS.kit:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1827|             m.name = 'MI_Robot_' + ascii_names[m.name]
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1851|     os.makedirs(os.path.dirname(ARGS.export), exist_ok=True)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1852|     bpy.ops.export_scene.fbx(filepath=ARGS.export, use_selection=True, object_types={'ARMATURE', 'MESH'},
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1855|     print('[rig] 瀵煎嚭', ARGS.export)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1856|     if ARGS.blend:
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1857|         bpy.ops.wm.save_as_mainfile(filepath=os.path.splitext(ARGS.export)[0] + '.blend')
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1884|     box('闂ㄦ��', 1.3, 0.12, 2.35, M['frame'], None, (-1.6, 9.66, 1.175), bevel=0.01)
+[2026.11.02-19.22.54:498][  0]LogPython: Warning: [src]  1885|     box('闂�', 1.05, 0.08, 2.1, M['paint'], None, (-1.6, 9.62, 1.05), bevel=0.008)
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src] #### lookdev/factions/heitie/hx_common.py 1075 琛�
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]     3| # 鍗曚綅锛氶浂浠堕兘鎸夈�屼汉褰㈠昂瀵哥殑绫炽�嶅啓锛堟父鎴忛噷鏁翠綋鍐� 脳1.35锛夛紝鍦烘櫙鏈�韬�鏄�鍘樼背鍒讹紙SKM_Robot_v3.blend锛夛紝
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   288|     """寤� v3 鍚屽悕妲界殑鏉愯川锛圡I_Robot_*锛夛紝鏃х殑鍚屽悕鏉愯川鏀瑰悕璁╁紑銆傜礌鏉愪欢鐨� MI_Kit_* 娌跨敤鏂囦欢閲岀殑銆�"""
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   308|         if m.name.startswith('MI_Kit_Hydraulics'):
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   310|             M['Kit_Hydraulics'] = m
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   311|         elif m.name.startswith('MI_Kit_Pipes'):
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   313|             M['Kit_Pipes'] = m
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   478|         f = bpy.data.fonts.load(path)
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   557| def init_rig():
+[2026.11.02-19.22.54:499][  0]LogPython: Warning: [src]   650| def chassis(v3, drop=None, name='鏍囧噯搴曠洏', spring_slot='Frame'):
+[2026.11.02-19.22.54:499][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.22.54:499][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src] #### lookdev/factions/baita/baita_build.py 213 琛�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     1| # 鐧藉�旂�戞妧澶栧３鏂规�堬細寤烘ā + 鍑哄浘銆�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     2| # blender -b D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend -P D:/RobotSlice/lookdev/factions/baita/baita_build.py -- \
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     3| #     --scheme A|B|C|v3 [--views front,side,back,34,dyn,cmp,sil] [--engine auto|cpu|gpu|workbench] [--samples 48]
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     4| #     [--out D:/.../renders] [--save]
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     5| # 瑙嗚�掞細front/side/back 姝ｄ氦绔欏Э銆�34 閫忚�嗘枩渚х珯濮裤�乨yn 鍔ㄦ�侊紙娓告垙鍔ㄤ綔 Aim_CC 绔�鍏呰兘姝ユ灙锛岀孩闃熺伅鑹茬ず鎰忥級銆�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     6| #       cmp 鍜� v3 鏍囧噯搴曠洏骞舵帓锛堟�ｄ氦姝ｉ潰锛夈�乻il 绾�榛戝壀褰憋紙姝ｉ潰 / 渚ч潰 / 鏂滀晶锛岀粰鍓�褰卞�规瘮鍥剧敤锛夈��
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     7| # 娉ㄦ剰锛氭墦寮�鐨勬槸娓告垙楠ㄦ灦鏂囦欢锛岃剼鏈�浠庝笉淇濆瓨瀹冿紱--save 鍙﹀瓨鍒� factions/baita/blend/銆�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     8| import argparse
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]     9| import json
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    10| import math
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    11| import os
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    12| import sys
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    14| import bpy
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    15| from mathutils import Matrix, Vector
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    17| sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    18| import baita_common as C  # noqa: E402
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    19| import importlib  # noqa: E402
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    20| import baita_schemes as SCH  # noqa: E402
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    22| argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    23| ap = argparse.ArgumentParser()
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    24| ap.add_argument('--scheme', default='A')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    25| ap.add_argument('--views', default='front,side,back,34,dyn,cmp,sil')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    26| ap.add_argument('--engine', default='auto')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    27| ap.add_argument('--samples', type=int, default=48)
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    28| ap.add_argument('--out', default=os.path.join(C.HERE, 'renders'))
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    29| ap.add_argument('--suffix', default='')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    30| ap.add_argument('--save', action='store_true')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    31| ap.add_argument('--res', default='800x1000')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    32| ap.add_argument('--dynpose', default='Rifle/Aim_CC.fbx:12')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    33| A = ap.parse_args(argv)
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    34| os.makedirs(A.out, exist_ok=True)
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    35| views = A.views.split(',')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    36| engine = A.engine
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    37| if engine == 'auto':
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    38|     engine = 'cpu' if C.user_busy() else 'gpu'
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    39| print('[baita] 鏂规��', A.scheme, '寮曟搸', engine)
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    41| C.setup_scene()
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    42| C.make_materials('cyan')
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    43| if A.scheme != 'v3':
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    44|     MOD = importlib.import_module('scheme_' + A.scheme.lower())
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    45|     MOD.build()
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    46| else:
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    47|     MOD = None
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    48| objs = C.scheme_objects() if A.scheme != 'v3' else [C.V3MESH]
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    49| print('[baita] 闆朵欢', len(C.PARTS), '缃戞牸', len(objs))
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    51| # 鍠峰彛浣嶇疆锛堣繘娓告垙瑕佹敼鍠风劙鎸傜偣锛夛細缁戝畾濮垮娍銆侀�ㄦ灦鏈�缂╂斁锛堝帢绫筹級锛屽彇鍠囧彮鍙ｅ�栨部涓�蹇冣�斺�斿拰 README銆屾帹杩涘櫒鍠风劙銆嶉噷 v3 鐨� NozzleMouthMesh 鍚屼竴涓�閲忔硶銆�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    52| # Blender (x, y, z) 杩� UE 鏄� (x, -y, z)銆�
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    53| NOZ = []
+[2026.11.02-19.22.54:499][  0]LogInit: Display: LogPython: Warning: [src]    54| if A.scheme != 'v3':
