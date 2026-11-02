@@ -6,11 +6,13 @@ import unreal
 
 ROOT = 'D:/RobotSlice'
 TARGETS = [
-    ('lookdev/factions/baita/baita_build.py', r'.'),
-    ('lookdev/factions/baita/baita_common.py', r'RL\b|RL\[|robot_lookdev|exec\(|def load|^import|^from|SCHEME|scheme'),
-    ('lookdev/robot_lookdev.py', r'add_argument|ARGS\.(blend|export|kit|rig)|def main|COIL\[|spring_len|MAT\[|M\[\'|mat_|def mat|materials.new|MI_Robot'),
-    ('lookdev/factions/heitie/hx_common.py', r'def init_rig|def chassis|Kit_|kit|SKM_Robot_v3|V3_BLEND|load\('),
+    ('lookdev/make_shoulder_game.py', r'kit|KIT|lib|机甲|零件|def |append|load\(|item|#\d|export|fbx|SM_'),
+    ('lookdev/make_shoulder_tactical.py', r'kit|KIT|lib|机甲|零件|def |append|load\(|item|#\d|export|fbx|SM_'),
 ]
+import glob as _g
+for _d in ('Inbox/_肩部候选/游戏模型', 'Inbox/_肩部候选/游戏模型_战术'):
+    for _f in sorted(_g.glob(f'D:/RobotSlice/{_d}/*')):
+        unreal.log_warning(f'[src] 文件 {_d}/{os.path.basename(_f)} {os.path.getsize(_f) // 1024} KB')
 log = lambda *a: unreal.log_warning('[src] ' + ' '.join(str(x) for x in a))
 for path, pat in TARGETS:
     p = f'{ROOT}/{path}'
@@ -21,6 +23,6 @@ for path, pat in TARGETS:
     log('####', path, len(lines), '行')
     n = 0
     for i, l in enumerate(lines):
-        if re.search(pat, l) and n < 300 or ('robot_lookdev' in path and 1385 <= i < 1434):
+        if re.search(pat, l) and n < 400:
             log(f'{i + 1:5d}| {l.rstrip()[:230]}')
             n += 1
