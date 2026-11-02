@@ -1,0 +1,150 @@
+exit=0
+[2026.11.02-11.29.09:512][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.29.10:165][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.29.10:209][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 42.697 ms
+[2026.11.02-11.29.10:209][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-11.29.10:211][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 2.493 ms (total: 45.190 ms)
+[2026.11.02-11.29.10:211][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_k62_catalog_dump.py
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_A 瀹� 102.9 娣� 50.3 楂� 100.8 {"name": "SM_SV_LG_A_Solid", "tris_solid": 219952, "tris_deco": 707108, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_B 瀹� 77.8 娣� 49.3 楂� 96.9 {"name": "SM_SV_LG_B_Solid", "tris_solid": 203100, "tris_deco": 765826, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_C 瀹� 55.6 娣� 54.2 楂� 102.8 {"name": "SM_SV_LG_C_Solid", "tris_solid": 385104, "tris_deco": 758312, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_D 瀹� 88.8 娣� 50.4 楂� 77.0 {"name": "SM_SV_LG_D_Solid", "tris_solid": 195992, "tris_deco": 930298, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_E 瀹� 135.1 娣� 155.0 楂� 94.8 {"name": "SM_SV_LG_E_Solid", "tris_solid": 346592, "tris_deco": 1213580, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_F 瀹� 71.4 娣� 45.0 楂� 118.4 {"name": "SM_SV_LG_F_Solid", "tris_solid": 302098, "tris_deco": 1018899, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_G 瀹� 24.6 娣� 41.8 楂� 82.0 {"name": "SM_SV_LG_G_Solid", "tris_solid": 81756, "tris_deco": 316236, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_H 瀹� 53.5 娣� 50.0 楂� 85.9 {"name": "SM_SV_LG_H_Solid", "tris_solid": 116487, "tris_deco": 360074, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_I 瀹� 95.5 娣� 42.9 楂� 71.3 {"name": "SM_SV_LG_I_Solid", "tris_solid": 239588, "tris_deco": 504002, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] LG_J 瀹� 75.6 娣� 84.9 楂� 48.1 {"name": "SM_SV_LG_J_Solid", "tris_solid": 65936, "tris_deco": 681708, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_A 瀹� 55.5 娣� 34.1 楂� 35.2 {"name": "SM_SV_MD_A_Solid", "tris_solid": 60262, "tris_deco": 505063, "floor_h": 3.6}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_B 瀹� 57.0 娣� 37.3 楂� 47.3 {"name": "SM_SV_MD_B_Solid", "tris_solid": 220996, "tris_deco": 355968, "floor_h": 3.0}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_C 瀹� 48.6 娣� 29.2 楂� 50.5 {"name": "SM_SV_MD_C_Solid", "tris_solid": 48042, "tris_deco": 373039, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_D 瀹� 40.6 娣� 30.8 楂� 23.6 {"name": "SM_SV_MD_D_Solid", "tris_solid": 54434, "tris_deco": 324506, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_E 瀹� 45.8 娣� 27.7 楂� 32.1 {"name": "SM_SV_MD_E_Solid", "tris_solid": 36152, "tris_deco": 340595, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_F 瀹� 40.1 娣� 17.0 楂� 25.7 {"name": "SM_SV_MD_F_Solid", "tris_solid": 26888, "tris_deco": 241325, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_G 瀹� 36.8 娣� 64.8 楂� 24.9 {"name": "SM_SV_MD_G_Solid", "tris_solid": 47684, "tris_deco": 316564, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_H 瀹� 45.7 娣� 34.3 楂� 31.9 {"name": "SM_SV_MD_H_Solid", "tris_solid": 51746, "tris_deco": 366957, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_I 瀹� 39.5 娣� 24.3 楂� 22.9 {"name": "SM_SV_MD_I_Solid", "tris_solid": 16468, "tris_deco": 230585, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] MD_J 瀹� 36.0 娣� 40.1 楂� 31.1 {"name": "SM_SV_MD_J_Solid", "tris_solid": 27454, "tris_deco": 293875, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_A 瀹� 38.6 娣� 30.0 楂� 14.6 {"name": "SM_SV_SM_A_Solid", "tris_solid": 20872, "tris_deco": 172913, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_B 瀹� 23.3 娣� 50.8 楂� 16.1 {"name": "SM_SV_SM_B_Solid", "tris_solid": 34530, "tris_deco": 124946, "floor_h": 2.9}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_C 瀹� 23.8 娣� 15.1 楂� 13.2 {"name": "SM_SV_SM_C_Solid", "tris_solid": 17412, "tris_deco": 116494, "floor_h": 3.6}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_D 瀹� 34.9 娣� 16.5 楂� 18.0 {"name": "SM_SV_SM_D_Solid", "tris_solid": 29194, "tris_deco": 152768, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_E 瀹� 31.7 娣� 31.7 楂� 14.5 {"name": "SM_SV_SM_E_Solid", "tris_solid": 8194, "tris_deco": 150114, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_F 瀹� 25.3 娣� 25.5 楂� 14.2 {"name": "SM_SV_SM_F_Solid", "tris_solid": 7058, "tris_deco": 120239, "floor_h": 3.5}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_G 瀹� 30.6 娣� 30.0 楂� 13.8 {"name": "SM_SV_SM_G_Solid", "tris_solid": 23520, "tris_deco": 137936, "floor_h": 3.9000000000000004}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_H 瀹� 29.5 娣� 24.2 楂� 16.7 {"name": "SM_SV_SM_H_Solid", "tris_solid": 20664, "tris_deco": 137225, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_I 瀹� 26.9 娣� 30.8 楂� 13.0 {"name": "SM_SV_SM_I_Solid", "tris_solid": 34504, "tris_deco": 180128, "floor_h": 3.4}
+[2026.11.02-11.29.10:358][  0]LogPython: Warning: [k62cat] SM_J 瀹� 27.3 娣� 20.3 楂� 13.5 {"name": "SM_SV_SM_J_Solid", "tris_solid": 18666, "tris_deco": 131274, "floor_h": 2.6}
+[2026.11.02-11.29.10:366][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/gallery.jpg 304912
+[2026.11.02-11.29.10:366][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_sheet.jpg 84625
+[2026.11.02-11.29.10:366][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_LG.jpg 360571
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_MD.jpg 347749
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_SM.jpg 315039
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v1.jpg 298794
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v2.jpg 418050
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v3.jpg 563273
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v4.jpg 522910
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v5.jpg 611610
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v5b.jpg 242832
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v6.jpg 619703
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v7.jpg 613611
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v7b.jpg 458608
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v8.jpg 616814
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/cloudy06.png 2328155
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/crop1.png 377365
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/crop2.png 813179
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_klopp.png 474977
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_misty.png 349539
+[2026.11.02-11.29.10:367][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_oldstreet.png 872615
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/heights_sheet.png 47620
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/T_SV_GroundMask.png 1365608
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/甯冨眬.png 241080
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鎬昏��.jpg 1190460
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/40绫充刊鐪嬩腑闄�.png 4080853
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/47绫虫ゼ椤跺線涓滃崡.png 3958889
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/50绫虫ゼ椤跺線瑗�.png 4100517
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/涓滄í琛楀崡澶�.png 3744863
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/涓滄í琛楃��涓変汉绉�.png 3906180
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/涓�闄㈠叆鍙�.png 3719083
+[2026.11.02-11.29.10:369][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/涓�闄㈣溅搴�.png 3346781
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/浣庣┖娌块暱琛�.png 3720738
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/淇�瑙嗗竷灞�.png 241080
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鍏�浜ょ珯.png 3822854
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鍖楀悗宸�.png 3599160
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鍖楅暱琛椾腑娈�.png 3924013
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鍖楅暱琛楃��涓変汉绉�.png 4004376
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鍖楅暱琛楄タ澶磋创鍦�.png 3865622
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鏈轰綋姣斾緥.png 3826122
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/姝ｄ笂鏂�.png 4004493
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/绉嬪崈婊戞��.png 3851385
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/钃濋槦鍑虹敓骞垮満.png 3544370
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/瑗垮崡楂樺�勪刊鐬�.png 4033165
+[2026.11.02-11.29.10:370][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/瑗垮ぇ闄㈡ゼ椤�.png 3949020
+[2026.11.02-11.29.10:371][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/璺�鐏�.png 3764305
+[2026.11.02-11.29.10:371][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/璺�杈圭殑杞�.png 4059270
+[2026.11.02-11.29.10:371][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/杞﹀簱鍜岀伀绠�婊戞��.png 3783941
+[2026.11.02-11.29.10:371][  0]LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/闄愰珮澶勪刊鐬�.png 4006482
+[2026.11.02-11.29.10:377][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/hdr_sheet.jpg
+[2026.11.02-11.29.10:384][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/sheet_LG.jpg
+[2026.11.02-11.29.10:390][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/sheet_MD.jpg
+[2026.11.02-11.29.10:395][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/sheet_SM.jpg
+[2026.11.02-11.29.10:400][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/heights_sheet.png
+[2026.11.02-11.29.10:405][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/Inbox/_k62/甯冨眬.png
+[2026.11.02-11.29.10:412][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/鎬昏��.jpg
+[2026.11.02-11.29.10:420][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/47绫虫ゼ椤跺線涓滃崡.png
+[2026.11.02-11.29.10:428][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/50绫虫ゼ椤跺線瑗�.png
+[2026.11.02-11.29.10:433][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/淇�瑙嗗竷灞�.png
+[2026.11.02-11.29.10:440][  0]LogPython: Warning: [k62cat] 澶嶅埗 D:/RobotSlice/docs/鑻忚仈鏉挎ゼ_20261102/瑗垮ぇ闄㈡ゼ椤�.png
+[2026.11.02-11.29.10:440][  0]LogPython: Warning: [k62cat] 瀹屾垚锛屽叡 49 寮犲�欓�夛紝澶嶅埗 11
+[2026.11.02-11.29.10:440][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-11.29.10:440][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_A 瀹� 102.9 娣� 50.3 楂� 100.8 {"name": "SM_SV_LG_A_Solid", "tris_solid": 219952, "tris_deco": 707108, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_B 瀹� 77.8 娣� 49.3 楂� 96.9 {"name": "SM_SV_LG_B_Solid", "tris_solid": 203100, "tris_deco": 765826, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_C 瀹� 55.6 娣� 54.2 楂� 102.8 {"name": "SM_SV_LG_C_Solid", "tris_solid": 385104, "tris_deco": 758312, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_D 瀹� 88.8 娣� 50.4 楂� 77.0 {"name": "SM_SV_LG_D_Solid", "tris_solid": 195992, "tris_deco": 930298, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_E 瀹� 135.1 娣� 155.0 楂� 94.8 {"name": "SM_SV_LG_E_Solid", "tris_solid": 346592, "tris_deco": 1213580, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_F 瀹� 71.4 娣� 45.0 楂� 118.4 {"name": "SM_SV_LG_F_Solid", "tris_solid": 302098, "tris_deco": 1018899, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_G 瀹� 24.6 娣� 41.8 楂� 82.0 {"name": "SM_SV_LG_G_Solid", "tris_solid": 81756, "tris_deco": 316236, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_H 瀹� 53.5 娣� 50.0 楂� 85.9 {"name": "SM_SV_LG_H_Solid", "tris_solid": 116487, "tris_deco": 360074, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_I 瀹� 95.5 娣� 42.9 楂� 71.3 {"name": "SM_SV_LG_I_Solid", "tris_solid": 239588, "tris_deco": 504002, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] LG_J 瀹� 75.6 娣� 84.9 楂� 48.1 {"name": "SM_SV_LG_J_Solid", "tris_solid": 65936, "tris_deco": 681708, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_A 瀹� 55.5 娣� 34.1 楂� 35.2 {"name": "SM_SV_MD_A_Solid", "tris_solid": 60262, "tris_deco": 505063, "floor_h": 3.6}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_B 瀹� 57.0 娣� 37.3 楂� 47.3 {"name": "SM_SV_MD_B_Solid", "tris_solid": 220996, "tris_deco": 355968, "floor_h": 3.0}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_C 瀹� 48.6 娣� 29.2 楂� 50.5 {"name": "SM_SV_MD_C_Solid", "tris_solid": 48042, "tris_deco": 373039, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_D 瀹� 40.6 娣� 30.8 楂� 23.6 {"name": "SM_SV_MD_D_Solid", "tris_solid": 54434, "tris_deco": 324506, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_E 瀹� 45.8 娣� 27.7 楂� 32.1 {"name": "SM_SV_MD_E_Solid", "tris_solid": 36152, "tris_deco": 340595, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_F 瀹� 40.1 娣� 17.0 楂� 25.7 {"name": "SM_SV_MD_F_Solid", "tris_solid": 26888, "tris_deco": 241325, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_G 瀹� 36.8 娣� 64.8 楂� 24.9 {"name": "SM_SV_MD_G_Solid", "tris_solid": 47684, "tris_deco": 316564, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_H 瀹� 45.7 娣� 34.3 楂� 31.9 {"name": "SM_SV_MD_H_Solid", "tris_solid": 51746, "tris_deco": 366957, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_I 瀹� 39.5 娣� 24.3 楂� 22.9 {"name": "SM_SV_MD_I_Solid", "tris_solid": 16468, "tris_deco": 230585, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] MD_J 瀹� 36.0 娣� 40.1 楂� 31.1 {"name": "SM_SV_MD_J_Solid", "tris_solid": 27454, "tris_deco": 293875, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_A 瀹� 38.6 娣� 30.0 楂� 14.6 {"name": "SM_SV_SM_A_Solid", "tris_solid": 20872, "tris_deco": 172913, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_B 瀹� 23.3 娣� 50.8 楂� 16.1 {"name": "SM_SV_SM_B_Solid", "tris_solid": 34530, "tris_deco": 124946, "floor_h": 2.9}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_C 瀹� 23.8 娣� 15.1 楂� 13.2 {"name": "SM_SV_SM_C_Solid", "tris_solid": 17412, "tris_deco": 116494, "floor_h": 3.6}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_D 瀹� 34.9 娣� 16.5 楂� 18.0 {"name": "SM_SV_SM_D_Solid", "tris_solid": 29194, "tris_deco": 152768, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_E 瀹� 31.7 娣� 31.7 楂� 14.5 {"name": "SM_SV_SM_E_Solid", "tris_solid": 8194, "tris_deco": 150114, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_F 瀹� 25.3 娣� 25.5 楂� 14.2 {"name": "SM_SV_SM_F_Solid", "tris_solid": 7058, "tris_deco": 120239, "floor_h": 3.5}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_G 瀹� 30.6 娣� 30.0 楂� 13.8 {"name": "SM_SV_SM_G_Solid", "tris_solid": 23520, "tris_deco": 137936, "floor_h": 3.9000000000000004}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_H 瀹� 29.5 娣� 24.2 楂� 16.7 {"name": "SM_SV_SM_H_Solid", "tris_solid": 20664, "tris_deco": 137225, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_I 瀹� 26.9 娣� 30.8 楂� 13.0 {"name": "SM_SV_SM_I_Solid", "tris_solid": 34504, "tris_deco": 180128, "floor_h": 3.4}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] SM_J 瀹� 27.3 娣� 20.3 楂� 13.5 {"name": "SM_SV_SM_J_Solid", "tris_solid": 18666, "tris_deco": 131274, "floor_h": 2.6}
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/gallery.jpg 304912
+[2026.11.02-11.29.10:440][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_sheet.jpg 84625
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_LG.jpg 360571
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_MD.jpg 347749
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/sheet_SM.jpg 315039
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v1.jpg 298794
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v2.jpg 418050
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v3.jpg 563273
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v4.jpg 522910
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v5.jpg 611610
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v5b.jpg 242832
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v6.jpg 619703
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v7.jpg 613611
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v7b.jpg 458608
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/v8.jpg 616814
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/cloudy06.png 2328155
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/crop1.png 377365
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/crop2.png 813179
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_klopp.png 474977
+[2026.11.02-11.29.10:441][  0]LogInit: Display: LogPython: Warning: [k62cat] 鍥� D:/RobotSlice/Inbox/_k62/hdr_misty.png 349539
