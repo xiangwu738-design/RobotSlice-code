@@ -1,0 +1,1 @@
+﻿占位目录：只为通过 UE 启动器版引擎编译规则里的 NetFxSDK 检查（引擎模块已预编译，不会用到这里的文件）。注册表：HKCU\SOFTWARE\Microsoft\Microsoft SDKs\NETFXSDK\4.6.2 的 KitsInstallationFolder 指向这里。删掉该注册表项即可撤销。若改用源码版引擎，需要安装真正的 .NET Framework 4.8 Developer Pack。

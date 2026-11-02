@@ -1,0 +1,32 @@
+﻿Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" RobotSliceEditor Win64 Development -Project=D:\RobotSlice\RobotSlice.uproject -WaitMutex -NoHotReloadFromIDE
+Log file: C:\Users\ASUS\AppData\Local\UnrealBuildTool\Log.txt
+Determining max actions to execute in parallel (16 physical cores, 32 logical cores)
+  Executing up to 16 processes, one per physical core
+Using 'git status' to determine working set for adaptive non-unity build (D:\RobotSlice).
+UbaServer - Listening on 0.0.0.0:1345
+Building RobotSliceEditor...
+===== Toolchain Information =====
+Using ISPC compiler (D:\EPIC\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2) 
+Using Visual Studio 14.44.35227 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[Adaptive Build] Excluded from AdvancedLightingRuntime unity file: AdvancedLightingRuntimeModule.cpp, AdvancedLightingSettings.cpp, ExposureController.cpp, LightingBlueprintLibrary.cpp, LightingCelestial.cpp, LightingDirector.cpp, LightingEnvironmentRig.cpp, LightingPreset.cpp, LightingProfiles.cpp, LightingQualityManager.cpp, LightingRegionSettings.cpp, LightingSequenceController.cpp, LightingTestConsole.cpp, LightingTuningSettings.cpp, LightingTypes.cpp, LightingUpdateComponent.cpp, LightingVolume.cpp, LightingWeatherPresentation.cpp, LightingWorldSubsystem.cpp, LightingZoneComponent.cpp, TimeOfDayController.cpp, WeatherController.cpp, LightingCoreTests.cpp, LightingFullTests.cpp, LightingNatureTests.cpp, LightingTuningTests.cpp, LightingWeatherTests.cpp
+[Adaptive Build] Excluded from AdvancedLightingEditor unity file: AdvancedLightingEditorModule.cpp, LightingEditorLibrary.cpp, LightingPresetFactories.cpp, LightingValidationCommandlet.cpp, SLightingControlPanel.cpp, LightingEditorTests.cpp
+[Adaptive Build] Excluded from RobotSlice unity file: MechAIController.cpp, MechCharacter.cpp, MechCombatComponent.cpp, MechGameMode.cpp, MechGameState.cpp, MechHealthComponent.cpp, MechHUD.cpp, MechMeshComponent.cpp, MechMissile.cpp, MechMovementComponent.cpp, RobotSlice.cpp, RobotSliceCharacter.cpp, RobotSliceGameMode.cpp, RobotSlicePlayerController.cpp, CombatCharacter.cpp, CombatGameMode.cpp, CombatPlayerController.cpp, CombatAIController.cpp, CombatEnemy.cpp, CombatEnemySpawner.cpp, CombatStateTreeUtility.cpp, EnvQueryContext_Danger.cpp, EnvQueryContext_Player.cpp, AnimNotify_CheckChargedAttack.cpp, AnimNotify_CheckCombo.cpp, AnimNotify_DoAttackTrace.cpp, CombatActivationVolume.cpp, CombatCheckpointVolume.cpp, CombatDamageableBox.cpp, CombatDummy.cpp, CombatLavaFloor.cpp, CombatActivatable.cpp, CombatAttacker.cpp, CombatDamageable.cpp, CombatLifeBar.cpp, PlatformingCharacter.cpp, PlatformingGameMode.cpp, PlatformingPlayerController.cpp, AnimNotify_EndDash.cpp, SideScrollingCameraManager.cpp, SideScrollingCharacter.cpp, SideScrollingGameMode.cpp, SideScrollingPlayerController.cpp, SideScrollingAIController.cpp, SideScrollingNPC.cpp, SideScrollingStateTreeUtility.cpp, SideScrollingJumpPad.cpp, SideScrollingMovingPlatform.cpp, SideScrollingPickup.cpp, SideScrollingSoftPlatform.cpp, SideScrollingInteractable.cpp, SideScrollingUI.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 4 action(s)
+  CPU 16 physical cores, 32 logical cores
+  Memory 31.18 GB physical, 57.42 GB/69.71 GB committed
+  UBA Storage capacity 40 GB
+[1/4] Compile [x64] MechGameMode.cpp
+[2/4] Link [x64] UnrealEditor-RobotSlice.lib
+  正在创建库 D:/RobotSlice/Intermediate/Build/Win64/x64/UnrealEditor/Development/RobotSlice/UnrealEditor-RobotSlice.lib 和对象 D:/RobotSlice/Intermediate/Build/Win64/x64/UnrealEditor/Development/RobotSlice/UnrealEditor-RobotSlice.exp
+[3/4] Link [x64] UnrealEditor-RobotSlice.dll
+[4/4] WriteMetadata RobotSliceEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 8.20 seconds
+Output binary: D:\EPIC\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 9.55 seconds
+Trace written to file C:\Users\ASUS\AppData\Local\UnrealBuildTool\Trace.uba with size 6.1kb

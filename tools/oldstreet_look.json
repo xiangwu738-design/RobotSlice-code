@@ -1,0 +1,93 @@
+{
+  "_说明": "老旧街道 A 老胶片午后的光照和后期。ue_build_oldstreet.py 读它写进地图；ue_oldstreet_look.py 只改这部分不重搭。太阳方位 = 真实方位 + north_yaw（16.3 点太阳方位约 260°、高约 22°）：-100 → 世界朝向 160°，从 -X、略偏 +Y 照过来，顺街的低角度暖光。 天气用插件的 Haze（FogColor 0.68/0.65/0.57，暖）：-MechWeather=Haze。",
+  "tuning": {
+    "override_astronomy": true,
+    "north_yaw": -100.0,
+    "sun_multiplier": 1.6,
+    "sky_multiplier": 1.5,
+    "override_clouds": true,
+    "cloud_coverage": 0.2,
+    "cloud_density": 0.0,
+    "cloud_bottom_km": 3.0,
+    "cloud_depth_km": 1.5,
+    "cloud_shape_scale": 1.4,
+    "cloud_shadow_strength": 0.0,
+    "override_weather": true,
+    "fog_density": 0.03,
+    "fog_height_falloff": 0.02,
+    "rain_intensity": 0.0,
+    "wetness": 0.0,
+    "wind_strength": 0.0,
+    "wind_direction": 45.0,
+    "lightning_rate": 0.0,
+    "dust_multiplier": 1.0
+  },
+  "post": {
+    "white_temp": 8200.0,
+    "white_tint": 0.03,
+    "color_saturation": [
+      1.0,
+      0.97,
+      0.9,
+      0.76
+    ],
+    "color_contrast": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "color_gamma": [
+      1.0,
+      1.0,
+      1.0,
+      1.02
+    ],
+    "color_gain_highlights": [
+      1.06,
+      1.0,
+      0.88,
+      1.0
+    ],
+    "color_gain_shadows": [
+      1.04,
+      1.0,
+      0.92,
+      1.0
+    ],
+    "color_offset_shadows": [
+      0.034,
+      0.028,
+      0.018,
+      0.0
+    ],
+    "color_offset": [
+      0.006,
+      0.005,
+      0.003,
+      0.0
+    ],
+    "film_toe": 0.6,
+    "film_black_clip": 0.0,
+    "bloom_intensity": 0.55,
+    "auto_exposure_bias": 0.8,
+    "vignette_intensity": 0.42,
+    "film_grain_intensity": 0.12,
+    "scene_fringe_intensity": 0.12,
+    "local_exposure_shadow_contrast_scale": 0.7,
+    "local_exposure_highlight_contrast_scale": 0.75,
+    "motion_blur_amount": 0.0
+  },
+  "atmosphere": {
+    "rayleigh_scattering": [
+      0.3,
+      0.4,
+      0.62,
+      1.0
+    ],
+    "rayleigh_scattering_scale": 0.026,
+    "mie_scattering_scale": 0.012,
+    "mie_anisotropy": 0.75,
+    "multi_scattering_factor": 1.0
+  }
+}

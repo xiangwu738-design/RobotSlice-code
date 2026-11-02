@@ -1,0 +1,51 @@
+{
+ "actors": 82,
+ "game_mode_override": "/Game/Campus/Player/BP_CampusGameMode.BP_CampusGameMode_C",
+ "classes": [
+  {
+   "class": "/Script/Engine.StaticMeshActor",
+   "count": 38,
+   "sample": "V29_A1"
+  },
+  {
+   "class": "/Script/Engine.PointLight",
+   "count": 33,
+   "sample": "ALS_Lamp_校园路灯杆"
+  },
+  {
+   "class": "/Script/Engine.CameraActor",
+   "count": 5,
+   "sample": "01_CampusOverview"
+  },
+  {
+   "class": "/Script/Engine.PlayerStart",
+   "count": 1,
+   "sample": "PlayerStart_CampusEntrance"
+  },
+  {
+   "class": "/Script/AdvancedLightingRuntime.LightingEnvironmentRig",
+   "count": 1,
+   "sample": "LightingEnvironment_V21"
+  },
+  {
+   "class": "/Script/CinematicCamera.CineCameraActor",
+   "count": 1,
+   "sample": "ALS_CinematicCamera"
+  },
+  {
+   "class": "/Script/CampusShuttle.CampusShuttleCourse",
+   "count": 1,
+   "sample": "V29_FPV_FreeExploration"
+  },
+  {
+   "class": "/Script/CampusShuttle.CampusGlass",
+   "count": 1,
+   "sample": "V29_BreakableGlass"
+  },
+  {
+   "class": "/Script/AdvancedLightingRuntime.LightingDirector",
+   "count": 1,
+   "sample": "LightingDirector_V29"
+  }
+ ]
+}
