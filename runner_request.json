@@ -1,3 +1,4 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "dump_src", "script": "tools/ue_dump_src.py", "seconds": 120}
+  {"kind": "gamepy", "name": "kf_shoulder", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_shoulder.py", "seconds": 900},
+  {"kind": "gamepy", "name": "kf_shoulder_old", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_shoulder_old.py", "seconds": 120}
 ]}
