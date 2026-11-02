@@ -2,6 +2,7 @@
 #include "GameFramework/InputSettings.h"
 #include "MechMapRules.h"
 #include "MechLoop.h"
+#include "MechSpringArm.h"
 #include "MechRun.h"
 #include "MechSettings.h"
 #include "MechComms.h"
@@ -154,7 +155,8 @@ namespace
 
 AMechCharacter::AMechCharacter(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer.SetDefaultSubobjectClass<UMechMeshComponent>(ACharacter::MeshComponentName)
-		.SetDefaultSubobjectClass<UMechMovementComponent>(ACharacter::CharacterMovementComponentName))
+		.SetDefaultSubobjectClass<UMechMovementComponent>(ACharacter::CharacterMovementComponentName)
+		.SetDefaultSubobjectClass<UMechSpringArm>(TEXT("CameraBoom")))  // 11-02 老街循环：瞬移时镜头延迟跟着挪（MechSpringArm.h）
 {
 	PrimaryActorTick.bCanEverTick = true;
 

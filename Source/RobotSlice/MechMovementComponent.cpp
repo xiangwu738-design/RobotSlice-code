@@ -1,6 +1,7 @@
 #include "MechMovementComponent.h"
 #include "MechMapRules.h"
 #include "MechLoop.h"
+#include "MechSpringArm.h"
 
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/Character.h"
@@ -1035,7 +1036,16 @@ void UMechMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 	if (bLoop && UpdatedComponent && FMath::Abs(UpdatedComponent->GetComponentLocation().X - LoopX0) > MechLoop::Period(GetWorld()) * 0.5f)
 	{
-		if (LoopBoom->bEnableCameraLag)
+		// 镜头延迟的记录跟着挪同样的量（整周期），镜头照常带着延迟跟随，不会一下子贴到机体上「顿」一下。
+		// 镜头臂不是 UMechSpringArm（不该发生）时退回旧做法：这一帧关掉延迟
+		const float Moved = float(UpdatedComponent->GetComponentLocation().X) - LoopX0;
+		const float P = MechLoop::Period(GetWorld());
+		const float Shift = P * FMath::RoundToFloat(Moved / P);
+		if (UMechSpringArm* Arm = Cast<UMechSpringArm>(LoopBoom))
+		{
+			Arm->ShiftLag(FVector(Shift, 0.f, 0.f));
+		}
+		else if (LoopBoom->bEnableCameraLag)
 		{
 			LoopBoom->bEnableCameraLag = false;
 			bLoopLagRestore = true;
