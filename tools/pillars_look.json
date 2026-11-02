@@ -1,17 +1,49 @@
 {
   "_说明": "石柱山水的整体色调（11-02 云端调色第一轮）。ue_pillars_look.py 只改这里的后期和水面颜色，不重搭地图。原值：后期 color_saturation 总 1.08、contrast 1.06、gain_shadows (0.96,1,1.03)；水面 Deep (0.004,0.024,0.05) Mid (0.006,0.058,0.07) Shallow (0.018,0.125,0.1)。第一轮基准图：整片水面饱和的绿松石色，盖过石柱，像游戏素材。往原作国风山水的青绿、偏灰、深一点靠。",
   "post": {
-    "color_saturation": [1.0, 0.94, 0.9, 0.94],
-    "color_contrast": [1.0, 1.0, 1.0, 1.06],
-    "color_gain_shadows": [0.97, 1.0, 1.02, 1.0],
-    "color_gain_highlights": [1.03, 1.0, 0.96, 1.0],
+    "color_saturation": [
+      1.0,
+      0.92,
+      0.88,
+      0.92
+    ],
+    "color_contrast": [
+      1.0,
+      1.0,
+      1.0,
+      1.06
+    ],
+    "color_gain_shadows": [
+      0.97,
+      1.0,
+      1.02,
+      1.0
+    ],
+    "color_gain_highlights": [
+      1.03,
+      1.0,
+      0.96,
+      1.0
+    ],
     "white_temp": 6900.0,
     "vignette_intensity": 0.2,
     "bloom_intensity": 0.25
   },
   "water": {
-    "Deep": [0.005, 0.019, 0.036],
-    "Mid": [0.008, 0.038, 0.048],
-    "Shallow": [0.03, 0.085, 0.072]
+    "Deep": [
+      0.006,
+      0.017,
+      0.03
+    ],
+    "Mid": [
+      0.01,
+      0.032,
+      0.04
+    ],
+    "Shallow": [
+      0.034,
+      0.075,
+      0.064
+    ]
   }
 }
