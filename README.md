@@ -308,6 +308,7 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - 打包版的设置存在 `%LOCALAPPDATA%\RobotSlice\Saved`；第一次启动默认 2880×1620 窗口（`Config/DefaultGameUserSettings.ini`）。游戏名 HX-07。
 - 打包要放在独立进程里跑（工具的后台命令 10 分钟会超时）；日志在 `%APPDATA%\Unreal Engine\AutomationTool\Logs`。打包脚本自己写「结束」标记时要写到另一个文件：烘焙留下的着色器编译进程会继承并占着重定向的日志文件，往同一个日志追加会失败（11-01 踩过）。
 - **打包版才露馅的「缺材质用途标记」**：编辑器里缺标记会现场补上，打包版里直接换成默认灰格子，日志里是 `missing usage flag ... Default Material will be used in game`。每次打包后在包里 `Saved\Logs` 搜这句。（11-01 打包日志里 `MI_Drone_*_Paint missing usage flag Nanite` 是假警报：照片棚的 `Item` 组件换模型时，上一架无人机的涂装动态材质还挂着，在 Nanite 枪上过了一遍材质检查，紧接着就清掉了；`ArrangeWeapon` / `ArrangeDrone` 改成先清再换。）11-01 用 `tools/ue_fix_material_usage.py` 补了 `M_WeaponPBR`（飞刀的实例化网格）和 `M_KitHolo`（园区全息牌的 Nanite）；街道盖布汽车的母材质是 Interchange 插件的 `M_Default`，插件资源不改，仍是灰的。
+- **云端打包（11-02）**：`打包.bat` 不在仓库里，云端用 `tools/ue_package_launch.py`（测试流程 kind=py）照抄它生成 `Saved/CloudPackage/打包_云端_<时间>.bat`：`-map=` 换成 `DefaultGame.ini` 的全部 `MapsToCook`（含石林、苏联、月球、老街），去掉 pause，在脱离测试流程的独立进程里跑；日志 `package_<时间>.log`，退出码写 `done_<时间>.txt`。进度 / 结果用 `tools/ue_package_status.py`（`[packstat]`：退出码、错误、缺材质用途标记、包的位置）。打包期间别推要编译的提交。**本地的 `打包.bat` 也该把这四张图加进 `-map=`**。
 - 只改了代码 / 配置：`打包_只更新代码.bat`（跳过烘焙，约 3 分钟）。给朋友的 zip：`py -3 tools/make_friend_zip.py`（排除包里的 `Saved` 和测试日志，根目录放 `tools/给朋友的说明.txt`），产物 `D:\RobotSlice_Build\HX-07_测试版_日期.zip`，约 1.3 GB。
 - 打包版用 `-RenderOffscreen -unattended -ForceRes -ResX=2880 -ResY=1620 -MechInputTest -MechPerf` 测，**每次先删掉包里的 `RobotSlice\Saved\Config\Windows\GameUserSettings.ini`**：残留设置（比如以前存下的窗口大小）会让测出来的分辨率不对（踩过：以为 50% 精度 85 帧，其实是 2160×1215 下测的）。
 - **帧率（2880×1620 窗口，RTX 5070 笔记本，打包版）**：默认「高」+ 3D 渲染精度自动（约 810p，`AMechPlayerController::UpdateRenderScale`）+ 关光追 ≈ 74 帧（最慢 1% 19 毫秒）；「史诗」约 58 帧（TSR 历史缓冲 200% 按输出分辨率算，很贵）；「中」约 87 帧但关掉 Lumen 全局光照。显卡开销大头在按输出分辨率算的部分（TSR、后期），渲染线程约 11–15 毫秒。坑：精度和光追都要**用控制台命令**设（`ConsoleCommand("r.ScreenPercentage 50")`、`r.RayTracing.Enable 0`）——直接 `IConsoleVariable::Set(…, ECVF_SetByCode)` 设精度、或在 DefaultEngine.ini 里写 `r.RayTracing.Enable=0`，值变了但实测不生效。`-MechRayTracing` 保留光追，`-MechKeepScreenPercentage` 不自动设精度。
@@ -1225,3 +1226,14 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - 狙击枪伤害 1100；烟雾弹 20 秒、烟里敌人每秒 20 点（`AMechSmoke::Tick`，服务器，算给放烟的人）；地雷有 10 秒冷却，同厂再 ×0.85；同厂加成数值见 `MechWeapons.h` 的 `Own*`。
 - **街道隐形墙**：`tools/ue_street_walls.py`，L_Street 地面平面四边往里 1 米处四面 BlockingVolume（只挡 Pawn），旧图备份在 `D:/归档/RobotSlice_街道空气墙_20261102/`。
 - 苏联板楼 / 月球基地进了 `MechMaps`（Elim | DM）、`MapsToCook`、`打包.bat`，缩略图 `tools/room_map_thumbs.py` + `ue_import_map_thumbs.py`。原来误命中老街的 `Contains("Street")` 已全部改成 `EndsWith("L_Street")`。老街（死斗）11-02 进表和 `MapsToCook`，缩略图任务里的源图路径是占位（源图不存在会跳过）。
+
+## 11-02 云端会话补充（循环老街之后的改动）
+
+- **老街**：隐形墙收到主街 ±7.6 米（`tools/ue_oldstreet_walls.py`、`oldstreet_layout.py` 的 `ARENA_HALF_Y`）；过接缝「顿一下」是弹簧臂镜头延迟在瞬移那帧被拉回 → `UMechSpringArm::ShiftLag`（`MechSpringArm.h`，构造里 `SetDefaultSubobjectClass` 换掉 CameraBoom），移动组件检测到循环瞬移时把延迟的历史位置一起平移；马路上随视角闪的黑影是树叶风动（WPO）让虚拟阴影页反复失效 → 风调小、2500 厘米外关 WPO（`tools/oldstreet_wind.json` + `ue_oldstreet_wind.py`，还闪就把 `shadow_static` 改 true 重跑）；调色第三轮 `tools/oldstreet_look.json`（去暖黄，白平衡 7200）。
+- **威胁框**：`MechHudAlerts.cpp` 只给「屏幕上、前方、最近的那个非导弹威胁」画菱形（`FrontNearest`），不再每个敌人都画。
+- **近战命中后转向**：`TurnToward` 加了加速度参数；出刀命中后用 2400°/秒、64000°/秒² 立刻转回镜头方向。
+- **灵敏度**：设置「操作」页多两行「瞄准灵敏度」（右键瞄准，默认 = 鼠标 × 0.6）「开镜灵敏度」（狙击镜，默认 = 鼠标 × 放大倍率换算），`FMechSettings::AimSensitivity / ScopeSensitivity`，旧存档按 `SensVersion 3` 迁移。
+- **调色**：石林用第一轮（`tools/pillars_look.json` + `ue_pillars_look.py`）；月球 `moon_look.json` + `ue_moon_look.py`（地面清晰度：先试「史诗」贴图质量，不够再换 4K 贴图）。
+- **苏联板楼**：只做合理性小改（`tools/soviet_plan.py` + `ue_soviet_replan.py`）：居民区去掉工业烟囱（MD_C → MD_E、删 LG_H），外圈楼的朝向对齐街道（0/90/180/270）。布局其余不变。
+- **彩蛋模型**：底子在 `tools/easter_src/`（狗：Blockbench 的 Spot Mini glTF；无人机：Sketchfab Low Poly Quadcopter，说明在 `说明.txt`；**狗底子的网址和许可还要用户补到 `Inbox/链接.txt`**）。云端经测试流程驱动本地 Blender：`tools/grade_easter_build.py`（kind=gamepy，按 `easter_run.json` 跑 Blender 步骤、收图）→ `ue_easter_import_all.py`（kind=py，导入）→ `grade_easter_ingame.py`（进苏联图用 `mech.Easter.*` 生成后拍四张）。狗按真 Spot 比例（身长 1.0 米、头小、带嘴），`blender_easter_dog.py` 的 `region_slots` 按骨头重分材质槽：头 → Accent、腿 → Frame、身体尾巴 → Shell；`AMechEasterBot::ApplyLivery` 每只三种颜色完全随机（主色 PaintA、副色 PaintB 也写进 FrameColor 让腿跟着变、点缀兼灯色），所以头、腿、身体各一种随机色。
+- **还没核对**：荒野压力板没找到废墟塔，退到离中心最近的楼顶；老街的门（X=27 米、Y=-8.3 米）在收窄后的隐形墙外，子弹打得到、人过不去。进游戏 `mech.Easter.Info` 看位置。
