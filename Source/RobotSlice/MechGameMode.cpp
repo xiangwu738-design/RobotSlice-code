@@ -1,4 +1,5 @@
 #include "MechGameMode.h"
+#include "UObject/UObjectGlobals.h"
 #include "MechLoop.h"
 #include "MechMapRules.h"
 
@@ -177,10 +178,23 @@ void AMechPlayerController::PerfTick(float DeltaTime)
 	PerfGT += FPlatformTime::ToMilliseconds(GGameThreadTime);
 	PerfRT += FPlatformTime::ToMilliseconds(GRenderThreadTime);
 	PerfGPU += FPlatformTime::ToMilliseconds(RHIGetGPUFrameCycles(0));
+	// 11-02 用户：「在石林地图，主机有的时候会很卡顿」→ 卡顿帧多记一点：这一帧各线程耗时、这期间有没有垃圾回收、场上 actor 数
+	static int32 GcCount = 0;
+	static bool bGcHooked = false;
+	if (!bGcHooked)
+	{
+		bGcHooked = true;
+		FCoreUObjectDelegates::GetPostGarbageCollect().AddLambda([]() { ++GcCount; });
+	}
+	static int32 GcSeen = 0;
+	const int32 GcNew = GcCount - GcSeen;
+	GcSeen = GcCount;
 	if (Ms > 50.f)
 	{
 		++PerfHitches;
-		UE_LOG(LogTemp, Display, TEXT("[perf] 卡顿一帧 %.0f 毫秒（第 %.1f 秒）"), Ms, PerfAge);
+		UE_LOG(LogTemp, Display, TEXT("[perf] 卡顿一帧 %.0f 毫秒（第 %.1f 秒）| 游戏线程 %.1f 渲染线程 %.1f GPU %.1f 毫秒 | 垃圾回收 %d 次 | actor %d"), Ms, PerfAge,
+			FPlatformTime::ToMilliseconds(GGameThreadTime), FPlatformTime::ToMilliseconds(GRenderThreadTime), FPlatformTime::ToMilliseconds(RHIGetGPUFrameCycles(0)), GcNew,
+			GetWorld()->GetActorCount());
 	}
 	PerfClock += DeltaTime;
 	if (PerfClock >= 2.f)
