@@ -1,0 +1,156 @@
+exit=0
+[2026.11.02-16.14.09:021][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-16.14.10:112][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-16.14.10:166][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 53.667 ms
+[2026.11.02-16.14.10:166][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-16.14.10:250][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 83.537 ms (total: 137.205 ms)
+[2026.11.02-16.14.10:250][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_asset_audit.py
+[2026.11.02-16.14.10:327][  0]LogPython: Warning: [audit] 鍥� L_Street锛�626 涓�鍖�
+[2026.11.02-16.14.10:329][  0]LogPython: Warning: [audit] 鍥� L_Nature锛�561 涓�鍖�
+[2026.11.02-16.14.10:331][  0]LogPython: Warning: [audit] 鍥� L_Range锛�278 涓�鍖�
+[2026.11.02-16.14.10:333][  0]LogPython: Warning: [audit] 鍥� L_TechPark锛�407 涓�鍖�
+[2026.11.02-16.14.10:333][  0]LogPython: Warning: [audit] 鍥� L_Dreamfield锛�81 涓�鍖�
+[2026.11.02-16.14.10:335][  0]LogPython: Warning: [audit] 鍥� L_Pillars锛�435 涓�鍖�
+[2026.11.02-16.14.10:338][  0]LogPython: Warning: [audit] 鍥� L_Soviet锛�548 涓�鍖�
+[2026.11.02-16.14.10:339][  0]LogPython: Warning: [audit] 鍥� L_Moon锛�221 涓�鍖�
+[2026.11.02-16.14.10:341][  0]LogPython: Warning: [audit] 鍥� L_OldStreet锛�350 涓�鍖�
+[2026.11.02-16.14.10:341][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Easter锛�12 涓�鍖�
+[2026.11.02-16.14.10:342][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Robot锛�230 涓�鍖�
+[2026.11.02-16.14.10:344][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Weapons锛�160 涓�鍖�
+[2026.11.02-16.14.10:344][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Audio锛�217 涓�鍖�
+[2026.11.02-16.14.10:344][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Input锛�11 涓�鍖�
+[2026.11.02-16.14.10:346][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_04/Particles锛�276 涓�鍖�
+[2026.11.02-16.14.10:347][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_03/Particles锛�225 涓�鍖�
+[2026.11.02-16.14.10:348][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail锛�60 涓�鍖�
+[2026.11.02-16.14.10:348][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion锛�150 涓�鍖�
+[2026.11.02-16.14.10:349][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_07_Fire_Explosion锛�183 涓�鍖�
+[2026.11.02-16.14.10:350][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_00/Particle锛�210 涓�鍖�
+[2026.11.02-16.14.10:351][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_05/Particles锛�210 涓�鍖�
+[2026.11.02-16.14.10:352][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_06/Particles锛�203 涓�鍖�
+[2026.11.02-16.14.10:353][  0]LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion锛�143 涓�鍖�
+[2026.11.02-16.14.10:353][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Env/Materials锛�62 涓�鍖�
+[2026.11.02-16.14.10:354][  0]LogPython: Warning: [audit] 鐩�褰� /Game/LevelPrototyping/Materials锛�14 涓�鍖�
+[2026.11.02-16.14.10:354][  0]LogPython: Warning: [audit] 鐩�褰� /Game/Results锛�3 涓�鍖�
+[2026.11.02-16.14.10:354][  0]LogPython: Warning: [audit] 鐩�褰� /Game/UI/Maps锛�10 涓�鍖�
+[2026.11.02-16.14.10:354][  0]LogPython: Warning: [audit] 鐩�褰� /Game/UI/WeaponIcons锛�24 涓�鍖�
+[2026.11.02-16.14.10:354][  0]LogPython: Warning: [audit] 鐩�褰� /Engine/MapTemplates/Sky锛�1 涓�鍖�
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit] 鍚堣�� 3756 涓�鍖咃紝65 涓�鏉ユ簮鏂囦欢澶癸紙鎸夊ぇ灏忥級锛�
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Soviet | 391 鍖� 916 MB | 鍥撅細L_Soviet | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Environments | 337 鍖� 805 MB | 鍥撅細L_Nature,L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/ANGRY_MESH | 140 鍖� 788 MB | 鍥撅細L_Soviet | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Ruins | 130 鍖� 661 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Moon | 209 鍖� 653 MB | 鍥撅細L_Moon | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/AAAVFX | 596 鍖� 525 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion,/G
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Audio | 217 鍖� 416 MB | 鍥撅細L_Nature | 鐩�褰曪細/Game/Audio
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Weapons | 146 鍖� 347 MB | 鍥撅細- | 鐩�褰曪細/Game/Easter,/Game/Robot,/Game/Weapons
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Pillars | 56 鍖� 217 MB | 鍥撅細L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/TechPark | 127 鍖� 194 MB | 鍥撅細L_TechPark | 鐩�褰曪細/Game/Env/Materials
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Robot | 195 鍖� 187 MB | 鍥撅細L_Street | 鐩�褰曪細/Game/Env/Materials,/Game/Robot,/Game/Weapons
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Street | 345 鍖� 186 MB | 鍥撅細L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Campus | 19 鍖� 131 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Maps | 9 鍖� 125 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Textures | 31 鍖� 85 MB | 鍥撅細L_Moon,L_Nature,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細/Game/Env/Materials
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Characters | 23 鍖� 82 MB | 鍥撅細- | 鐩�褰曪細/Game/Robot
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/OldStreet | 76 鍖� 74 MB | 鍥撅細L_OldStreet | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/CampusV29 | 197 鍖� 66 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Dreamfield | 39 鍖� 41 MB | 鍥撅細L_Dreamfield,L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Canyon | 4 鍖� 13 MB | 鍥撅細L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Easter | 11 鍖� 9 MB | 鍥撅細- | 鐩�褰曪細/Game/Easter
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/CampusV21 | 34 鍖� 7 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/StyleHex_Studio | 27 鍖� 5 MB | 鍥撅細L_Dreamfield | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/UI | 34 鍖� 4 MB | 鍥撅細- | 鐩�褰曪細/Game/UI/Maps,/Game/UI/WeaponIcons
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Nature | 33 鍖� 2 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/VFXWeatherPack | 1 鍖� 2 MB | 鍥撅細L_Soviet | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/City | 4 鍖� 1 MB | 鍥撅細L_Moon | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Input | 9 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/Input
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Env/Materials | 24 鍖� 0 MB | 鍥撅細L_Street,L_TechPark | 鐩�褰曪細/Game/Env/Materials
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/LevelPrototyping | 9 鍖� 0 MB | 鍥撅細L_Range | 鐩�褰曪細/Game/LevelPrototyping/Materials
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/Results | 3 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/Results
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/CampusV26 | 1 鍖� 0 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EngineMaterials | 8 鍖� 0 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion,/Game/AAAVFX/Co
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EngineSky | 11 鍖� 0 MB | 鍥撅細L_Nature,L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/BasicShapes | 4 鍖� 0 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/Functions | 43 鍖� 0 MB | 鍥撅細L_Dreamfield,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Partic
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EngineResources | 4 鍖� 0 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細/Game/Env/Materials,/Game/Robot,/Game/Weapons
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EditorResources | 3 鍖� 0 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Landmass/Landscape | 2 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/Materials | 8 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Landmass/DistanceFields | 3 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/Icons | 1 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/Curves | 1 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/FluidSimulation | 2 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/Textures | 4 鍖� 0 MB | 鍥撅細L_Nature,L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Water/Meshes | 1 鍖� 0 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /ControlRig/Controls | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/Robot
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/Animation | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_04/Particles,/Game/Robot
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /ACLPlugin/ACLAnimCurveCompressionSettings | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_04/Particles,/Game/Robot
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /ACLPlugin/ACLAnimBoneCompressionSettings | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_04/Particles,/Game/Robot
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/MobileResources | 2 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/Input
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/DynamicInputs | 23 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explo
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/Modules | 55 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion,/
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/Enums | 80 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion,/Ga
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/Functions | 3 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_04/Particles,/Game/AAAVFX/Course_06/Particles
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/ParameterDefinitions | 6 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/VectorFields | 3 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosi
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EngineVolumetrics | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_07_Fire_Explosion,/Game/AAAVFX/Course_03/Particles,/Game/AAAVFX/Course_04/Particles
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/EngineMeshes | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_04/Particles
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Niagara/DefaultAssets | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion,/Game/AAAVFX/Course_03/Particles,/Game/AAAVFX/Course_04/Particles,/Game/AAAVFX/Course_05/Particles,/Ga
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/ParagonCountess | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_03/Particles
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/ParagonMuriel | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_01/Particles/Ex_07_Fire_Explosion
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/ParagonSerath | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_01/Particles/Ex_07_Fire_Explosion
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Game/ParagonRiktor | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion
+[2026.11.02-16.14.10:563][  0]LogPython: Warning: [audit]   /Engine/MapTemplates | 1 鍖� 0 MB | 鍥撅細- | 鐩�褰曪細/Engine/MapTemplates/Sky
+[2026.11.02-16.14.10:598][  0]LogPython: Warning: [audit] 涓嶈繘鍖呯殑鏂囦欢澶� 15 涓�锛� /Game/8KValleyLandscapePack, /Game/Env/Cables, /Game/Env/Defense, /Game/Env/MegaCanyon, /Game/Env/PolyHaven, /Game/Env/Signs, /Game/Env/Valley, /Game/Env/Volcano, /Game/LightingExamples, /Game/ThirdPerson, /Game/Variant_Co
+[2026.11.02-16.14.10:598][  0]LogPython: Warning: [audit] 瀹屾暣娓呭崟 D:/RobotSlice/Saved/AssetAudit/audit.json
+[2026.11.02-16.14.10:598][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-16.14.10:599][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Street锛�626 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Nature锛�561 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Range锛�278 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_TechPark锛�407 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Dreamfield锛�81 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Pillars锛�435 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Soviet锛�548 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_Moon锛�221 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍥� L_OldStreet锛�350 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Easter锛�12 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Robot锛�230 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Weapons锛�160 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Audio锛�217 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Input锛�11 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_04/Particles锛�276 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_03/Particles锛�225 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail锛�60 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion锛�150 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_07_Fire_Explosion锛�183 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_00/Particle锛�210 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_05/Particles锛�210 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_06/Particles锛�203 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/AAAVFX/Course_01/Particles/Ex_04_Thunder_Explosion锛�143 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Env/Materials锛�62 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/LevelPrototyping/Materials锛�14 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/Results锛�3 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/UI/Maps锛�10 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Game/UI/WeaponIcons锛�24 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鐩�褰� /Engine/MapTemplates/Sky锛�1 涓�鍖�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit] 鍚堣�� 3756 涓�鍖咃紝65 涓�鏉ユ簮鏂囦欢澶癸紙鎸夊ぇ灏忥級锛�
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Soviet | 391 鍖� 916 MB | 鍥撅細L_Soviet | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Environments | 337 鍖� 805 MB | 鍥撅細L_Nature,L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/ANGRY_MESH | 140 鍖� 788 MB | 鍥撅細L_Soviet | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Ruins | 130 鍖� 661 MB | 鍥撅細L_Nature | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Moon | 209 鍖� 653 MB | 鍥撅細L_Moon | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/AAAVFX | 596 鍖� 525 MB | 鍥撅細- | 鐩�褰曪細/Game/AAAVFX/Course_00/Particle,/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail,/Game/AAAVFX/Course_01/Particles/Ex_02_Earth_Explosion,/Game/AAAVFX/Course_01/Particles/Ex_04_Th
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Audio | 217 鍖� 416 MB | 鍥撅細L_Nature | 鐩�褰曪細/Game/Audio
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Weapons | 146 鍖� 347 MB | 鍥撅細- | 鐩�褰曪細/Game/Easter,/Game/Robot,/Game/Weapons
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Pillars | 56 鍖� 217 MB | 鍥撅細L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/TechPark | 127 鍖� 194 MB | 鍥撅細L_TechPark | 鐩�褰曪細/Game/Env/Materials
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Robot | 195 鍖� 187 MB | 鍥撅細L_Street | 鐩�褰曪細/Game/Env/Materials,/Game/Robot,/Game/Weapons
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Street | 345 鍖� 186 MB | 鍥撅細L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Campus | 19 鍖� 131 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Maps | 9 鍖� 125 MB | 鍥撅細L_Dreamfield,L_Moon,L_Nature,L_OldStreet,L_Pillars,L_Range,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Textures | 31 鍖� 85 MB | 鍥撅細L_Moon,L_Nature,L_Soviet,L_Street,L_TechPark | 鐩�褰曪細/Game/Env/Materials
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Characters | 23 鍖� 82 MB | 鍥撅細- | 鐩�褰曪細/Game/Robot
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/OldStreet | 76 鍖� 74 MB | 鍥撅細L_OldStreet | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/CampusV29 | 197 鍖� 66 MB | 鍥撅細L_OldStreet,L_Pillars,L_Range,L_Street,L_TechPark | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Dreamfield | 39 鍖� 41 MB | 鍥撅細L_Dreamfield,L_Pillars | 鐩�褰曪細-
+[2026.11.02-16.14.10:599][  0]LogInit: Display: LogPython: Warning: [audit]   /Game/Env/Canyon | 4 鍖� 13 MB | 鍥撅細L_Pillars | 鐩�褰曪細-

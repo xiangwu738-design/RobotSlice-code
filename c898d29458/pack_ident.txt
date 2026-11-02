@@ -1,0 +1,139 @@
+pack_ident 结束：ok，用时 119 秒，日志行 138
+[2026.11.02-16.14.26:706][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-16.14.26:706][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-16.14.26:706][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-16.14.26:706][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-16.14.26:706][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-16.14.27:396][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-16.14.27:396][  0]LogPython: Using Python 3.11.8
+[2026.11.02-16.14.27:415][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-16.14.28:029][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-16.14.28:045][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-16.14.28:053][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-16.14.28:056][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-16.14.28:056][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-16.14.28:056][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-16.14.28:064][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-16.14.28:064][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-16.14.28:065][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-16.14.28:175][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-16.14.28:663][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-16.14.28:692][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-16.14.28:698][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 7.555 ms
+[2026.11.02-16.14.28:699][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-16.14.28:707][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-16.14.28:711][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 12.386 ms (total: 19.942 ms)
+[2026.11.02-16.14.29:283][  0]LogPython: Warning: [packid] 找到 21 个 .blend： Inbox\K004——蒸汽朋克复古建筑.blend | Inbox\K005——摩天大楼建筑物城市街道楼房.blend | Inbox\K007——未来市贫民窟无人区建筑.blend | Inbox\K008——罗马帝国著名建筑.blend | Inbox\K009——狂野西部风格乡村木屋.blend | Inbox\K010_欧美建筑景观装饰艺术景观.blend | Inbox\K018——巴黎建筑楼房欧式建.blend | Inbox\K0
+[2026.11.02-16.14.36:122][  0]LogPython: Warning: [packid] == Inbox\K004——蒸汽朋克复古建筑.blend 1466 MB 物体 608 材质 12
+[2026.11.02-16.14.36:122][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.36:122][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_Bricks1', 4], ['KB3D_Roof', 4], ['KB3D_MetalPitted', 4], ['KB3D_StoneVictorian', 3], ['KB3D_Wood', 3], ['KB3D_BricksOld', 3], ['KB3D_MetalPlates', 3], ['KB3D_Ground', 3]]
+[2026.11.02-16.14.36:122][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.14.36:122][  0]LogPython: Warning: [packid]    物体 ['_Component_Antenna_GROUP_grp', 'Antenna_Metal', 'Antenna_Pipes', 'ChimneyRound_Metal', 'ChimneyRound_Pipes', 'ChimneyRound_Roof', 'ChimneySq_Metal', 'ClockLG_Concrete']
+[2026.11.02-16.14.38:435][  0]LogPython: Warning: [packid] == Inbox\K005——摩天大楼建筑物城市街道楼房.blend 676 MB 物体 429 材质 31
+[2026.11.02-16.14.38:435][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.38:435][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_WoodBeam', 5], ['KB3D_MetalGalvanized', 4], ['KB3D_ConcreteMix', 4], ['KB3D_BrickClean', 4], ['KB3D_MetalFlake', 3], ['KB3D_BricksOld', 3], ['KB3D_RoofTar', 3], ['KB3D_ConcreteRome', 3]]
+[2026.11.02-16.14.38:435][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.14.38:435][  0]LogPython: Warning: [packid]    物体 ['_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_007_grp', '_GROUP_008_grp', '_GROUP_010_grp', '_GROUP_011_grp', '_GROUP_012_grp', '_GROUP_013_grp']
+[2026.11.02-16.14.42:766][  0]LogPython: Warning: [packid] == Inbox\K007——未来市贫民窟无人区建筑.blend 1016 MB 物体 2797 材质 18
+[2026.11.02-16.14.42:767][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.42:767][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_FutureSlums', 4], ['KB3D_ConcreteMix', 3], ['KB3D_MetalPitted', 3], ['KB3D_RoofCorrugated', 2], ['KB3D_Cloth', 2], ['KB3D_whitePlastic', 2], ['KB3d_SignageOld', 2], ['KB3D_Cardboard', 2]]
+[2026.11.02-16.14.42:767][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 17 1', 'Collection 17 10']
+[2026.11.02-16.14.42:767][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_011_grp', '_GROUP_016_grp', '_GROUP_017_grp', '_GROUP_024_grp']
+[2026.11.02-16.14.45:669][  0]LogPython: Warning: [packid] == Inbox\K008——罗马帝国著名建筑.blend 528 MB 物体 1261 材质 19
+[2026.11.02-16.14.45:669][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.45:669][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_RoofClayTiles', 3], ['KB3D_ConcreteOldSmooth', 3], ['KB3D_ConcreteRome', 3], ['KB3D_DirtRough', 3], ['KB3D_MetalPitted', 3], ['KB3D_StonePortuguese', 3], ['KB3D_ConcretePainted', 2], ['KB3D_Rome', 2]]
+[2026.11.02-16.14.45:669][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.14.45:669][  0]LogPython: Warning: [packid]    物体 ['ACC_ColumnCorinthian_Displaced', 'ACC_ColumnCorinthian_HighPoly', 'ACC_ColumnCorinthian_NormalMap', 'ACC_ColumnDoric', 'ACC_ColumnIonic_Displaced', 'ACC_ColumnIonic_HighPoly', 'ACC_ColumnIonic_NormalMap', 'ACC_Obelisk']
+[2026.11.02-16.14.47:791][  0]LogPython: Warning: [packid] == Inbox\K009——狂野西部风格乡村木屋.blend 335 MB 物体 508 材质 20
+[2026.11.02-16.14.47:791][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.47:791][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_WoodBeam', 8], ['KB3D_WoodOld', 4], ['KB3D_WoodAged', 4], ['KB3D_RoofWoodShingle', 3], ['KB3D_WoodOldDry', 3], ['KB3D_WoodPlanks', 3], ['KB3D_MetalPitted', 2], ['KB3D_WoodWorn', 2]]
+[2026.11.02-16.14.47:791][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 17', 'Collection 18', 'Collection 19', 'Collection 2', 'Collection 20']
+[2026.11.02-16.14.47:791][  0]LogPython: Warning: [packid]    物体 ['_Barn_GROUP_grp', '_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp']
+[2026.11.02-16.14.50:560][  0]LogPython: Warning: [packid] == Inbox\K010_欧美建筑景观装饰艺术景观.blend 642 MB 物体 112 材质 9
+[2026.11.02-16.14.50:560][  0]LogPython: Warning: [packid]    材质前缀 [['mat_plastic', 1]]
+[2026.11.02-16.14.50:560][  0]LogPython: Warning: [packid]    贴图前缀 [['kb_texture', 4]]
+[2026.11.02-16.14.50:560][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 2', 'Collection 3', 'Collection 4', 'Collection 5', 'Collection 6', 'Collection 7', 'Collection 8', 'Collection 9']
+[2026.11.02-16.14.50:560][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp', '_GROUP_009_grp']
+[2026.11.02-16.14.54:989][  0]LogPython: Warning: [packid] == Inbox\K018——巴黎建筑楼房欧式建.blend 1478 MB 物体 594 材质 20
+[2026.11.02-16.14.54:989][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.14.54:989][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_RocaMat', 3], ['KB3D_ParisConcrete', 3], ['KB3D_ParisWood', 3], ['KB3D_ParisGlass', 3], ['KB3D_RoofShingles', 3], ['KB3D_ParisStone', 3], ['KB3D_ParisStonePatched', 3], ['KB3D_EustacheWall', 3]]
+[2026.11.02-16.14.54:989][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.14.54:989][  0]LogPython: Warning: [packid]    物体 ['Component_Arch', 'Component_BayWindowLG_CleanStoneBlocks_a', 'Component_BayWindowLG_CleanStoneBlocks_b', 'Component_BayWindowLG_CleanStoneBlocks_c', 'Component_BayWindowLG_ConcreteOld', 'Component_BayWindowLG_Glass_a', 'Component_Bay
+[2026.11.02-16.15.01:554][  0]LogPython: Warning: [packid] == Inbox\K030——中世纪街道市场.blend 2649 MB 物体 937 材质 28
+[2026.11.02-16.15.01:554][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.15.01:554][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_Wood', 16], ['KB3D_Fabric', 16], ['KB3D_Ceramic', 12], ['KB3D_StoneWall', 8], ['KB3D_Leather', 4], ['KB3D_Shingles', 4], ['KB3D_Wicker', 4], ['KB3D_Thatch', 4]]
+[2026.11.02-16.15.01:554][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 100', 'Collection 101', 'Collection 102', 'Collection 103', 'Collection 104', 'Collection 105', 'Collection 106', 'Collection 107', 'Collection 108']
+[2026.11.02-16.15.01:554][  0]LogPython: Warning: [packid]    物体 ['Apple_A_DecalSheet', 'Axe_Iron', 'Axe_Wood_D', 'Bag_A_Fabric_A', 'Bag_A_grp', 'Bag_A_Rope', 'Bag_B_a_Fabric_A', 'Bag_B_b_Fabric_A']
+[2026.11.02-16.15.04:062][  0]LogPython: Warning: [packid] == Inbox\K031——蒸汽朋克皇室贵族颓废城市.blend 1045 MB 物体 115 材质 36
+[2026.11.02-16.15.04:062][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.15.04:062][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_StoneBlocksWorn', 12], ['KB3D_ConcretePlain', 9], ['KB3D_Wood', 6], ['KB3D_Iron', 4], ['KB3D_MetalPitted', 4], ['KB3D_MetalPlates', 4], ['KB3D_ParisConcrete', 4], ['KB3D_ParisStone', 4]]
+[2026.11.02-16.15.04:062][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 2', 'Collection 3', 'Collection 4', 'Collection 5', 'Collection 6', 'Collection 7', 'Collection 8']
+[2026.11.02-16.15.04:062][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp', '_GROUP_008_grp']
+[2026.11.02-16.15.06:386][  0]LogPython: Warning: [packid] == Inbox\K032——新上海城市.blend 856 MB 物体 457 材质 16
+[2026.11.02-16.15.06:387][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.15.06:387][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_MetalGrating', 4], ['KB3D_AsphaltHexagonRoof', 3], ['KB3D_SpeedwayTiles', 3], ['KB3D_ConcreteBlocks', 3], ['KB3D_ConcretePattern', 3], ['KB3D_SatinSteel', 3], ['KB3D_MetalFlake', 3], ['KB3D_MetalAccent', 3]]
+[2026.11.02-16.15.06:387][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.15.06:387][  0]LogPython: Warning: [packid]    物体 ['AirHandlerA', 'AirHandlerB', 'AirHandlerC', 'AirHandlerD', 'AirHandlerE', 'AntennaA', 'AntennaB', 'AntennaC']
+[2026.11.02-16.15.08:794][  0]LogPython: Warning: [packid] == Inbox\K035——荒芜之地废墟工厂场景.blend 866 MB 物体 794 材质 29
+[2026.11.02-16.15.08:794][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.15.08:794][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_WSL', 12], ['KB3D_cans', 4], ['KB3D_concreteBricks', 4], ['KB3D_concreteDam', 4], ['KB3D_concreteFloor', 4], ['KB3D_containerBlue', 4], ['KB3D_containerGreen', 4], ['KB3D_containerRed', 4]]
+[2026.11.02-16.15.08:794][  0]LogPython: Warning: [packid]    集合 ['Bldg_LG_A_grp', 'Bldg_LG_B_grp', 'Bldg_LG_C_grp', 'Bldg_LG_D_grp', 'Bldg_LG_E_grp', 'Bldg_LG_F_grp', 'Bldg_LG_G_grp', 'Bldg_LG_H_grp', 'Bldg_LG_I_grp', 'Bldg_LG_J_grp', 'Bldg_MD_A_grp', 'Bldg_MD_B_grp']
+[2026.11.02-16.15.08:794][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp', '_GROUP_008_grp']
+[2026.11.02-16.15.12:216][  0]LogPython: Warning: [packid] == Inbox\K043_军事哨所模型军事基地模型包.blend 1681 MB 物体 286 材质 48
+[2026.11.02-16.15.12:216][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_MIL', 47]]
+[2026.11.02-16.15.12:216][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_MIL', 282]]
+[2026.11.02-16.15.12:216][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19']
+[2026.11.02-16.15.12:216][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp', '_GROUP_008_grp']
+[2026.11.02-16.15.15:715][  0]LogPython: Warning: [packid] == Inbox\K043_军事哨所模型军事基地模型包2.blend 1260 MB 物体 867 材质 52
+[2026.11.02-16.15.15:715][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_MIL', 51]]
+[2026.11.02-16.15.15:715][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_MIL', 265]]
+[2026.11.02-16.15.15:715][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 11', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19', 'Collection 2']
+[2026.11.02-16.15.15:715][  0]LogPython: Warning: [packid]    物体 ['_GROUP_001_grp', '_GROUP_002_grp', '_GROUP_003_grp', '_GROUP_004_grp', '_GROUP_005_grp', '_GROUP_006_grp', '_GROUP_007_grp', '_GROUP_008_grp']
+[2026.11.02-16.15.17:919][  0]LogPython: Warning: [packid] == Inbox\K051_高科技街道.blend 716 MB 物体 325 材质 17
+[2026.11.02-16.15.17:919][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_HTS', 16]]
+[2026.11.02-16.15.17:919][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_HTS', 67]]
+[2026.11.02-16.15.17:919][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 10', 'Collection 11', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19', 'Collection 2']
+[2026.11.02-16.15.17:919][  0]LogPython: Warning: [packid]    物体 ['KB3D_HTS_Bench_A_Main', 'KB3D_HTS_Bench_B_BenchA', 'KB3D_HTS_Bench_B_BenchB', 'KB3D_HTS_Bench_B_Main', 'KB3D_HTS_BldgLG_A_Base', 'KB3D_HTS_BldgLG_A_BenchA', 'KB3D_HTS_BldgLG_A_BenchB', 'KB3D_HTS_BldgLG_A_BenchC']
+[2026.11.02-16.15.20:948][  0]LogPython: Warning: [packid] == Inbox\K052_道具：机械.blend 1442 MB 物体 409 材质 31
+[2026.11.02-16.15.20:948][  0]LogPython: Warning: [packid]    材质前缀 [['BrickWork_OldPaintW', 2], ['BrickWork_F2', 1], ['GalvanizedSteel_A', 1], ['Wood_A', 1]]
+[2026.11.02-16.15.20:948][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_MCH', 120]]
+[2026.11.02-16.15.20:948][  0]LogPython: Warning: [packid]    集合 ['1', 'Anvil_A_grp', 'CarLift_A_grp', 'Catwalk_A_grp', 'Catwalk_B_grp', 'Catwalk_C_grp', 'Catwalk_Stairs_A_grp', 'Catwalk_Stairs_B_grp', 'Compressor_A_grp', 'ConcreteMixer_A_grp', 'DumpHammer_A_grp', 'ForgingPress_grp']
+[2026.11.02-16.15.20:948][  0]LogPython: Warning: [packid]    物体 ['Anvil_A_CastingLadle', 'Anvil_A_FTrimM1', 'Anvil_A_Wood_A_Old', 'Beam_A_FTrimM1', 'Beam_B_FTrimM1', 'Beam_C_FTrimM1', 'Beam_D_FTrimM1', 'Beam_E_FTrimM1']
+[2026.11.02-16.15.23:373][  0]LogPython: Warning: [packid] == Inbox\K058_新赛博朋克未来科幻街道楼房.blend 722 MB 物体 672 材质 36
+[2026.11.02-16.15.23:374][  0]LogPython: Warning: [packid]    材质前缀 []
+[2026.11.02-16.15.23:374][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_CPP', 32]]
+[2026.11.02-16.15.23:374][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Collection 1', 'Collection 10', 'Collection 12', 'Collection 13', 'Collection 14', 'Collection 15', 'Collection 16', 'Collection 17', 'Collection 18', 'Collection 19', 'Collection 2']
+[2026.11.02-16.15.23:374][  0]LogPython: Warning: [packid]    物体 ['Desirefx.me_CyberAcc_AC_A_Decals', 'Desirefx.me_CyberAcc_AC_A_LightBlue', 'Desirefx.me_CyberAcc_AC_A_PaintBlack', 'Desirefx.me_CyberAcc_AC_A_PaintBlue', 'Desirefx.me_CyberAcc_AC_A_PaintWhiteRusty', 'Desirefx.me_CyberAcc_AC_A_Rubber',
+[2026.11.02-16.15.27:801][  0]LogPython: Warning: [packid] == Inbox\K059 _城市街道.blend 2796 MB 物体 424 材质 42
+[2026.11.02-16.15.27:801][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_CTS', 40]]
+[2026.11.02-16.15.27:801][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_CTS', 168]]
+[2026.11.02-16.15.27:801][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Export', 'Export 1', 'Export 10', 'Export 11', 'Export 12', 'Export 13', 'Export 14', 'Export 15', 'Export 16', 'Export 17', 'Export 18']
+[2026.11.02-16.15.27:801][  0]LogPython: Warning: [packid]    物体 ['Camera', 'Cube', 'KB3D_CTS_Atm_A_Main', 'KB3D_CTS_Barier_A_Main', 'KB3D_CTS_Barier_B_Main', 'KB3D_CTS_Barier_C_Main', 'KB3D_CTS_Barier_D_Main', 'KB3D_CTS_Barier_E_Main']
+[2026.11.02-16.15.37:916][  0]LogPython: Warning: [packid] == Inbox\K62_苏联建筑.blend 5042 MB 物体 1455 材质 53
+[2026.11.02-16.15.37:916][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_SVB', 51]]
+[2026.11.02-16.15.37:916][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_SVB', 177]]
+[2026.11.02-16.15.37:916][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Export', 'Export 1', 'Export 10', 'Export 11', 'Export 12', 'Export 13', 'Export 14', 'Export 15', 'Export 16', 'Export 17', 'Export 18']
+[2026.11.02-16.15.37:916][  0]LogPython: Warning: [packid]    物体 ['Camera', 'Cube', 'KB3D_SVB_Accent_A_Main', 'KB3D_SVB_Accent_B_Main', 'KB3D_SVB_Accent_C_Main', 'KB3D_SVB_Accent_D_Main', 'KB3D_SVB_Accent_E_Main', 'KB3D_SVB_Accent_F_Main']
+[2026.11.02-16.15.43:024][  0]LogPython: Warning: [packid] == Inbox\K65_月球基地.blend 2061 MB 物体 627 材质 30
+[2026.11.02-16.15.43:024][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_LNB', 28]]
+[2026.11.02-16.15.43:024][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_LNB', 119]]
+[2026.11.02-16.15.43:024][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Export', 'Export 1', 'Export 10', 'Export 11', 'Export 12', 'Export 13', 'Export 14', 'Export 15', 'Export 16', 'Export 17', 'Export 18']
+[2026.11.02-16.15.43:024][  0]LogPython: Warning: [packid]    物体 ['Camera', 'Cube', 'KB3D_LNB_Antenna_A_Main', 'KB3D_LNB_Antenna_B_Main', 'KB3D_LNB_Antenna_C_Main', 'KB3D_LNB_Antenna_D_Main', 'KB3D_LNB_Antenna_E_Main', 'KB3D_LNB_Antenna_F_Main']
+[2026.11.02-16.16.00:652][  0]LogPython: Warning: [packid] == Inbox\K72——新版赛博.blend 10291 MB 物体 1841 材质 118
+[2026.11.02-16.16.00:652][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_CBD', 116]]
+[2026.11.02-16.16.00:652][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_CBD', 643]]
+[2026.11.02-16.16.00:652][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Export', 'Export 1', 'Export 10', 'Export 11', 'Export 12', 'Export 13', 'Export 14', 'Export 15', 'Export 16', 'Export 17', 'Export 18']
+[2026.11.02-16.16.00:652][  0]LogPython: Warning: [packid]    物体 ['Camera', 'Cube', 'KB3D_CBD_BldgLgAbandonedBuilding_A_ACunitA', 'KB3D_CBD_BldgLgAbandonedBuilding_A_ACunitB', 'KB3D_CBD_BldgLgAbandonedBuilding_A_ACunitC', 'KB3D_CBD_BldgLgAbandonedBuilding_A_Barrel', 'KB3D_CBD_BldgLgAbandonedBuilding
+[2026.11.02-16.16.06:538][  0]LogPython: Warning: [packid] == Inbox\k70——赛博朋克.blend 2301 MB 物体 1096 材质 48
+[2026.11.02-16.16.06:538][  0]LogPython: Warning: [packid]    材质前缀 [['KB3D_CBP', 46]]
+[2026.11.02-16.16.06:538][  0]LogPython: Warning: [packid]    贴图前缀 [['KB3D_CBP', 254]]
+[2026.11.02-16.16.06:538][  0]LogPython: Warning: [packid]    集合 ['Collection', 'Export', 'Export 1', 'Export 10', 'Export 11', 'Export 12', 'Export 13', 'Export 14', 'Export 15', 'Export 16', 'Export 17', 'Export 18']
+[2026.11.02-16.16.06:538][  0]LogPython: Warning: [packid]    物体 ['Camera', 'Cube', 'KB3D_CBP_ACPD_A_ACunitA', 'KB3D_CBP_ACPD_A_ACunitB', 'KB3D_CBP_ACPD_A_ACunitC', 'KB3D_CBP_ACPD_A_ACunitD', 'KB3D_CBP_ACPD_A_ACunitE', 'KB3D_CBP_ACPD_A_ACunitF']
+[2026.11.02-16.16.06:563][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-16.16.06:604][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-16.16.06:607][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-16.16.06:607][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-16.16.06:607][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-16.16.06:638][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-16.16.07:118][  2]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-16.16.07:238][  3]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
