@@ -1,0 +1,118 @@
+exit=0
+[2026.11.02-13.43.13:444][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-13.43.14:303][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.43.14:317][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 13.923 ms
+[2026.11.02-13.43.14:317][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-13.43.14:338][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 20.663 ms (total: 34.587 ms)
+[2026.11.02-13.43.14:338][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_package_status.py
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat] 鏈�鏂颁竴娆� 20261102_143118锛屾棩蹇� 0.0 MB锛�12 鍒嗛挓鍓嶆洿鏂�
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat] 宸茬粨鏉燂紝閫�鍑虹爜 0 锛�0 = 鎴愬姛锛�
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat] 鍏抽敭琛� 0 鏉★紙鏈�澶� 60锛夛細
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat] 鏈�鍚� 25 琛岋細
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat]   | Running AutomationTool...
+[2026.11.02-13.43.14:343][  0]LogPython: Warning: [packstat]   | Using bundled DotNet SDK version: 10.0 win-x64
+[2026.11.02-13.43.14:344][  0]LogPython: Warning: [packstat] UAT 鏃ュ織 C:\Users\ASUS\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+EPIC+UE_5.8\Log.txt 11-02 14:35
+[2026.11.02-13.43.14:346][  0]LogPython: Warning: [packstat]   UAT| Parsing command line: BuildCookRun -project=D:\RobotSlice\RobotSlice.uproject -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -archive -archivedirectory=D:\RobotSlice_Build -map=/Game/Ma
+[2026.11.02-13.43.14:348][  0]LogPython: Warning: [packstat]   UAT| SkipCookingErrorSummary=False
+[2026.11.02-13.43.14:349][  0]LogPython: Warning: [packstat]   UAT| Running: D:\EPIC\UE_5.8\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "D:\RobotSlice\RobotSlice.uproject" -run=Cook -Map=/Game/Maps/L_Street+/Game/Maps/L_Nature+/Game/Maps/L_Range+/Game/Maps/L_TechPark+/Game/Maps/L_Dreamfie
+[2026.11.02-13.43.14:349][  0]LogPython: Warning: [packstat]   UAT| LogCsvProfiler: Display: Metadata set : commandline="" D:\RobotSlice\RobotSlice.uproject -run=Cook -Map=/Game/Maps/L_Street+/Game/Maps/L_Nature+/Game/Maps/L_Range+/Game/Maps/L_TechPark+/Game/Maps/L_Dreamfield+/Game/Maps/
+[2026.11.02-13.43.14:350][  0]LogPython: Warning: [packstat]   UAT| LogCook: Display: Sandbox cleanup took 0.049 seconds for platforms Windows
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_0鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_1鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_10鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_2鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_3鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_4鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_5鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_6鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_7鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_8鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_9鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:351][  0]LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusShuttleCourse /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusShuttleCourse_0
+[2026.11.02-13.43.14:352][  0]LogPython: Warning: [packstat]   UAT| LogCook: Display: Packages Cooked: 4090, Packages Incrementally Skipped: 0, Packages Skipped by Platform: 120, Total Packages: 4210
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogCook: Display: Done!
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_0鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_1鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_10鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_2鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_3鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_4鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_5鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_6鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_7鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_8鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_9鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusShuttleCourse /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusShuttleCourse_0
+[2026.11.02-13.43.14:353][  0]LogPython: Warning: [packstat]   UAT| LogInit: Display: Success - 0 error(s), 14 warning(s)
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT| BUILD SUCCESSFUL
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT| AutomationTool exiting with ExitCode=0 (Success)
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 Archive command time: 1.08 s
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 ********** ARCHIVE COMMAND COMPLETED **********
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 BuildCookRun time: 272.89 s
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 BUILD SUCCESSFUL
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 AutomationTool executed for 0h 4m 33s
+[2026.11.02-13.43.14:401][  0]LogPython: Warning: [packstat]   UAT 灏緗 AutomationTool exiting with ExitCode=0 (Success)
+[2026.11.02-13.43.14:425][  0]LogPython: Warning: [packstat] Cook 鏃ュ織 C:\Users\ASUS\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+EPIC+UE_5.8\Cook-2026.11.02-14.34.44.txt 缂烘潗璐ㄧ敤閫旀爣璁� 0 娆�
+[2026.11.02-13.43.14:427][  0]LogPython: Warning: [packstat] pak global.ucas 0.00 GB 11-02 14:35
+[2026.11.02-13.43.14:427][  0]LogPython: Warning: [packstat] pak global.utoc 0.00 GB 11-02 14:35
+[2026.11.02-13.43.14:427][  0]LogPython: Warning: [packstat] pak RobotSlice-Windows.pak 0.01 GB 11-02 14:35
+[2026.11.02-13.43.14:428][  0]LogPython: Warning: [packstat] pak RobotSlice-Windows.ucas 2.86 GB 11-02 14:35
+[2026.11.02-13.43.14:428][  0]LogPython: Warning: [packstat] pak RobotSlice-Windows.utoc 0.00 GB 11-02 14:35
+[2026.11.02-13.43.14:428][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build/Windows/RobotSlice.exe 11-02 14:34
+[2026.11.02-13.43.14:468][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice_Build\Windows\RobotSlice.exe 11-02 14:34
+[2026.11.02-13.43.14:475][  0]LogPython: Warning: [packstat] 鍖咃細 D:/RobotSlice/Saved/StagedBuilds\Windows\RobotSlice.exe 11-02 14:34
+[2026.11.02-13.43.14:475][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-13.43.14:475][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-13.43.14:475][  0]LogInit: Display: LogPython: Warning: [packstat] 鏈�鏂颁竴娆� 20261102_143118锛屾棩蹇� 0.0 MB锛�12 鍒嗛挓鍓嶆洿鏂�
+[2026.11.02-13.43.14:475][  0]LogInit: Display: LogPython: Warning: [packstat] 宸茬粨鏉燂紝閫�鍑虹爜 0 锛�0 = 鎴愬姛锛�
+[2026.11.02-13.43.14:475][  0]LogInit: Display: LogPython: Warning: [packstat] 鍏抽敭琛� 0 鏉★紙鏈�澶� 60锛夛細
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat] 鏈�鍚� 25 琛岋細
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   | Running AutomationTool...
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   | Using bundled DotNet SDK version: 10.0 win-x64
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat] UAT 鏃ュ織 C:\Users\ASUS\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+EPIC+UE_5.8\Log.txt 11-02 14:35
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| Parsing command line: BuildCookRun -project=D:\RobotSlice\RobotSlice.uproject -noP4 -platform=Win64 -clientconfig=Development -build -cook -stage -pak -iostore -archive -archivedirectory=D:\RobotSlice_Build -map=/G
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| SkipCookingErrorSummary=False
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| Running: D:\EPIC\UE_5.8\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "D:\RobotSlice\RobotSlice.uproject" -run=Cook -Map=/Game/Maps/L_Street+/Game/Maps/L_Nature+/Game/Maps/L_Range+/Game/Maps/L_TechPark+/Game/Maps/L_Dr
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogCsvProfiler: Display: Metadata set : commandline="" D:\RobotSlice\RobotSlice.uproject -run=Cook -Map=/Game/Maps/L_Street+/Game/Maps/L_Nature+/Game/Maps/L_Range+/Game/Maps/L_TechPark+/Game/Maps/L_Dreamfield+/Game
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogCook: Display: Sandbox cleanup took 0.049 seconds for platforms Windows
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_0鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_1鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_10鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_2鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_3鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_4鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_5鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_6鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_7鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_8鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_9鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusShuttleCourse /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusShuttleCourse_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogCook: Display: Packages Cooked: 4090, Packages Incrementally Skipped: 0, Packages Skipped by Platform: 120, Total Packages: 4210
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogCook: Display: Done!
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_0鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_1鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_10鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_2鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_3鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_4鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_5鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_6鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:476][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_7鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_8鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淚nstancedStaticMeshComponent_9鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusGlass /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusGlass_0
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: LoadErrors: Warning: 鍒涘缓瀵煎嚭锛氳祫浜р�淩oot鈥濈殑澶栭儴瀹瑰櫒鍔犺浇澶辫触锛欳ampusShuttleCourse /Game/CampusV29/Maps/L_XiuzhouCampus_V29.L_XiuzhouCampus_V29:PersistentLevel.CampusShuttleCourse_0
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| LogInit: Display: Success - 0 error(s), 14 warning(s)
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| BUILD SUCCESSFUL
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT| AutomationTool exiting with ExitCode=0 (Success)
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 Archive command time: 1.08 s
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 ********** ARCHIVE COMMAND COMPLETED **********
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 BuildCookRun time: 272.89 s
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 BUILD SUCCESSFUL
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 AutomationTool executed for 0h 4m 33s
+[2026.11.02-13.43.14:477][  0]LogInit: Display: LogPython: Warning: [packstat]   UAT 灏緗 AutomationTool exiting with ExitCode=0 (Success)
