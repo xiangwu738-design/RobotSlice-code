@@ -1,0 +1,574 @@
+kit_study 结束：ok，用时 28 秒，日志行 573
+[2026.11.02-18.18.08:910][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-18.18.08:911][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-18.18.08:911][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-18.18.08:911][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-18.18.08:911][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-18.18.09:769][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-18.18.09:769][  0]LogPython: Using Python 3.11.8
+[2026.11.02-18.18.09:802][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-18.18.10:573][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-18.18.10:599][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-18.18.10:602][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-18.18.10:603][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-18.18.10:603][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-18.18.10:603][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-18.18.10:607][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-18.18.10:607][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-18.18.10:607][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-18.18.10:723][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-18.18.11:482][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-18.18.11:509][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-18.18.11:521][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 11.772 ms
+[2026.11.02-18.18.11:521][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-18.18.11:536][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-18.18.11:548][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 26.714 ms (total: 38.487 ms)
+[2026.11.02-18.18.11:561][  0]LogPython: Warning: [kitsrc] #### lookdev/factions/dingshan/ds_common.py 1250 行（前 30 行）
+[2026.11.02-18.18.11:561][  0]LogPython: Warning: [kitsrc]     1| # 鼎山重工外壳方案的公用部分：材质、造型函数、素材件、骨架载入 / 分段 / 绑骨 / 摆姿势、棚拍和渲染。
+[2026.11.02-18.18.11:561][  0]LogPython: Warning: [kitsrc]     2| # 材质和造型函数照 lookdev/robot_lookdev.py 拷过来（那个文件一 import 就会跑 main，不能直接 import），
+[2026.11.02-18.18.11:561][  0]LogPython: Warning: [kitsrc]     3| # 材质名直接用 v3 的槽名（MI_Robot_Frame / Paint / PaintDark / Accent / Stencil / Nozzle / Plastic / Lens / Glow / Rubber，
+[2026.11.02-18.18.11:561][  0]LogPython: Warning: [kitsrc]     4| # 素材件 MI_Kit_Hydraulics / MI_Kit_Pipes），游戏里的涂装系统按这些槽名换色。
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]     5| #
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]     6| # 单位：游戏米。v3 绑骨文件是人形尺寸的厘米（178.5 高），游戏里再放大 1.35 倍 → 骨架整体乘 GAME_K = 0.0135，机体约 2.41 米。
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]     7| # 正面朝 -Y，机体左手在 +X。
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]     8| import math
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]     9| import os
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    10|
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    11| import bmesh
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    12| import bpy
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    13| from mathutils import Euler, Matrix, Vector
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    14|
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    15| RIG_BLEND = r'D:/RobotSlice/lookdev/rig/SKM_Robot_v3.blend'
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    16| GAME_K = 0.0135
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    17| KIT_LIB = {
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    18|     '机甲2': r'D:/RobotSlice/Inbox/机甲组件5000+/机甲2.blend',
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    19|     '机械零件': r'D:/RobotSlice/Inbox/机甲组件5000+/机械零件.blend',
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    20| }
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    21| SCENE = bpy.context.scene
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    22| M = {}
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    23| USED_KIT = {}      # 用到的素材件：名字 → (库, 次数)
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    24|
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    25|
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    26| def lin(hexstr):
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    27|     h = hexstr.lstrip('#')
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    28|     out = []
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    29|     for i in (0, 2, 4):
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    30|         c = int(h[i:i + 2], 16) / 255
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc] #### lookdev/factions/dingshan/ds_common.py 1250 行
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:17
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    17| KIT_LIB = {
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    18|     '机甲2': r'D:/RobotSlice/Inbox/机甲组件5000+/机甲2.blend',
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    19|     '机械零件': r'D:/RobotSlice/Inbox/机甲组件5000+/机械零件.blend',
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    20| }
+[2026.11.02-18.18.11:563][  0]LogPython: Warning: [kitsrc]    21| SCENE = bpy.context.scene
+[2026.11.02-18.18.11:564][  0]LogPython: Warning: [kitsrc]    22| M = {}
+[2026.11.02-18.18.11:564][  0]LogPython: Warning: [kitsrc]    23| USED_KIT = {}      # 用到的素材件：名字 → (库, 次数)
+[2026.11.02-18.18.11:564][  0]LogPython: Warning: [kitsrc]    24|
+[2026.11.02-18.18.11:564][  0]LogPython: Warning: [kitsrc]    25|
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:612
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   612| KIT_CACHE = {}
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   613| KIT_MATS = {}
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   614| KIT_SLOT = {'Hydraulics_T1': 'MI_Kit_Hydraulics', 'Hydraulics_T2': 'MI_Kit_Hydraulics', 'Pipes': 'MI_Kit_Pipes'}
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   615|
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   616|
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:617
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   617| def kit_tint(mat, sat=0.3, val=0.95):
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   618|     if mat is None or not mat.node_tree or mat.get('kit_tinted'):
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   619|         return
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   620|     nt = mat.node_tree
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   621|     bsdf = next((n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED'), None)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   622|     if bsdf is None or not bsdf.inputs['Base Color'].is_linked:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   623|         return
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   624|     link = bsdf.inputs['Base Color'].links[0]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   625|     hs = nt.nodes.new('ShaderNodeHueSaturation')
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   626|     hs.inputs['Saturation'].default_value = sat
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   627|     hs.inputs['Value'].default_value = val
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   628|     nt.links.new(link.from_socket, hs.inputs['Color'])
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   629|     nt.links.new(hs.outputs['Color'], bsdf.inputs['Base Color'])
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   630|     mat['kit_tinted'] = True
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   631|
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   632|
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:633
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   633| def kit_source(name, lib, axes=None):
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   634|     """从素材库追加一个物体，网格烘进自己的主轴坐标系（u 主方向、v 次方向，中心在原点），返回 (网格, 沿 u 的长度)。"""
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   635|     key = (name, axes)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   636|     if key in KIT_CACHE:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   637|         return KIT_CACHE[key]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   638|     import numpy as np
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   639|     with bpy.data.libraries.load(KIT_LIB[lib], link=False) as (src, dst):
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   640|         dst.objects = [name]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   641|     ob = dst.objects[0]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   642|     me = ob.data.copy()
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   643|     for i, m in enumerate(me.materials):
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   644|         if m is not None:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   645|             base = m.name.split('.')[0]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   646|             if base not in KIT_MATS:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   647|                 KIT_MATS[base] = m
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   648|                 kit_tint(m)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   649|                 if base in KIT_SLOT:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   650|                     m.name = KIT_SLOT[base]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   651|                 m.diffuse_color = (0.25, 0.26, 0.27, 1)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   652|             me.materials[i] = KIT_MATS[base]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   653|     mw, p = ob.matrix_basis.copy(), ob.parent
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   654|     while p is not None:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   655|         mw = p.matrix_basis @ mw
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   656|         p = p.parent
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   657|     me.transform(mw)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   658|     co = np.empty(len(me.vertices) * 3)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   659|     me.vertices.foreach_get('co', co)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   660|     co = co.reshape(-1, 3)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   661|     if axes is None:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   662|         c = co.mean(0)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   663|         a = co[np.argmax(((co - c) ** 2).sum(1))]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   664|         b = co[np.argmax(((co - a) ** 2).sum(1))]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   665|         u = (b - a) / np.linalg.norm(b - a)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   666|         rest = (co - c) - np.outer((co - c) @ u, u)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   667|         v = np.linalg.eigh(rest.T @ rest)[1][:, -1]
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   668|         v = v - u * (u @ v)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   669|         v /= np.linalg.norm(v)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   670|         center = (a + b) / 2
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   671|     else:
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   672|         u, v = np.array(axes[0], float), np.array(axes[1], float)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   673|         center = (co.min(0) + co.max(0)) / 2
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   674|     w = np.cross(u, v)
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   675|     R = np.stack([u, v, w])
+[2026.11.02-18.18.11:565][  0]LogPython: Warning: [kitsrc]   676|     local = (co - center) @ R.T
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   677|     me.vertices.foreach_set('co', local.ravel())
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   678|     me.update()
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   679|     bpy.data.objects.remove(ob)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   680|     KIT_CACHE[key] = (me, float(local[:, 0].max() - local[:, 0].min()))
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   681|     return KIT_CACHE[key]
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   682|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   683|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:684
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   684| def kit_place(name, lib, parent, center, u_to, v_to, length=None, k=None, axes=None, thick=1.0, bend=1.0, mat=None,
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   685|               decimate=1.0, label=None):
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   686|     src_me, src_len = kit_source(name, lib, axes)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   687|     k = k if k is not None else length / src_len
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   688|     u = Vector(u_to).normalized()
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   689|     v = Vector(v_to)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   690|     v = (v - u * v.dot(u)).normalized()
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   691|     w = u.cross(v)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   692|     ob = bpy.data.objects.new(label or name, src_me.copy())
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   693|     place(ob, parent, (0, 0, 0), (0, 0, 0))
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   694|     rot = Matrix((u, v, w)).transposed().to_4x4()
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   695|     ob.matrix_basis = Matrix.Translation(Vector(center)) @ rot @ Matrix.Diagonal((k, k * thick * bend, k * thick, 1.0))
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   696|     if mat is not None:
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   697|         ob.data.materials.clear()
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   698|         ob.data.materials.append(mat)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   699|     if decimate < 1.0:
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   700|         ob.modifiers.new('减面', 'DECIMATE').ratio = decimate
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   701|     lib_n = USED_KIT.setdefault(name, [lib, 0])
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   702|     lib_n[1] += 1
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   703|     return ob
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   704|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   705|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc] lookdev/factions/dingshan/ds_common.py:706
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   706| def kit_span(name, lib, parent, p1, p2, v_to, axes=None, thick=1.0, bend=1.0, mat=None, decimate=1.0, label=None):
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   707|     p1, p2 = Vector(p1), Vector(p2)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   708|     return kit_place(name, lib, parent, (p1 + p2) / 2, p2 - p1, v_to, length=(p2 - p1).length, axes=axes, thick=thick,
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   709|                      bend=bend, mat=mat, decimate=decimate, label=label)
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   710|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   711|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   712| PISTON_AXES = ((0, 1, 0), (1, 0, 0))     # Hydraulics_T1_02：素材长轴 Y、销轴 X
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   713|
+[2026.11.02-18.18.11:566][  0]LogPython: Warning: [kitsrc]   714|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc] #### lookdev/factions/dingshan/flat/flat_run.py 18 行（前 18 行）
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     1| """先注册减曲面方案（ds_flat：M1 / M2 / H1 / H2），再原样跑上一层目录里的现成脚本（ds_clip.py / ds_render.py / ds_camcheck.py），
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     2| 这样不用改那些脚本。用法（Blender 命令行，参数原样传给被跑的脚本）：
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     3|   blender -b --factory-startup -P flat_run.py -- ds_clip.py --scheme M1 --out D:/RobotSlice/lookdev/factions/dingshan/flat/renders
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     4|   blender -b --factory-startup -P flat_run.py -- ds_render.py --scheme H2 --engine wb --views front --noref
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     5|       --out D:/RobotSlice/lookdev/factions/dingshan/flat/wip --blend D:/RobotSlice/lookdev/factions/dingshan/flat/DS_H2.blend"""
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     6| import os
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     7| import runpy
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     8| import sys
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     9|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    10| HERE = os.path.dirname(os.path.abspath(__file__))
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    11| DS = os.path.dirname(HERE)
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    12| sys.path.insert(0, DS)
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    13| sys.path.insert(0, HERE)
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    14| i = sys.argv.index('--')
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    15| target = sys.argv[i + 1]
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    16| sys.argv = sys.argv[:i + 1] + sys.argv[i + 2:]        # 去掉脚本名，剩下的参数留给被跑的脚本
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    17| import ds_flat  # noqa: E402,F401
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    18| runpy.run_path(os.path.join(DS, target), run_name='__main__')
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc] #### lookdev/factions/dingshan/flat/ds_flat.py 371 行（前 45 行）
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     1| # 新纪建设（NEC）中型 / 重型「减曲面」方案（10-31 用户：「新纪建设的曲面太多了」）。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     2| # 用户的口味：方正、利落、薄板层次清楚；不要臃肿、不要圆滚滚的弧线（「不是说简洁就一定要这么多弧线，也是方正一点」）。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     3| # 做法：先用现成的建模函数把定稿原样建出来（中型 = ds_exc.build_exc(PRESETS['M'])，重型 = ds_hk.build_HKF），
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     4| # 再按名字把曲面件换掉。这样每个方案改了什么一目了然，定稿脚本一行没动。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     5| #
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     6| #   方案一「只换大曲面」（M1 / H1）：
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     7| #     · 机舱（胸腔芯）侧面那个圆鼓鼓的八边形 → 方箱截面（前后竖直、顶底水平，只在四角切 45 度），外轮廓不超过原来的范围；
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     8| #     · 直径 ≥ 11 厘米的大圆柱（销轴凸台、关节销、腰柱、髋轮）→ 八角，外接圆 = 原半径（关节转起来扫过的范围和原来一样，不会多穿模）；
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]     9| #     · 重型大腿上那根粗悬挂缸（三视图里最大的一块曲面）→ 八角截面。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    10| #     · 不动：液压杆（油缸）、软管、细栏杆、喷口（游戏里尾焰按圆喷口对位）、回转支承（挖掘机的标志）、配重。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    11| #   方案二「全部方正化」（M2 / H2）：方案一再往前一步，「八角」都换成「方」——
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    12| #     · 销轴凸台 → 方形轴承座：八角销体 + 两端方盖板（对角线在原圆以内）+ 四角螺栓 + 方销帽；
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    13| #     · 中型：回转支承 → 八角转台、配重 → 切角方块、动臂 → 一折（原来是三折的缓弧）、腰柱 / 髋轮 → 方块、排气管 → 方管、
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    14| #       警示灯 → 方灯、扶手 → 方杆、胸侧板加大成上下两块薄板（盖住机舱侧面）、小腿油缸缸筒罩一副 U 形护板；
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    15| #     · 重型：悬挂缸 → 方截面、胸侧板加大并加竖筋（和货箱壁同款）、斜梯扶手 / 栏杆 / 货箱上沿管 → 方杆、拖钩 → 方环。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    16| #   两个方案都只在原来零件的范围以内改，不加宽、不加高；骨架、关节位置、身高都不变。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    17| # 坐标约定同 ds_schemes.py（游戏米，正面 -Y，左手 +X；躯干 / 骨盆 / 头 / 锁骨 / 脚写世界坐标，四肢写肢体局部坐标）。
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    18| import math
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    19| import os
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    20| import re
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    21| import sys
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    22|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    23| import bpy
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    24| from mathutils import Matrix, Quaternion, Vector
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    25|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    26| DS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    27| if DS not in sys.path:
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    28|     sys.path.insert(0, DS)
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    29| import ds_exc  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    30| import ds_hk  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    31| import ds_schemes as S  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    32| from ds_common import M, box, cyl, empty, prism, tube  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    33| from ds_exc import PRESETS, leaf  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    34| from ds_schemes import SIDES  # noqa: E402
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    35|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    36| Q8 = Quaternion((0, 0, 1), math.radians(22.5))     # 八边形转半格：平边朝上下左右（不是尖角朝外）
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    37|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    38|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    39| # ---------------------------------------------------------------- 工具
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    40|
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    41| def kill(B, seg, names):
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    42|     """删掉挂点 seg 下面直接挂着的、名字在 names 里的零件（连同子物体）。同一场景建了几台时名字会带 .001，先去掉再比。"""
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    43|     hold = B[seg]
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    44|     for o in list(hold.children):
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc]    45|         if re.sub(r'\.\d{3}$', '', o.name) in names:
+[2026.11.02-18.18.11:567][  0]LogPython: Warning: [kitsrc] #### lookdev/factions/baita/baita_common.py 879 行
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc] lookdev/factions/baita/baita_common.py:652
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   652| KIT_LIB = {
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   653|     '机甲': r'D:/RobotSlice/Inbox/机甲组件5000+/机甲.blend',
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   654|     '机甲2': r'D:/RobotSlice/Inbox/机甲组件5000+/机甲2.blend',
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   655| }
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   656| KIT_USED = []
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   657|
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   658|
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc] lookdev/factions/baita/baita_common.py:659
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   659| def kit_span(name, lib_obj, lib, bone, F, p1, p2, v_to, thick=1.0, sx=1, decimate=1.0, mat=None):
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   660|     """素材件沿 p1→p2 摆（借 robot_lookdev.kit_span，坐标按厘米），记下用了哪件。"""
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   661|     p1 = Vector((p1[0] * sx, p1[1], p1[2]))
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   662|     p2 = Vector((p2[0] * sx, p2[1], p2[2]))
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   663|     v = Vector(v_to)
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   664|     v.x *= sx
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   665|     ob = RL['kit_span'](lib_obj, lib, None, p1, p2, v, axes=((0, 1, 0), (1, 0, 0)), thick=thick, mat=mat, decimate=decimate)
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   666|     ob.name = name
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   667|     KIT_USED.append(f'{lib}.blend / {lib_obj}')
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   668|     return adopt(ob, bone, F)
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   669|
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   670|
+[2026.11.02-18.18.11:569][  0]LogPython: Warning: [kitsrc]   671| # ---------------------------------------------------------------- 姿势
+[2026.11.02-18.18.11:570][  0]LogPython: Warning: [kitsrc] #### lookdev/robot_lookdev.py 2157 行
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1190
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1190| KIT_LIB = {
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1191|     '机甲2': r'D:/RobotSlice/Inbox/机甲组件5000+/机甲2.blend',
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1192|     '机械零件': r'D:/RobotSlice/Inbox/机甲组件5000+/机械零件.blend',
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1193| }
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1194| KIT_CACHE = {}
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1195| KIT_MATS = {}
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1196| # 游戏用的减面比例（在各件自己的减面上再乘）：液压杆 5.8k → 1.2k，双管 22k → 2.2k，减震缸筒 / 活塞杆 0.3、弹簧 0.4。
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1197| # 整机约 9 万三角（原机体 5 万；13.6 万那版用户说「再减一减」）。
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1198| # 波纹管 Pipes_11 由上千个小环拼成，减面减不下去（最少还有 3.9 万三角），游戏版换成双管 Pipes_07（见 kit_lite()）
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1199| KIT_LITE = {'Hydraulics_T1_02': 0.2, 'Pipes_07': 0.1, 'coilover': 0.3, 'spring': 0.4}
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1200|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1201|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1202
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1202| def kit_lite():
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1203|     return ARGS.kit_lite or bool(ARGS.rig)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1204|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1205|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1206
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1206| def kit_ratio(name, base=1.0):
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1207|     return base * (KIT_LITE.get(name, 1.0) if kit_lite() else 1.0)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1208|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1209|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1210
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1210| def kit_source(name, lib, axes=None):
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1211|     """从素材库追加一个物体，把网格烘进它自己的坐标系（u 主方向、v 次方向、w = u×v，中心在原点），返回 (网格, 沿 u 的长度)。
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1212|     axes=None：两端最远的两点连线当 u、横向摆幅最大的方向当 v（软管用）；否则 axes=(u, v) 是素材里的方向（硬件用）。"""
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1213|     key = (name, axes)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1214|     if key in KIT_CACHE:
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1215|         return KIT_CACHE[key]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1216|     import numpy as np
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1217|     with bpy.data.libraries.load(KIT_LIB[lib], link=False) as (src, dst):
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1218|         dst.objects = [name]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1219|     ob = dst.objects[0]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1220|     me = ob.data.copy()
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1221|     for i, m in enumerate(me.materials):
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1222|         if m is not None:
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1223|             me.materials[i] = KIT_MATS.setdefault(m.name.split('.')[0], m)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1224|     # 没放进场景的物体 matrix_world 没算过，按自身和父级的 位移 / 旋转 / 缩放 自己乘（hutch 自带 0.01 缩放）
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1225|     mw, p = ob.matrix_basis.copy(), ob.parent
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1226|     while p is not None:
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1227|         mw = p.matrix_basis @ mw
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1228|         p = p.parent
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1229|     me.transform(mw)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1230|     co = np.empty(len(me.vertices) * 3)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1231|     me.vertices.foreach_get('co', co)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1232|     co = co.reshape(-1, 3)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1233|     if axes is None:
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1234|         c = co.mean(0)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1235|         a = co[np.argmax(((co - c) ** 2).sum(1))]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1236|         b = co[np.argmax(((co - a) ** 2).sum(1))]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1237|         u = (b - a) / np.linalg.norm(b - a)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1238|         rest = (co - c) - np.outer((co - c) @ u, u)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1239|         v = np.linalg.eigh(rest.T @ rest)[1][:, -1]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1240|         v = v - u * (u @ v)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1241|         v /= np.linalg.norm(v)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1242|         center = (a + b) / 2
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1243|     else:
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1244|         u, v = np.array(axes[0], float), np.array(axes[1], float)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1245|         center = (co.min(0) + co.max(0)) / 2
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1246|     w = np.cross(u, v)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1247|     R = np.stack([u, v, w])
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1248|     local = (co - center) @ R.T
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1249|     me.vertices.foreach_set('co', local.ravel())
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1250|     me.update()
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1251|     bpy.data.objects.remove(ob)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1252|     KIT_CACHE[key] = (me, float(local[:, 0].max() - local[:, 0].min()))
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1253|     return KIT_CACHE[key]
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1254|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1255|
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1256
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1256| def kit_place(name, lib, parent, center, u_to, v_to, length=None, k=None, axes=None, thick=1.0, bend=1.0, mat=None, decimate=1.0):
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1257|     """把素材摆到父零件（关节空物体）的局部坐标里：素材 u 轴对准 u_to、v 轴尽量对准 v_to；
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1258|     length 给出沿 u 的目标长度（或直接给缩放 k），thick 再单独调粗细，bend 只压 v 向（软管的弯曲摆幅）。每件只挂一个父零件，不跨关节。"""
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1259|     from mathutils import Matrix
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1260|     src_me, src_len = kit_source(name, lib, axes)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1261|     k = k if k is not None else length / src_len
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1262|     u = Vector(u_to).normalized()
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1263|     v = Vector(v_to)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1264|     v = (v - u * v.dot(u)).normalized()
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1265|     w = u.cross(v)
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1266|     ob = bpy.data.objects.new(name, src_me.copy())
+[2026.11.02-18.18.11:573][  0]LogPython: Warning: [kitsrc]  1267|     place(ob, parent, (0, 0, 0), (0, 0, 0))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1268|     rot = Matrix((u, v, w)).transposed().to_4x4()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1269|     ob.matrix_basis = Matrix.Translation(Vector(center)) @ rot @ Matrix.Diagonal((k, k * thick * bend, k * thick, 1.0))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1270|     if mat is not None:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1271|         ob.data.materials.clear()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1272|         ob.data.materials.append(mat)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1273|     else:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1274|         for m in ob.data.materials:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1275|             kit_tint(m)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1276|     decimate = kit_ratio(name, decimate)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1277|     if decimate < 1.0:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1278|         m = ob.modifiers.new('减面', 'DECIMATE')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1279|         m.ratio = decimate
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1280|     return ob
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1281|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1282|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1283
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1283| def kit_span(name, lib, parent, p1, p2, v_to, axes=None, thick=1.0, bend=1.0, mat=None, decimate=1.0):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1284|     """沿 p1 → p2 摆一根（液压杆 / 软管），两端落在这两点上。"""
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1285|     p1, p2 = Vector(p1), Vector(p2)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1286|     return kit_place(name, lib, parent, (p1 + p2) / 2, p2 - p1, v_to, length=(p2 - p1).length, axes=axes,
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1287|                      thick=thick, bend=bend, mat=mat, decimate=decimate)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1288|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1289|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1290
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1290| def kit_tint(mat):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1291|     """素材包贴图偏橄榄绿，接一个色相 / 饱和度节点压掉饱和度，贴近我们的冷灰。每个材质只接一次。"""
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1292|     if mat is None or not mat.node_tree or mat.get('kit_tinted'):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1293|         return
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1294|     nt = mat.node_tree
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1295|     bsdf = next((n for n in nt.nodes if n.type == 'BSDF_PRINCIPLED'), None)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1296|     if bsdf is None or not bsdf.inputs['Base Color'].is_linked:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1297|         return
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1298|     link = bsdf.inputs['Base Color'].links[0]
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1299|     hs = nt.nodes.new('ShaderNodeHueSaturation')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1300|     hs.inputs['Saturation'].default_value = 0.3
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1301|     hs.inputs['Value'].default_value = 0.95
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1302|     nt.links.new(link.from_socket, hs.inputs['Color'])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1303|     nt.links.new(hs.outputs['Color'], bsdf.inputs['Base Color'])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1304|     mat['kit_tinted'] = True
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1305|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1306|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1307| KIT_PAIRS = []   # 跨关节的减震：(缸筒, 缸筒销点（父关节局部）, 活塞杆, 活塞杆销点（父关节局部）, 粗细)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1308| COIL = {}
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1309| # Hydraulics_T1_02 沿长轴（素材 Y，从 -Y 端量起，素材单位）：活塞杆一端销孔 0.13、缸口 0.55、缸筒一端销孔 1.72。
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1310| # 原件缸筒长、活塞杆短，行程太小（膝盖一弯缸筒就从活塞杆那头戳出去）：把缸筒中段那截没有中间顶点的直筒（0.72~1.12）
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1311| # 缩短 0.36、活塞杆中段（0.40~0.52）拉长 0.30，两段差不多长，行程翻倍。下面是改过以后的位置
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1312| COIL_ROD_STRETCH, COIL_BARREL_SHRINK = 0.30, 0.36
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1313| COIL_PIN_ROD, COIL_CUT, COIL_PIN_BARREL = 0.13 - COIL_ROD_STRETCH, 0.55, 1.72 - COIL_BARREL_SHRINK
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1314| COIL_SLACK = 0.10   # 伸直时活塞杆还插在缸筒里的长度，关节再伸开一点也不露缝
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1315|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1316|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1317
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1317| def kit_coilover_meshes():
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1318|     """把 Hydraulics_T1_02 在缸口处切成缸筒、活塞杆两块（各自原点在销孔、+X 朝对方），再从机械零件 hutch_01 里取出 11 圈弹簧
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1319|     （直径归一成 1、沿 +X），套在缸筒上。"""
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1320|     if COIL:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1321|         return COIL
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1322|     import bmesh
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1323|     src, _ = kit_source('Hydraulics_T1_02', '机甲2', ((0, 1, 0), (1, 0, 0)))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1324|     u0 = min(v.co.x for v in src.vertices)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1325|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1326|     def piece(keep_rod, pin, sign, name):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1327|         bm = bmesh.new()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1328|         bm.from_mesh(src)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1329|         dead = [f for f in bm.faces if ((f.calc_center_median().x - u0) < COIL_CUT) != keep_rod]
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1330|         bmesh.ops.delete(bm, geom=dead, context='FACES')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1331|         for v in bm.verts:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1332|             rel = v.co.x - u0
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1333|             if keep_rod and rel <= 0.42:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1334|                 rel -= COIL_ROD_STRETCH       # 活塞杆销孔那头往外挪：中段那截杆拉长
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1335|             elif not keep_rod and rel >= 1.10:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1336|                 rel -= COIL_BARREL_SHRINK     # 缸筒销孔那头往里挪：中段那截直筒变短
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1337|             v.co = Vector((sign * (rel - pin), v.co.y, sign * v.co.z))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1338|         me = bpy.data.meshes.new(name)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1339|         bm.to_mesh(me)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1340|         bm.free()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1341|         for m in src.materials:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1342|             me.materials.append(m)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1343|             kit_tint(m)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1344|         return me
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1345|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1346|     COIL['rod'] = piece(True, COIL_PIN_ROD, 1, '减震活塞杆')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1347|     COIL['barrel'] = piece(False, COIL_PIN_BARREL, -1, '减震缸筒')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1348|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1349|     with bpy.data.libraries.load(KIT_LIB['机械零件'], link=False) as (lib_src, dst):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1350|         dst.objects = ['hutch_01']
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1351|     ob = dst.objects[0]
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1352|     hm = ob.data.copy()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1353|     hm.transform(ob.matrix_basis)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1354|     bpy.data.objects.remove(ob)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1355|     bm = bmesh.new()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1356|     bm.from_mesh(hm)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1357|     bm.verts.ensure_lookup_table()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1358|     seen, keep = set(), []
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1359|     for v in bm.verts:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1360|         if v.index in seen:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1361|             continue
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1362|         stack, isl = [v], [v]
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1363|         seen.add(v.index)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1364|         while stack:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1365|             x = stack.pop()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1366|             for e in x.link_edges:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1367|                 o = e.other_vert(x)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1368|                 if o.index not in seen:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1369|                     seen.add(o.index)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1370|                     stack.append(o)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1371|                     isl.append(o)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1372|         lo = Vector([min(p.co[i] for p in isl) for i in range(3)])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1373|         hi = Vector([max(p.co[i] for p in isl) for i in range(3)])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1374|         if 150 < len(isl) < 260 and (hi - lo).y > 0.06 and (hi - lo).z > 0.06 and (hi - lo).x < 0.03:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1375|             keep.extend(isl)   # 一圈弹簧（这个素材的弹簧每圈是单独的一块）
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1376|     keep_ids = {v.index for v in keep}
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1377|     bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.index not in keep_ids], context='VERTS')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1378|     lo = Vector([min(v.co[i] for v in bm.verts) for i in range(3)])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1379|     hi = Vector([max(v.co[i] for v in bm.verts) for i in range(3)])
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1380|     dia = ((hi - lo).y + (hi - lo).z) / 2
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1381|     for v in bm.verts:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1382|         v.co = Vector(((v.co.x - lo.x) / dia, (v.co.y - (lo.y + hi.y) / 2) / dia, (v.co.z - (lo.z + hi.z) / 2) / dia))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1383|     me = bpy.data.meshes.new('减震弹簧')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1384|     bm.to_mesh(me)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1385|     bm.free()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1386|     for p in me.polygons:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1394
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1394| def kit_coilover(name, bone, parent_a, anchor_a, parent_b, anchor_b, thick=1.0):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1395|     """跨关节的减震：缸筒（带弹簧）挂 parent_a、销孔在 anchor_a；活塞杆挂 parent_b、销孔在 anchor_b。
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1396|     两段各跟各的骨头，摆完姿势后 aim_kit_pairs() 让它们互相对准（游戏里也要每帧这样对准，关节一弯活塞杆就在缸筒里伸缩）。
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1397|     bone：导出时给这两段各加一根小骨头 <bone>_a（缸筒，挂 parent_a 的骨头）、<bone>_b（活塞杆），UMechMeshComponent 每帧把它们互相对准。"""
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1398|     C = kit_coilover_meshes()
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1399|     barrel = place(bpy.data.objects.new(name + '缸筒', C['barrel'].copy()), parent_a, anchor_a, (0, 0, 0))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1400|     rod = place(bpy.data.objects.new(name + '活塞杆', C['rod'].copy()), parent_b, anchor_b, (0, 0, 0))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1401|     # 弹簧套在缸筒上（缸筒局部：销孔 0，缸口 COIL_PIN_BARREL - COIL_CUT = 0.81），从销孔座往后 0.10 到缸口前 0.05，外径 0.32
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1402|     spring = place(bpy.data.objects.new(name + '弹簧', C['spring'].copy()), barrel, (0.10, 0, 0), (0, 0, 0))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1403|     spring.scale = ((COIL_PIN_BARREL - COIL_CUT - 0.15) / C['spring_len'], 0.32, 0.32)
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1404|     if kit_ratio('spring') < 1.0:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1405|         spring.modifiers.new('减面', 'DECIMATE').ratio = kit_ratio('spring')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1406|     barrel['kit_bone'], rod['kit_bone'] = bone.replace('#', 'a'), bone.replace('#', 'b')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1407|     if kit_ratio('coilover') < 1.0:
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1408|         for ob in (barrel, rod):
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1409|             ob.modifiers.new('减面', 'DECIMATE').ratio = kit_ratio('coilover')
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1410|     KIT_PAIRS.append((barrel, Vector(anchor_a), rod, Vector(anchor_b), thick))
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1411|     return barrel, rod
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1412|
+[2026.11.02-18.18.11:574][  0]LogPython: Warning: [kitsrc]  1413|
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc] lookdev/robot_lookdev.py:1434
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1434| def add_kit(pelvis, torso, arms, legs):
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1435|     """v3 加细节（用户：「改动可以大一点」；弹簧要跨关节才合理）。全是机甲2 / 机械零件的素材：
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1436|     液压杆 Hydraulics_T1_02（销轴沿关节轴 X）：腰两侧、大腿后、大腿外侧一对、小腿后、上臂前、前臂外，各挂一个零件；
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1437|     减震：膝盖后外侧、脚踝后外侧（跟腱位）各一根跨关节的减震，缸筒 + 活塞杆两段分挂关节两边，缸筒上套 hutch_01 的弹簧（橙色）；
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1438|     线缆：背上 / 胸前各一束双管 Pipes_07 走到肩，腰前一根、上臂后一根、大腿内后一根波纹管 Pipes_11。"""
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1439|     PISTON = dict(axes=((0, 1, 0), (1, 0, 0)))   # 素材长轴是 Y，销轴是 X
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1440|     for sx, side, lr in ((1, '左', 'l'), (-1, '右', 'r')):
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1441|         hip, kn, an = legs[side]
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1442|         sh, el, wr = arms[side]
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1443|         # 液压杆（大腿后、小腿后让出膝盖后面给减震）
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1444|         kit_span('Hydraulics_T1_02', '机甲2', pelvis, (0.09 * sx, 0.03, 0.04), (0.11 * sx, 0.02, 0.24), (1, 0, 0), thick=1.0, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1445|         kit_span('Hydraulics_T1_02', '机甲2', hip, (0, 0.10, -0.08), (0, 0.095, -0.38), (1, 0, 0), thick=1.15, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1446|         for dy in (-0.035, 0.035):
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1447|             kit_span('Hydraulics_T1_02', '机甲2', hip, (0.135 * sx, dy, -0.07), (0.135 * sx, dy, -0.50), (1, 0, 0), thick=0.9, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1448|         kit_span('Hydraulics_T1_02', '机甲2', kn, (0, 0.075, -0.26), (0, 0.06, -0.56), (1, 0, 0), thick=1.15, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1449|         kit_span('Hydraulics_T1_02', '机甲2', sh, (0, -0.075, -0.06), (0, -0.07, -0.32), (1, 0, 0), thick=0.9, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1450|         kit_span('Hydraulics_T1_02', '机甲2', el, (0.075 * sx, 0.03, -0.04), (0.075 * sx, 0.03, -0.31), (1, 0, 0), thick=1.25, **PISTON)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1451|         # 跨关节减震：膝盖后外侧（大腿下段 → 小腿上段）、脚踝后外侧（小腿下段 → 脚跟），避开小腿中线的后鳍、喷口和液压杆
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1452|         kit_coilover(f'{side}膝减震', f'damper_knee_#_{lr}', hip, (0.055 * sx, 0.105, -0.40), kn, (0.055 * sx, 0.095, -0.22))
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1453|         kit_coilover(f'{side}踝减震', f'damper_ankle_#_{lr}', kn, (0.06 * sx, 0.075, -0.38), an, (0.06 * sx, 0.13, -0.05))
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1454|         # 线缆：摆幅平贴体表
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1455|         for p1, p2, fwd in (((0.12 * sx, 0.20, 0.12), (0.30 * sx, 0.07, 0.30), (0, 1, 0)),
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1456|                             ((0.17 * sx, -0.13, 0.10), (0.29 * sx, -0.06, 0.30), (0, -1, 0))):
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1457|             p1, p2 = Vector(p1), Vector(p2)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1458|             kit_span('Pipes_07', '机甲2', torso, p1, p2, (p2 - p1).cross(Vector(fwd)), thick=1.5, bend=0.6)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1459|         corr = dict(name='Pipes_07', thick=1.5) if kit_lite() else dict(name='Pipes_11', thick=1.35, decimate=0.2)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1460|         kit_span(lib='机甲2', parent=pelvis, p1=(0.11 * sx, -0.07, 0.07), p2=(0.09 * sx, -0.05, 0.22), v_to=(sx, 0, 0), bend=0.4, **corr)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1461|         kit_span(lib='机甲2', parent=sh, p1=(0.0, 0.065, -0.06), p2=(0.0, 0.06, -0.33), v_to=(sx, 0, 0), bend=0.35, **corr)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1462|         kit_span(lib='机甲2', parent=hip, p1=(-0.045 * sx, 0.08, -0.08), p2=(-0.04 * sx, 0.07, -0.50), v_to=(sx, 0, 0), bend=0.3, **corr)
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1463|     aim_kit_pairs()
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1464|
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]  1465|
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc] #### lookdev/rig/factions/run_export.py 70 行（前 40 行）
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     1| # 一键：导出九台（NEC_L = v3 按同一套规矩重导）→ 重新导入自检 → 握持检查 → 关节弯曲检查 → 清单。py -3 lookdev/rig/factions/run_export.py [--keys NEC_M,VHI_H] [--skip-export]
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     2| # 只用 CPU（Blender -b，不渲染 Cycles；自检的缩略图是 Workbench 小图）。每台大约 5 秒，四个一组并行。
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     3| import argparse
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     4| import os
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     5| import subprocess
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     6| import sys
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     7| from concurrent.futures import ThreadPoolExecutor
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     8|
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]     9| HERE = os.path.dirname(os.path.abspath(__file__))
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    10| LOOKDEV = os.path.dirname(os.path.dirname(HERE))
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    11| BLENDER = r'D:\SteamLibrary\steamapps\common\Blender\blender.exe'
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    12| SRC = {
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    13|     'NEC_L': None,     # v3：不开工程，export_factions.py 自己照 robot_lookdev.py 重建
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    14|     # 10-31 减曲面：用户挑了中型方案二（全部方正化）、重型方案一（只换大曲面），见 docs/阵营机甲/新纪_减曲面_方案_20261031.png；
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    15|     # 改前的源文件是 factions/dingshan/DS_M.blend / DS_HKF.blend（导出结果的备份在 D:\归档\RobotSlice_新纪减曲面导入前_20261031）
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    16|     'NEC_M': 'factions/dingshan/flat/DS_M2.blend', 'NEC_H': 'factions/dingshan/flat/DS_H1.blend',
+[2026.11.02-18.18.11:575][  0]LogPython: Warning: [kitsrc]    17|     'PHASE_L': 'factions/baita/blend/白塔_L1.blend', 'PHASE_M': 'factions/baita/blend/白塔_BM.blend',
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    18|     'PHASE_H': 'factions/baita/blend/白塔_H2.blend',
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    19|     'VHI_L': 'rig/SKM_Robot_v3.blend', 'VHI_M': 'rig/SKM_Robot_v3.blend', 'VHI_H': 'rig/SKM_Robot_v3.blend',
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    20| }
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    21|
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    22| ap = argparse.ArgumentParser()
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    23| ap.add_argument('--keys', default=','.join(SRC))
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    24| ap.add_argument('--out', default=HERE)
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    25| ap.add_argument('--skip-export', action='store_true')
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    26| ap.add_argument('--jobs', type=int, default=4)
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    27| A = ap.parse_args()
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    28| try:
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    29|     sys.stdout.reconfigure(encoding='utf-8')
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    30| except AttributeError:
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    31|     pass
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    32| keys = [k for k in A.keys.split(',') if k]
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    33| os.makedirs(os.path.join(A.out, 'logs'), exist_ok=True)
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    34|
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    35|
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    36| def blender(args, logname):
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    37|     with open(os.path.join(A.out, 'logs', logname), 'w', encoding='utf-8', errors='replace') as f:
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    38|         r = subprocess.run([BLENDER, '-b'] + args, stdout=f, stderr=subprocess.STDOUT)
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    39|     print(('完成 ' if r.returncode == 0 else '失败 ') + logname, flush=True)
+[2026.11.02-18.18.11:576][  0]LogPython: Warning: [kitsrc]    40|     return r.returncode
+[2026.11.02-18.18.13:068][  0]LogPython: Warning: [kitdim] #### lookdev/kit/kit_inspect.py 输出 3 行，相关 0 行
+[2026.11.02-18.18.15:086][  0]LogPython: Warning: [kitdim] #### lookdev/kit/kit_profile.py 输出 32 行，相关 0 行
+[2026.11.02-18.18.15:089][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-18.18.15:108][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-18.18.15:108][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-18.18.15:108][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-18.18.15:108][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-18.18.15:111][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-18.18.15:640][  5]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-18.18.15:782][  6]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
