@@ -627,6 +627,7 @@ void AMechHUD::DrawHUD()
 		DrawPings(Mech);  // 中键标点（11-01，MechHudPing.cpp）
 		DrawOffscreen(Mech);
 		DrawLockBox(Mech);
+		DrawEaster(Mech);  // 11-02 彩蛋：无人机 / 机械狗的锁定框、标记、全场提示（MechHudEaster.cpp）
 		Gate(1.2f);
 		DrawScope(Mech);
 		DrawReticle(Mech);

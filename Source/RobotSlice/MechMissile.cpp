@@ -1,4 +1,5 @@
 #include "MechMissile.h"
+#include "MechEaster.h"
 #include "MechGrunt.h"
 #include "MechRun.h"
 #include "MechSmoke.h"
@@ -228,6 +229,8 @@ void AMechMissile::Tick(float DeltaSeconds)
 				Movement->bIsHomingProjectile = false;
 			}
 		}
+		// 11-02 彩蛋：没锁机体时追准星附近的无人机 / 狗（MechEaster.h），贴近就炸
+		if (!Target && MechEaster::SteerMissile(this, Shooter, Movement, RunTarget)) { Explode(GetActorLocation()); return; }
 	}
 	if (RunLife > 0.f && Age > RunLife)
 	{

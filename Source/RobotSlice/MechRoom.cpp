@@ -247,6 +247,7 @@ namespace MechRoom
 			GConfig->GetFloat(Section, TEXT("ChallengeArmor"), S.ChallengeArmor, GGameUserSettingsIni);
 			GConfig->GetFloat(Section, TEXT("ChallengeDamage"), S.ChallengeDamage, GGameUserSettingsIni);
 			GConfig->GetBool(Section, TEXT("FriendlyFire"), S.bFriendlyFire, GGameUserSettingsIni);
+			GConfig->GetBool(Section, TEXT("Easter"), S.bEaster, GGameUserSettingsIni);
 			// 人机名单：「队伍:强度,队伍:强度」；存过空串 = 房主把人机都删了
 			FString Text;
 			if (GConfig->GetString(Section, TEXT("AIs"), Text, GGameUserSettingsIni))
@@ -290,6 +291,7 @@ namespace MechRoom
 		GConfig->SetFloat(Section, TEXT("ChallengeArmor"), S.ChallengeArmor, GGameUserSettingsIni);
 		GConfig->SetFloat(Section, TEXT("ChallengeDamage"), S.ChallengeDamage, GGameUserSettingsIni);
 		GConfig->SetBool(Section, TEXT("FriendlyFire"), S.bFriendlyFire, GGameUserSettingsIni);
+		GConfig->SetBool(Section, TEXT("Easter"), S.bEaster, GGameUserSettingsIni);
 		TArray<FString> Parts;
 		for (const FMechRoomAI& A : S.AIs)
 		{

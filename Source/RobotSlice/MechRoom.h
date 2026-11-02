@@ -81,6 +81,10 @@ struct FMechRoomSettings
 	/** 11-02 训练场的友伤开关：打开后玩家之间能互相打（只在训练场有用） */
 	UPROPERTY()
 	bool bFriendlyFire = false;
+
+	/** 11-02 彩蛋（无人机群、机械狗……，MechEaster.h）：所有模式都有，默认开 */
+	UPROPERTY()
+	bool bEaster = true;
 };
 
 namespace MechRoom
