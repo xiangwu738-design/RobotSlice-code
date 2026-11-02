@@ -1,5 +1,5 @@
-#include "MechMapRules.h"
 #include "MechCombatComponent.h"
+#include "MechMapRules.h"
 #include "MechLoop.h"
 
 #include "Camera/CameraComponent.h"
