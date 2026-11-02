@@ -1,4 +1,3 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "kitfree_deploy", "script": "tools/ue_kitfree_deploy.py", "seconds": 900},
-  {"kind": "game", "name": "frame_lineup", "map": "/Game/Maps/L_Range?Range", "args": ["-MechFrameLineup", "-MechHour=13", "-MechWeather=Clear"], "seconds": 300}
+  {"kind": "py", "name": "kitfree_cleanup", "script": "tools/ue_kitfree_cleanup.py", "seconds": 300}
 ]}
