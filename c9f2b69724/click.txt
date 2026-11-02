@@ -1,0 +1,123 @@
+click 结束：ok，用时 490 秒，日志行 122
+[2026.11.02-13.19.26:226][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-13.19.26:226][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-13.19.26:226][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-13.19.26:226][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-13.19.26:226][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-13.19.26:642][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-13.19.26:642][  0]LogPython: Using Python 3.11.8
+[2026.11.02-13.19.26:664][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-13.19.27:239][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-13.19.27:268][  0]LogTemp: Display: [lighting] 时间 21.50 天气 LightRain
+[2026.11.02-13.19.27:270][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-13.19.27:270][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-13.19.27:270][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-13.19.27:270][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-13.19.27:272][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-13.19.27:273][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-13.19.27:273][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=108.286 Y=49.592 Z=149.812
+[2026.11.02-13.19.27:319][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-13.19.27:784][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-13.19.27:812][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-13.19.27:821][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 8.928 ms
+[2026.11.02-13.19.27:821][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-13.19.27:831][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-13.19.27:840][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 19.566 ms (total: 28.495 ms)
+[2026.11.02-13.19.27:841][  0]LogTemp: Display: [uiclick] 开始，共 80 步
+[2026.11.02-13.19.27:842][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-13.19.27:856][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-13.19.27:856][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-13.19.27:856][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-13.19.27:856][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-13.19.27:860][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-13.19.27:868][  1]LogTemp: Display: [uiclick] 通过：等「开房」（0.1 秒）
+[2026.11.02-13.19.28:603][ 48]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-13.19.28:697][ 49]LogTemp: Display: [lighting] 时间 21.50 天气 LightRain
+[2026.11.02-13.19.33:168][537]LogTemp: Display: [uiclick] 通过：等场景稳定（5.0 秒）
+[2026.11.02-13.19.35:053][673]LogTemp: Display: [uiclick] 通过：鼠标移到「加入」上（悬停）（0.5 秒）
+[2026.11.02-13.19.36:083][770]LogTemp: Display: [uiclick] 通过：点「加入」→ 出现「JOIN ROOM」（0.0 秒）
+[2026.11.02-13.19.37:105][870]LogTemp: Display: [uiclick] 通过：点「返回」→ 出现「开房」（0.0 秒）
+[2026.11.02-13.19.37:414][911]LogTemp: Display: [uiclick] 通过：点「设置」→ 出现「SETTINGS」（0.0 秒）
+[2026.11.02-13.19.37:728][948]LogTemp: Display: [uiclick] 通过：点「画面」→ 出现「垂直同步」（0.0 秒）
+[2026.11.02-13.19.38:758][ 56]LogTemp: Display: [uiclick] 通过：点「声音」→ 出现「音乐音量」（0.0 秒）
+[2026.11.02-13.19.39:782][163]LogTemp: Display: [uiclick] 通过：点「操作」→ 出现「鼠标灵敏度」（0.0 秒）
+[2026.11.02-13.19.40:810][266]LogTemp: Display: [uiclick] 通过：点「界面」→ 出现「菜单配色」（0.0 秒）
+[2026.11.02-13.19.41:845][372]LogTemp: Display: [uiclick] 通过：点「按键」→ 出现「前进」（0.0 秒）
+[2026.11.02-13.19.42:855][484]LogTemp: Display: [uiclick] 通过：点「前进」→ 出现「按任意键…」（0.0 秒）
+[2026.11.02-13.19.43:162][526]LogTemp: Display: [uiclick] 通过：改键等新键时按 Esc 取消（0.0 秒）
+[2026.11.02-13.19.43:481][568]LogTemp: Display: [uiclick] 通过：点「界面」→ 出现「菜单配色」（0.0 秒）
+[2026.11.02-13.19.43:795][607]LogTemp: Display: [uiclick] 通过：点「琥珀」→ 强调色换成琥珀、设置里 MenuPalette = 1（0.0 秒）
+[2026.11.02-13.19.44:813][711]LogTemp: Display: [uiclick] 通过：点「青色」→ 强调色换回青色（0.0 秒）
+[2026.11.02-13.19.45:122][750]LogTemp: Display: [uiclick] 通过：点「新纪建设」→ HudTheme = 1（0.0 秒）
+[2026.11.02-13.19.45:436][789]LogTemp: Display: [uiclick] 通过：点「跟随机体」→ HudTheme = -1（0.0 秒）
+[2026.11.02-13.19.45:756][829]LogTemp: Display: [uiclick] 通过：点「声音」→ 出现「音乐音量」（0.0 秒）
+[2026.11.02-13.19.46:094][871]LogTemp: Display: [uiclick] 音乐音量 0.70 → 0.60，ini 里 0.60
+[2026.11.02-13.19.46:094][872]LogTemp: Display: [uiclick] 通过：拖音乐音量滑条到 60%（0.0 秒）
+[2026.11.02-13.19.47:115][982]LogTemp: Display: [uiclick] 通过：点「画面」→ 出现「垂直同步」（0.0 秒）
+[2026.11.02-13.19.47:437][ 24]LogTemp: Display: [uiclick] 通过：点「120」→ 出现「未应用」（0.0 秒）
+[2026.11.02-13.19.48:470][132]LogTemp: Display: [uiclick] 通过：点「撤销」→ 「未应用」消失（0.0 秒）
+[2026.11.02-13.19.48:788][172]LogTemp: Display: [uiclick] 通过：点「144」→ 出现「未应用」（0.0 秒）
+[2026.11.02-13.19.49:123][209]LogTemp: Display: [uiclick] 通过：点「应用」→ 「未应用」消失、帧率上限 = 144（0.0 秒）
+[2026.11.02-13.19.49:441][250]LogTemp: Display: [uiclick] 通过：点「返回」→ 出现「开房」（0.0 秒）
+[2026.11.02-13.19.49:753][289]LogTemp: Display: [room] 开房：荒野与废墟 · 个人死斗 · 先到 25 击毁 · 20 分钟，人机 1 台
+[2026.11.02-13.19.50:251][290]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-13.19.50:294][290]LogTemp: Display: [lighting] 时间 21.50 天气 LightRain
+[2026.11.02-13.19.50:294][290]LogTemp: Display: [room] 进房间图：荒野与废墟 · 个人死斗 · 先到 25 击毁 · 20 分钟，网络 开房（端口 7777）
+[2026.11.02-13.19.50:297][290]LogTemp: Display: [room] 你 报到（蓝队）
+[2026.11.02-13.19.50:297][290]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-13.19.50:352][290]LogTemp: Display: [music] 无 → 房间 巌戸台分寮
+[2026.11.02-13.19.50:527][290]LogTemp: Display: [uiclick] 通过：点「开房」→ 进了房间图（0.0 秒）
+[2026.11.02-13.19.50:648][293]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-13.19.50:733][301]LogTemp: Display: [lighting] 时间 21.50 天气 LightRain
+[2026.11.02-13.19.52:039][448]LogTemp: Display: [uiclick] 通过：房间页稳定（1.5 秒）
+[2026.11.02-13.19.53:052][565]LogTemp: Display: [uiclick] 通过：房间页换配色 1（0.0 秒）
+[2026.11.02-13.19.54:071][685]LogTemp: Display: [uiclick] 通过：房间页换配色 2（0.0 秒）
+[2026.11.02-13.19.55:092][811]LogTemp: Display: [uiclick] 通过：房间页换配色 3（0.0 秒）
+[2026.11.02-13.19.56:108][937]LogTemp: Display: [uiclick] 通过：房间页换配色 4（0.0 秒）
+[2026.11.02-13.19.57:124][ 61]LogTemp: Display: [uiclick] 通过：房间页换回设置里的配色（0.0 秒）
+[2026.11.02-13.19.57:440][106]LogTemp: Display: [room] 房主改选择：相位电子园区 · 个人死斗 · 先到 25 击毁 · 20 分钟，人机 1 台，禁用阶段 关
+[2026.11.02-13.19.57:440][107]LogTemp: Display: [uiclick] 通过：点「相位电子园区」→ 地图 = 相位电子园区（0.0 秒）
+[2026.11.02-13.19.57:749][149]LogTemp: Display: [room] 房主改选择：老旧街道 · 个人死斗 · 先到 25 击毁 · 20 分钟，人机 1 台，禁用阶段 关
+[2026.11.02-13.19.57:749][150]LogTemp: Display: [uiclick] 通过：点「死斗」→ 模式 = 死斗（0.0 秒）
+[2026.11.02-13.19.58:063][193]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 关
+[2026.11.02-13.19.58:063][194]LogTemp: Display: [uiclick] 通过：点「团队淘汰」→ 模式 = 团队淘汰（0.0 秒）
+[2026.11.02-13.19.58:369][237]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 关
+[2026.11.02-13.19.58:369][238]LogTemp: Display: [uiclick] 通过：点「赛博朋克街道」→ 地图 = 街道（序号 0，进图快）（0.0 秒）
+[2026.11.02-13.19.58:686][282]LogTemp: Display: [uiclick] 通过：记下人机台数（0.0 秒）
+[2026.11.02-13.19.58:992][325]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 2 台，禁用阶段 关
+[2026.11.02-13.19.58:992][326]LogTemp: Display: [uiclick] 通过：点「+ 加人机」→ 多一台人机（0.0 秒）
+[2026.11.02-13.20.00:012][450]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 2 台，禁用阶段 关
+[2026.11.02-13.20.00:012][451]LogTemp: Display: [uiclick] 通过：点「›」→ 第一台人机换了强度（0.0 秒）
+[2026.11.02-13.20.00:127][466]LogTemp: Warning: [map] 没拿到场地框，用出生点周围 150 米
+[2026.11.02-13.20.00:143][466]LogTemp: Display: [map] 开拍：活动范围 150×150 米，底图 2048×2048（4×4 块，9.3 厘米/像素），镜头高 29 米（参考地面 2）
+[2026.11.02-13.20.00:375][472]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 关
+[2026.11.02-13.20.00:375][473]LogTemp: Display: [uiclick] 通过：点「×」→ 移除一台人机（0.0 秒）
+[2026.11.02-13.20.00:592][482]LogTemp: Display: [map] 高度校验：24 个点平均差 0 厘米（几十厘米以内 = 方向和高度都对）
+[2026.11.02-13.20.00:662][492]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.00:662][493]LogTemp: Display: [uiclick] 通过：禁用阶段先开、挑战倍数先关、友伤先关（0.0 秒）
+[2026.11.02-13.20.00:841][514]LogTemp: Display: [map] 底图完成：拍摄共 388 毫秒（16 块），从开拍到能用 0.7 秒，贴图 2048×2048（16.0 MB）
+[2026.11.02-13.20.00:971][532]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 关
+[2026.11.02-13.20.00:971][532]LogTemp: Display: [uiclick] 通过：点「开」→ 禁用阶段关（0.0 秒）
+[2026.11.02-13.20.01:282][574]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.01:282][575]LogTemp: Display: [uiclick] 通过：点「关」→ 禁用阶段开（0.0 秒）
+[2026.11.02-13.20.01:591][617]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.01:591][618]LogTemp: Display: [uiclick] 通过：点「关」→ 挑战倍数开（0.0 秒）
+[2026.11.02-13.20.01:909][654]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.01:909][655]LogTemp: Display: [uiclick] 通过：点「自定义」→ 倍数自定义（0.0 秒）
+[2026.11.02-13.20.02:925][778]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.02:925][779]LogTemp: Display: [uiclick] 通过：点「推荐」→ 倍数用推荐（0.0 秒）
+[2026.11.02-13.20.03:237][824]LogTemp: Display: [uiclick] 通过：点「加入红队」→ 自己换到红队（0.0 秒）
+[2026.11.02-13.20.03:550][868]LogTemp: Display: [uiclick] 通过：点「加入蓝队」→ 自己换回蓝队（0.0 秒）
+[2026.11.02-13.20.03:870][912]LogTemp: Display: [room] 房主改选择：训练场 · 自由练习，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.03:870][913]LogTemp: Display: [uiclick] 通过：点「训练场」→ 地图 = 训练场（0.0 秒）
+[2026.11.02-13.20.04:181][954]LogTemp: Display: [room] 房主改选择：训练场 · 自由练习 · 友伤开，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.04:181][955]LogTemp: Display: [uiclick] 通过：点「关」→ 友伤开（0.0 秒）
+[2026.11.02-13.20.05:196][ 76]LogTemp: Display: [room] 房主改选择：赛博朋克街道 · 团队淘汰 · 三局两胜，人机 1 台，禁用阶段 开
+[2026.11.02-13.20.05:196][ 77]LogTemp: Display: [uiclick] 通过：点「赛博朋克街道」→ 地图 = 街道，回到对战（0.0 秒）
+[2026.11.02-13.21.36:214][350]LogTemp: Display: [uiclick] 失败：点「开始」→ 换到对战图（从房间开的场）（90.0 秒）
+[2026.11.02-13.24.06:531][172]LogTemp: Display: [uiclick] 失败：禁用 / 选配：轮到自己时点卡片、点确认（150.0 秒）
+[2026.11.02-13.25.36:840][233]LogTemp: Display: [uiclick] 失败：选配结束，开局（90.0 秒）
+[2026.11.02-13.25.47:150][482]LogTemp: Display: [uiclick] 失败：打开暂停页（10.0 秒）
+[2026.11.02-13.27.18:172][754]LogTemp: Display: [uiclick] 失败：点「回房间」→ 回到房间图（90.0 秒）
+[2026.11.02-13.27.19:981][  3]LogTemp: Display: [uiclick] 通过：回房间后稳定（1.5 秒）
+[2026.11.02-13.27.20:998][131]LogTemp: Display: [uiclick] 结束：通过 53 项，失败 5 项
