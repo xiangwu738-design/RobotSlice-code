@@ -1,3 +1,3 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "dump_src", "script": "tools/ue_dump_src.py", "seconds": 120}
+  {"kind": "gamepy", "name": "kitfree_src", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_sources.py", "seconds": 900}
 ]}
