@@ -2,12 +2,17 @@
 
 #include "CoreGlobals.h"
 #include "Components/AudioComponent.h"
+#include "Engine/World.h"
 #include "EngineUtils.h"
 #include "HAL/IConsoleManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "Misc/App.h"
 #include "Misc/CommandLine.h"
+#include "HAL/FileManager.h"
+#include "Misc/FileHelper.h"
+#include "Misc/Paths.h"
 #include "Sound/SoundBase.h"
+#include "Sound/SoundWaveProcedural.h"
 #include "MechCharacter.h"
 #include "MechDefense.h"
 #include "MechGameState.h"
@@ -52,17 +57,235 @@ namespace MechMusicLocal
 		return Table[FMath::Clamp((int32)M, 0, (int32)EMechMusic::Count - 1)];
 	}
 
-	USoundBase* Load(EMechMusic M)
+	// ---------------------------------------------------------------- 音乐包（11-02）
+	// 用户：「最好使用音乐包机制，以后打包了也能改」。游戏目录里放一个 MusicPack 文件夹，里面的 .wav 按文件名对号入座，
+	// 优先于打进包里的曲子，打包后直接换文件就行（下一次换曲 / 下一张图生效，不用重新打包）：
+	//   <位置>_<地图名去掉 L_>.wav（这张图专用，如 battle_OldStreet.wav）> <位置>.wav（所有图）> 包里的 S_mus_<位置>_<地图> > 包里的 S_mus_<位置>。
+	//   位置 = menu room draft intro round clutch battle defprep boss1 boss2 results defwin range。
+	// 找的地方：工程目录 /MusicPack（编辑器 D:/RobotSlice/MusicPack，打包版 <解压目录>/RobotSlice/MusicPack），再找根目录 /MusicPack（打包版 = exe 旁边）。
+	// 只认 WAV（PCM 8/16/24/32 位或 32 位浮点，任意采样率，单声道 / 立体声；多声道只取前两个）。运行时自己解码成 16 位，
+	// 用 USoundWaveProcedural 一次排进去放。音量照样乘这个位置的倍数，所以新曲最好也统一到 -16 LUFS（tools/music_pack.py 可以转）。
+	struct FPackPcm
+	{
+		TArray<uint8> Pcm;  // 16 位交错
+		int32 Rate = 0;
+		int32 Channels = 0;
+		FDateTime Stamp;
+		int64 Size = 0;
+	};
+
+	TArray<FString> PackDirs()
+	{
+		TArray<FString> Out;
+		Out.Add(FPaths::ConvertRelativePathToFull(FPaths::ProjectDir() / TEXT("MusicPack")));
+		const FString Root = FPaths::ConvertRelativePathToFull(FPaths::RootDir() / TEXT("MusicPack"));
+		if (!Out.Contains(Root))
+		{
+			Out.Add(Root);
+		}
+		return Out;
+	}
+
+	bool DecodeWav(const TArray<uint8>& Bytes, FPackPcm& Out, FString& Why)
+	{
+		const int64 N = Bytes.Num();
+		const uint8* D = Bytes.GetData();
+		auto U16 = [&](int64 At) { return (uint32)D[At] | ((uint32)D[At + 1] << 8); };
+		auto U32 = [&](int64 At) { return U16(At) | (U16(At + 2) << 16); };
+		if (N < 12 || FMemory::Memcmp(D, "RIFF", 4) != 0 || FMemory::Memcmp(D + 8, "WAVE", 4) != 0)
+		{
+			Why = TEXT("不是 RIFF/WAVE（只认 .wav）");
+			return false;
+		}
+		int32 Format = 0, Ch = 0, Rate = 0, Bits = 0;
+		int64 DataAt = -1, DataLen = 0;
+		for (int64 At = 12; At + 8 <= N;)
+		{
+			const uint32 Len = U32(At + 4);
+			const int64 Body = At + 8;
+			if (FMemory::Memcmp(D + At, "fmt ", 4) == 0 && Len >= 16 && Body + 16 <= N)
+			{
+				Format = U16(Body);
+				Ch = U16(Body + 2);
+				Rate = U32(Body + 4);
+				Bits = U16(Body + 14);
+				if (Format == 0xFFFE && Len >= 26 && Body + 26 <= N)
+				{
+					Format = U16(Body + 24);  // WAVE_FORMAT_EXTENSIBLE：子格式 GUID 的头两个字节
+				}
+			}
+			else if (FMemory::Memcmp(D + At, "data", 4) == 0)
+			{
+				DataAt = Body;
+				DataLen = FMath::Min<int64>(Len, N - Body);  // 有的软件写的长度不对，按文件实际长度截
+				break;
+			}
+			At = Body + Len + (Len & 1);
+		}
+		if (DataAt < 0 || Ch <= 0 || Rate <= 0)
+		{
+			Why = TEXT("找不到 fmt / data 块");
+			return false;
+		}
+		const bool bFloat = Format == 3;
+		if (!((Format == 1 && (Bits == 8 || Bits == 16 || Bits == 24 || Bits == 32)) || (bFloat && Bits == 32)))
+		{
+			Why = FString::Printf(TEXT("不支持的格式（格式 %d，%d 位）：请存成 16 / 24 位 PCM WAV"), Format, Bits);
+			return false;
+		}
+		const int32 Bps = Bits / 8;
+		const int32 OutCh = FMath::Min(Ch, 2);
+		const int64 Frames = DataLen / (Bps * Ch);
+		Out.Rate = Rate;
+		Out.Channels = OutCh;
+		Out.Pcm.SetNumUninitialized(Frames * OutCh * 2);
+		int16* W = reinterpret_cast<int16*>(Out.Pcm.GetData());
+		const uint8* P = D + DataAt;
+		for (int64 F = 0; F < Frames; ++F)
+		{
+			for (int32 C = 0; C < OutCh; ++C)
+			{
+				const uint8* S = P + (F * Ch + C) * Bps;
+				int32 V = 0;
+				if (bFloat)
+				{
+					float X;
+					FMemory::Memcpy(&X, S, 4);
+					V = FMath::RoundToInt(FMath::Clamp(X, -1.f, 1.f) * 32767.f);
+				}
+				else if (Bps == 1)
+				{
+					V = ((int32)S[0] - 128) << 8;
+				}
+				else if (Bps == 2)
+				{
+					V = (int16)(S[0] | (S[1] << 8));
+				}
+				else if (Bps == 3)
+				{
+					V = (int16)(S[1] | (S[2] << 8));
+				}
+				else
+				{
+					V = (int16)(S[2] | (S[3] << 8));
+				}
+				*W++ = (int16)FMath::Clamp(V, -32768, 32767);
+			}
+		}
+		return Frames > 0;
+	}
+
+	/** 音乐包里这个名字的 wav（解码过的留着，文件改了重新读；最多留 4 首） */
+	TSharedPtr<FPackPcm> FindPack(const FString& Name, FString& OutPath)
+	{
+		static TMap<FString, TSharedPtr<FPackPcm>> Cache;
+		static TArray<FString> Order;
+		IFileManager& FM = IFileManager::Get();
+		for (const FString& Dir : PackDirs())
+		{
+			const FString Path = Dir / (Name + TEXT(".wav"));
+			const FFileStatData St = FM.GetStatData(*Path);
+			if (!St.bIsValid || St.bIsDirectory)
+			{
+				continue;
+			}
+			OutPath = Path;
+			if (const TSharedPtr<FPackPcm>* Hit = Cache.Find(Path); Hit && (*Hit)->Stamp == St.ModificationTime && (*Hit)->Size == St.FileSize)
+			{
+				return *Hit;
+			}
+			TArray<uint8> Bytes;
+			if (!FFileHelper::LoadFileToArray(Bytes, *Path))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("[music] 音乐包：读不了 %s"), *Path);
+				return nullptr;
+			}
+			TSharedPtr<FPackPcm> Pcm = MakeShared<FPackPcm>();
+			FString Why;
+			if (!DecodeWav(Bytes, *Pcm, Why))
+			{
+				UE_LOG(LogTemp, Warning, TEXT("[music] 音乐包：%s 用不了：%s"), *Path, *Why);
+				return nullptr;
+			}
+			Pcm->Stamp = St.ModificationTime;
+			Pcm->Size = St.FileSize;
+			Cache.Add(Path, Pcm);
+			Order.Remove(Path);
+			Order.Add(Path);
+			while (Order.Num() > 4)
+			{
+				Cache.Remove(Order[0]);
+				Order.RemoveAt(0);
+			}
+			return Pcm;
+		}
+		return nullptr;
+	}
+
+	USoundBase* FromPack(const FString& Name, UObject* Outer)
+	{
+		FString Path;
+		const TSharedPtr<FPackPcm> Pcm = FindPack(Name, Path);
+		if (!Pcm.IsValid())
+		{
+			return nullptr;
+		}
+		USoundWaveProcedural* W = NewObject<USoundWaveProcedural>(Outer);
+		W->SetSampleRate(Pcm->Rate);
+		W->NumChannels = Pcm->Channels;
+		W->Duration = (float)(Pcm->Pcm.Num() / (2 * Pcm->Channels)) / Pcm->Rate;
+		W->SoundGroup = SOUNDGROUP_Music;
+		W->bLooping = false;
+		W->VirtualizationMode = EVirtualizationMode::PlayWhenSilent;  // 淡入从 0.001 起，别被当成静音停掉（程序化的声音停了不能从原处接着放）
+		W->QueueAudio(Pcm->Pcm.GetData(), Pcm->Pcm.Num());
+		UE_LOG(LogTemp, Display, TEXT("[music] 音乐包：%s（%d:%02d，%d Hz，%s）"), *Path, (int32)W->Duration / 60, (int32)W->Duration % 60, Pcm->Rate,
+			Pcm->Channels == 2 ? TEXT("立体声") : TEXT("单声道"));
+		return W;
+	}
+
+	USoundBase* Load(EMechMusic M, const UWorld* World, UObject* Outer)
 	{
 		const FSlot& S = Slot(M);
 		if (!S.Asset)
 		{
 			return nullptr;
 		}
+		FString MapName;
+		if (World)
+		{
+			MapName = World->GetMapName();
+			MapName.RemoveFromStart(World->StreamingLevelsPrefix);
+			MapName.RemoveFromStart(TEXT("L_"));
+		}
+		FString Short = S.Asset;
+		Short.RemoveFromStart(TEXT("S_mus_"));
+		// 1、2：音乐包（这张图专用 → 通用）
+		if (!MapName.IsEmpty())
+		{
+			if (USoundBase* P = FromPack(Short + TEXT("_") + MapName, Outer))
+			{
+				return P;
+			}
+		}
+		if (USoundBase* P = FromPack(Short, Outer))
+		{
+			return P;
+		}
+		// 3：包里这张图专用的 S_mus_<位置>_<地图>（如 S_mus_battle_OldStreet）
+		if (!MapName.IsEmpty())
+		{
+			const FString Own = FString::Printf(TEXT("%s_%s"), S.Asset, *MapName);
+			if (USoundBase* Mine = LoadObject<USoundBase>(nullptr, *FString::Printf(TEXT("/Game/Audio/Music/%s.%s"), *Own, *Own), nullptr, LOAD_NoWarn | LOAD_Quiet))
+			{
+				UE_LOG(LogTemp, Display, TEXT("[music] 用这张图专用的 %s"), *Own);
+				return Mine;
+			}
+		}
+		// 4：包里通用的
 		USoundBase* Sound = LoadObject<USoundBase>(nullptr, *FString::Printf(TEXT("/Game/Audio/Music/%s.%s"), S.Asset, S.Asset), nullptr, LOAD_NoWarn | LOAD_Quiet);
 		if (!Sound)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("[music] 没有 /Game/Audio/Music/%s（tools/ue_import_music.py 导入）"), S.Asset);
+			UE_LOG(LogTemp, Warning, TEXT("[music] 没有 /Game/Audio/Music/%s（tools/ue_import_music.py 导入），音乐包里也没有 %s.wav"), S.Asset, *Short);
 		}
 		return Sound;
 	}
@@ -212,7 +435,7 @@ EMechMusic UMechMusic::Pick()
 
 void UMechMusic::StartVoice(EMechMusic SlotId, float FadeIn)
 {
-	USoundBase* Sound = MechMusicLocal::Load(SlotId);
+	USoundBase* Sound = MechMusicLocal::Load(SlotId, GetWorld(), this);
 	UWorld* World = GetWorld();
 	if (!Sound || !World)
 	{

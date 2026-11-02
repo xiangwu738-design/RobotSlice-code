@@ -1,0 +1,16 @@
+HX-07 音乐包（换背景音乐不用重新打包）
+
+把 .wav 放进这个 MusicPack 文件夹，按文件名替换对应场合的音乐。下一次换曲或下一张图就生效（游戏开着也行）。
+删掉文件就恢复原来的曲子。
+
+文件名 = 场合.wav（所有地图）或 场合_地图.wav（只这张图，优先）
+  场合：menu 主菜单  room 房间  draft 禁用/选配  intro 开场运镜  round 团队淘汰回合  clutch 赛点/最后一台
+        battle 死斗/保卫战  defprep 保卫战准备  boss1 第5波首领  boss2 最终首领  results 结算  defwin 保卫战胜利  range 测试场
+  地图：Street 赛博朋克街道  Nature 荒野与废墟  TechPark 相位电子园区  Dreamfield 梦核旷野  Pillars 石柱山水
+        Soviet 苏联板楼  Moon 月球基地  OldStreet 老旧街道  Range 训练场
+  例：battle.wav（所有图的死斗）、battle_OldStreet.wav（只有老街的死斗）、menu.wav（主菜单）
+
+格式：只认 WAV（16 / 24 位 PCM 或 32 位浮点，采样率随意，单声道或立体声）。mp3 / flac 先用 Audacity 之类导出成 wav。
+响度：最好统一到 -16 LUFS（Audacity：效果 → 响度标准化 → 感知响度 -16 LUFS），不然会比别的曲子忽大忽小。
+曲子不用做循环：快放完时会自动从头交叉淡入。
+文件放在两处都行：游戏根目录\MusicPack（和 RobotSlice.exe 同级）或 游戏根目录\RobotSlice\MusicPack，两处都有同名文件时用 RobotSlice\MusicPack 里的。

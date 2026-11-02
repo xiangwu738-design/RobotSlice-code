@@ -33,4 +33,12 @@ with zipfile.ZipFile(OUT, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6
     z.write(README, os.path.join(ROOT, '给朋友的说明.txt'))
     # 10-31：联机诊断启动器（带 -MechNetDiag 开游戏，退出后打开日志文件夹），和 RobotSlice.exe 放一起
     z.write(r'D:\RobotSlice\tools\联机诊断.bat', os.path.join(ROOT, '联机诊断.bat'))
+    # 11-02 音乐包：exe 旁边的 MusicPack（放说明；D:\RobotSlice\MusicPack 里有 wav 就一起带上）
+    z.write(r'D:\RobotSlice\tools\音乐包说明.txt', os.path.join(ROOT, 'MusicPack', '说明.txt'))
+    PACK = r'D:\RobotSlice\MusicPack'
+    if os.path.isdir(PACK):
+        for f in sorted(os.listdir(PACK)):
+            if f.lower().endswith('.wav'):
+                z.write(os.path.join(PACK, f), os.path.join(ROOT, 'MusicPack', f))
+                count += 1
 print('%s  %d 个文件  %.2f GB' % (OUT, count + 2, os.path.getsize(OUT) / 1024 ** 3))
