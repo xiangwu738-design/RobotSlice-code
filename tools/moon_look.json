@@ -1,0 +1,9 @@
+{
+  "_说明": "月球地面清晰度（11-02 云端，用户：地面纹理清晰度太低）。ue_moon_look.py 只改月壤材质实例 MI_Moon_Ground 的参数，不重导贴图、不重搭地图。材质四层见 ue_moon_import.py 的 M_Moon_Ground：细颗粒 TileF（原 230 厘米一格）、小尺度 TileA 900、中尺度 TileB 4300、大尺度 TileC 23000；原强度 FineAmt 1.0、FineNormal 0.9、DetailNormal 1.1、MidNormal 1.4。近处只有中尺度的明暗斑、缺细颗粒 → 细颗粒铺密、加强。",
+  "scalars": {
+    "TileF": 140.0,
+    "FineAmt": 1.35,
+    "FineNormal": 1.3,
+    "DetailNormal": 1.25
+  }
+}
