@@ -37,11 +37,12 @@ if mesh:
     except Exception as e:
         log('Cylinder nanite 读不到', e)
 pats = ['D:/RobotSlice_Build/Windows/RobotSlice/Saved/Logs/*.log', os.path.join(os.environ.get('LOCALAPPDATA', ''), 'RobotSlice', 'Saved', 'Logs', '*.log')]
-files = sorted({f for p in pats for f in glob.glob(p)}, key=os.path.getmtime)[-4:]
-keys = ('usage flag', 'Default Material', 'DefaultMaterial', 'Tracer', 'MI_Tracer', 'Failed to load', 'Shader', 'Cylinder')
+files = sorted({f for p in pats for f in glob.glob(p)}, key=os.path.getmtime)[-1:]
+keys = ('usage flag', 'Default Material', 'DefaultMaterial', 'Tracer', 'M_RobotMaster', 'Cylinder', 'PSO', 'Failed to find', 'Couldn')
+skip = ('.dll', 'LogD3D12RHI', 'LogShaderLibrary', 'LogConfig', 'Precache.GlobalShaders')
 for f in files:
     lines = open(f, 'rb').read().decode('utf-8', errors='replace').splitlines()
-    hits = [l for l in lines if any(k in l for k in keys)]
+    hits = [l for l in lines if any(k in l for k in keys) and not any(x in l for x in skip)]
     log('打包版日志', f, time.strftime('%m-%d %H:%M', time.localtime(os.path.getmtime(f))), len(lines), '行，相关', len(hits), '行')
     seen = set()
     for l in hits:
@@ -50,5 +51,5 @@ for f in files:
             continue
         seen.add(k)
         log('  |', l.strip()[:240])
-        if len(seen) >= 25:
+        if len(seen) >= 60:
             break
