@@ -834,6 +834,10 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 		I.bEdge = true;
 	}
 	// 机体：队友一直显示（阵亡的夺芯里还要等救，画个空框），敌人按「被发现」显示，之后在最后位置淡出
+	// 11-02 修崩溃：阵亡 / 观战 / 还没出生时 Mech 是空的（打包版 GatherMapIcons 读空指针）。老街循环按自己的机体换算，没有机体就按镜头，再没有就原样
+	const FVector LoopRef = Mech ? Mech->GetActorLocation() : (PlayerOwner && PlayerOwner->PlayerCameraManager ? PlayerOwner->PlayerCameraManager->GetCameraLocation() : FVector::ZeroVector);
+	const bool bLoopRef = Mech || (PlayerOwner && PlayerOwner->PlayerCameraManager);
+	auto LoopNear = [this, &LoopRef, bLoopRef](const AActor* A) { return bLoopRef ? MechLoop::Near(GetWorld(), A->GetActorLocation(), LoopRef) : A->GetActorLocation(); };
 	for (TActorIterator<AMechCharacter> It(GetWorld()); It; ++It)
 	{
 		AMechCharacter* Other = *It;
@@ -843,7 +847,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 		}
 		if (Other->IsTrainingDummy())
 		{
-			Add(FMechMapIcon::Dummy, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Dim).Alpha = 0.6f;
+			Add(FMechMapIcon::Dummy, LoopNear(Other), Dim).Alpha = 0.6f;
 			continue;
 		}
 		const bool bDead = Other->GetHealth()->IsDead();
@@ -853,7 +857,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 			{
 				continue;
 			}
-			FMechMapIcon& I = Add(bDead ? FMechMapIcon::AllyDown : FMechMapIcon::Ally, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Ally);
+			FMechMapIcon& I = Add(bDead ? FMechMapIcon::AllyDown : FMechMapIcon::Ally, LoopNear(Other), Ally);
 			I.Yaw = Other->GetActorRotation().Yaw;
 			I.Label = Other->DisplayName;
 			I.bEdge = !bDead;
@@ -867,7 +871,7 @@ void AMechHUD::GatherMapIcons(AMechCharacter* Mech, TArray<FMechMapIcon>& Out)
 		const float Age = Now - S->Time;
 		if (Age < 0.45f)
 		{
-			FMechMapIcon& I = Add(FMechMapIcon::Enemy, MechLoop::Near(GetWorld(), Other->GetActorLocation(), Mech->GetActorLocation()), Enemy);
+			FMechMapIcon& I = Add(FMechMapIcon::Enemy, LoopNear(Other), Enemy);
 			I.Yaw = Other->GetActorRotation().Yaw;
 		}
 		else if (Age < 3.5f)
