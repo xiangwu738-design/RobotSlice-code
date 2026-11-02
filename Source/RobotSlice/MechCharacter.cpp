@@ -707,6 +707,21 @@ void AMechCharacter::OnLoopWrapped(float Shift)
 	UpdateLoopCapsules();
 }
 
+USceneComponent* AMechCharacter::GetLoopNearestCapsule(const FVector& From) const
+{
+	USceneComponent* Best = GetCapsuleComponent();
+	double BestD = FVector::DistSquared(Best->GetComponentLocation(), From);
+	for (UCapsuleComponent* C : LoopCapsules)
+	{
+		if (C && FVector::DistSquared(C->GetComponentLocation(), From) < BestD)
+		{
+			Best = C;
+			BestD = FVector::DistSquared(C->GetComponentLocation(), From);
+		}
+	}
+	return Best;
+}
+
 void AMechCharacter::UpdateLoopCapsules()
 {
 	UWorld* World = GetWorld();

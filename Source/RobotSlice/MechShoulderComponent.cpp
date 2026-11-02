@@ -1,4 +1,5 @@
 #include "MechShoulderComponent.h"
+#include "MechLoop.h"
 
 #include "Components/AudioComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -677,7 +678,7 @@ void UMechShoulderComponent::UpdateDrone(float DeltaTime)
 	else if (IsArtilleryDeployed() || Now - LastFireTime < 0.9f || Now - Combat->GetLastMissileTime() < 0.9f || Now - DroneFiredAt < 0.9f)
 	{
 		const AMechCharacter* T = Combat->GetTarget();
-		Face = Mech->GetLoadout().Shoulder == EMechShoulder::Missiles && T && !T->GetHealth()->IsDead() ? T->GetActorLocation() - DronePos
+		Face = Mech->GetLoadout().Shoulder == EMechShoulder::Missiles && T && !T->GetHealth()->IsDead() ? MechLoop::Near(GetWorld(), T->GetActorLocation(), DronePos) - DronePos
 			: Combat->GetPoseAimPoint() - DronePos;
 		bAim = true;
 	}
@@ -838,7 +839,7 @@ void UMechShoulderComponent::AimShot(float Speed, FVector& OutOrigin, FVector& O
 	AMechCharacter* Target = Combat->GetTarget();
 	const bool bTarget = Target && !Target->GetHealth()->IsDead();
 	auto LeadPoint = [&]() {
-		FVector P = Target->GetActorLocation() + FVector(0.f, 0.f, 30.f);
+		FVector P = MechLoop::Near(GetWorld(), Target->GetActorLocation(), OutOrigin) + FVector(0.f, 0.f, 30.f);  // 老街循环
 		if (Speed > 0.f)
 		{
 			P += Target->GetVelocity() * (FVector::Dist(OutOrigin, P) / Speed) * Combat->LeadAccuracy;
@@ -972,7 +973,7 @@ void UMechShoulderComponent::Fire()
 		if (Type == EMechShoulder::Smoke && !Mech->IsPlayerControlled() && Target)
 		{
 			const FVector Me = Mech->GetActorLocation();
-			Point = Me + (Target->GetActorLocation() - Me).GetClampedToMaxSize(1000.f) - FVector(0.f, 0.f, 100.f);
+			Point = Me + MechLoop::Delta(GetWorld(), Me, Target->GetActorLocation()).GetClampedToMaxSize(1000.f) - FVector(0.f, 0.f, 100.f);
 		}
 		if (FVector::Dist(Origin, Point) > GrenadeRange)
 		{
@@ -1072,7 +1073,7 @@ UMechShoulderComponent::FTraceResult UMechShoulderComponent::TraceGrapple(const 
 		}
 		const UCapsuleComponent* Cap = M->GetCapsuleComponent();
 		const float Half = Cap->GetScaledCapsuleHalfHeight() * 0.7f;
-		const FVector C = M->GetActorLocation();
+		const FVector C = MechLoop::Near(GetWorld(), M->GetActorLocation(), Origin);  // 老街循环：钩爪 / 网按离发射点最近的那份
 		FVector OnRay, OnBody;
 		FMath::SegmentDistToSegmentSafe(Origin, WorldEnd, C - FVector(0.f, 0.f, Half), C + FVector(0.f, 0.f, Half), OnRay, OnBody);
 		const float Along = FVector::Dist(Origin, OnRay);
@@ -1266,7 +1267,7 @@ void UMechShoulderComponent::FireGrappleAuthority(const FVector& Origin, const F
 	float Dist = GrappleRange;
 	if (Hit.Mech)
 	{
-		Grapple.Tip = Hit.Mech->GetActorLocation();
+		Grapple.Tip = MechLoop::Near(GetWorld(), Hit.Mech->GetActorLocation(), O);
 		Dist = Hit.Dist;
 	}
 	else if (Hit.bWorld)
@@ -1359,7 +1360,7 @@ void UMechShoulderComponent::TickGrappleAuthority()
 					const float Dealt = V->ReceiveHit(GrappleDamage, GrappleImpact, Mech, At, EMechHitKind::Missile, 1.4f);
 					Mech->GetCombat()->ConfirmHit(V, true, EMechHitKind::Missile, Dealt, At);
 				}
-				const FVector Me = Mech->GetActorLocation();
+				const FVector Me = MechLoop::Near(GetWorld(), Mech->GetActorLocation(), At);  // 老街循环：按被抓那台那一边算拉到哪
 				FVector ToV = At - Me;
 				ToV.Z = 0.f;
 				ToV = ToV.IsNearlyZero() ? Mech->GetActorForwardVector() : ToV.GetSafeNormal();
@@ -1671,7 +1672,7 @@ void UMechShoulderComponent::UpdateVisuals(float DeltaTime)
 	FQuat Q = L->GetComponentQuat();
 	float Sag = 0.f;
 	auto Toward = [&](const FVector& To) { return FRotationMatrix::MakeFromX((To - M).GetSafeNormal()).ToQuat(); };
-	auto VictimPoint = [](const AMechCharacter* V) { return BodyPoint(V); };  // 按画面上的网格（别人的机体网格平滑追着胶囊）
+	auto VictimPoint = [this](const AMechCharacter* V) { return GetOwner() ? MechLoop::Near(GetWorld(), BodyPoint(V), GetOwner()->GetActorLocation()) : BodyPoint(V); };  // 老街循环：画最近的那份  // 按画面上的网格（别人的机体网格平滑追着胶囊）
 	switch (Vis.State)
 	{
 	case EMechGrapple::Flying:
@@ -2022,7 +2023,7 @@ void UMechShoulderComponent::ArtilleryAutoAim(float DeltaTime)
 	FVector ViewLoc;
 	FRotator ViewRot;
 	Controller->GetPlayerViewPoint(ViewLoc, ViewRot);
-	FVector Lead = Target->GetActorLocation() + FVector(0.f, 0.f, 30.f);
+	FVector Lead = MechLoop::Near(GetWorld(), Target->GetActorLocation(), ViewLoc) + FVector(0.f, 0.f, 30.f);
 	Lead += Target->GetVelocity() * (FVector::Dist(Muzzle(), Lead) / ShellSpeed);
 	const FRotator Want = (Lead - ViewLoc).Rotation();
 	const float Angle = FMath::RadiansToDegrees(FMath::Acos(FMath::Clamp(Want.Vector() | ViewRot.Vector(), -1.f, 1.f)));

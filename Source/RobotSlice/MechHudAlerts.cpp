@@ -29,6 +29,7 @@
 //  说话时提示音压到 55%。语音音量跟「告警音量」走。资源 /Game/Audio/HUD/Voice/S_vo_<female|mech|corp>_<句>（SourceAssets/sfx_hud/voice）。
 
 #include "MechHudAlerts.h"
+#include "MechLoop.h"
 
 #include "CanvasItem.h"
 #include "CanvasTypes.h"
@@ -327,7 +328,7 @@ void UMechHudAlerts::Draw(AMechHUD& Hud, AMechCharacter* Mech)
 			{
 				continue;
 			}
-			const float D = FVector::Dist(It->GetActorLocation(), Mech->GetActorLocation());
+			const float D = MechLoop::Dist(Mech->GetWorld(), It->GetActorLocation(), Mech->GetActorLocation());
 			if (D < BestD)
 			{
 				BestD = D;
@@ -340,7 +341,7 @@ void UMechHudAlerts::Draw(AMechHUD& Hud, AMechCharacter* Mech)
 			Puller = Best;
 			FThreat& T = Threats.AddDefaulted_GetRef();
 			T.Source = Best;
-			T.Pos = Best->GetActorLocation();
+			T.Pos = MechLoop::Near(Mech->GetWorld(), Best->GetActorLocation(), Mech->GetActorLocation());
 			T.Level = 4;
 			T.Dist = BestD;
 		}
@@ -508,9 +509,9 @@ void UMechHudAlerts::Gather(AMechHUD& Hud, AMechCharacter* Mech, float Real, boo
 		{
 			FThreat& T = Threats.AddDefaulted_GetRef();
 			T.Source = E;
-			T.Pos = E->GetActorLocation();
+			T.Pos = MechLoop::Near(Mech->GetWorld(), E->GetActorLocation(), MyPos);  // 老街循环：最近的那份
 			T.Level = static_cast<uint8>(Level);
-			T.Dist = FVector::Dist(E->GetActorLocation(), MyPos);
+			T.Dist = FVector::Dist(T.Pos, MyPos);
 			MaxMechLevel = FMath::Max(MaxMechLevel, Level);
 		}
 	}
@@ -532,7 +533,7 @@ void UMechHudAlerts::Gather(AMechHUD& Hud, AMechCharacter* Mech, float Real, boo
 		{
 			continue;
 		}
-		const FVector To = MyPos - M->GetActorLocation();
+		const FVector To = MyPos - MechLoop::Near(Mech->GetWorld(), M->GetActorLocation(), MyPos);
 		const float D = To.Size();
 		bool bIn = M->GetTarget() == Mech;
 		if (!bIn && D < 4000.f)
@@ -553,7 +554,7 @@ void UMechHudAlerts::Gather(AMechHUD& Hud, AMechCharacter* Mech, float Real, boo
 		ClosestMissile = FMath::Min(ClosestMissile, D);
 		FThreat& T = Threats.AddDefaulted_GetRef();
 		T.Source = M;
-		T.Pos = M->GetActorLocation();
+		T.Pos = MechLoop::Near(Mech->GetWorld(), M->GetActorLocation(), MyPos);
 		T.Level = 3;
 		T.Dist = D;
 		const TWeakObjectPtr<AActor> Key(M);
@@ -573,7 +574,7 @@ float UMechHudAlerts::AimMiss(const AMechCharacter* Enemy, const AMechCharacter*
 	const UMechCombatComponent* C = Enemy->GetCombat();
 	const FVector From = C->GetPoseAimPivot();
 	const FVector Dir = C->GetPoseAimDirection().GetSafeNormal();
-	const FVector To = Me->GetActorLocation() + FVector(0.f, 0.f, 40.f) - From;
+	const FVector To = MechLoop::Near(Me->GetWorld(), Me->GetActorLocation(), From) + FVector(0.f, 0.f, 40.f) - From;
 	const float Along = To | Dir;
 	if (Along < 100.f)
 	{
@@ -591,7 +592,7 @@ bool UMechHudAlerts::HasLos(AMechCharacter* Enemy, const AMechCharacter* Me, flo
 		FHitResult Hit;
 		FCollisionQueryParams P(SCENE_QUERY_STAT(MechAlertLos), false, Enemy);
 		P.AddIgnoredActor(Me);
-		L.bClear = !Enemy->GetWorld()->LineTraceSingleByObjectType(Hit, Enemy->GetActorLocation() + FVector(0.f, 0.f, 100.f),
+		L.bClear = !Enemy->GetWorld()->LineTraceSingleByObjectType(Hit, MechLoop::Near(Enemy->GetWorld(), Enemy->GetActorLocation(), Me->GetActorLocation()) + FVector(0.f, 0.f, 100.f),
 			Me->GetActorLocation() + FVector(0.f, 0.f, 60.f), FCollisionObjectQueryParams(ECC_WorldStatic), P);
 	}
 	return L.bClear;
@@ -1036,7 +1037,8 @@ void UMechHudAlerts::DrawThreats(AMechHUD& Hud, AMechCharacter* Mech, float Real
 			continue;  // 一批导弹从差不多的方向来，最多画最近的两发，免得一团叠在一起
 		}
 		++Shown;
-		const FVector At = bMissile ? Src->GetActorLocation() : Src->GetActorLocation() + FVector(0.f, 0.f, 40.f);
+		const FVector SrcAt = MechLoop::Near(Src->GetWorld(), Src->GetActorLocation(), CamLoc);  // 老街循环
+		const FVector At = bMissile ? SrcAt : SrcAt + FVector(0.f, 0.f, 40.f);
 		const FVector Local = CamRot.UnrotateVector(At - CamLoc);
 		FVector2D P;
 		const float Pad = 50.f * UI;

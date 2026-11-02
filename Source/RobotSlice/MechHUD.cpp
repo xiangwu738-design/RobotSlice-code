@@ -1,4 +1,5 @@
 #include "MechHUD.h"
+#include "MechLoop.h"
 
 #include "Engine/GameViewportClient.h"
 #include "MechHudOverlay.h"
@@ -1394,7 +1395,7 @@ void AMechHUD::DrawReticle(AMechCharacter* Mech)
 		SoftLine(CX, CY + R, CX - R, CY, C, 1.5f);
 		SoftLine(CX - R, CY, CX, CY - R, C, 1.5f);
 		AMechCharacter* Target = Combat->GetTarget();
-		if (Target && FVector::Dist(Target->GetActorLocation(), Mech->GetActorLocation()) <= Combat->GetBladeRange())
+		if (Target && MechLoop::Dist(GetWorld(), Target->GetActorLocation(), Mech->GetActorLocation()) <= Combat->GetBladeRange())
 		{
 			Arc(CX, CY, 40.f * UI, -0.5f, 0.5f, Accent, 2.f);
 			Arc(CX, CY, 40.f * UI, PI - 0.5f, PI + 0.5f, Accent, 2.f);
@@ -1550,9 +1551,9 @@ void AMechHUD::DrawReticle(AMechCharacter* Mech)
 		if (AMechCharacter* Pal = Sh->GetAllyAim(); Pal && Sh->GetReady() >= 1.f && PlayerOwner)
 		{
 			FVector2D P;
-			if (UGameplayStatics::ProjectWorldToScreen(PlayerOwner, Pal->GetMechMesh()->VisualPivot() - FVector(0.f, 0.f, 60.f), P))
+			if (UGameplayStatics::ProjectWorldToScreen(PlayerOwner, MechLoop::Near(GetWorld(), Pal->GetMechMesh()->VisualPivot(), Mech->GetActorLocation()) - FVector(0.f, 0.f, 60.f), P))
 			{
-				const float D = FVector::Dist(Pal->GetActorLocation(), Mech->GetActorLocation());
+				const float D = MechLoop::Dist(GetWorld(), Pal->GetActorLocation(), Mech->GetActorLocation());
 				const float PH = FMath::Clamp(9000.f / FMath::Max(D, 100.f), 28.f, 90.f) * UI * 1.25f;
 				const float Pulse = 0.7f + 0.3f * FMath::Sin(Now * 10.f);
 				Brackets(P.X, P.Y, PH, 12.f * UI, Fade(Ally, Pulse), 2.f);
@@ -1813,7 +1814,7 @@ void AMechHUD::DrawLockBox(AMechCharacter* Mech)
 	{
 		FVector2D P;
 		// 10-31 联机抖动：框在画面上的机体（网格）上，不在胶囊上——客户端上别人的胶囊每来一个包跳一下，网格是按时间回放的、比胶囊晚一点
-		const FVector At = Target->GetMechMesh()->VisualPivot() - FVector(0.f, 0.f, 80.f);
+		const FVector At = MechLoop::Near(GetWorld(), Target->GetMechMesh()->VisualPivot(), Mech->GetActorLocation()) - FVector(0.f, 0.f, 80.f);  // 老街循环：框在离自己最近的那份上
 		if (UGameplayStatics::ProjectWorldToScreen(PlayerOwner, At, P))
 		{
 			UMechHealthComponent* TH = Target->GetHealth();
@@ -1866,7 +1867,7 @@ void AMechHUD::DrawMarkers(AMechCharacter* Mech)
 			continue;
 		}
 		FVector2D P;
-		if (!UGameplayStatics::ProjectWorldToScreen(PlayerOwner, Other->GetMechMesh()->VisualPivot() + FVector(0.f, 0.f, 130.f), P))  // 头顶名字跟着画面上的机体（同上）
+		if (!UGameplayStatics::ProjectWorldToScreen(PlayerOwner, MechLoop::Near(GetWorld(), Other->GetMechMesh()->VisualPivot(), Mech->GetActorLocation()) + FVector(0.f, 0.f, 130.f), P))  // 头顶名字跟着画面上的机体（同上）
 		{
 			continue;
 		}
@@ -1899,7 +1900,7 @@ void AMechHUD::DrawOffscreen(AMechCharacter* Mech)
 		{
 			continue;
 		}
-		const FVector At = Other->GetActorLocation();
+		const FVector At = MechLoop::Near(GetWorld(), Other->GetActorLocation(), CamLoc);  // 老街循环
 		FVector2D P;
 		if (UGameplayStatics::ProjectWorldToScreen(PlayerOwner, At, P) && P.X > 0.f && P.X < W && P.Y > 0.f && P.Y < H)
 		{
@@ -1971,7 +1972,7 @@ void AMechHUD::DrawDamage(AMechCharacter* Mech)
 		FVector Dir = Mech->GetLastHitFrom().GetSafeNormal2D();
 		if (Src && Src != Mech)
 		{
-			Dir = (Src->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal2D();
+			Dir = MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), Src->GetActorLocation()).GetSafeNormal2D();  // 老街循环：最近的那份
 		}
 		FDamageArc* Arc = nullptr;
 		for (FDamageArc& Old : DamageArcs)
@@ -2006,7 +2007,7 @@ void AMechHUD::DrawDamage(AMechCharacter* Mech)
 		FVector Dir = D.WorldDir;
 		if (AActor* Src = D.Source.Get())
 		{
-			Dir = (Src->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal2D();  // 来源在动，弧跟着转
+			Dir = MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), Src->GetActorLocation()).GetSafeNormal2D();  // 来源在动，弧跟着转
 		}
 		const FVector Local = FRotator(0.f, CamYaw, 0.f).UnrotateVector(Dir);
 		const float Ang = FMath::Atan2(Local.Y, Local.X);  // 0 = 正前方（屏幕上方），顺时针为正

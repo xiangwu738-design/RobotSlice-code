@@ -1,4 +1,5 @@
 #include "MechSmoke.h"
+#include "MechLoop.h"
 #include "EngineUtils.h"
 #include "MechCharacter.h"
 #include "MechHealthComponent.h"
@@ -187,7 +188,7 @@ void AMechSmoke::Tick(float DeltaSeconds)
 				for (TActorIterator<AMechCharacter> It(GetWorld()); It; ++It)
 				{
 					AMechCharacter* M = *It;
-					if (M == Thrower || M->GetTeam() == Thrower->GetTeam() || M->GetHealth()->IsDead() || FVector::DistSquared(M->GetActorLocation(), C) > R * R)
+					if (M == Thrower || M->GetTeam() == Thrower->GetTeam() || M->GetHealth()->IsDead() || MechLoop::DistSquared(GetWorld(), M->GetActorLocation(), C) > R * R)
 					{
 						continue;
 					}
@@ -269,7 +270,7 @@ bool AMechSmoke::BlocksLine(const UWorld* World, const FVector& A, const FVector
 		{
 			continue;
 		}
-		const FVector C = S->GetActorLocation() + FVector(0.f, 0.f, CloudHeight);
+		const FVector C = MechLoop::Near(World, S->GetActorLocation() + FVector(0.f, 0.f, CloudHeight), (A + B) * 0.5f);  // 老街循环
 		if (FVector::DistSquared(FMath::ClosestPointOnSegment(C, A, B), C) < R * R)
 		{
 			return true;

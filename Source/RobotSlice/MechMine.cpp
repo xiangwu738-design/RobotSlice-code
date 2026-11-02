@@ -1,4 +1,5 @@
 #include "MechMine.h"
+#include "MechLoop.h"
 
 #include "Components/CapsuleComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
@@ -324,7 +325,7 @@ float AMechMine::DistToMech(const AMechCharacter* M, const FVector& P)
 	// 到机体胶囊中线的距离再减半径（和 EMP / 炮弹的算法一样）
 	const UCapsuleComponent* Cap = M->GetCapsuleComponent();
 	const float Half = Cap->GetScaledCapsuleHalfHeight();
-	const FVector C = M->GetActorLocation();
+	const FVector C = MechLoop::Near(M->GetWorld(), M->GetActorLocation(), P);  // 老街循环
 	return FMath::Max(0.f, FVector::Dist(P, FMath::ClosestPointOnSegment(P, C - FVector(0.f, 0.f, Half), C + FVector(0.f, 0.f, Half))) - Cap->GetScaledCapsuleRadius());
 }
 
@@ -335,7 +336,7 @@ bool AMechMine::HasLineTo(const AMechCharacter* M, const FVector& From) const
 	Params.AddIgnoredActor(M);
 	FHitResult Hit;
 	const FVector Start = From + FVector(RestNormal) * 30.f;
-	return !GetWorld()->LineTraceSingleByObjectType(Hit, Start, M->GetActorLocation(), FCollisionObjectQueryParams(ECC_WorldStatic), Params);
+	return !GetWorld()->LineTraceSingleByObjectType(Hit, Start, MechLoop::Near(GetWorld(), M->GetActorLocation(), Start), FCollisionObjectQueryParams(ECC_WorldStatic), Params);
 }
 
 // ---------------------------------------------------------------- 服务器：炸 / 碎
