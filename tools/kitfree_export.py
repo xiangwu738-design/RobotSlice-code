@@ -24,6 +24,11 @@ if '--normals' in rest:
 if '--kitfree' in rest:
     rest.remove('--kitfree')
     kitfree = True
+v3_blend = None
+if '--v3' in rest:          # 维克托：用去组件的 v3 绑骨工程（第二步取骨架也用它，骨架和原来的一模一样）
+    j = rest.index('--v3')
+    v3_blend = rest[j + 1]
+    del rest[j:j + 2]
 sys.argv = sys.argv[:i + 1] + rest
 
 
@@ -58,6 +63,10 @@ anchor = "tmp = os.path.join(TMP, f'{A.key}_{os.getpid()}_mesh.blend')"
 assert anchor in src, 'export_factions.py 变了，钩子要改'
 src = src.replace(anchor, '__hook__(robot)\n' + anchor, 1)
 G = {'__name__': '__main__', '__file__': SRC, '__hook__': hook}
+if v3_blend:
+    a0 = "V3_BLEND = os.path.join(LOOKDEV, 'rig', 'SKM_Robot_v3.blend')"
+    assert a0 in src
+    src = src.replace(a0, f'V3_BLEND = {v3_blend!r}', 1)
 if kitfree:
     sys.path.insert(0, TOOLS)
     import kitfree_parts  # noqa: E402

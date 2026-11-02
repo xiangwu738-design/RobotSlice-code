@@ -8,6 +8,7 @@ from mathutils import Vector
 
 i = sys.argv.index('--')
 fbx, prefix = sys.argv[i + 1], sys.argv[i + 2]
+only = sys.argv[i + 3].split(',') if len(sys.argv) > i + 3 else None
 bpy.ops.wm.read_factory_settings(use_empty=True)
 bpy.ops.import_scene.fbx(filepath=fbx)
 meshes = [o for o in bpy.context.scene.objects if o.type == 'MESH']
@@ -40,6 +41,8 @@ for o in meshes:
 shots = [('全身斜侧', Vector((-0.75, -1.0, 0.25)), ctr, H * 1.15), ('胸口', Vector((-0.35, -1.0, 0.1)), Vector((ctr.x, ctr.y, lo.z + H * 0.72)), H * 0.42),
          ('腿', Vector((-0.4, -1.0, 0.15)), Vector((ctr.x, ctr.y, lo.z + H * 0.3)), H * 0.45), ('背面', Vector((0.5, 1.0, 0.2)), Vector((ctr.x, ctr.y, lo.z + H * 0.6)), H * 0.65)]
 for name, d, tgt, size in shots:
+    if only and name not in only:
+        continue
     d = d.normalized()
     dist = size / (2 * math.tan(cam.data.angle / 2)) * 1.05
     cam.location = tgt + d * dist
