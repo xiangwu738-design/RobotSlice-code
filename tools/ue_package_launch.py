@@ -80,7 +80,7 @@ def main():
     stamp = time.strftime('%Y%m%d_%H%M%S')
     logf = f'{OUT}/package_{stamp}.log'.replace('/', '\\')
     done = f'{OUT}/done_{stamp}.txt'.replace('/', '\\')
-    inner = f'{OUT}/打包_云端_{stamp}.bat'
+    inner = f'{OUT}/pack_cloud_{stamp}.bat'  # 文件名只用英文：cmd 读 bat 里的中文路径会乱码（11-02 第一次就是这样没起来）
     # 原 bat 里可能有 exit /b，所以包一层：外层 call 内层，内层输出进日志，外层写退出码
     open(inner, 'w', encoding=enc if enc != 'utf-8-sig' else 'utf-8').write('\r\n'.join(out_lines) + '\r\n')
     outer = f'{OUT}/run_{stamp}.bat'
