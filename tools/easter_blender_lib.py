@@ -210,8 +210,10 @@ def import_fbx(path):
         bpy.ops.wm.fbx_import(filepath=path)
 
 
-def load_base(path):
-    """读底子：.blend 直接打开（用物体最多的场景）；其他格式先清空场景再导入。返回底子的全部物体"""
+def load_base(path, pose_frame=None):
+    """读底子：.blend 直接打开（用物体最多的场景）；其他格式先清空场景再导入。返回底子的全部物体。
+    pose_frame（11-02）：底子的默认姿势不对时（Spot Mini 的默认姿势是趴着，自带的 start 动作是站起来），跳到动作的这一帧再烤：
+    None = 不动；负数 = 动作的最后一帧；其他 = 那一帧"""
     ext = os.path.splitext(path)[1].lower()
     log(f'读底子 {rel(path)}')
     if ext == '.blend':
@@ -230,6 +232,13 @@ def load_base(path):
         objs = [o for o in bpy.data.objects if o not in before]
     sc = bpy.context.scene
     sc.unit_settings.system = 'METRIC'
+    if pose_frame is not None:
+        f = float(pose_frame)
+        if f < 0:
+            ends = [a.frame_range[1] for a in bpy.data.actions]
+            f = max(ends) if ends else 0.0
+        sc.frame_set(int(round(f)))
+        log(f'底子姿势：跳到动作第 {int(round(f))} 帧再烤（动作 {[a.name for a in bpy.data.actions]}）')
     for o in objs:
         try:
             o.hide_set(False)

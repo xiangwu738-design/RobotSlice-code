@@ -29,7 +29,7 @@ def survey():
     explicit = rest.pop(0) if rest and '=' not in rest[0] and not rest[0].startswith('--') else ''
     cfg = L.load_config(which, rest)
     path = L.find_base(which, explicit or cfg.get('base_file', ''))
-    objs = L.load_base(path)
+    objs = L.load_base(path, cfg.get('pose_frame'))
     sc = bpy.context.scene
     res = {'which': which, 'file': L.rel(path), 'size_mb': round(os.path.getsize(path) / 1e6, 2), 'blender': bpy.app.version_string,
            'unit_scale': sc.unit_settings.scale_length, 'fps': sc.render.fps, 'frame_range': [sc.frame_start, sc.frame_end],

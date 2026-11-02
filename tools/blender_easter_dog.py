@@ -296,7 +296,7 @@ def build():
     cfg = L.load_config('dog', args)
     flags = cfg['_flags']
     path = L.find_base('dog', cfg.get('base_file', ''))
-    objs = L.load_base(path)
+    objs = L.load_base(path, cfg.get('pose_frame'))
     for o in objs:
         if o.name == 'Armature':
             o.name = 'Armature_base'
