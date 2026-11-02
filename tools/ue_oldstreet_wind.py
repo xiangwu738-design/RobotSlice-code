@@ -106,6 +106,9 @@ for act in sub.get_all_level_actors():
             try:
                 comp.set_editor_property('world_position_offset_disable_distance', int(W['disable_distance_cm']))
                 n += 1
+                # shadow_static：影子按静止的树算（虚拟阴影缓存不因摆动失效），叶子照摆；false = 引擎默认（影子跟着摆）
+                beh = unreal.ShadowCacheInvalidationBehavior.STATIC if W.get('shadow_static') else unreal.ShadowCacheInvalidationBehavior.AUTO
+                comp.set_editor_property('shadow_cache_invalidation_behavior', beh)
             except Exception as e:
                 log('设不了偏移距离', act.get_actor_label(), e)
 log('树组件', n, '个设了偏移距离', W['disable_distance_cm'])
