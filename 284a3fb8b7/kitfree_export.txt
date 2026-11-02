@@ -1,0 +1,80 @@
+kitfree_export 结束：ok，用时 84 秒，日志行 79
+[2026.11.02-19.28.05:582][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.28.05:582][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-19.28.05:582][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.28.05:582][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-19.28.05:582][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-19.28.06:407][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-19.28.06:407][  0]LogPython: Using Python 3.11.8
+[2026.11.02-19.28.06:458][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.28.07:280][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-19.28.07:296][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-19.28.07:300][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-19.28.07:301][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.28.07:301][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.28.07:301][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.28.07:306][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-19.28.07:307][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-19.28.07:307][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-19.28.07:430][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-19.28.08:436][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-19.28.08:472][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.28.08:493][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 19.947 ms
+[2026.11.02-19.28.08:493][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.28.08:515][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-19.28.08:517][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 24.577 ms (total: 44.524 ms)
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] == NEC_L 退出码 0 4 秒
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [kitfree] 自建 Hydraulics_T1_02：411 面，长 1.8629
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [kitfree] 自建减震：活塞杆 125 面、缸筒 286 面、弹簧 898 面
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [kitfree] 自建 Pipes_07：608 面，长 2.3773
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [factions] NEC_L 三角面 61120 （原 100660 ）坏权重顶点 0
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [kitfree] 法线重算：27200 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.12:969][  0]LogPython: Warning: [kfexp] NEC_L | [factions] NEC_L 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\NEC_L.fbx 三角 61120
+[2026.11.02-19.28.19:829][  0]LogPython: Warning: [kfexp] == NEC_M 退出码 0 3 秒
+[2026.11.02-19.28.19:829][  0]LogPython: Warning: [kfexp] NEC_M | [factions] NEC_M 骨架 DS_骨架 缩放 74.07407189450666 残差 3.0537725876803e-05 缺 []
+[2026.11.02-19.28.19:829][  0]LogPython: Warning: [kfexp] NEC_M | [factions] NEC_M 三角面 40930 （原 107268 ）坏权重顶点 0
+[2026.11.02-19.28.19:829][  0]LogPython: Warning: [kfexp] NEC_M | [kitfree] 法线重算：19654 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.19:829][  0]LogPython: Warning: [kfexp] NEC_M | [factions] NEC_M 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\NEC_M.fbx 三角 40930
+[2026.11.02-19.28.25:976][  0]LogPython: Warning: [kfexp] == NEC_H 退出码 0 3 秒
+[2026.11.02-19.28.25:976][  0]LogPython: Warning: [kfexp] NEC_H | [factions] NEC_H 骨架 DS_骨架 缩放 74.07407189450666 残差 3.0537725876803e-05 缺 []
+[2026.11.02-19.28.25:976][  0]LogPython: Warning: [kfexp] NEC_H | [factions] NEC_H 三角面 18692 （原 59652 ）坏权重顶点 0
+[2026.11.02-19.28.25:976][  0]LogPython: Warning: [kfexp] NEC_H | [kitfree] 法线重算：10180 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.25:976][  0]LogPython: Warning: [kfexp] NEC_H | [factions] NEC_H 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\NEC_H.fbx 三角 18692
+[2026.11.02-19.28.32:324][  0]LogPython: Warning: [kfexp] == PHASE_L 退出码 0 3 秒
+[2026.11.02-19.28.32:324][  0]LogPython: Warning: [kfexp] PHASE_L | [factions] PHASE_L 骨架 白塔骨架 缩放 74.07407189450666 残差 3.0537725876803e-05 缺 []
+[2026.11.02-19.28.32:324][  0]LogPython: Warning: [kfexp] PHASE_L | [factions] PHASE_L 三角面 26206 （原 57278 ）坏权重顶点 0
+[2026.11.02-19.28.32:324][  0]LogPython: Warning: [kfexp] PHASE_L | [kitfree] 法线重算：13818 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.32:324][  0]LogPython: Warning: [kfexp] PHASE_L | [factions] PHASE_L 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\PHASE_L.fbx 三角 26206
+[2026.11.02-19.28.38:589][  0]LogPython: Warning: [kfexp] == PHASE_M 退出码 0 3 秒
+[2026.11.02-19.28.38:589][  0]LogPython: Warning: [kfexp] PHASE_M | [factions] PHASE_M 骨架 白塔骨架 缩放 74.07407189450666 残差 3.0537725876803e-05 缺 []
+[2026.11.02-19.28.38:589][  0]LogPython: Warning: [kfexp] PHASE_M | [factions] PHASE_M 三角面 28708 （原 62758 ）坏权重顶点 0
+[2026.11.02-19.28.38:589][  0]LogPython: Warning: [kfexp] PHASE_M | [kitfree] 法线重算：15007 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.38:589][  0]LogPython: Warning: [kfexp] PHASE_M | [factions] PHASE_M 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\PHASE_M.fbx 三角 28708
+[2026.11.02-19.28.44:967][  0]LogPython: Warning: [kfexp] == PHASE_H 退出码 0 3 秒
+[2026.11.02-19.28.44:967][  0]LogPython: Warning: [kfexp] PHASE_H | [factions] PHASE_H 骨架 白塔骨架 缩放 74.07407189450666 残差 3.0537725876803e-05 缺 []
+[2026.11.02-19.28.44:968][  0]LogPython: Warning: [kfexp] PHASE_H | [factions] PHASE_H 三角面 24840 （原 51784 ）坏权重顶点 0
+[2026.11.02-19.28.44:968][  0]LogPython: Warning: [kfexp] PHASE_H | [kitfree] 法线重算：12861 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.44:968][  0]LogPython: Warning: [kfexp] PHASE_H | [factions] PHASE_H 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\PHASE_H.fbx 三角 24840
+[2026.11.02-19.28.51:792][  0]LogPython: Warning: [kfexp] == VHI_L 退出码 0 3 秒
+[2026.11.02-19.28.51:792][  0]LogPython: Warning: [kfexp] VHI_L | [factions] VHI_L 迷彩：主漆零件 24 → PaintDark 8
+[2026.11.02-19.28.51:793][  0]LogPython: Warning: [kfexp] VHI_L | [factions] VHI_L 三角面 37824 （原 55806 ）坏权重顶点 0
+[2026.11.02-19.28.51:793][  0]LogPython: Warning: [kfexp] VHI_L | [kitfree] 法线重算：18520 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.51:793][  0]LogPython: Warning: [kfexp] VHI_L | [factions] VHI_L 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\VHI_L.fbx 三角 37824
+[2026.11.02-19.28.58:097][  0]LogPython: Warning: [kfexp] == VHI_M 退出码 0 3 秒
+[2026.11.02-19.28.58:097][  0]LogPython: Warning: [kfexp] VHI_M | [factions] VHI_M 迷彩：主漆零件 26 → PaintDark 9
+[2026.11.02-19.28.58:097][  0]LogPython: Warning: [kfexp] VHI_M | [factions] VHI_M 三角面 44628 （原 72460 ）坏权重顶点 0
+[2026.11.02-19.28.58:097][  0]LogPython: Warning: [kfexp] VHI_M | [kitfree] 法线重算：22154 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.28.58:097][  0]LogPython: Warning: [kfexp] VHI_M | [factions] VHI_M 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\VHI_M.fbx 三角 44628
+[2026.11.02-19.29.03:546][  0]LogPython: Warning: [kfexp] == VHI_H 退出码 0 3 秒
+[2026.11.02-19.29.03:546][  0]LogPython: Warning: [kfexp] VHI_H | [factions] VHI_H 迷彩：主漆零件 25 → PaintDark 8
+[2026.11.02-19.29.03:546][  0]LogPython: Warning: [kfexp] VHI_H | [factions] VHI_H 三角面 39400 （原 73640 ）坏权重顶点 0
+[2026.11.02-19.29.03:546][  0]LogPython: Warning: [kfexp] VHI_H | [kitfree] 法线重算：19313 面，硬边角度 30.0°，加权法线（面积、保留硬边）
+[2026.11.02-19.29.03:546][  0]LogPython: Warning: [kfexp] VHI_H | [factions] VHI_H 导出 D:/RobotSlice/lookdev/rig/factions/kitfree/fix\VHI_H.fbx 三角 39400
+[2026.11.02-19.29.06:407][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-19.29.06:426][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-19.29.06:427][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.29.06:427][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.29.06:427][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.29.06:430][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-19.29.06:918][  7]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-19.29.07:045][  8]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
