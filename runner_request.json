@@ -1,5 +1,3 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "k62_catalog", "script": "tools/ue_k62_catalog_dump.py", "seconds": 200},
-  {"kind": "py", "name": "oldstreet_wind", "script": "tools/ue_oldstreet_wind.py", "seconds": 400},
-  {"kind": "gamepy", "name": "grade_oldstreet", "map": "/Game/Maps/L_OldStreet", "script": "tools/grade_shots_oldstreet.py", "args": ["-MechBeauty"], "seconds": 240}
+  {"kind": "gamepy", "name": "k62_sheets", "map": "/Game/Maps/L_Range", "script": "tools/grab_k62_sheets.py", "args": ["-MechBeauty"], "seconds": 90}
 ]}
