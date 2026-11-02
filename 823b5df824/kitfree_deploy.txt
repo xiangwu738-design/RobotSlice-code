@@ -1,0 +1,35 @@
+exit=0
+[2026.11.02-19.31.28:430][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.31.29:109][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.31.29:119][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 10.115 ms
+[2026.11.02-19.31.29:119][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.31.29:134][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 14.735 ms (total: 24.850 ms)
+[2026.11.02-19.31.29:134][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_kitfree_deploy.py
+[2026.11.02-19.31.29:449][  0]LogPython: Warning: [kfdeploy] 澶囦唤鍒� D:/褰掓。/RobotSlice_鍘荤粍浠跺墠_20261102 锛涗節鍙板凡鎹㈡垚鍘荤粍浠剁増
+[2026.11.02-19.31.45:158][  0]LogPython: Warning: [kfdeploy] 瀵煎叆璺戝畬锛堣�︾粏瑙� [factions] 琛岋級
+[2026.11.02-19.31.45:171][  0]LogPython: Warning: [kfdeploy] MI_Kit_Hydraulics 姣嶆潗璐� M_WeaponPBR 鈫� MI_Robot_Frame
+[2026.11.02-19.31.45:183][  0]LogPython: Warning: [kfdeploy] MI_Kit_Pipes 姣嶆潗璐� M_WeaponPBR 鈫� MI_Robot_Rubber
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_BaseColor 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Metallic 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Normal 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Roughness 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_BaseColor 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Metallic 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Normal 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Roughness 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:191][  0]LogPython: Warning: [kfdeploy] 瀹屾垚
+[2026.11.02-19.31.45:191][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.31.45:191][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.31.45:191][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 澶囦唤鍒� D:/褰掓。/RobotSlice_鍘荤粍浠跺墠_20261102 锛涗節鍙板凡鎹㈡垚鍘荤粍浠剁増
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 瀵煎叆璺戝畬锛堣�︾粏瑙� [factions] 琛岋級
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] MI_Kit_Hydraulics 姣嶆潗璐� M_WeaponPBR 鈫� MI_Robot_Frame
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] MI_Kit_Pipes 姣嶆潗璐� M_WeaponPBR 鈫� MI_Robot_Rubber
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_BaseColor 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Metallic 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Normal 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Hydraulics_Roughness 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Hydraulics']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_BaseColor 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Metallic 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Normal 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 鐣欑潃 /Game/Robot/Textures/T_Kit_Pipes_Roughness 杩樻湁浜哄紩鐢� ['/Game/Robot/Materials/MI_Kit_Pipes']
+[2026.11.02-19.31.45:192][  0]LogInit: Display: LogPython: Warning: [kfdeploy] 瀹屾垚
