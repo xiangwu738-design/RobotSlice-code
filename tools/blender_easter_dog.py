@@ -209,6 +209,52 @@ def add_groups(o, per_vertex=None, bone=None):
         g.add(ids, 1.0, 'REPLACE')
 
 
+def region_slots(mesh, cfg):
+    """11-02 用户：头、腿、身体各一种颜色。合并后按每个面属于哪根骨头重新分材质槽：
+    头（head 骨头：头壳、嘴、脖子）→ Accent（第三种颜色）；腿（leg_*）→ Frame（副色）；身体、尾巴 → Shell（主色）。
+    发光的面（EasterMask 红 = 1：眼灯、灯带）不动。配置 region_slots=false 关掉，回到按零件 / 底子材质分槽"""
+    if not cfg.get('region_slots', True):
+        return
+    me = mesh.data
+    names = {g.index: g.name for g in mesh.vertex_groups}
+    ca = me.color_attributes.get(L.MASK)
+    glow = [False] * len(me.polygons)
+    if ca:
+        for p in me.polygons:
+            glow[p.index] = any(ca.data[li].color[0] > 0.5 for li in p.loop_indices)
+    vb = []
+    for v in me.vertices:
+        best, bw = '', 0.0
+        for g in v.groups:
+            if g.weight > bw:
+                best, bw = names.get(g.group, ''), g.weight
+        vb.append(best)
+    si = {}
+    for k, sname in enumerate(L.SLOTS):
+        hit = next((i for i, m in enumerate(me.materials) if m and (m.name == sname or m.name.endswith(sname) or sname in m.name)), None)
+        si[sname] = hit if hit is not None else k
+    idx = [0] * len(me.polygons)
+    me.polygons.foreach_get('material_index', idx)
+    cnt = {'头': 0, '腿': 0, '身体': 0, '发光（不动）': 0}
+    for p in me.polygons:
+        if glow[p.index]:
+            cnt['发光（不动）'] += 1
+            continue
+        bones = [vb[v] for v in p.vertices]
+        b = max(set(bones), key=bones.count) if bones else ''
+        if b == 'head':
+            idx[p.index] = si['Accent']
+            cnt['头'] += 1
+        elif b.startswith('leg_'):
+            idx[p.index] = si['Frame']
+            cnt['腿'] += 1
+        else:
+            idx[p.index] = si['Shell']
+            cnt['身体'] += 1
+    me.polygons.foreach_set('material_index', idx)
+    L.log(f'按部位分色（头 Accent / 腿 Frame / 身体 Shell）：面数 {cnt}，槽序号 {si}')
+
+
 # ---------------------------------------------------------------- 动作
 def match_clips(cfg, acts):
     import re
@@ -375,6 +421,7 @@ def build():
     mesh.matrix_parent_inverse = Matrix.Identity(4)
     mod = mesh.modifiers.new('Armature', 'ARMATURE')
     mod.object = arm
+    region_slots(mesh, cfg)
     unknown = [g.name for g in mesh.vertex_groups if g.name not in arm.data.bones]
     if unknown:
         L.warn(f'有顶点组不是骨头（这些顶点不会动）：{unknown}')
