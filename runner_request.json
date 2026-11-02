@@ -1,3 +1,5 @@
 {"build": true, "tests": [
-  {"kind": "gamepy", "name": "easter_ingame", "map": "/Game/Maps/L_Soviet?Range", "script": "tools/grade_easter_ingame.py", "args": ["-MechInfiniteEnergy", "-MechEasterLog"], "seconds": 180}
+  {"kind": "click"},
+  {"kind": "game", "name": "oldstreet_dm", "map": "/Game/Maps/L_OldStreet?Match?Mode=DM", "args": ["-MechQuitAfter=40"], "seconds": 120},
+  {"kind": "py", "name": "pack_launch", "script": "tools/ue_package_launch.py", "seconds": 300}
 ]}
