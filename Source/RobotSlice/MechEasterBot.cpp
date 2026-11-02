@@ -34,30 +34,13 @@ namespace MechEasterBotLocal
 	constexpr float DroneClearance = 700.f;    // 离地至少 7 米
 	constexpr float RotorSpin = 2400.f;        // 旋翼转速（度/秒）
 	// ---- 狗
-	constexpr float DogCenter = 60.f;          // 碰撞球中心离脚底多高
+	constexpr float DogCenter = 40.f;          // 碰撞球中心离脚底多高（11-02 狗缩到真 Spot 大小：60→40）
 	constexpr float DogWalk = 260.f;
 	constexpr float DogRun = 750.f;
 	constexpr float ClimbTime = 1.3f;
 	constexpr float SlideTime = 1.2f;
 
-	const FLinearColor DroneAccent(1.f, 0.07f, 0.03f);  // 维克托红
-	const FLinearColor DogAccent(0.08f, 0.85f, 1.f);    // 相位青
-
-	/** 随机涂装：主色 / 副色（线性色），生成时按种子挑一组，可能对调 */
-	const FLinearColor Palette[][2] = {
-		{FLinearColor(1.f, 0.32f, 0.04f), FLinearColor(0.05f, 0.05f, 0.06f)},    // 赛车橙 / 石墨
-		{FLinearColor(0.22f, 0.85f, 0.55f), FLinearColor(0.85f, 0.87f, 0.88f)},  // 薄荷 / 白
-		{FLinearColor(0.85f, 0.05f, 0.45f), FLinearColor(0.06f, 0.06f, 0.07f)},  // 品红 / 深灰
-		{FLinearColor(0.12f, 0.42f, 1.f), FLinearColor(0.9f, 0.9f, 0.92f)},      // 天蓝 / 白
-		{FLinearColor(1.f, 0.82f, 0.04f), FLinearColor(0.03f, 0.03f, 0.03f)},    // 柠檬黄 / 黑
-		{FLinearColor(0.4f, 0.1f, 0.85f), FLinearColor(0.05f, 0.7f, 0.75f)},     // 紫 / 青
-		{FLinearColor(1.f, 0.3f, 0.25f), FLinearColor(0.95f, 0.85f, 0.7f)},      // 珊瑚 / 奶油
-		{FLinearColor(0.2f, 0.3f, 0.1f), FLinearColor(0.6f, 0.5f, 0.3f)},        // 军绿 / 沙
-		{FLinearColor(0.92f, 0.95f, 1.f), FLinearColor(0.08f, 0.08f, 0.09f)},    // 冰白 / 石墨
-		{FLinearColor(1.f, 0.55f, 0.7f), FLinearColor(0.95f, 0.95f, 0.95f)},     // 樱粉 / 白
-		{FLinearColor(0.5f, 1.f, 0.1f), FLinearColor(0.3f, 0.05f, 0.5f)},        // 青柠 / 紫
-		{FLinearColor(0.02f, 0.06f, 0.25f), FLinearColor(1.f, 0.4f, 0.05f)},     // 海军蓝 / 橙
-	};
+	// 11-02 涂装改成三种颜色完全随机（ApplyLivery），原来的品牌色点缀和 12 组配色删了
 
 	// 狗的骨头（建模那边的约定）
 	const FName BoneBody(TEXT("body"));
@@ -178,7 +161,7 @@ void AMechEasterBot::BuildVisuals()
 	}
 	else
 	{
-		HitBox->SetSphereRadius(85.f);
+		HitBox->SetSphereRadius(60.f);  // 11-02 狗缩小（身长 1.5→1.0 米）：85→60
 		Visual->SetRelativeLocation(FVector(0.f, 0.f, -DogCenter));  // 狗的原点在脚底
 		BuildDog();
 	}
@@ -334,13 +317,12 @@ void AMechEasterBot::ApplyLivery(UMeshComponent* C)
 	{
 		return;
 	}
-	// 种子各端一样 → 涂装各端一样。品牌色（无人机红、狗青）固定在 Accent，发光强弱随机
+	// 种子各端一样 → 涂装各端一样。11-02 用户：每只三种颜色（主色 / 副色 / 点缀和灯），三种都完全随机（不再从配好的几组里挑、点缀也不再固定品牌色）。
+	// 色相、饱和度、亮度都随机；点缀兼当灯，饱和度和亮度偏高一点，免得灯是灰的
 	FRandomStream R(Seed);
-	const int32 Pick = R.RandRange(0, static_cast<int32>(UE_ARRAY_COUNT(Palette)) - 1);
-	const bool bSwap = R.FRand() < 0.5f;
-	const FLinearColor A = Palette[Pick][bSwap ? 1 : 0];
-	const FLinearColor B = Palette[Pick][bSwap ? 0 : 1];
-	const FLinearColor Accent = Kind == EMechEasterKind::Drone ? DroneAccent : DogAccent;
+	const FLinearColor A = FLinearColor::MakeFromHSV8(static_cast<uint8>(R.RandRange(0, 255)), static_cast<uint8>(R.RandRange(40, 255)), static_cast<uint8>(R.RandRange(40, 240)));
+	const FLinearColor B = FLinearColor::MakeFromHSV8(static_cast<uint8>(R.RandRange(0, 255)), static_cast<uint8>(R.RandRange(40, 255)), static_cast<uint8>(R.RandRange(40, 240)));
+	const FLinearColor Accent = FLinearColor::MakeFromHSV8(static_cast<uint8>(R.RandRange(0, 255)), static_cast<uint8>(R.RandRange(170, 255)), static_cast<uint8>(R.RandRange(190, 255)));
 	const float Glow = R.FRandRange(6.f, 14.f);
 	UMaterialInterface* Parent = MechEaster::Load<UMaterialInterface>(MechEaster::LiveryPath());
 	for (int32 i = 0; i < C->GetNumMaterials(); ++i)
