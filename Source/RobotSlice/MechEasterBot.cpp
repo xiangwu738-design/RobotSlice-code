@@ -341,6 +341,12 @@ void AMechEasterBot::ApplyLivery(UMeshComponent* C)
 		MID->SetVectorParameterValue(TEXT("PaintB"), B);
 		MID->SetVectorParameterValue(TEXT("Accent"), Accent);
 		MID->SetScalarParameterValue(TEXT("AccentGlow"), Glow);
+		if (Kind == EMechEasterKind::Dog)
+		{
+			// 11-02 用户：狗的头、腿、身体分三种颜色（模型按部位分槽：身体 Shell = PaintA，腿 Frame，头 Accent）。
+			// Frame 实例 PaintAmount = 0，底色就是 FrameColor（原来固定石墨灰），所以把副色给 FrameColor，腿才跟着随机
+			MID->SetVectorParameterValue(TEXT("FrameColor"), B);
+		}
 		C->SetMaterial(i, MID);
 		LiveryMIDs.Add(MID);
 	}
