@@ -1,4 +1,5 @@
-{"build": false, "tests": [
+{"build": true, "tests": [
+  {"kind": "gamepy", "name": "easter_build", "map": "/Game/Maps/L_Range", "script": "tools/grade_easter_build.py", "args": ["-MechBeauty"], "seconds": 900},
   {"kind": "py", "name": "easter_import", "script": "tools/ue_easter_import_all.py", "seconds": 600},
   {"kind": "gamepy", "name": "easter_ingame", "map": "/Game/Maps/L_Soviet?Range", "script": "tools/grade_easter_ingame.py", "args": ["-MechInfiniteEnergy", "-MechEasterLog"], "seconds": 180}
 ]}
