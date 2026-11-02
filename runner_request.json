@@ -1,5 +1,6 @@
 {"build": true, "tests": [
   {"kind": "py", "name": "oldstreet_walls", "script": "tools/ue_oldstreet_walls.py", "seconds": 300},
+  {"kind": "py", "name": "oldstreet_wind", "script": "tools/ue_oldstreet_wind.py", "seconds": 300},
   {"kind": "gamepy", "name": "seam_cut", "map": "/Game/Maps/L_OldStreet?Range", "script": "tools/grade_seam_cut.py", "args": ["-MechHour=16.3"], "seconds": 240},
   {"kind": "gamepy", "name": "seam_nocut", "map": "/Game/Maps/L_OldStreet?Range", "script": "tools/grade_seam_nocut.py", "args": ["-MechHour=16.3"], "seconds": 240},
   {"kind": "game", "name": "oldstreet_dm", "map": "/Game/Maps/L_OldStreet?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechLoopLog", "-MechQuitAfter=90"], "seconds": 150}
