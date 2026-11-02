@@ -416,7 +416,7 @@ def import_drone(mats):
         size = b.max - b.min
         log(f'{path}：槽 {names}，简单碰撞 {simple_collision_count(mesh)[0]} 个，尺寸 {size.x:.1f} × {size.y:.1f} × {size.z:.1f} 厘米，'
             f'范围 ({b.min.x:.1f}, {b.min.y:.1f}, {b.min.z:.1f})..({b.max.x:.1f}, {b.max.y:.1f}, {b.max.z:.1f})，'
-            f'顶点 {mesh.get_num_vertices(0)}，插槽 {[str(s.get_editor_property("socket_name")) for s in mesh.get_editor_property("sockets")]}')
+            f'顶点 {mesh.get_num_vertices(0)}，插槽 {[n for n in ("Rotor_FL", "Rotor_FR", "Rotor_BL", "Rotor_BR", "Muzzle") if mesh.find_socket(n)]}')
         out[name] = mesh
     if rep and 'SM_VDrone_Body' in out:
         want = rep.get('size_m')
