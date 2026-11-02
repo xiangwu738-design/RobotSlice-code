@@ -39,12 +39,14 @@ REPORT, ERRORS = [], []
 
 
 def log(msg):
-    unreal.log(f'[easter] {msg}')
+    for line in str(msg).splitlines() or ['']:
+        unreal.log(f'[easter] {line}')
     REPORT.append(msg)
 
 
 def err(msg):
-    unreal.log_error(f'[easter] {msg}')
+    for line in str(msg).splitlines() or ['']:
+        unreal.log_error(f'[easter] {line}')  # 一行一行打：多行的话本地测试流程只收得到第一行
     REPORT.append('错误：' + msg)
     ERRORS.append(msg)
 
