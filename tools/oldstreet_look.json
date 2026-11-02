@@ -27,9 +27,9 @@
     "white_tint": 0.03,
     "color_saturation": [
       1.0,
+      0.74,
       0.86,
-      0.88,
-      0.72
+      0.7
     ],
     "color_contrast": [
       1.0,
@@ -78,9 +78,9 @@
     "local_exposure_highlight_contrast_scale": 0.75,
     "motion_blur_amount": 0.0,
     "color_gain_midtones": [
-      1.03,
+      1.05,
       1.0,
-      0.92,
+      0.86,
       1.0
     ]
   },
@@ -96,5 +96,5 @@
     "mie_anisotropy": 0.75,
     "multi_scattering_factor": 1.0
   },
-  "_说明_调色11-02": "云端调色第一轮：基准图里树冠绿得太艳，不像褪色老胶片。原值 color_saturation (1,0.97,0.9,0.76)、white_temp 8200、没有 color_gain_midtones；现在压绿、中间调往暖黄偏。"
+  "_说明_调色11-02": "云端调色：基准图里树冠绿得太艳，不像褪色老胶片。原值 color_saturation (1,0.97,0.9,0.76)、white_temp 8200、没有 color_gain_midtones。第一轮 (1,0.86,0.88,0.72) + 中间调 (1.03,1,0.92) 变化太小；第二轮绿通道饱和度再压、中间调更偏暖黄。"
 }
