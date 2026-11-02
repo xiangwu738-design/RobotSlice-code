@@ -13,11 +13,6 @@
     ],
     [
       "blender",
-      "tools/blender_easter_parts.py",
-      "find"
-    ],
-    [
-      "blender",
       "tools/blender_easter_survey.py",
       "dog"
     ],
@@ -64,5 +59,6 @@
   "log_files": [
     "Inbox/_easter/export/PDog_build.json",
     "Inbox/_easter/export/VDrone_build.json"
-  ]
+  ],
+  "blender": "D:/SteamLibrary/steamapps/common/Blender/blender.exe"
 }

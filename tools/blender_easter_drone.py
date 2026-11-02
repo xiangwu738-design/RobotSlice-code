@@ -62,7 +62,7 @@ def build():
     cfg = L.load_config('drone', args)
     flags = cfg['_flags']
     path = L.find_base('drone', cfg.get('base_file', ''))
-    objs = L.load_base(path)
+    objs = L.load_base(path, cfg.get('pose_frame'))
     meshes, arms, info = L.prepare_base(objs, cfg, 'drone')
     if arms:
         L.log(f'底子带骨架 {[a.name for a in arms]}：无人机按静态网格做（绑定姿势），骨架 / 动作不要，旋翼由代码转')
