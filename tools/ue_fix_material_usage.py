@@ -11,6 +11,8 @@ FIXES = [
     ('/Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car', unreal.MaterialUsage.MATUSAGE_NANITE),
     ('/Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car1', unreal.MaterialUsage.MATUSAGE_NANITE),
     ('/Game/Env/TechPark/Materials/MI_HTS_HoloInfoA', unreal.MaterialUsage.MATUSAGE_NANITE),
+    # 11-02 打包版日志：近战残影（MeleeFx 给武器网格套 M_BladeGhost 的动态实例，武器是 Nanite）缺 Nanite 标记 → 打包版残影变默认材质
+    ('/Game/Weapons/Materials/M_BladeGhost', unreal.MaterialUsage.MATUSAGE_NANITE),
 ]
 BACKUP = 'D:/归档/RobotSlice_材质用途_20261101'
 
