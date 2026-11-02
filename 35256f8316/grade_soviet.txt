@@ -1,0 +1,100 @@
+grade_soviet 结束：ok，用时 92 秒，日志行 99
+[2026.11.02-11.06.14:875][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.06.14:875][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-11.06.14:875][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-11.06.14:875][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-11.06.14:875][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-11.06.15:297][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-11.06.15:297][  0]LogPython: Using Python 3.11.8
+[2026.11.02-11.06.15:318][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-11.06.16:089][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-11.06.16:089][  0]LogTemp: Display: [easter] 彩蛋调度开在 L_Soviet
+[2026.11.02-11.06.16:091][  0]LogTemp: Display: [lighting] 时间 13.00 天气 Clear
+[2026.11.02-11.06.16:093][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-11.06.16:093][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:093][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:093][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:095][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-11.06.16:096][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-11.06.16:096][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-11.06.16:096][  0]LogTemp: Display: [keys] 键位： 前进=W 后退=S 左移=A 右移=D 跳跃 / 喷射 / 蹬墙=SpaceBar 冲刺 / 滑翔=LeftShift 快速闪避=F 切换射击 / 近战=Q 开火 / 攻击=LeftMouseButton 瞄准 / 格挡=RightMouseButton 肩部装备=E 换弹=R 第一人称=V 大地图（按住）=M 计分板（按住）=Tab 扔核心（夺芯）=G 标点=MiddleMouseButton
+[2026.11.02-11.06.16:097][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:097][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:097][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:099][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-11.06.16:099][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:099][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:099][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:101][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-11.06.16:101][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:101][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:101][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:103][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-11.06.16:103][  0]LogTemp: Display: [range] 测试场：木桩 3 个
+[2026.11.02-11.06.16:147][  0]LogTemp: Display: [hudtheme] HUD 主题 → NEC（自己操控的机体）
+[2026.11.02-11.06.16:157][  0]LogTemp: Display: [alert] 告警音效 14/14 已加载（/Game/Audio/HUD）
+[2026.11.02-11.06.16:166][  0]LogTemp: Display: [alert] 告警语音 冷静女声：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-11.06.16:609][  0]LogTemp: Display: [music] 无 → 测试场 Basement
+[2026.11.02-11.06.16:696][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.06.16:704][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 7.200 ms
+[2026.11.02-11.06.16:704][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-11.06.16:711][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-11.06.16:714][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 10.917 ms (total: 18.118 ms)
+[2026.11.02-11.06.16:720][  0]LogPython: [shots] 已挂上逐帧回调，输出 D:/RobotSlice/Saved/Screenshots/Grade/soviet
+[2026.11.02-11.06.16:720][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-11.06.16:769][  1]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-11.06.16:769][  1]LogTemp: Display: [range] 你 换装：相位 中型 · 均衡型 · 双持手枪 · 钝器 · 火炮
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:802][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 蹲点 在 V(X=2599.26, Y=-300.00) 方向 V(Y=1.00) 长 400 高 200
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 滑梯 在 V(X=2290.45, Y=-1300.00) 方向 V(X=-1.00) 长 581 高 240
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 跷跷板 在 V(X=-1400.00, Y=1300.00) 方向 V(X=0.77, Y=-0.64) 长 221 高 76
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 蹲点 在 V(X=1344.84, Y=-700.00) 方向 V(Y=1.00) 长 400 高 200
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 蹲点 在 V(X=-1344.84, Y=700.00) 方向 V(Y=-1.00) 长 400 高 200
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 蹲点 在 V(X=-2000.00, Y=-1644.84) 方向 V(X=1.00) 长 400 高 200
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 苏联：狗玩的地方 蹲点 在 V(X=2000.00, Y=1644.84) 方向 V(X=-1.00) 长 400 高 200
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [easter] 缺机械狗模型 /Game/Easter/Dog/SK_PDog，不生成机械狗
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-11.06.16:803][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-11.06.16:808][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-11.06.16:808][  1]LogTemp: Display: [drone] MechCharacter_1 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-11.06.16:808][  1]LogTemp: Display: [drone] MechCharacter_2 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-11.06.16:808][  1]LogTemp: Display: [drone] MechCharacter_3 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-11.06.16:809][  1]LogTemp: Display: [hudtheme] HUD 主题 → PHASE（自己操控的机体）
+[2026.11.02-11.06.16:918][  1]LogTemp: Display: [alert] 告警语音 企业客服：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-11.06.17:044][  4]LogTemp: Display: [map] 开拍：活动范围 345×253 米，底图 2048×2048（4×4 块，18.9 厘米/像素），镜头高 23 米（参考地面 1）
+[2026.11.02-11.06.17:432][  8]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-11.06.17:527][  9]LogTemp: Display: [lighting] 时间 13.00 天气 Clear
+[2026.11.02-11.06.17:831][ 20]LogTemp: Display: [map] 高度校验：48 个点平均差 213 厘米（几十厘米以内 = 方向和高度都对）
+[2026.11.02-11.06.18:201][ 66]LogTemp: Display: [map] 底图完成：拍摄共 352 毫秒（16 块），从开拍到能用 1.2 秒，贴图 2048×2048（16.0 MB）
+[2026.11.02-11.06.28:912][324]LogPython: [shots] 地图里的 CameraActor 1 机体位置 <Struct 'Vector' (0x0000028A62F0A270) {x: -13500.000000, y: 0.000000, z: 131.750009}>
+[2026.11.02-11.06.28:936][325]LogPython: [shots] a0_aerial_sw 机位 (-146, -106, 58.0) yaw -37 pitch -15.6
+[2026.11.02-11.06.33:924][860]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/a0_aerial_sw.png 这一机位后半段平均帧率 110.8
+[2026.11.02-11.06.35:409][949]LogPython: [shots] s0_street_n_w 机位 (-140, 50, 2.4) yaw 0 pitch 0.3
+[2026.11.02-11.06.40:414][518]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/s0_street_n_w.png 这一机位后半段平均帧率 115.4
+[2026.11.02-11.06.41:465][603]LogPython: [shots] s1_street_n_mid 机位 (-20, 46, 2.4) yaw -9 pitch 2.5
+[2026.11.02-11.06.46:456][196]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/s1_street_n_mid.png 这一机位后半段平均帧率 119.6
+[2026.11.02-11.06.47:475][277]LogPython: [shots] s2_cross 机位 (50, -100, 2.4) yaw -90 pitch 1.0
+[2026.11.02-11.06.52:469][861]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/s2_cross.png 这一机位后半段平均帧率 122.3
+[2026.11.02-11.06.53:497][943]LogPython: [shots] y0_yard_center 机位 (-36, -14, 2.4) yaw -25 pitch 2.4
+[2026.11.02-11.06.58:504][528]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/y0_yard_center.png 这一机位后半段平均帧率 115.4
+[2026.11.02-11.06.59:510][615]LogPython: [shots] y1_spawn_w 机位 (-146, -3, 3.0) yaw -4 pitch 3.3
+[2026.11.02-11.07.04:519][227]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/y1_spawn_w.png 这一机位后半段平均帧率 122.6
+[2026.11.02-11.07.05:549][308]LogPython: [shots] f1_fly_mid 机位 (-30, 110, 35.0) yaw 69 pitch -10.2
+[2026.11.02-11.07.10:553][922]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/f1_fly_mid.png 这一机位后半段平均帧率 123.1
+[2026.11.02-11.07.11:578][ 12]LogPython: [shots] c0_third_street 机位 (-104, 46, 4.5) yaw -5 pitch -1.9
+[2026.11.02-11.07.16:585][602]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/c0_third_street.png 这一机位后半段平均帧率 119.5
+[2026.11.02-11.07.17:614][682]LogPython: [shots] c2_third_cross 机位 (44, -30, 5.0) yaw -83 pitch 0.0
+[2026.11.02-11.07.22:618][276]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/c2_third_cross.png 这一机位后半段平均帧率 121.1
+[2026.11.02-11.07.23:669][359]LogPython: [shots] p3_playground 机位 (10, 4, 3.0) yaw -13 pitch -6.2
+[2026.11.02-11.07.28:669][968]LogPython: [shots] 截图 D:/RobotSlice/Saved/Screenshots/Grade/soviet/p3_playground.png 这一机位后半段平均帧率 122.6
+[2026.11.02-11.07.31:732][293]LogPython: [shots] 完成，退出
