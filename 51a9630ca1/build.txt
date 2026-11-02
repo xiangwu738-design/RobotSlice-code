@@ -1,0 +1,6 @@
+exit=1
+D:\RobotSlice\Source\RobotSlice\MechCombatComponent.cpp(1): error: Expected MechCombatComponent.h to be first header included.
+D:\RobotSlice\Source\RobotSlice\MechMovementComponent.cpp(1112,9): error C2248: “AMechCharacter::OnLoopWrapped”: 无法访问 protected 成员(在“AMechCharacter”类中声明)
+D:\RobotSlice\Source\RobotSlice\MechMissile.cpp(206,46): error C2248: “AMechCharacter::GetLoopNearestCapsule”: 无法访问 protected 成员(在“AMechCharacter”类中声明)
+Result: Failed (OtherCompilationError)
+Total execution time: 102.93 seconds
