@@ -1,0 +1,17 @@
+exit=0
+[2026.11.02-12.28.34:513][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-12.28.35:087][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.28.35:096][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 9.652 ms
+[2026.11.02-12.28.35:096][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.28.35:109][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 13.015 ms (total: 22.668 ms)
+[2026.11.02-12.28.35:109][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_oldstreet_wind.py
+[2026.11.02-12.28.35:115][  0]LogPython: Warning: [oswind] M_OS_Leaf 宸茬粡鎺ヤ簡涓栫晫浣嶇疆鍋忕Щ锛屼笉鍐嶅缓鑺傜偣锛涙暟鍊煎湪涓嬮潰鐨勫瓙瀹炰緥涓婃敼
+[2026.11.02-12.28.35:239][  0]LogPython: Warning: [oswind] 鏍戝彾鏉愯川瀹炰緥 1 涓�宸茶�惧弬鏁�
+[2026.11.02-12.28.35:355][  0]LogPython: Warning: [oswind] 鏍戠粍浠� 2 涓�璁句簡鍋忕Щ璺濈�� 2500
+[2026.11.02-12.28.35:414][  0]LogPython: Warning: [oswind] 宸插瓨
+[2026.11.02-12.28.35:414][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-12.28.35:414][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-12.28.35:414][  0]LogInit: Display: LogPython: Warning: [oswind] M_OS_Leaf 宸茬粡鎺ヤ簡涓栫晫浣嶇疆鍋忕Щ锛屼笉鍐嶅缓鑺傜偣锛涙暟鍊煎湪涓嬮潰鐨勫瓙瀹炰緥涓婃敼
+[2026.11.02-12.28.35:414][  0]LogInit: Display: LogPython: Warning: [oswind] 鏍戝彾鏉愯川瀹炰緥 1 涓�宸茶�惧弬鏁�
+[2026.11.02-12.28.35:414][  0]LogInit: Display: LogPython: Warning: [oswind] 鏍戠粍浠� 2 涓�璁句簡鍋忕Щ璺濈�� 2500
+[2026.11.02-12.28.35:414][  0]LogInit: Display: LogPython: Warning: [oswind] 宸插瓨

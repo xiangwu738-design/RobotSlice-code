@@ -1,0 +1,3 @@
+exit=0
+Result: Succeeded
+Total execution time: 15.10 seconds

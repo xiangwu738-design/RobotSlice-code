@@ -1,0 +1,86 @@
+seam_cut 结束：ok，用时 62 秒，日志行 85
+[2026.11.02-12.28.49:780][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-12.28.49:780][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-12.28.49:780][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-12.28.49:780][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-12.28.49:780][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-12.28.50:352][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-12.28.50:352][  0]LogPython: Using Python 3.11.8
+[2026.11.02-12.28.50:379][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-12.28.51:053][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-12.28.51:054][  0]LogTemp: Display: [easter] 彩蛋调度开在 L_OldStreet
+[2026.11.02-12.28.51:054][  0]LogTemp: Display: [loop] 沿 X 循环：周期 100 米，接缝 ±50 米，中心 X = 0 米
+[2026.11.02-12.28.51:066][  0]LogTemp: Display: [sens] 开镜灵敏度独立：瞄准 0.600、开镜 0.300（由主灵敏度 1.000 换算）
+[2026.11.02-12.28.51:068][  0]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-12.28.51:071][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-12.28.51:071][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:071][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:071][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:075][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-12.28.51:075][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-12.28.51:075][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-12.28.51:077][  0]LogTemp: Display: [keys] 键位： 前进=W 后退=S 左移=A 右移=D 跳跃 / 喷射 / 蹬墙=SpaceBar 冲刺 / 滑翔=LeftShift 快速闪避=F 切换射击 / 近战=Q 开火 / 攻击=LeftMouseButton 瞄准 / 格挡=RightMouseButton 肩部装备=E 换弹=R 第一人称=V 大地图（按住）=M 计分板（按住）=Tab 扔核心（夺芯）=G 标点=MiddleMouseButton
+[2026.11.02-12.28.51:078][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:078][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:078][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:082][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-12.28.51:083][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:083][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:083][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:087][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-12.28.51:088][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:088][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:088][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:091][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-12.28.51:091][  0]LogTemp: Display: [range] 测试场：木桩 3 个
+[2026.11.02-12.28.51:109][  0]LogTemp: Display: [hudtheme] HUD 主题 → NEC（自己操控的机体）
+[2026.11.02-12.28.51:125][  0]LogTemp: Display: [alert] 告警音效 14/14 已加载（/Game/Audio/HUD）
+[2026.11.02-12.28.51:136][  0]LogTemp: Display: [alert] 告警语音 冷静女声：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-12.28.51:613][  0]LogTemp: Display: [music] 无 → 测试场 Basement
+[2026.11.02-12.28.51:651][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-12.28.51:660][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 10.632 ms
+[2026.11.02-12.28.51:662][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-12.28.51:674][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-12.28.51:679][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 17.050 ms (total: 27.682 ms)
+[2026.11.02-12.28.51:684][  0]LogPython: [osseam] 已挂上逐帧回调
+[2026.11.02-12.28.51:685][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-12.28.51:740][  1]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-12.28.51:741][  1]LogTemp: Display: [range] 你 换装：相位 中型 · 均衡型 · 步枪 · 钝器 · 火炮
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:744][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [easter] 老街：地图里没有 EasterDoor 标记，在街边楼面上找了一处，门放在 V(X=2700.00, Y=-831.04, Z=160.00)
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [easter] 门 在 V(X=2700.00, Y=-831.04, Z=160.00)（占位）
+[2026.11.02-12.28.51:745][  1]LogTemp: Display: [easter] 按钮 在 V(X=2700.00, Y=-861.04, Z=160.00)（占位）
+[2026.11.02-12.28.51:747][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-12.28.51:747][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-12.28.51:747][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-12.28.51:759][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-12.28.51:760][  1]LogTemp: Display: [drone] MechCharacter_1 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-12.28.51:760][  1]LogTemp: Display: [drone] MechCharacter_2 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-12.28.51:760][  1]LogTemp: Display: [drone] MechCharacter_3 机身 SM_MissilePod 包围盒中心 V(X=-0.20, Y=-0.00, Z=-1.00) 半尺寸 V(X=25.80, Y=15.50, Z=14.00) → 缩放 1.12
+[2026.11.02-12.28.51:762][  1]LogTemp: Display: [hudtheme] HUD 主题 → PHASE（自己操控的机体）
+[2026.11.02-12.28.51:774][  1]LogTemp: Display: [alert] 告警语音 企业客服：12/12 句已加载（/Game/Audio/HUD/Voice）
+[2026.11.02-12.28.52:028][ 23]LogTemp: Display: [map] 开拍：活动范围 115×30 米，底图 1536×1024（3×2 块，10.1 厘米/像素），镜头高 34 米（参考地面 0）
+[2026.11.02-12.28.52:681][ 25]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-12.28.52:863][ 26]LogTemp: Display: [lighting] 时间 16.30 天气 Haze
+[2026.11.02-12.28.53:150][ 29]LogTemp: Display: [map] 高度校验：18 个点平均差 126 厘米（几十厘米以内 = 方向和高度都对）
+[2026.11.02-12.28.53:546][ 56]LogTemp: Display: [map] 底图完成：拍摄共 328 毫秒（6 块），从开拍到能用 1.5 秒，贴图 1536×1024（6.0 MB）
+[2026.11.02-12.28.56:187][243]LogPython: [osseam] 开始；瞬移那帧镜头切换标记 True
+[2026.11.02-12.28.56:875][247]LogTemp: Display: [ui] 3D 渲染精度 71%
+[2026.11.02-12.29.06:008][759]LogPython: [osseam] 帧时间毫秒 fwd_street k 0 [319.8, 5.5, 4.2, 8.0, 12.8, 11.2, 10.8, 10.3, 10.4, 10.5, 10.2, 11.4]
+[2026.11.02-12.29.09:085][903]LogPython: [osseam] 帧时间毫秒 fwd_street k 1 [18.0, 409.9, 6.9, 5.5, 13.3, 12.2, 14.1, 12.6, 13.4, 15.1, 13.8, 15.5, 17.6]
+[2026.11.02-12.29.12:249][ 75]LogPython: [osseam] 帧时间毫秒 fwd_street k 3 [18.5, 20.7, 20.9, 446.2, 6.6, 5.8, 9.3, 12.1, 16.6, 12.1, 12.6, 13.8, 13.8, 15.5, 18.0]
+[2026.11.02-12.29.15:264][264]LogPython: [osseam] 帧时间毫秒 fwd_street k 8 [11.6, 10.8, 10.4, 14.6, 9.5, 9.2, 8.8, 10.4, 325.1, 4.9, 4.2, 8.9, 8.7, 9.3, 10.2, 10.1, 10.1, 14.2, 11.6, 11.0]
+[2026.11.02-12.29.23:608][805]LogPython: [osseam] 帧时间毫秒 back_street k 0 [340.8, 5.0, 3.5, 9.4, 11.9, 12.3, 10.6, 10.1, 11.2, 11.5, 11.6, 11.4]
+[2026.11.02-12.29.26:590][999]LogPython: [osseam] 帧时间毫秒 back_street k 1 [20.0, 335.4, 5.2, 3.7, 9.2, 12.2, 10.0, 9.6, 12.4, 9.3, 10.4, 9.5, 10.2]
+[2026.11.02-12.29.29:563][179]LogPython: [osseam] 帧时间毫秒 back_street k 3 [12.9, 16.6, 12.3, 309.8, 5.2, 4.1, 9.1, 9.5, 11.0, 11.8, 11.6, 11.5, 12.2, 13.0, 10.9]
+[2026.11.02-12.29.32:666][377]LogPython: [osseam] 帧时间毫秒 back_street k 8 [15.2, 15.1, 14.6, 18.9, 13.9, 13.1, 19.7, 20.2, 360.7, 4.9, 3.5, 7.9, 8.2, 8.6, 9.9, 8.3, 23.6, 8.5, 10.7, 9.8]
+[2026.11.02-12.29.35:703][607]LogPython: [osseam] 完成 12 张
