@@ -19,11 +19,16 @@ with wave.open(PATH, 'wb') as w:
     w.setframerate(44100)
     w.writeframes(b''.join(struct.pack('<hh', v, v) for v in (int(6000 * math.sin(2 * math.pi * 440 * i / 44100)) for i in range(44100 * 6))))
 log('写了', PATH)
-world = unreal.UnrealEditorSubsystem().get_game_world()
+world = None
 step = {'n': 0}
 
 
 def tick(dt):
+    global world
+    if world is None:
+        world = unreal.find_object(None, '/Game/Maps/L_Range.L_Range')
+        if world is None:
+            return
     step['n'] += 1
     n = step['n']
     if n == 30:
@@ -39,7 +44,7 @@ def tick(dt):
             log('删测试文件失败', e)
         log('结束')
         unreal.unregister_slate_post_tick_callback(handle)
-        unreal.SystemLibrary.quit_game(world, None, unreal.QuitPreference.QUIT, False)
+        unreal.SystemLibrary.execute_console_command(world, 'quit')
 
 
 handle = unreal.register_slate_post_tick_callback(tick)
