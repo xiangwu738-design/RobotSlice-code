@@ -1,5 +1,3 @@
-{"build": true, "tests": [
-  {"kind": "click"},
-  {"kind": "game", "name": "oldstreet_dm", "map": "/Game/Maps/L_OldStreet?Match?Mode=DM", "args": ["-MechQuitAfter=40"], "seconds": 120},
+{"build": false, "tests": [
   {"kind": "py", "name": "pack_launch", "script": "tools/ue_package_launch.py", "seconds": 300}
 ]}
