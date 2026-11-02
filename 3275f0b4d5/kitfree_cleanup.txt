@@ -1,0 +1,31 @@
+exit=0
+[2026.11.02-19.34.01:529][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.34.01:940][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.34.01:948][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 8.049 ms
+[2026.11.02-19.34.01:948][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-19.34.01:964][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 16.609 ms (total: 24.658 ms)
+[2026.11.02-19.34.01:964][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_kitfree_cleanup.py
+[2026.11.02-19.34.01:966][  0]LogPython: Warning: [kfclean] MI_Kit_Hydraulics 姣嶆潗璐� MI_Robot_Frame 璐村浘鍙傛暟 0
+[2026.11.02-19.34.01:966][  0]LogPython: Warning: [kfclean] MI_Kit_Pipes 姣嶆潗璐� MI_Robot_Rubber 璐村浘鍙傛暟 0
+[2026.11.02-19.34.02:286][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_BaseColor True
+[2026.11.02-19.34.02:569][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Metallic True
+[2026.11.02-19.34.02:846][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Normal True
+[2026.11.02-19.34.03:127][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Roughness True
+[2026.11.02-19.34.03:410][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_BaseColor True
+[2026.11.02-19.34.03:697][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Metallic True
+[2026.11.02-19.34.03:980][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Normal True
+[2026.11.02-19.34.04:266][  0]LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Roughness True
+[2026.11.02-19.34.04:266][  0]LogPython: Warning: [kfclean] 瀹屾垚
+[2026.11.02-19.34.04:266][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-19.34.04:266][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] MI_Kit_Hydraulics 姣嶆潗璐� MI_Robot_Frame 璐村浘鍙傛暟 0
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] MI_Kit_Pipes 姣嶆潗璐� MI_Robot_Rubber 璐村浘鍙傛暟 0
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_BaseColor True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Metallic True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Normal True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Hydraulics_Roughness True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_BaseColor True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Metallic True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Normal True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 鍒� /Game/Robot/Textures/T_Kit_Pipes_Roughness True
+[2026.11.02-19.34.04:266][  0]LogInit: Display: LogPython: Warning: [kfclean] 瀹屾垚
