@@ -1,0 +1,15 @@
+exit=0
+[2026.11.02-15.22.54:915][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-15.22.55:576][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.22.55:589][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 14.330 ms
+[2026.11.02-15.22.55:589][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-15.22.55:607][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 17.428 ms (total: 31.759 ms)
+[2026.11.02-15.22.55:607][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_fix_material_usage.py
+[2026.11.02-15.22.55:702][  0]LogPython: Warning: D:/RobotSlice/tools/ue_fix_material_usage.py:51: DeprecationWarning: MaterialEditingLibrary: Function 'set_material_usage' on 'MaterialEditingLibrary' is deprecated: Use SetBaseMaterialUsage instead
+[2026.11.02-15.22.55:769][  0]LogPython: Warning: [usage] /Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car 鐨勬瘝鏉愯川涓嶅湪宸ョ▼閲岋紙/InterchangeAssets/gltf/M_Default锛夛紝涓嶆敼
+[2026.11.02-15.22.55:803][  0]LogPython: Warning: [usage] /Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car1 鐨勬瘝鏉愯川涓嶅湪宸ョ▼閲岋紙/InterchangeAssets/gltf/M_Default锛夛紝涓嶆敼
+[2026.11.02-15.22.56:067][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-15.22.56:067][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-15.22.56:067][  0]LogInit: Display: LogPython: Warning: D:/RobotSlice/tools/ue_fix_material_usage.py:51: DeprecationWarning: MaterialEditingLibrary: Function 'set_material_usage' on 'MaterialEditingLibrary' is deprecated: Use SetBaseMaterialUsage instead
+[2026.11.02-15.22.56:067][  0]LogInit: Display: LogPython: Warning: [usage] /Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car 鐨勬瘝鏉愯川涓嶅湪宸ョ▼閲岋紙/InterchangeAssets/gltf/M_Default锛夛紝涓嶆敼
+[2026.11.02-15.22.56:067][  0]LogInit: Display: LogPython: Warning: [usage] /Game/Env/PolyHaven/covered_car/covered_car_2k/Materials/covered_car1 鐨勬瘝鏉愯川涓嶅湪宸ョ▼閲岋紙/InterchangeAssets/gltf/M_Default锛夛紝涓嶆敼
