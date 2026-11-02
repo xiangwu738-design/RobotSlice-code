@@ -1,0 +1,82 @@
+kf_shoulder 结束：ok，用时 23 秒，日志行 81
+[2026.11.02-19.45.05:251][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.45.05:251][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-19.45.05:251][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.45.05:251][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-19.45.05:251][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-19.45.05:656][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-19.45.05:656][  0]LogPython: Using Python 3.11.8
+[2026.11.02-19.45.05:677][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.45.06:055][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-19.45.06:066][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-19.45.06:069][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-19.45.06:069][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.45.06:070][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.45.06:070][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.45.06:073][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-19.45.06:073][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-19.45.06:074][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-19.45.06:170][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-19.45.06:535][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-19.45.06:552][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.45.06:560][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 7.098 ms
+[2026.11.02-19.45.06:560][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.45.06:567][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-19.45.06:574][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 14.531 ms (total: 21.629 ms)
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] == game 退出码 0 3 秒
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 机甲 / Desirefx.me_Mega_Kitbash_Detail_52：192 面，尺寸 [0.244, 0.95, 0.213]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 机械零件2 / Detail_288：196 面，尺寸 [0.25, 0.3, 0.3]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 机甲2 / Limb_02：236 面，尺寸 [0.36, 0.474, 0.312]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_GrappleLauncher 0.676x0.178x0.357 米 三角 1192 范围 x -33.8..33.8 厘米 z -27.5..8.2
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 钩爪收着时爪根在发射器 x=29.5 厘米，筒口 x=33.8 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_GrappleClaw 0.337x0.256x0.222 米 三角 560 范围 x 0.0..33.7 厘米 z -11.1..11.1
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 爪长 33.7 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 机甲 / Desirefx.me_Mega_Kitbash_Detail_60：181 面，尺寸 [0.35, 0.9, 0.35]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_NetLauncher 0.702x0.249x0.309 米 三角 890 范围 x -32.0..38.2 厘米 z -18.4..12.4
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 网发射器筒口 x=32.0 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_NetOpen 0.814x4.754x4.534 米 三角 16356 范围 x -25.3..56.0 厘米 z -226.7..226.7
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_NetWrapped 1.653x1.607x2.104 米 三角 16356 范围 x -82.3..83.0 厘米 z 39.4..249.8
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 枪炮 / b1：150 面，尺寸 [1.0, 0.2, 0.2]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 零件 枪炮 b1 长轴 X 前端粗细 0.059 后端 0.125 → 尺寸 [0.82, 0.164, 0.164]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_Artillery 0.820x0.164x0.227 米 三角 396 范围 x -31.0..51.0 厘米 z -13.7..9.0
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 火炮炮口 x=51.0 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 军事武器部件零件 / Desirefx.me_Body328：160 面，尺寸 [1.0, 0.34, 0.22]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 零件 军事武器部件零件 Desirefx.me_Body328 长轴 X 前端粗细 0.151 后端 0.195 → 尺寸 [0.4, 0.136, 0.088]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_SmokeLauncher 0.400x0.136x0.151 米 三角 472 范围 x -20.0..20.0 厘米 z -9.9..5.2
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 烟雾弹管口 x=20.0 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 军事武器部件零件 / Desirefx.me_Body326：210 面，尺寸 [1.0, 0.33, 0.177]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] 零件 军事武器部件零件 Desirefx.me_Body326 长轴 X 前端粗细 0.165 后端 0.065 → 尺寸 [0.42, 0.139, 0.074]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_EmpLauncher 0.420x0.139x0.139 米 三角 624 范围 x -21.0..21.0 厘米 z -9.2..4.7
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] EMP 管口 x=21.0 厘米
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部自建 枪炮 / engine_6：574 面，尺寸 [0.1, 1.0, 1.0]
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_ShieldEmitter 0.120x0.340x0.395 米 三角 1236 范围 x -10.0..2.0 厘米 z -22.5..17.0
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_ShieldDome 1.219x3.790x3.170 米 三角 8848 范围 x 88.1..210.0 厘米 z -141.9..175.1
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_Grenade 0.260x0.128x0.128 米 三角 180 范围 x -10.0..16.0 厘米 z -6.4..6.4
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [game] SM_Shell 0.525x0.150x0.150 米 三角 150 范围 x -17.5..35.0 厘米 z -7.5..7.5
+[2026.11.02-19.45.09:246][  0]LogPython: Warning: [kfsh] game | [kitfree] 肩部重建完成 game D:/RobotSlice/Inbox/_肩部候选/游戏模型_kitfree
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] == tactical 退出码 0 2 秒
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / engine_4：214 面，尺寸 [1.0, 0.2, 0.21]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / engine_4：214 面，尺寸 [1.0, 0.2, 0.21]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / b3：78 面，尺寸 [0.28, 0.2, 0.07]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] SM_BurstPack 尺寸 37.9x35.2x52.4 厘米 三角 2064 范围 x -22.9..14.9 y -17.6..17.6 z -30.4..22.0 槽 ['MI_Robot_PaintDark', 'MI_Robot_Glow', 'MI_Robot_Frame', 'MI_Robot_Accent']
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / a5：138 面，尺寸 [0.42, 0.42, 0.04]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / a5：138 面，尺寸 [0.38, 0.38, 0.036]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] SM_LaunchSpring 尺寸 42.0x42.0x52.3 厘米 三角 5100 范围 x -21.0..21.0 y -21.0..21.0 z -28.5..23.8 槽 ['MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent']
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / a1：504 面，尺寸 [0.56, 0.56, 0.045]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / a1：504 面，尺寸 [0.314, 0.314, 0.025]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / engine_5：256 面，尺寸 [1.0, 0.18, 0.18]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] SM_ShockRing 尺寸 56.7x63.4x29.0 厘米 三角 4120 范围 x -28.4..28.4 y -31.7..31.7 z -17.0..12.0 槽 ['MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow']
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 枪炮 / a5：138 面，尺寸 [0.385, 0.385, 0.037]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] SM_Mine 尺寸 44.9x44.9x8.3 厘米 三角 796 范围 x -22.4..22.4 y -22.4..22.4 z 0.0..8.3 槽 ['MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent', 'MI_Robot_Glow']
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部自建 科幻机械 / scifi_kitbash_piece_03：138 面，尺寸 [0.56, 0.232, 0.16]
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] SM_MineLayer 尺寸 56.0x23.2x39.5 厘米 三角 2884 范围 x -28.0..28.0 y -11.6..11.6 z -23.0..16.5 槽 ['MI_Robot_PaintDark', 'MI_Robot_Frame', 'MI_Robot_Accent']
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [tactical] 完成
+[2026.11.02-19.45.11:462][  0]LogPython: Warning: [kfsh] tactical | [kitfree] 肩部重建完成 tactical D:/RobotSlice/Inbox/_肩部候选/游戏模型_战术_kitfree
+[2026.11.02-19.45.11:472][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-19.45.11:482][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-19.45.11:482][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.45.11:482][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.45.11:482][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.45.11:484][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-19.45.11:808][ 15]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-19.45.11:870][ 16]LogTemp: Display: [lighting] 时间 21.50 天气 Fog

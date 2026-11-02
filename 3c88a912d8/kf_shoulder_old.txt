@@ -1,0 +1,33 @@
+kf_shoulder_old 结束：ok，用时 16 秒，日志行 32
+[2026.11.02-19.45.28:624][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.45.28:624][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-19.45.28:624][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-19.45.28:624][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-19.45.28:624][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-19.45.29:023][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-19.45.29:023][  0]LogPython: Using Python 3.11.8
+[2026.11.02-19.45.29:045][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-19.45.29:456][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-19.45.29:465][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-19.45.29:469][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-19.45.29:469][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.45.29:470][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.45.29:470][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.45.29:474][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-19.45.29:475][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-19.45.29:475][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-19.45.29:528][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-19.45.29:905][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-19.45.29:924][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.45.29:930][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 6.814 ms
+[2026.11.02-19.45.29:930][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-19.45.29:938][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-19.45.29:942][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 11.995 ms (total: 18.810 ms)
+[2026.11.02-19.45.30:000][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-19.45.30:009][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-19.45.30:009][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-19.45.30:009][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-19.45.30:009][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-19.45.30:010][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-19.45.30:624][ 81]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-19.45.30:686][ 82]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
