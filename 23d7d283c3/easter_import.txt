@@ -1,0 +1,35 @@
+exit=1
+[2026.11.02-12.47.39:853][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-12.47.40:198][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.47.40:206][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py鈥︹�� took 7.563 ms
+[2026.11.02-12.47.40:206][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� started...
+[2026.11.02-12.47.40:336][  0]LogPython: Display: 姝ｅ湪杩愯�屽惎鍔ㄨ剼鏈珼:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py鈥︹�� took 130.710 ms (total: 138.273 ms)
+[2026.11.02-12.47.40:336][  0]LogPythonScriptCommandlet: Display: Running Python script: D:/RobotSlice/tools/ue_easter_import_all.py
+[2026.11.02-12.47.41:369][  0]LogPython: Warning: D:/RobotSlice/tools/ue_easter_import.py:370: DeprecationWarning: EditorStaticMeshLibrary: Function 'get_simple_collision_count' on 'EditorStaticMeshLibrary' is deprecated: The Editor Scripting Utilities Plugin is deprecated - Use the function in Stat
+[2026.11.02-12.47.41:370][  0]LogPython: Error: [easter] 鑴氭湰鍑洪敊锛�
+[2026.11.02-12.47.41:370][  0]LogPython: Error: [easter] Traceback (most recent call last):
+[2026.11.02-12.47.41:370][  0]LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 628, in <module>
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]     main()
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 617, in main
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]     import_drone(insts.get('VDrone', {}))
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 406, in import_drone
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]     fix_sockets(mesh, (rep or {}).get('sockets', {}))
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 434, in fix_sockets
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]     have = {str(s.get_editor_property('socket_name')): s for s in mesh.get_editor_property('sockets')}
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter]                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.47.41:371][  0]LogPython: Error: [easter] Exception: StaticMesh: Property 'Sockets' for attribute 'sockets' on 'StaticMesh' is protected and cannot be read
+[2026.11.02-12.47.41:371][  0]LogPythonScriptCommandlet: Display: Python script executed successfully
+[2026.11.02-12.47.41:371][  0]LogInit: Display: Warning/Error Summary (Unique only)
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter] 鑴氭湰鍑洪敊锛�
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter] Traceback (most recent call last):
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 628, in <module>
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]     main()
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 617, in main
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]     import_drone(insts.get('VDrone', {}))
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 406, in import_drone
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]     fix_sockets(mesh, (rep or {}).get('sockets', {}))
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]   File "D:/RobotSlice/tools/ue_easter_import.py", line 434, in fix_sockets
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]     have = {str(s.get_editor_property('socket_name')): s for s in mesh.get_editor_property('sockets')}
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter]                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Error: [easter] Exception: StaticMesh: Property 'Sockets' for attribute 'sockets' on 'StaticMesh' is protected and cannot be read
+[2026.11.02-12.47.41:371][  0]LogInit: Display: LogPython: Warning: D:/RobotSlice/tools/ue_easter_import.py:370: DeprecationWarning: EditorStaticMeshLibrary: Function 'get_simple_collision_count' on 'EditorStaticMeshLibrary' is deprecated: The Editor Scripting Utilities Plugin is deprecated - Use th
