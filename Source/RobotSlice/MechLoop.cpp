@@ -334,7 +334,6 @@ void AMechLoopGhosts::Tick(float DeltaTime)
 			Set.RescanClock = 0.5f;
 			RescanParts(Set);
 		}
-		const bool bMechShown = !Mech->IsHidden();
 		for (FPart& Part : Set.Parts)
 		{
 			UPrimitiveComponent* Src = Part.Source.Get();
@@ -342,7 +341,7 @@ void AMechLoopGhosts::Tick(float DeltaTime)
 			{
 				continue;
 			}
-			const bool bShown = bMechShown && Src->IsRegistered() && Src->IsVisible() && !Src->bHiddenInGame;
+			const bool bShown = Src->IsRegistered() && Src->ShouldRender();  // 自己可见、没在游戏里隐藏、机体没被藏起来
 			const FTransform Xf = Src->GetComponentTransform();
 			for (int32 k = 0; k < Part.Copies.Num() && k < Offsets.Num(); ++k)
 			{
