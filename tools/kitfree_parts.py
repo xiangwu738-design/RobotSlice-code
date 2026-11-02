@@ -222,3 +222,80 @@ def patch(module, label=''):
         module.KIT_CACHE.clear()
     module.kit_source = kit_source
     print(f'[kitfree] 已替换 {label or module.__name__}.kit_source')
+
+
+def coilover_meshes(COIL, kit_source_fn, M, pin_rod, cut, pin_barrel, rod_stretch, barrel_shrink):
+    """代替 robot_lookdev.kit_coilover_meshes：和原来一样把液压杆在缸口（cut）切成缸筒 / 活塞杆两块
+    （活塞杆 0.42 以内整体外移 rod_stretch、缸筒 1.10 以外整体内移 barrel_shrink，各自原点在销孔、+X 朝对方），
+    弹簧用自建螺旋（直径 1、沿 +X），材质 M['accent']（原来的弹簧也是点缀色）。结果写进 COIL（robot_lookdev 的全局 dict）。"""
+    if COIL:
+        return COIL
+    src, _ = kit_source_fn('Hydraulics_T1_02', '机甲2', ((0, 1, 0), (1, 0, 0)))
+    u0 = min(v.co.x for v in src.vertices)
+
+    def piece(keep_rod, pin, sign, name):
+        bm = bmesh.new()
+        bm.from_mesh(src)
+        dead = [f for f in bm.faces if ((f.calc_center_median().x - u0) < cut) != keep_rod]
+        bmesh.ops.delete(bm, geom=dead, context='FACES')
+        for v in bm.verts:
+            rel = v.co.x - u0
+            if keep_rod and rel <= 0.42:
+                rel -= rod_stretch
+            elif not keep_rod and rel >= 1.10:
+                rel -= barrel_shrink
+            v.co = Vector((sign * (rel - pin), v.co.y, sign * v.co.z))
+        me = bpy.data.meshes.new(name)
+        bm.to_mesh(me)
+        bm.free()
+        for m in src.materials:
+            me.materials.append(m)
+        return me
+
+    COIL['rod'] = piece(True, pin_rod, 1, '减震活塞杆（自建）')
+    COIL['barrel'] = piece(False, pin_barrel, -1, '减震缸筒（自建）')
+    bm, length = spring_mesh()
+    me = bpy.data.meshes.new('减震弹簧（自建）')
+    bm.to_mesh(me)
+    bm.free()
+    for p in me.polygons:
+        p.use_smooth = True
+    me.materials.append(M['accent'])
+    COIL['spring'] = me
+    COIL['spring_len'] = length
+    print(f'[kitfree] 自建减震：活塞杆 {len(COIL["rod"].polygons)} 面、缸筒 {len(COIL["barrel"].polygons)} 面、弹簧 {len(me.polygons)} 面', flush=True)
+    return COIL
+
+
+RL_PATCH = '''
+# ---- 11-02 去组件（tools/kitfree_parts.py 插进来的）：组件零件换成自建件，自建件本来就是低面，不再按 KIT_LITE 减面
+KIT_CACHE.clear()
+kit_source = __kitfree__.kit_source
+KIT_LITE = {}
+
+
+def kit_coilover_meshes():
+    return __kitfree__.coilover_meshes(COIL, kit_source, M, COIL_PIN_ROD, COIL_CUT, COIL_PIN_BARREL, COIL_ROD_STRETCH, COIL_BARREL_SHRINK)
+
+
+'''
+
+
+def patch_rl_source(src):
+    """robot_lookdev.py 源码（最后一行是 main()）：在 main() 之前插上面的替换"""
+    body = src.rstrip()
+    assert body.endswith('main()'), 'robot_lookdev.py 最后一行不是 main()'
+    return body[:-len('main()')] + RL_PATCH + 'main()\n'
+
+
+def patch_rl_namespace(ns):
+    """已经 exec 过的 robot_lookdev 命名空间（baita_common.RL）：换 kit_source、清缓存、不再减面"""
+    ns['KIT_CACHE'].clear()
+    ns['kit_source'] = kit_source
+    ns['KIT_LITE'].clear()
+    if 'COIL' in ns:
+        ns['COIL'].clear()
+        M_ = ns['M']
+        ns['kit_coilover_meshes'] = lambda: coilover_meshes(ns['COIL'], kit_source, M_, ns['COIL_PIN_ROD'], ns['COIL_CUT'], ns['COIL_PIN_BARREL'],
+                                                              ns['COIL_ROD_STRETCH'], ns['COIL_BARREL_SHRINK'])
+    print('[kitfree] 已替换 robot_lookdev 命名空间里的 kit_source / kit_coilover_meshes', flush=True)

@@ -57,7 +57,16 @@ src = open(SRC, encoding='utf-8').read()
 anchor = "tmp = os.path.join(TMP, f'{A.key}_{os.getpid()}_mesh.blend')"
 assert anchor in src, 'export_factions.py 变了，钩子要改'
 src = src.replace(anchor, '__hook__(robot)\n' + anchor, 1)
+G = {'__name__': '__main__', '__file__': SRC, '__hook__': hook}
 if kitfree:
+    sys.path.insert(0, TOOLS)
+    import kitfree_parts  # noqa: E402
     assert 'KIT_FINAL = 0.2' in src
     src = src.replace('KIT_FINAL = 0.2', 'KIT_FINAL = 1.0', 1)
-exec(compile(src, SRC, 'exec'), {'__name__': '__main__', '__file__': SRC, '__hook__': hook})
+    # NEC_L（v3）：export_factions 自己 exec robot_lookdev，往它的源码里也插去组件替换
+    a1 = "exec(compile(src, rl_path, 'exec'), {'__name__': 'robot_lookdev', '__file__': rl_path, '__hook__': v3_hook})"
+    assert a1 in src, 'export_factions.py 的 v3 段变了'
+    src = src.replace(a1, "exec(compile(__kitfree__.patch_rl_source(src), rl_path, 'exec'), {'__name__': 'robot_lookdev', '__file__': rl_path, "
+                          "'__hook__': v3_hook, '__kitfree__': __kitfree__})", 1)
+    G['__kitfree__'] = kitfree_parts
+exec(compile(src, SRC, 'exec'), G)
