@@ -1,7 +1,5 @@
 {"build": false, "tests": [
-  {"kind": "py", "name": "look_pillars", "script": "tools/ue_pillars_look.py", "seconds": 300},
-  {"kind": "gamepy", "name": "moon_before", "map": "/Game/Maps/L_Moon", "script": "tools/grade_shots_moon_ground.py", "args": ["-MechBeauty"], "seconds": 200},
-  {"kind": "py", "name": "look_moon", "script": "tools/ue_moon_look.py", "seconds": 300},
-  {"kind": "gamepy", "name": "moon_after", "map": "/Game/Maps/L_Moon", "script": "tools/grade_shots_moon_ground.py", "args": ["-MechBeauty"], "seconds": 200},
+  {"kind": "py", "name": "k62_catalog", "script": "tools/ue_k62_catalog_dump.py", "seconds": 200},
+  {"kind": "py", "name": "oldstreet_wind", "script": "tools/ue_oldstreet_wind.py", "seconds": 400},
   {"kind": "gamepy", "name": "grade_oldstreet", "map": "/Game/Maps/L_OldStreet", "script": "tools/grade_shots_oldstreet.py", "args": ["-MechBeauty"], "seconds": 240}
 ]}
