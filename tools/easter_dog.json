@@ -11,7 +11,7 @@
   "auto_remove_ground": true,
   "target_length_m": 1.5,
   "_target_length_m": "底子（不含加的头和尾巴）前后长 1.5 米：真 Spot 约 1.1 米，×1.36 ≈ 机体比人放大的 1.35 倍（机体 1.8 米人形 ×1.35 ≈ 2.4 米），站在机体旁边背高到大腿根，可爱又看得见",
-  "leg_length_scale": 0.85,
+  "leg_length_scale": 1.0,
   "body_band_threshold": 0.5,
   "body_bottom_m": null,
   "knee_frac": 0.5,
@@ -120,15 +120,15 @@
       "at": [
         1,
         0,
-        0.8
+        0.25
       ],
       "push": [
-        0.6,
+        0.35,
         0,
-        0.6
+        0.1
       ],
       "fit": "y",
-      "size": 0.8,
+      "size": 0.42,
       "bone": "head",
       "defines_bone": "head",
       "pivot": [
@@ -180,7 +180,7 @@
         0
       ],
       "fit": "z",
-      "size": 0.55,
+      "size": 0.3,
       "bone": "head"
     },
     {
@@ -224,7 +224,7 @@
         0
       ],
       "fit": "yz",
-      "size": 0.2,
+      "size": 0.12,
       "mirror": "y",
       "bone": "head",
       "slot": "Accent",
@@ -531,5 +531,6 @@
     }
   ],
   "pose_frame": -1,
-  "_pose_frame": "11-02：Spot Mini 底子默认趴着（自带的 start 动作是站起来），取动作最后一帧（-1）当站姿再烤；底子朝 +Y（glTF 的 -Z 前方，头节点在那边）"
+  "_pose_frame": "11-02：Spot Mini 底子默认趴着（自带的 start 动作是站起来），取动作最后一帧（-1）当站姿再烤；底子朝 +Y（glTF 的 -Z 前方，头节点在那边）",
+  "_11-02_比例": "用户：狗的头太大了，按偏真实的比例和形状（Spot 的头就是机身前端略窄的传感器罩，高度和身体差不多）。头 0.8→0.42 倍身宽、贴机身前端略低；脖子 0.55→0.3；眼灯 0.2→0.12；腿不再缩短（0.85→1.0）"
 }
