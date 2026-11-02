@@ -1,0 +1,4 @@
+彩蛋模型的底子（11-02 用户下载后传给云端；Inbox 不同步，所以放在 tools 下，grade_easter_build.py 跑之前复制到 Inbox/_easter/dog、drone）。
+dog/scene.gltf   Spot Mini（Blockbench 3.5.4 导出，876 三角面，贴图内嵌；动作只有 animation.spot_mini.start，走路由代码程序化）。网址 / 许可：待用户补到 Inbox/链接.txt
+drone/drone.glb  Low Poly Quadcopter Drone (Game Ready PBR Asset)，Sketchfab https://sketchfab.com/3d-models/low-poly-quadcopter-drone-game-ready-pbr-asset-65d0bfcf9c5a479ebb19215a261b8497（4946 三角面，许可待用户补）
+只做内部测试。
