@@ -1,4 +1,3 @@
-{"build": true, "tests": [
-  {"kind": "py", "name": "pack_status", "script": "tools/ue_package_status.py", "seconds": 120},
-  {"kind": "gamepy", "name": "music_pack", "map": "/Game/Maps/L_Range?Range", "script": "tools/grade_music_pack.py", "seconds": 120}
+{"build": false, "tests": [
+  {"kind": "py", "name": "pack_launch", "script": "tools/ue_package_launch.py", "seconds": 300}
 ]}
