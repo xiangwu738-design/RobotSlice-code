@@ -1,1 +1,4 @@
-{"build": true, "tests": []}
+{"build": true, "tests": [
+  {"kind": "game", "name": "oldstreet_dm", "map": "/Game/Maps/L_OldStreet?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechLoopLog", "-MechQuitAfter=110"], "seconds": 160},
+  {"kind": "game", "name": "moon_dm", "map": "/Game/Maps/L_Moon?Match?Mode=DM?Team=2", "args": ["-MechAutoBattle", "-MechVacuumLog", "-MechQuitAfter=80"], "seconds": 130}
+]}
