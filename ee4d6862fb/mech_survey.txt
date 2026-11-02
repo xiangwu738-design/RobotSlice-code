@@ -1,0 +1,238 @@
+mech_survey 结束：ok，用时 70 秒，日志行 237
+[2026.11.02-18.12.43:608][  0]LogTemp: Error test: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-18.12.43:608][  0]LogTemp: Error with param: UE::UnifiedErrorTest::WithInt: [Error with int -7]
+[2026.11.02-18.12.43:608][  0]LogTemp: Error with context: UE::UnifiedErrorTest::Empty: [Empty error]
+[2026.11.02-18.12.43:608][  0]LogTemp: FError that has been invalidated: ::: []
+[2026.11.02-18.12.43:608][  0]LogTemp: FError that has been moved from: ::: []
+[2026.11.02-18.12.44:064][  0]LogPython: Python enabled via CVar 'Engine.Python.IsEnabledByDefault'
+[2026.11.02-18.12.44:064][  0]LogPython: Using Python 3.11.8
+[2026.11.02-18.12.44:106][  0]LogPython: Display: No pip-enabled plugins with python dependencies found, skipping
+[2026.11.02-18.12.44:552][  0]LogTemp: Display: [battle] 你 加入，分到蓝队
+[2026.11.02-18.12.44:566][  0]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
+[2026.11.02-18.12.44:570][  0]LogTemp: Display: [anim] 移动动作（编号:速度 厘米每秒/时长/左脚落地次数） 0:0/10.00s/1步 1:207/4.00s/4步 2:207/4.00s/4步 3:186/3.70s/4步 4:155/4.03s/4步 5:155/4.03s/4步 6:155/4.03s/4步 7:186/3.70s/4步 8:207/4.00s/4步 9:517/2.50s/4步 10:517/2.50s/4步 11:362/2.37s/4步 12:310/2.57s/4步 13:310/2.57s/4步 14:31
+[2026.11.02-18.12.44:571][  0]LogTemp: Display: [mech] SKM_NEC_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-18.12.44:571][  0]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-18.12.44:571][  0]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-18.12.44:576][  0]LogTemp: Display: [shoulder] 护盾材质 /Game/Weapons/Materials/M_ShieldFX.M_ShieldFX 编译中或出错 0
+[2026.11.02-18.12.44:576][  0]LogTemp: Display: [thruster] SKM_NEC_M（NEC_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=7.410 Y=-20.670 Z=108.290 → 骨头坐标 X=-28.571 Y=-26.638 Z=-7.410 方向 X=-0.802 Y=-0.598 Z=0.000，粗细 0.090，圆锥底面 Z -50.0
+[2026.11.02-18.12.44:576][  0]LogTemp: Display: [mech] 网格 SKM_NEC_M 材质数 11 缩放 X=1.350 Y=1.350 Z=1.350 相对位置 X=0.000 Y=0.000 Z=-129.600 包围盒 X=49.592 Y=108.286 Z=149.812
+[2026.11.02-18.12.44:632][  0]LogTemp: Display: [thruster] SKM_PHASE_M（PHASE_M）喷焰挂 spine_05：骨头绑定位置 X=-0.000 Y=0.525 Z=141.102，ball_l X=15.778 Y=13.929 Z=0.751，左喷口 X=6.570 Y=-20.070 Z=115.390 → 骨头坐标 X=-21.687 Y=-24.798 Z=-6.570 方向 X=-0.783 Y=-0.617 Z=-0.080，粗细 0.088，圆锥底面 Z -50.0
+[2026.11.02-18.12.45:053][  0]LogTemp: Display: [music] 无 → 主菜单 Color Your Night
+[2026.11.02-18.12.45:074][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... started...
+[2026.11.02-18.12.45:085][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/IKRig/Content/Python/init_unreal.py... took 10.813 ms
+[2026.11.02-18.12.45:085][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... started...
+[2026.11.02-18.12.45:098][  0]LogPython: registering <class 'ControlRigWorkflows.workflow_deformation_rig_preset.provider'>
+[2026.11.02-18.12.45:101][  0]LogPython: Display: Running start-up script D:/EPIC/UE_5.8/Engine/Plugins/Animation/ControlRig/Content/Python/init_unreal.py... took 16.129 ms (total: 26.942 ms)
+[2026.11.02-18.12.45:137][  0]LogPython: Warning: [mechsurvey] lookdev 里 39 个 .blend
+[2026.11.02-18.12.45:597][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\_肩部候选\样子\shoulder_kits.blend 27 MB
+[2026.11.02-18.12.45:597][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\军事武器部件零件.blend 644 MB
+[2026.11.02-18.12.45:597][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机械零件.blend 64 MB
+[2026.11.02-18.12.45:597][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机械零件1.blend 109 MB
+[2026.11.02-18.12.45:597][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机械零件2.blend 1889 MB
+[2026.11.02-18.12.45:598][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机械零件3.blend 131 MB
+[2026.11.02-18.12.45:598][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机械零件4.blend 196 MB
+[2026.11.02-18.12.45:598][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机甲.blend 1044 MB
+[2026.11.02-18.12.45:598][  0]LogPython: Warning: [mechsurvey] 像组件库的文件 Inbox\机甲组件5000+\机甲2.blend 245 MB
+[2026.11.02-18.12.46:742][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_A.blend 17 MB 网格物体 215 三角面 321627 带资产元数据 0
+[2026.11.02-18.12.46:743][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 93604], ['A大腿液压', 2, 11544], ['A小腿液压', 2, 11544], ['A肩翼', 2, 4024], ['A小臂罩', 2, 3688], ['A大腿罩', 2, 3072], ['A小腿罩', 2, 3072], ['A脚', 2, 2296], ['A推进舱', 2, 2040], ['A胸甲', 1, 1792], ['A肩球'
+[2026.11.02-18.12.46:743][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['A大腿刻度', 14], ['A主推进器螺栓', 12], ['A腿喷口螺栓', 12], ['A胸侧槽', 10], ['A胸刻度', 9], ['A指尖', 8], ['A指根', 8], ['A指背', 8]]
+[2026.11.02-18.12.46:743][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 82], ['Plastic', 40], ['Paint', 35], ['Stencil', 23], ['Glow', 17], ['v', 12], ['PaintDark', 4], ['Nozzle', 4]]
+[2026.11.02-18.12.46:743][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.47:871][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_B.blend 17 MB 网格物体 189 三角面 291795 带资产元数据 0
+[2026.11.02-18.12.47:871][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 93604], ['B大腿液压', 2, 11544], ['B小臂节', 6, 1816], ['B肩球', 2, 1680], ['B髋球', 2, 1680], ['B腰环', 3, 1668], ['B肩板上', 2, 1336], ['B脚', 2, 1288], ['B大腿板上', 2, 1152], ['B胸芯', 1, 1036], ['B小腿板', 
+[2026.11.02-18.12.47:871][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['B主推进器螺栓', 12], ['B腿喷口螺栓', 12], ['B小腿板', 8], ['B指尖', 8], ['B指根', 8], ['B指背', 8], ['B小腿缝灯', 6], ['B小臂节', 6]]
+[2026.11.02-18.12.47:871][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 74], ['Paint', 48], ['PaintDark', 25], ['Glow', 25], ['v', 12], ['Plastic', 6], ['Nozzle', 4], ['Hydraulics', 2]]
+[2026.11.02-18.12.47:871][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.48:888][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_B1.blend 17 MB 网格物体 187 三角面 281903 带资产元数据 0
+[2026.11.02-18.12.48:888][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 100660], ['B', 183, 17788], ['棚墙', 1, 192], ['地面', 1, 2]]
+[2026.11.02-18.12.48:888][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['B', 181], ['Hydraulics', 2], ['SKM', 1], ['SM', 1], ['地面', 1], ['棚墙', 1]]
+[2026.11.02-18.12.48:888][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 76], ['Paint', 40], ['PaintDark', 24], ['Plastic', 22], ['Glow', 14], ['v', 12], ['Nozzle', 4], ['Rubber', 2]]
+[2026.11.02-18.12.48:888][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.49:919][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_B2.blend 17 MB 网格物体 198 三角面 282051 带资产元数据 0
+[2026.11.02-18.12.49:919][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 100660], ['B', 194, 17936], ['棚墙', 1, 192], ['地面', 1, 2]]
+[2026.11.02-18.12.49:919][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['B', 192], ['Hydraulics', 2], ['SKM', 1], ['SM', 1], ['地面', 1], ['棚墙', 1]]
+[2026.11.02-18.12.49:919][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 76], ['Paint', 46], ['PaintDark', 25], ['Plastic', 22], ['Glow', 18], ['v', 12], ['Nozzle', 4], ['Rubber', 2]]
+[2026.11.02-18.12.49:919][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.51:087][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_BM.blend 17 MB 网格物体 205 三角面 282167 带资产元数据 0
+[2026.11.02-18.12.51:087][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 100660], ['BM膝后液压', 2, 11544], ['BM手掌', 2, 472], ['BM主推进器喉部', 2, 312], ['BM主推进器座圈', 2, 312], ['BM腿喷口喉部', 2, 312], ['BM腿喷口座圈', 2, 312], ['BM手背', 2, 256], ['BM主推进器螺栓', 12, 240], ['BM腿喷口螺栓
+[2026.11.02-18.12.51:087][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['BM主推进器螺栓', 12], ['BM腿喷口螺栓', 12], ['BM指尖', 8], ['BM指根', 8], ['BM指背', 8], ['BM胸侧槽', 8], ['BM小腿槽', 6], ['BM百叶', 4]]
+[2026.11.02-18.12.51:087][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 76], ['Paint', 44], ['PaintDark', 27], ['Plastic', 26], ['Glow', 18], ['MI', 12], ['Nozzle', 4], ['Stencil', 3]]
+[2026.11.02-18.12.51:087][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.52:226][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_C.blend 17 MB 网格物体 540 三角面 321831 带资产元数据 0
+[2026.11.02-18.12.52:226][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 93604], ['C大腿液压', 2, 11544], ['C脚', 2, 2072], ['C小臂筒', 2, 2016], ['C胸滚花', 2, 1912], ['C波纹管', 2, 1720], ['C肩球', 2, 1680], ['C大腿滚花', 2, 1592], ['C小腿滚花', 2, 1592], ['C大腿筒', 2, 1560], ['C小腿
+[2026.11.02-18.12.52:226][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['C肩盘刻', 72], ['C光环刻', 53], ['C胯盘刻', 48], ['C胸刻度', 42], ['C大腿刻度', 34], ['C小臂刻度', 30], ['C小腿刻度', 26], ['C头刻度', 22]]
+[2026.11.02-18.12.52:226][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Stencil', 313], ['Frame', 105], ['Paint', 38], ['Plastic', 32], ['Glow', 22], ['PaintDark', 13], ['v', 12], ['Nozzle', 4]]
+[2026.11.02-18.12.52:226][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.53:282][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_H1.blend 13 MB 网格物体 179 三角面 117618 带资产元数据 0
+[2026.11.02-18.12.53:282][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 100660], ['H', 176, 16764], ['棚墙', 1, 192], ['地面', 1, 2]]
+[2026.11.02-18.12.53:282][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['H', 174], ['Hydraulics', 2], ['SKM', 1], ['地面', 1], ['棚墙', 1]]
+[2026.11.02-18.12.53:282][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 63], ['Paint', 40], ['Glow', 37], ['PaintDark', 27], ['MI', 12], ['Plastic', 3], ['Nozzle', 2], ['Rubber', 2]]
+[2026.11.02-18.12.53:282][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.54:334][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_H2.blend 17 MB 网格物体 178 三角面 292651 带资产元数据 0
+[2026.11.02-18.12.54:334][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 100660], ['H', 174, 28536], ['棚墙', 1, 192], ['地面', 1, 2]]
+[2026.11.02-18.12.54:334][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['H', 170], ['Hydraulics', 4], ['SKM', 1], ['SM', 1], ['地面', 1], ['棚墙', 1]]
+[2026.11.02-18.12.54:334][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 69], ['Paint', 45], ['PaintDark', 25], ['Glow', 20], ['MI', 12], ['Plastic', 8], ['Hydraulics', 4], ['Nozzle', 2]]
+[2026.11.02-18.12.54:334][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.55:522][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\baita\blend\白塔_L1.blend 17 MB 网格物体 197 三角面 304767 带资产元数据 0
+[2026.11.02-18.12.55:522][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['充能步枪', 1, 163261], ['SKM', 1, 100660], ['L', 193, 40652], ['棚墙', 1, 192], ['地面', 1, 2]]
+[2026.11.02-18.12.55:522][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['L', 187], ['Hydraulics', 6], ['SKM', 1], ['SM', 1], ['地面', 1], ['棚墙', 1]]
+[2026.11.02-18.12.55:522][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['Frame', 102], ['Paint', 36], ['Glow', 21], ['PaintDark', 13], ['MI', 12], ['Plastic', 8], ['Hydraulics', 6], ['Nozzle', 4]]
+[2026.11.02-18.12.55:522][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.56:585][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_A.blend 6 MB 网格物体 452 三角面 62620 带资产元数据 0
+[2026.11.02-18.12.56:585][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['动臂油缸l', 1, 5772], ['动臂油缸r', 1, 5772], ['大腿油缸l', 1, 5772], ['大腿油缸r', 1, 5772], ['小腿油缸l', 1, 5772], ['小腿油缸r', 1, 5772], ['斗杆油缸l', 1, 5772], ['斗杆油缸r', 1, 5772], ['回转齿', 40, 480], ['回转上滚道', 1, 384], ['回转齿圈', 1, 384], ['
+[2026.11.02-18.12.56:585][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['回转齿', 40], ['Hydraulics', 8], ['动臂根销l螺栓-', 6], ['动臂根销l螺栓', 6], ['动臂根销r螺栓-', 6], ['动臂根销r螺栓', 6], ['肘销l螺栓-', 6], ['肘销l螺栓', 6]]
+[2026.11.02-18.12.56:585][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 460]]
+[2026.11.02-18.12.56:585][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.57:578][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_B.blend 6 MB 网格物体 392 三角面 38440 带资产元数据 0
+[2026.11.02-18.12.57:578][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['上臂油缸l', 1, 5772], ['上臂油缸r', 1, 5772], ['倾斜油缸l', 1, 5772], ['倾斜油缸r', 1, 5772], ['推杆球铰l', 1, 624], ['推杆球铰r', 1, 624], ['铲刀耳l', 1, 624], ['铲刀耳r', 1, 624], ['主推进器-', 3, 312], ['主推进器', 3, 312], ['上臂油缸l耳板', 4, 304], ['上臂油
+[2026.11.02-18.12.57:578][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['腿履带l板', 22], ['腿履带l齿', 22], ['腿履带r板', 22], ['腿履带r齿', 22], ['散热格栅叶片', 7], ['胸铲刃螺栓', 6], ['腿履带l导向轮孔', 6], ['腿履带l驱动轮孔', 6]]
+[2026.11.02-18.12.57:578][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 402]]
+[2026.11.02-18.12.57:578][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.58:684][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_C.blend 0 MB 网格物体 378 三角面 22896 带资产元数据 0
+[2026.11.02-18.12.58:684][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['风杯', 3, 1872], ['顶滑轮-', 9, 768], ['顶滑轮', 9, 768], ['缸箍l-', 2, 640], ['缸箍r-', 2, 640], ['绳头l', 1, 624], ['绳头r', 1, 624], ['踝球l', 1, 624], ['踝球r', 1, 624], ['缸口密封l', 1, 320], ['缸口密封r', 1, 320], ['转台圈', 1, 320]]
+[2026.11.02-18.12.58:684][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['人字架-', 9], ['人字架', 9], ['顶滑轮-', 9], ['顶滑轮', 9], ['上臂滑轮l孔', 6], ['上臂滑轮r孔', 6], ['肘轴l螺栓-', 6], ['肘轴l螺栓', 6]]
+[2026.11.02-18.12.58:684][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 389]]
+[2026.11.02-18.12.58:684][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.12.59:673][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_H.blend 6 MB 网格物体 460 三角面 61724 带资产元数据 0
+[2026.11.02-18.12.59:673][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['动臂油缸l', 1, 5772], ['动臂油缸r', 1, 5772], ['大腿油缸l', 1, 5772], ['大腿油缸r', 1, 5772], ['小腿油缸l', 1, 5772], ['小腿油缸r', 1, 5772], ['斗杆油缸l', 1, 5772], ['斗杆油缸r', 1, 5772], ['回转齿', 32, 384], ['回转上滚道', 1, 320], ['回转齿圈', 1, 320], ['
+[2026.11.02-18.12.59:673][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['回转齿', 32], ['Hydraulics', 8], ['动臂根销l螺栓-', 6], ['动臂根销l螺栓', 6], ['动臂根销r螺栓-', 6], ['动臂根销r螺栓', 6], ['肘销l螺栓-', 6], ['肘销l螺栓', 6]]
+[2026.11.02-18.12.59:673][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 473]]
+[2026.11.02-18.12.59:673][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.00:668][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_HKF.blend 5 MB 网格物体 231 三角面 17590 带资产元数据 0
+[2026.11.02-18.13.00:668][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['悬挂缸l', 1, 5772], ['悬挂缸r', 1, 5772], ['主推进器-', 3, 312], ['主推进器', 3, 312], ['悬挂缸l耳板', 4, 304], ['悬挂缸r耳板', 4, 304], ['箱侧标-', 1, 146], ['箱侧标', 1, 146], ['顶篷标', 1, 146], ['胎纹l', 10, 120], ['胎纹r', 10, 120], ['拖钩-', 1, 112
+[2026.11.02-18.13.00:668][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['胎纹l', 10], ['胎纹r', 10], ['大格栅叶片', 7], ['踏板', 6], ['保险杠螺栓', 5], ['悬挂缸l耳板', 4], ['悬挂缸r耳板', 4], ['指尖l', 4]]
+[2026.11.02-18.13.00:668][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 236]]
+[2026.11.02-18.13.00:668][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.01:685][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\DS_M.blend 6 MB 网格物体 436 三角面 61466 带资产元数据 0
+[2026.11.02-18.13.01:685][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['动臂油缸l', 1, 5772], ['动臂油缸r', 1, 5772], ['大腿油缸l', 1, 5772], ['大腿油缸r', 1, 5772], ['小腿油缸l', 1, 5772], ['小腿油缸r', 1, 5772], ['斗杆油缸l', 1, 5772], ['斗杆油缸r', 1, 5772], ['回转齿', 32, 384], ['回转上滚道', 1, 320], ['回转齿圈', 1, 320], ['
+[2026.11.02-18.13.01:685][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['回转齿', 32], ['Hydraulics', 8], ['动臂根销l螺栓-', 6], ['动臂根销l螺栓', 6], ['动臂根销r螺栓-', 6], ['动臂根销r螺栓', 6], ['肘销l螺栓-', 6], ['肘销l螺栓', 6]]
+[2026.11.02-18.13.01:685][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 445]]
+[2026.11.02-18.13.01:685][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.02:851][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\flat\DS_H1.blend 5 MB 网格物体 237 三角面 5118 带资产元数据 0
+[2026.11.02-18.13.02:851][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['主推进器-', 3, 312], ['主推进器', 3, 312], ['箱侧标-', 1, 146], ['箱侧标', 1, 146], ['顶篷标', 1, 146], ['胎纹l', 10, 120], ['胎纹r', 10, 120], ['悬挂缸l耳销', 4, 112], ['悬挂缸r耳销', 4, 112], ['拖钩-', 1, 112], ['拖钩', 1, 112], ['保险杠螺栓', 5, 100]]
+[2026.11.02-18.13.02:851][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['胎纹l', 10], ['胎纹r', 10], ['大格栅叶片', 7], ['踏板', 6], ['保险杠螺栓', 5], ['悬挂缸l耳销', 4], ['悬挂缸r耳销', 4], ['指尖l', 4]]
+[2026.11.02-18.13.02:852][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 242]]
+[2026.11.02-18.13.02:852][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.03:849][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\flat\DS_H2.blend 5 MB 网格物体 371 三角面 6750 带资产元数据 0
+[2026.11.02-18.13.03:849][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['主推进器-', 3, 312], ['主推进器', 3, 312], ['箱侧标-', 1, 146], ['箱侧标', 1, 146], ['顶篷标', 1, 146], ['胎纹l', 10, 120], ['胎纹r', 10, 120], ['保险杠螺栓', 5, 100], ['大格栅叶片', 7, 84], ['顶篷斜纹', 1, 84], ['格栅边螺栓l', 4, 80], ['格栅边螺栓r', 4, 80]]
+[2026.11.02-18.13.03:849][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['胎纹l', 10], ['胎纹r', 10], ['大格栅叶片', 7], ['踏板', 6], ['保险杠螺栓', 5], ['悬挂缸l耳销', 4], ['悬挂缸r耳销', 4], ['拖钩-', 4]]
+[2026.11.02-18.13.03:849][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 376]]
+[2026.11.02-18.13.03:849][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.04:833][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\flat\DS_M1.blend 6 MB 网格物体 424 三角面 58234 带资产元数据 0
+[2026.11.02-18.13.04:834][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['动臂油缸l', 1, 5772], ['动臂油缸r', 1, 5772], ['大腿油缸l', 1, 5772], ['大腿油缸r', 1, 5772], ['小腿油缸l', 1, 5772], ['小腿油缸r', 1, 5772], ['斗杆油缸l', 1, 5772], ['斗杆油缸r', 1, 5772], ['回转齿', 32, 384], ['回转上滚道', 1, 320], ['回转齿圈', 1, 320], ['
+[2026.11.02-18.13.04:834][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['回转齿', 32], ['Hydraulics', 8], ['动臂根销l螺栓-', 6], ['动臂根销l螺栓', 6], ['动臂根销r螺栓-', 6], ['动臂根销r螺栓', 6], ['肘销l螺栓-', 6], ['肘销l螺栓', 6]]
+[2026.11.02-18.13.04:834][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 433]]
+[2026.11.02-18.13.04:834][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.05:924][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\dingshan\flat\DS_M2.blend 6 MB 网格物体 414 三角面 56374 带资产元数据 0
+[2026.11.02-18.13.05:924][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['动臂油缸l', 1, 5772], ['动臂油缸r', 1, 5772], ['大腿油缸l', 1, 5772], ['大腿油缸r', 1, 5772], ['小腿油缸l', 1, 5772], ['小腿油缸r', 1, 5772], ['斗杆油缸l', 1, 5772], ['斗杆油缸r', 1, 5772], ['主推进器-', 3, 312], ['主推进器', 3, 312], ['动臂油缸l耳板', 4, 304],
+[2026.11.02-18.13.05:924][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['回转齿', 24], ['Hydraulics', 8], ['动臂根销l螺栓-', 4], ['动臂根销l螺栓', 4], ['动臂根销r螺栓-', 4], ['动臂根销r螺栓', 4], ['动臂油缸l耳板', 4], ['动臂油缸r耳板', 4]]
+[2026.11.02-18.13.05:924][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 423]]
+[2026.11.02-18.13.05:924][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.06:980][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_A.blend 14 MB 网格物体 2 三角面 215912 带资产元数据 0
+[2026.11.02-18.13.06:980][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 215912]]
+[2026.11.02-18.13.06:980][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.06:980][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.06:980][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.08:009][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_B.blend 14 MB 网格物体 2 三角面 222248 带资产元数据 0
+[2026.11.02-18.13.08:009][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 222248]]
+[2026.11.02-18.13.08:009][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.08:009][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.08:009][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.09:084][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_C.blend 14 MB 网格物体 2 三角面 224342 带资产元数据 0
+[2026.11.02-18.13.09:084][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 224342]]
+[2026.11.02-18.13.09:084][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.09:084][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.09:084][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.10:081][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_H2.blend 13 MB 网格物体 2 三角面 178304 带资产元数据 0
+[2026.11.02-18.13.10:081][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 178304]]
+[2026.11.02-18.13.10:081][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.10:081][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.10:081][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.11:280][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_Ha.blend 13 MB 网格物体 2 三角面 174300 带资产元数据 0
+[2026.11.02-18.13.11:280][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 174300]]
+[2026.11.02-18.13.11:280][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.11:280][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.11:280][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.12:434][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_Hb.blend 13 MB 网格物体 2 三角面 176852 带资产元数据 0
+[2026.11.02-18.13.12:434][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 176852]]
+[2026.11.02-18.13.12:434][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.12:434][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.12:434][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.13:645][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_L2.blend 13 MB 网格物体 2 三角面 174280 带资产元数据 0
+[2026.11.02-18.13.13:645][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 174280]]
+[2026.11.02-18.13.13:645][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.13:645][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.13:645][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.14:656][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_La.blend 13 MB 网格物体 2 三角面 165452 带资产元数据 0
+[2026.11.02-18.13.14:656][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 165452]]
+[2026.11.02-18.13.14:656][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.14:656][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.14:656][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.15:654][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_Lb.blend 13 MB 网格物体 2 三角面 156466 带资产元数据 0
+[2026.11.02-18.13.15:654][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 156466]]
+[2026.11.02-18.13.15:654][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.15:654][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.15:654][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.16:615][  0]LogPython: Warning: [mechsurvey] == lookdev\factions\heitie\heitie_M2.blend 13 MB 网格物体 2 三角面 173120 带资产元数据 0
+[2026.11.02-18.13.16:615][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 2, 173120]]
+[2026.11.02-18.13.16:615][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 2]]
+[2026.11.02-18.13.16:615][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 24]]
+[2026.11.02-18.13.16:615][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.17:761][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\SKM_Robot_v3.blend 11 MB 网格物体 1 三角面 100660 带资产元数据 0
+[2026.11.02-18.13.17:761][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 100660]]
+[2026.11.02-18.13.17:761][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.17:761][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.17:761][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'kit_bone', 'lockInfluenceWeights']
+[2026.11.02-18.13.18:695][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\NEC_H.blend 10 MB 网格物体 1 三角面 18692 带资产元数据 0
+[2026.11.02-18.13.18:695][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 18692]]
+[2026.11.02-18.13.18:695][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.18:695][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.18:695][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.19:734][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\NEC_L.blend 11 MB 网格物体 1 三角面 72432 带资产元数据 0
+[2026.11.02-18.13.19:734][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 72432]]
+[2026.11.02-18.13.19:734][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.19:734][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.19:734][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.20:875][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\NEC_M.blend 10 MB 网格物体 1 三角面 41282 带资产元数据 0
+[2026.11.02-18.13.20:875][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 41282]]
+[2026.11.02-18.13.20:875][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.20:875][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.20:875][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.21:774][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\PHASE_H.blend 10 MB 网格物体 1 三角面 28124 带资产元数据 0
+[2026.11.02-18.13.21:774][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 28124]]
+[2026.11.02-18.13.21:774][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.21:774][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.21:774][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.22:707][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\PHASE_L.blend 10 MB 网格物体 1 三角面 31132 带资产元数据 0
+[2026.11.02-18.13.22:707][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 31132]]
+[2026.11.02-18.13.22:707][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.22:707][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.22:707][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.23:641][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\PHASE_M.blend 10 MB 网格物体 1 三角面 30350 带资产元数据 0
+[2026.11.02-18.13.23:641][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 30350]]
+[2026.11.02-18.13.23:641][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.23:641][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.23:641][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.24:590][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\VHI_H.blend 10 MB 网格物体 1 三角面 39400 带资产元数据 0
+[2026.11.02-18.13.24:590][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 39400]]
+[2026.11.02-18.13.24:590][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.24:590][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.24:590][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.25:605][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\VHI_L.blend 10 MB 网格物体 1 三角面 37824 带资产元数据 0
+[2026.11.02-18.13.25:605][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 37824]]
+[2026.11.02-18.13.25:605][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.25:605][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.25:605][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.26:564][  0]LogPython: Warning: [mechsurvey] == lookdev\rig\factions\VHI_M.blend 10 MB 网格物体 1 三角面 44628 带资产元数据 0
+[2026.11.02-18.13.26:564][  0]LogPython: Warning: [mechsurvey]    物体前缀(名, 个数, 面数) [['SKM', 1, 44628]]
+[2026.11.02-18.13.26:564][  0]LogPython: Warning: [mechsurvey]    网格前缀 [['SKM', 1]]
+[2026.11.02-18.13.26:564][  0]LogPython: Warning: [mechsurvey]    材质前缀 [['MI', 12]]
+[2026.11.02-18.13.26:564][  0]LogPython: Warning: [mechsurvey]    自定义属性 ['jointTRSData', 'lockInfluenceWeights']
+[2026.11.02-18.13.26:565][  1]LogTemp: Display: [lobby] 玩家资料：你 涂装 5A636CFF / 383F46FF / CF5F1BFF
+[2026.11.02-18.13.26:575][  1]LogTemp: Display: [ui] 关闭光线追踪（-MechRayTracing 保留）
+[2026.11.02-18.13.26:575][  1]LogTemp: Display: [mech] SKM_PHASE_M 跨关节减震 0 对（骨头在但没有零件的 4 对不对准），骨头 99 根
+[2026.11.02-18.13.26:575][  1]LogTemp: Display: [grip] l 手：指根 (k,d) 食指 (2.6,9.3) 中指 (-0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (0.10,-0.99,-0.10)
+[2026.11.02-18.13.26:575][  1]LogTemp: Display: [grip] r 手：指根 (k,d) 食指 (2.6,9.3) 中指 (0.0,9.5) 无名指 (-2.4,8.9) 小指 (-4.2,7.8)，手心 N (-0.10,0.99,0.10)
+[2026.11.02-18.13.26:577][  1]LogTemp: Display: [drone] MechCharacter_0 机身 SM_Artillery 包围盒中心 V(X=10.00, Z=-2.35) 半尺寸 V(X=41.00, Y=22.67, Z=10.53) → 缩放 0.71
+[2026.11.02-18.13.26:896][ 14]LogTemp: Display: [perf] 预热特效 8 个
+[2026.11.02-18.13.26:958][ 15]LogTemp: Display: [lighting] 时间 21.50 天气 Fog
