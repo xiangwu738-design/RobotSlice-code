@@ -2,6 +2,7 @@
 
 #include "CoreGlobals.h"
 #include "Components/AudioComponent.h"
+#include "Engine/World.h"
 #include "EngineUtils.h"
 #include "HAL/IConsoleManager.h"
 #include "Kismet/GameplayStatics.h"
@@ -52,12 +53,26 @@ namespace MechMusicLocal
 		return Table[FMath::Clamp((int32)M, 0, (int32)EMechMusic::Count - 1)];
 	}
 
-	USoundBase* Load(EMechMusic M)
+	USoundBase* Load(EMechMusic M, const UWorld* World)
 	{
 		const FSlot& S = Slot(M);
 		if (!S.Asset)
 		{
 			return nullptr;
+		}
+		// 11-02 用户：「每个地图可以用不同音乐吗」→ 先找这张图专用的 S_mus_<位置>_<地图名去掉 L_>（如 S_mus_battle_OldStreet），没有再用通用的。
+		// 只是多找一个资源名，不加就和原来一样
+		if (World)
+		{
+			FString MapName = World->GetMapName();
+			MapName.RemoveFromStart(World->StreamingLevelsPrefix);
+			MapName.RemoveFromStart(TEXT("L_"));
+			const FString Own = FString::Printf(TEXT("%s_%s"), S.Asset, *MapName);
+			if (USoundBase* Mine = LoadObject<USoundBase>(nullptr, *FString::Printf(TEXT("/Game/Audio/Music/%s.%s"), *Own, *Own), nullptr, LOAD_NoWarn | LOAD_Quiet))
+			{
+				UE_LOG(LogTemp, Display, TEXT("[music] 用这张图专用的 %s"), *Own);
+				return Mine;
+			}
 		}
 		USoundBase* Sound = LoadObject<USoundBase>(nullptr, *FString::Printf(TEXT("/Game/Audio/Music/%s.%s"), S.Asset, S.Asset), nullptr, LOAD_NoWarn | LOAD_Quiet);
 		if (!Sound)
@@ -212,7 +227,7 @@ EMechMusic UMechMusic::Pick()
 
 void UMechMusic::StartVoice(EMechMusic SlotId, float FadeIn)
 {
-	USoundBase* Sound = MechMusicLocal::Load(SlotId);
+	USoundBase* Sound = MechMusicLocal::Load(SlotId, GetWorld());
 	UWorld* World = GetWorld();
 	if (!Sound || !World)
 	{
