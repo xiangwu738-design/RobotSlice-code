@@ -1,3 +1,4 @@
 {"build": false, "tests": [
-  {"kind": "gamepy", "name": "kitfree_export", "map": "/Game/Maps/L_Range", "script": "tools/grade_kitfree_export.py", "seconds": 900}
+  {"kind": "py", "name": "kitfree_deploy", "script": "tools/ue_kitfree_deploy.py", "seconds": 900},
+  {"kind": "game", "name": "frame_lineup", "map": "/Game/Maps/L_Range?Range", "args": ["-MechFrameLineup", "-MechHour=13", "-MechWeather=Clear"], "seconds": 300}
 ]}
