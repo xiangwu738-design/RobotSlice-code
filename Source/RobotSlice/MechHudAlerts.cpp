@@ -1024,6 +1024,28 @@ void UMechHudAlerts::DrawThreats(AMechHUD& Hud, AMechCharacter* Mech, float Real
 	const float Flash = FMath::Exp(-(Real - LastBeep) * 9.f);
 	int32 Shown = 0;
 	int32 MissilesShown = 0;
+	// 11-02 用户：屏幕上的威胁框只画前方最近的那一台敌人（以前瞄着自己的最多画 5 台，老街这种窄街满屏都是框）。
+	// 导弹的小菱形、屏幕外的边缘光带照旧
+	const AActor* FrontNearest = nullptr;
+	{
+		float Best = TNumericLimits<float>::Max();
+		const float PadPre = 50.f * UI;
+		for (const FThreat& T : Threats)
+		{
+			const AActor* Src = T.Source.Get();
+			if (!Src || T.Level == 3 || T.Dist >= Best)
+			{
+				continue;
+			}
+			const FVector At = MechLoop::Near(Src->GetWorld(), Src->GetActorLocation(), CamLoc) + FVector(0.f, 0.f, 40.f);
+			FVector2D P;
+			if (CamRot.UnrotateVector(At - CamLoc).X > 0.f && UGameplayStatics::ProjectWorldToScreen(PC, At, P) && P.X > PadPre && P.X < W - PadPre && P.Y > PadPre && P.Y < H - PadPre)
+			{
+				Best = T.Dist;
+				FrontNearest = Src;
+			}
+		}
+	}
 	for (const FThreat& T : Threats)
 	{
 		AActor* Src = T.Source.Get();
@@ -1057,7 +1079,7 @@ void UMechHudAlerts::DrawThreats(AMechHUD& Hud, AMechCharacter* Mech, float Real
 				// 导弹本身：红色小菱形，跟着哔声一跳
 				Diamond(7.f * UI * (1.f + 0.45f * Flash), MechAlertsUi::Fade(Base, 0.55f + 0.45f * Flash), 2.f);
 			}
-			else
+			else if (Src == FrontNearest)
 			{
 				// 照着自己的那台：菱形（和自己锁定别人的括号框区分开）；锁定时外面再套一圈、轻轻一跳一跳
 				const float R = FMath::Clamp(9000.f / FMath::Max(T.Dist, 100.f), 20.f, 60.f) * UI * 1.3f;
