@@ -6,11 +6,11 @@ import unreal
 
 ROOT = 'D:/RobotSlice'
 TARGETS = [
-    ('lookdev/make_shoulder_game.py', r'kit|KIT|lib|机甲|零件|def |append|load\(|item|#\d|export|fbx|SM_'),
-    ('lookdev/make_shoulder_tactical.py', r'kit|KIT|lib|机甲|零件|def |append|load\(|item|#\d|export|fbx|SM_'),
+    ('lookdev/make_shoulder_kits.py', r'^def |^LIB|^KIT|^[A-Z_]+ = |return|libraries|bound|dimensions|size|axis|rot'),
+    ('lookdev/make_shoulder_game.py', r'.'),
 ]
 import glob as _g
-for _d in ('Inbox/_肩部候选/游戏模型', 'Inbox/_肩部候选/游戏模型_战术'):
+for _d in ():
     for _f in sorted(_g.glob(f'D:/RobotSlice/{_d}/*')):
         unreal.log_warning(f'[src] 文件 {_d}/{os.path.basename(_f)} {os.path.getsize(_f) // 1024} KB')
 log = lambda *a: unreal.log_warning('[src] ' + ' '.join(str(x) for x in a))
@@ -23,6 +23,6 @@ for path, pat in TARGETS:
     log('####', path, len(lines), '行')
     n = 0
     for i, l in enumerate(lines):
-        if re.search(pat, l) and n < 400:
+        if re.search(pat, l) and n < 400 and ('make_shoulder_game' not in path or 1 <= i <= 200):
             log(f'{i + 1:5d}| {l.rstrip()[:230]}')
             n += 1
