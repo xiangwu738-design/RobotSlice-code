@@ -141,6 +141,9 @@ public:
 
 	// ---------------------------------------------------------------- 状态（HUD、AI、角色用）
 	AMechCharacter* GetTarget() const { return Target; }
+	bool WantsTargetFacing() const;
+	bool GetContactFacingYaw(float& OutYaw) const;
+	void NoteManualLook() { LastManualLookTime = GetWorld()->GetTimeSeconds(); }
 	float GetMissileLock() const { return MissileLock; }
 	/** 告警用（10-31，HUD 战机式告警）：这台对它的目标（GetTarget）的导弹锁定进度 0–1，服务器算好复制给所有人。
 	 *  只在肩部是导弹、导弹就绪（冷却完、没在齐射）时非零——冷却中的锁定构不成威胁，不然 AI 一直锁着人就一直响。
@@ -288,7 +291,7 @@ public:
 
 	/** 服务器通知攻击者：打中了（只发给控制这台机体的那一端） */
 	UFUNCTION(Client, Unreliable)
-	void ClientHitConfirm(bool bDirect, bool bKill, EMechHitKind Kind, float Damage, FVector_NetQuantize At, EMechHitPart Part);
+	void ClientHitConfirm(bool bDirect, bool bKill, EMechHitKind Kind, float Damage, FVector_NetQuantize At, EMechHitPart Part, AMechCharacter* FacingEnemy);
 
 	/** 散布倍数（武器自己的散布再乘这个）；AI 设大一点 */
 	UPROPERTY(EditAnywhere, Category="Mech|Rifle")
@@ -535,6 +538,10 @@ private:
 	TObjectPtr<AMechCharacter> Target;
 
 	bool bForcedTarget = false;
+	double LastManualLookTime = -100.0;
+	void FaceContact(AMechCharacter* Enemy, bool bClash);
+	FVector ContactLocation = FVector::ZeroVector;
+	double ContactFacingUntil = -1.;
 	TWeakObjectPtr<AMechCharacter> JammedTarget;
 	float JamTime = -100.f;
 	bool bTrigger = false;

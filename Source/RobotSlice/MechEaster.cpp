@@ -132,7 +132,7 @@ namespace MechEaster
 		{
 			return EMechEasterMap::Soviet;
 		}
-		if (Name.EndsWith(TEXT("L_OldStreet")))
+		if (Name.EndsWith(TEXT("L_OldStreet")) || Name.EndsWith(TEXT("L_MillenniumStreet")))
 		{
 			return EMechEasterMap::OldStreet;
 		}

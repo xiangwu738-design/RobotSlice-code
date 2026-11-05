@@ -1,8 +1,14 @@
 #include "MechCombatComponent.h"
+#include "MechWeaponGlow.h"
 #include "MechMapRules.h"
 #include "MechLoop.h"
 
 #include "Camera/CameraComponent.h"
+#include "Engine/LocalPlayer.h"
+#include "Engine/GameViewportClient.h"
+#include "SceneView.h"
+#include "MechComms.h"
+#include "MechGameMode.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InstancedStaticMeshComponent.h"
 #include "Components/PointLightComponent.h"
@@ -174,7 +180,7 @@ UMechCombatComponent::UMechCombatComponent()
 	BladeTrailFX = Load<UNiagaraSystem>(TEXT("/Game/AAAVFX/Course_01/Particles/Ex_01_Sword_Trail/Trail_01"));
 	BladeHitFX = Load<UNiagaraSystem>(TEXT("/Game/AAAVFX/Course_04/Particles/Ex_02_Exp_02"));
 	MissileLaunchFX = Load<UNiagaraSystem>(TEXT("/Game/AAAVFX/Course_04/Particles/Ex_03_Muzzle"));
-	KnifeMesh = Load<UStaticMesh>(TEXT("/Game/Weapons/Meshes/SM_Sword03"));
+	KnifeMesh = Load<UStaticMesh>(MechWeapons::Blade(EMechMeleeWeapon::Dagger).Mesh);
 	for (const TCHAR* P : {TEXT("/Game/Audio/Combat/S_rifle_fire_a"), TEXT("/Game/Audio/Combat/S_rifle_fire_b"), TEXT("/Game/Audio/Combat/S_rifle_fire_c")})
 	{
 		RifleSounds.Add(Load<USoundBase>(P));
@@ -247,6 +253,10 @@ void UMechCombatComponent::BeginPlay()
 	KnifeMeshes->SetHasPerInstancePrevTransforms(true);
 	KnifeMeshes->RegisterComponent();
 	KnifeMeshes->SetWorldTransform(FTransform::Identity);
+	if (AMechCharacter* PaintedOwner = Cast<AMechCharacter>(Owner))
+	{
+		PaintedOwner->ApplyPaint();  // 飞出的匕首与手中匕首共用机体配色。
+	}
 
 	// 飞刀尾迹（10-31 近战特效）：曳光材质换个颜色，普通匕首冷白、强力匕首橙色
 	for (int32 k = 0; k < 2; ++k)
@@ -288,6 +298,8 @@ void UMechCombatComponent::BeginPlay()
 	MuzzleLight->SetUsingAbsoluteLocation(true);
 	MuzzleLight->SetupAttachment(Owner->GetRootComponent());
 	MuzzleLight->RegisterComponent();
+	if (AMechCharacter* PaintedOwner = Cast<AMechCharacter>(Owner))
+		PaintedOwner->ApplyPaint();  // 尾迹和枪口灯此时已经注册，初次生成也使用点缀色。
 }
 
 void UMechCombatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
@@ -466,7 +478,7 @@ float UMechCombatComponent::GetMeleeHoldFraction() const
 bool UMechCombatComponent::IsEngaged() const
 {
 	const float Now = GetWorld()->GetTimeSeconds();
-	return bTrigger || bCharging || Charge > 0.f || MeleeMove != EMechMelee::None || bAiming || bGuarding || PendingMissiles > 0 || Now - LastEngagedTime < EngagedHold;
+	return bTrigger || bCharging || Charge > 0.f || MeleeMove != EMechMelee::None || bAiming || bGuarding || PendingMissiles > 0 || Now - LastEngagedTime < EngagedHold || Now < ContactFacingUntil;
 }
 
 void UMechCombatComponent::SetForcedTarget(AMechCharacter* InTarget)
@@ -901,11 +913,12 @@ void UMechCombatComponent::ServerSetAim_Implementation(AMechCharacter* InTarget,
 	RemoteAimPoint = AimPoint;
 }
 
-void UMechCombatComponent::ClientHitConfirm_Implementation(bool bDirect, bool bKill, EMechHitKind Kind, float Damage, FVector_NetQuantize At, EMechHitPart Part)
+void UMechCombatComponent::ClientHitConfirm_Implementation(bool bDirect, bool bKill, EMechHitKind Kind, float Damage, FVector_NetQuantize At, EMechHitPart Part, AMechCharacter* FacingEnemy)
 {
 	LastHitTime = GetWorld()->GetTimeSeconds();
 	bLastHitDirect = bDirect;
 	bLastHitKill = bKill;
+	FaceContact(FacingEnemy, false);
 	LastHitKind = Kind;
 	AMechCharacter* Mech = GetMech();
 	if (!Mech || !Mech->IsPlayerControlled() || !Mech->IsLocallyControlled())
@@ -1158,6 +1171,13 @@ void UMechCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 	MuzzleLight->SetIntensity(MuzzleFlash * 9000.f);
 }
 
+bool UMechCombatComponent::WantsTargetFacing() const
+{
+	const AMechCharacter* Mech = GetMech();
+	return Mech && !bForcedTarget && !Mech->IsEmped() && !Mech->GetHealth()->IsDead()
+		&& !Mech->GetShoulder()->IsArtilleryHeld() && (bAiming || bTrigger || bMeleeHeld || IsMeleeActive() || bCharging);
+}
+
 void UMechCombatComponent::UpdateLock(float DeltaTime)
 {
 	AMechCharacter* Mech = GetMech();
@@ -1212,14 +1232,35 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 
 	if (bLocalPlayer && !bForcedTarget)
 	{
-		// 玩家：已锁的目标还在放宽的范围里就保持，否则在中心锥里挑角度最小的
+		// 交战时按实际视口选择，自动继承开镜、宽高比与分屏的投影。
+		AMechPlayerController* PC = Cast<AMechPlayerController>(Mech->GetController());
+		ULocalPlayer* Local = PC ? PC->GetLocalPlayer() : nullptr;
+		const UMechCommsComponent* Comms = PC ? MechComms::Get(PC) : nullptr;
+		FSceneViewProjectionData Projection;
+		const bool bScreenLock = WantsTargetFacing() && Local && Local->ViewportClient && Local->ViewportClient->Viewport
+			&& PC->GetViewTarget() == Mech && !PC->IsMenuOpen() && !PC->IsLookInputIgnored() && !(Comms && Comms->IsWheelOpen())
+			&& Local->GetProjectionData(Local->ViewportClient->Viewport, Projection);
+		const FMatrix Matrix = bScreenLock ? Projection.ComputeViewProjectionMatrix() : FMatrix::Identity;
+		auto ScreenOffset = [&](const AMechCharacter* Other) -> FVector2D
+		{
+			const FVector4 Clip = Matrix.TransformFVector4(FVector4(LoopImg(Other, ViewLoc), 1.));
+			return Clip.W > UE_SMALL_NUMBER ? FVector2D(Clip.X / Clip.W, Clip.Y / Clip.W) : FVector2D(10., 10.);
+		};
+		const bool bManual = GetWorld()->GetTimeSeconds() - LastManualLookTime < 0.30;
 		AMechCharacter* Keep = nullptr;
-		if (Target && AngleTo(Target) < LockKeepCone && FVector::Dist(LoopImg(Target, ViewLoc), ViewLoc) < LockRange && Visible(Target))
+		if (Target && Target->GetTeam() != Mech->GetTeam()
+			&& (bScreenLock ? ScreenOffset(Target).GetAbsMax() < (bManual ? 1.0 : 1.25) : AngleTo(Target) < LockKeepCone)
+			&& FVector::Dist(LoopImg(Target, ViewLoc), ViewLoc) < LockRange && Visible(Target))
 		{
 			Keep = Target;
 		}
 		AMechCharacter* Best = Keep;
+		// 两敌交叉时保持原锁。玩家主动看向另一台，且准星已明显离开旧目标时才切换。
 		float BestAngle = Keep ? AngleTo(Keep) * 0.6f : LockCone;
+		if (bScreenLock)
+		{
+			BestAngle = !Keep ? 90.f : bManual && AngleTo(Keep) > 10.f ? 5.f : 0.f;
+		}
 		for (TActorIterator<AMechCharacter> It(GetWorld()); It; ++It)
 		{
 			AMechCharacter* Other = *It;
@@ -1228,7 +1269,8 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 				continue;
 			}
 			const float A = AngleTo(Other);
-			if (A < BestAngle && FVector::Dist(LoopImg(Other, ViewLoc), ViewLoc) < LockRange && Visible(Other))
+			if (A < BestAngle && (!bScreenLock || ScreenOffset(Other).GetAbsMax() <= 1.)
+				&& FVector::Dist(LoopImg(Other, ViewLoc), ViewLoc) < LockRange && Visible(Other))
 			{
 				Best = Other;
 				BestAngle = A;
@@ -1238,6 +1280,21 @@ void UMechCombatComponent::UpdateLock(float DeltaTime)
 		{
 			Target = Best;
 			MissileLock = 0.f;
+		}
+		if (bScreenLock && Target && !bManual)
+		{
+			const FVector2D Offset = ScreenOffset(Target).GetAbs();
+			const FRotator Error = ((LoopImg(Target, ViewLoc) - ViewLoc).Rotation() - ViewRot).GetNormalized();
+			auto EdgeStep = [DeltaTime](double Position, double Degrees)
+			{
+				// 屏幕中央留给微瞄，只追回超出舒适区的部分，靠边渐渐加速。
+				const double Weight = FMath::Clamp((Position - .68) / .32, 0., 1.);
+				return FMath::Clamp(Degrees * Weight * (1. - FMath::Exp(-6. * DeltaTime)), -120. * DeltaTime, 120. * DeltaTime);
+			};
+			if (Offset.GetMax() > .68)
+			{
+				PC->SetControlRotation(PC->GetControlRotation() + FRotator(EdgeStep(Offset.Y, Error.Pitch), EdgeStep(Offset.X, Error.Yaw), 0.));
+			}
 		}
 		if (!GetOwner()->HasAuthority())
 		{
@@ -2293,11 +2350,47 @@ void UMechCombatComponent::UpdateTracers()
 	}
 }
 
+void UMechCombatComponent::FaceContact(AMechCharacter* Enemy, bool bClash)
+{
+	const AMechCharacter* Mech = GetMech();
+	if (!Enemy || !Mech || !Mech->IsPlayerControlled() || Mech->GetTeam() == Enemy->GetTeam()
+		|| Mech->GetHealth()->IsDead() || (!bClash && GetClashFxAge() < .55f))
+	{
+		return;
+	}
+	// 只记接触时的位置，短暂引导机身；不改准星、锁定对象或突进方向。
+	ContactLocation = Enemy->GetActorLocation();
+	ContactFacingUntil = GetWorld()->GetTimeSeconds() + (bClash ? .55 : .40);
+}
+
+bool UMechCombatComponent::GetContactFacingYaw(float& OutYaw) const
+{
+	if (GetWorld()->GetTimeSeconds() >= ContactFacingUntil)
+	{
+		return false;
+	}
+	const AMechCharacter* Mech = GetMech();
+	if (!Mech || !Mech->IsPlayerControlled() || Mech->GetHealth()->IsDead())
+	{
+		return false;
+	}
+	const FVector To = MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), ContactLocation);
+	if (To.SizeSquared2D() <= 1.)
+	{
+		return false;
+	}
+	OutYaw = To.Rotation().Yaw;
+	return true;
+}
+
 void UMechCombatComponent::ConfirmHit(AMechCharacter* Victim, bool bDirect, EMechHitKind Kind, float Damage, const FVector& At, EMechHitPart Part)
 {
 	DebugDamage += Damage;
 	DebugBaseDamage += bDirect ? Damage / FMath::Max(Victim->GetHealth()->DirectHitScale, 1.f) : Damage;
-	ClientHitConfirm(bDirect, Victim->GetHealth()->IsDead(), Kind, Damage, At, Part);
+	// 范围爆炸可能同时打中多人；只有原目标受波及时才提供转向。
+	AMechCharacter* FacingEnemy = Damage > 0.f && (Kind != EMechHitKind::Missile || Victim == Target) ? Victim : nullptr;
+	FaceContact(FacingEnemy, false);
+	ClientHitConfirm(bDirect, Victim->GetHealth()->IsDead(), Kind, Damage, At, Part, FacingEnemy);
 }
 
 // ---------------------------------------------------------------- 导弹
@@ -2752,10 +2845,16 @@ void UMechCombatComponent::DriveMelee(const FMove& S, float Reach, float Dt)
 		{
 			Move->Velocity.Z *= FMath::Exp(-10.f * Dt);
 		}
-		// 11-02 用户：近战命中之后立刻转回镜头方向。以前砍下后最快 720°/秒、角加速度 16000°/秒² 慢慢转回去，看着像还黏在敌人身上；
-		// 现在最快 2400°/秒、起转加速度 64000°/秒²，基本一下就对齐（最后十几度仍按比例收，不硬切）
-		TurnRate = 2400.f;
-		TurnAccel = 64000.f;
+		// 砍中后顺势朝交手位置收刀；挥空时仍快速转回瞄准方向。
+		if (GetContactFacingYaw(WantYaw))
+		{
+			bHasWantYaw = true;
+		}
+		else
+		{
+			TurnRate = 2400.f;
+			TurnAccel = 64000.f;
+		}
 	}
 	if (bHasWantYaw)
 	{
@@ -3030,6 +3129,7 @@ void UMechCombatComponent::MulticastClash_Implementation(FVector_NetQuantize At,
 		Away = -Mech->GetActorForwardVector().GetSafeNormal2D();  // 正好叠在一起 / 对方这一端还没有：朝身后弹
 	}
 	ClashFxTime = GetWorld()->GetTimeSeconds();
+	FaceContact(Other, true);
 	++DebugClashes;
 	if (bGuarding)
 	{
@@ -3110,6 +3210,12 @@ void UMechCombatComponent::UpdateClashKnock(float DeltaTime)
 	if (ClashKnockClock < 0.f)
 	{
 		return;
+	}
+	// 弹开时移动组件让出了转向，在此只转机身，退开的速度仍沿原碰撞轴。
+	float ContactYaw;
+	if (GetContactFacingYaw(ContactYaw))
+	{
+		TurnToward(ContactYaw, 720.f, DeltaTime);
 	}
 	if (ClashKnockClock == 0.f)
 	{

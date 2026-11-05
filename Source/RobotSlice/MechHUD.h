@@ -141,6 +141,8 @@ private:
 	void DrawFeed();
 	/** 信息区的小图标：武器、技能（MechFeedIcon）；X / Y 是中心，S 是半高 */
 	void FeedIcon(uint8 Icon, float X, float Y, float S, const FLinearColor& C);
+	/** 仪表盘与击毁播报共用真实剪影，等比居中放进指定矩形（屏幕像素）；缺图返回 false。 */
+	bool WeaponSilhouette(uint8 Icon, float X, float Y, float Width, float Height, const FLinearColor& C);
 	// ---------------------------------------------------------------- 标点（11-01，实现在 MechHudPing.cpp）
 	/** 自己和队友的标点：图标 + 距离 + 谁标的（小字），屏幕外贴边 + 小箭头；刚放下时一圈扩散，最后一秒淡出 */
 	void DrawPings(AMechCharacter* Mech);

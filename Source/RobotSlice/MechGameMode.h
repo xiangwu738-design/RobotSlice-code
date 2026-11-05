@@ -32,6 +32,7 @@ class AMechPlayerController : public ARobotSlicePlayerController
 
 public:
 	AMechPlayerController();
+	virtual FRotator GetDesiredRotation() const override;
 
 	virtual void PlayerTick(float DeltaTime) override;
 	/** 玩家断开时引擎先删他的机体、再通知掉线：在删之前把还活着的机体交给 AI（AI 补位） */

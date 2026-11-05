@@ -1,4 +1,6 @@
 #include "MechCharacter.h"
+#include "MechWeaponGlow.h"
+#include "Camera/PlayerCameraManager.h"
 #include "GameFramework/InputSettings.h"
 #include "MechMapRules.h"
 #include "MechLoop.h"
@@ -300,8 +302,8 @@ AMechCharacter::AMechCharacter(const FObjectInitializer& ObjectInitializer)
 
 	// 武器：不挂骨头，由网格组件在骨骼定稿后按手的位置每帧摆放（绝对坐标）
 	// 步枪：9776 科幻枪包 GUN 3 号（无托步枪，底色压成冷灰）；剑：NO454 科幻剑包 07 号。摆正流程见 lookdev/weapon_normalize.py
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> RifleAsset(TEXT("/Game/Weapons/Meshes/SM_Gun3"));
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> BladeAsset(TEXT("/Game/Weapons/Meshes/SM_Sword07"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> RifleAsset(TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Rifle"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> BladeAsset(TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Katana"));
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> PodAsset(TEXT("/Game/Weapons/Meshes/SM_MissilePod"));
 	// 钩爪、捕获网：lookdev/make_shoulder_game.py（机甲组件库零件拼装 + 程序生成的网）
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> GrappleAsset(TEXT("/Game/Weapons/Meshes/SM_GrappleLauncher"));
@@ -355,6 +357,22 @@ AMechCharacter::AMechCharacter(const FObjectInitializer& ObjectInitializer)
 	OffBladeMesh = MakeWeapon(TEXT("OffBladeMesh"), nullptr);
 	OffGunMesh->SetVisibility(false);
 	OffBladeMesh->SetVisibility(false);
+	UStaticMeshComponent* GlowWeapons[] = {RifleMesh, BladeMesh, OffGunMesh, OffBladeMesh};
+	const FName GlowNames[] = {TEXT("RifleGlowLight"), TEXT("BladeGlowLight"), TEXT("OffGunGlowLight"), TEXT("OffBladeGlowLight")};
+	for (int32 GlowIndex = 0; GlowIndex < 4; ++GlowIndex)
+	{
+		UPointLightComponent* Light = CreateDefaultSubobject<UPointLightComponent>(GlowNames[GlowIndex]);
+		Light->SetupAttachment(GlowWeapons[GlowIndex]);
+		Light->SetIntensityUnits(ELightUnits::Candelas);
+		Light->SetIntensity(14.f);
+		Light->SetAttenuationRadius(140.f);
+		Light->SetSourceRadius(2.f);
+		Light->SetCastShadows(false);
+		Light->SetIndirectLightingIntensity(0.f);
+		Light->SetVolumetricScatteringIntensity(0.f);
+		Light->SetVisibility(false);
+		WeaponGlowLights[GlowIndex] = Light;
+	}
 
 	static ConstructorHelpers::FObjectFinder<USoundBase> BoostLoop(TEXT("/Game/Audio/Combat/S_boost_loop"));
 	BoostAudio = CreateDefaultSubobject<UAudioComponent>(TEXT("BoostAudio"));
@@ -541,6 +559,7 @@ void AMechCharacter::ApplyTeamColor()
 	}
 	for (UStaticMeshComponent* W : {RifleMesh.Get(), BladeMesh.Get(), PodMesh.Get(), OffGunMesh.Get(), OffBladeMesh.Get(), ClawMesh.Get()})
 	{
+		if (MechWeaponGlow::IsWeapon(W)) continue;  // 武器按点缀色，机体和肩部敌我灯保持原规则。
 		for (int32 WSlot = 0; WSlot < W->GetNumMaterials(); ++WSlot)
 		{
 			UMaterialInterface* Mat = W->GetMaterial(WSlot);
@@ -597,6 +616,10 @@ void AMechCharacter::DoLook(float Yaw, float Pitch)
 	if (MechComms::WheelLook(this, Yaw, Pitch))
 	{
 		return;  // 11-01 标点轮盘开着：鼠标移动拿去选轮盘上的项，镜头不转（MechComms.h）
+	}
+	if (Combat && (Yaw != 0.f || Pitch != 0.f))
+	{
+		Combat->NoteManualLook();
 	}
 	const FMechSettings& S = FMechSettings::Get();
 	// 瞄准时慢一点，狙击开镜更慢
@@ -1188,6 +1211,18 @@ void AMechCharacter::Tick(float DeltaSeconds)
 		}
 	}
 	Super::Tick(DeltaSeconds);
+	// 镜头附近正在显示的武器投出微弱彩光；远处只保留材质辉光。
+	const APlayerController* GlowViewer = GetWorld()->GetFirstPlayerController();
+	const bool bGlowNear = GetNetMode() != NM_DedicatedServer && GlowViewer && GlowViewer->PlayerCameraManager
+		&& FVector::DistSquared(GetActorLocation(), GlowViewer->PlayerCameraManager->GetCameraLocation()) < FMath::Square(1400.f)
+		&& !Health->IsDead() && !IsHidden() && !FLinearColor(Paint.Accent).IsAlmostBlack();
+	for (int32 GlowIndex = 0; GlowIndex < 4; ++GlowIndex)
+	{
+		UPointLightComponent* Light = WeaponGlowLights[GlowIndex];
+		const USceneComponent* Weapon = Light->GetAttachParent();
+		const bool bHeld = (GlowIndex % 2 == 0) == (Combat->GetStance() == EMechStance::Gun);
+		Light->SetVisibility(bGlowNear && bHeld && Weapon && Weapon->IsVisible() && !Weapon->bHiddenInGame);
+	}
 	// 房主机器上别人（客户端）的机体：引擎默认「收到一个移动包才走一下动画」（为了根运动和动画事件和客户端对齐），
 	// 包扎堆到达时动作一顿一跳，枪、挂件跟着手骨跳。机体动作不用根运动，交回网格组件每帧走（移动组件里也不再按包走，见 TickCharacterPose）
 	if (HasAuthority() && GetMesh()->bOnlyAllowAutonomousTickPose)
@@ -1996,6 +2031,8 @@ void AMechCharacter::ApplyLoadout()
 		UStaticMesh* Mesh = LoadObject<UStaticMesh>(nullptr, Path);
 		if (Mesh && W->GetStaticMesh() != Mesh)
 		{
+			// 新武器有独立涂装槽，换枪前清掉旧槽号上的动态材质，避免颜色/机芯材质串到另一把。
+			W->EmptyOverrideMaterials();
 			W->SetStaticMesh(Mesh);
 		}
 	};
@@ -2018,6 +2055,7 @@ void AMechCharacter::ApplyLoadout()
 	Shoulder->OnLoadoutChanged();
 	Tactical->OnLoadoutChanged();  // 紧急脱离等四件的冷却清零（机身模型上面已经换了）
 	ApplyFrameMesh();
+	ApplyPaint();  // 同一机体只换武器时 ApplyFrameMesh 会提前返回，也要给新武器和副手刷涂装。
 	ApplyTeamColor();
 }
 
@@ -3916,9 +3954,17 @@ void AMechCharacter::ApplyPaint()
 {
 	const TPair<const TCHAR*, FColor> Slots[] = {{TEXT("MI_Robot_Paint"), Paint.Primary}, {TEXT("MI_Robot_PaintDark"), Paint.Secondary},
 		{TEXT("MI_Robot_Accent"), Paint.Accent}};
-	// 机体和背后的肩部挂件一起刷
-	for (UMeshComponent* Target : {static_cast<UMeshComponent*>(GetMesh()), static_cast<UMeshComponent*>(PodMesh.Get())})
+	// 三路涂装沿用；武器的小面积发光槽额外用点缀色，钢件与橡胶保持原材质。
+	TInlineComponentArray<UMeshComponent*> PaintedMeshes;
+	GetComponents(PaintedMeshes);  // 飞刀实例和之后新增的武器组件也按同一槽名规则处理。
+	for (UMeshComponent* Target : PaintedMeshes)
 	{
+		MechWeaponGlow::Apply(Target, Paint.Accent);
+		if (Target->GetFName() == TEXT("KnifeStreaks") || Target->GetFName() == TEXT("PowerStreaks"))
+		{
+			if (UMaterialInstanceDynamic* Streak = Target->CreateAndSetMaterialInstanceDynamic(0))
+				Streak->SetVectorParameterValue(TEXT("Emissive"), MechWeaponGlow::EffectColor(Paint.Accent));
+		}
 		for (const TPair<const TCHAR*, FColor>& S : Slots)
 		{
 			const int32 Index = Target ? Target->GetMaterialIndex(S.Key) : INDEX_NONE;
@@ -3934,6 +3980,21 @@ void AMechCharacter::ApplyPaint()
 			}
 		}
 	}
+	for (int32 GlowIndex = 0; GlowIndex < 4; ++GlowIndex)
+	{
+		UPointLightComponent* Light = WeaponGlowLights[GlowIndex];
+		if (!Light) continue;
+		Light->SetLightColor(FLinearColor(Paint.Accent));
+		const bool bGunLight = GlowIndex % 2 == 0;
+		const FVector At = bGunLight ? MechWeapons::Gun(Loadout.Shooter).Muzzle * .55f
+			: FVector(MechWeapons::Blade(Loadout.Melee).GripRange.Y + 14.f, 0.f, 1.f);
+		Light->SetRelativeLocation(At + FVector(0.f, -5.f, 2.f));
+	}
+	TInlineComponentArray<UPointLightComponent*> PaintedLights;
+	GetComponents(PaintedLights);
+	for (UPointLightComponent* Light : PaintedLights)
+		if (Light->GetFName() == TEXT("MuzzleLight")) Light->SetLightColor(FLinearColor(Paint.Accent));
+
 }
 
 void AMechCharacter::SetShowcasePose(bool bOn)

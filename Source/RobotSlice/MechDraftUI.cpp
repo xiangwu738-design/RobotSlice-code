@@ -2308,7 +2308,7 @@ TSharedRef<SWidget> SMechDraftScreen::MakeLobbyPage()
 				.OnTextCommitted_Lambda([this](const FText&, ETextCommit::Type) { SaveProfile(); })
 			]
 		]
-		+ SVerticalBox::Slot().AutoHeight().Padding(FMargin(0.f, 0.f, 0.f, 6.f))[MechKit::Text(INVTEXT("主漆 / 副漆 / 点缀"), Font(13), MechKit::Color(&FMechUITheme::Dim))]
+		+ SVerticalBox::Slot().AutoHeight().Padding(FMargin(0.f, 0.f, 0.f, 6.f))[MechKit::Text(INVTEXT("主漆 / 副漆 / 点缀（兼武器光色）"), Font(13), MechKit::Color(&FMechUITheme::Dim))]
 		+ SVerticalBox::Slot().AutoHeight().Padding(FMargin(0.f, 0.f, 0.f, 6.f))[MakePaintRow(0)]
 		+ SVerticalBox::Slot().AutoHeight().Padding(FMargin(0.f, 0.f, 0.f, 6.f))[MakePaintRow(1)]
 		+ SVerticalBox::Slot().AutoHeight()[MakePaintRow(2)];

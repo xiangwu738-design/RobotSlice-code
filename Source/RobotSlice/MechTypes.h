@@ -164,7 +164,7 @@ constexpr bool MechIsTacticalShoulder(EMechShoulder Shoulder)
 	return Shoulder >= EMechShoulder::Burst;
 }
 
-/** 机体涂装（玩家自己挑的颜色，sRGB）：主漆、副漆、点缀色；发光件仍是队伍色，远处分得清敌我 */
+/** 机体涂装（sRGB）：主漆、副漆、点缀色；点缀兼武器灯光/刀光，机体识别灯仍是队伍色。 */
 USTRUCT()
 struct FMechPaint
 {

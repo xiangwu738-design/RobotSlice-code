@@ -109,17 +109,17 @@ namespace MechHudFeedLocal
 	};
 }
 
-void AMechHUD::FeedIcon(uint8 Icon, float X, float Y, float S, const FLinearColor& C)
+bool AMechHUD::WeaponSilhouette(uint8 Icon, float X, float Y, float Width, float Height, const FLinearColor& C)
 {
-	// 有真实模型的剪影就画剪影（白色贴图 × 颜色）；爆炸、场地、杂兵、还没有模型的肩部装备走下面的几何小图标
+	// 两处 HUD 走同一缓存与绘制逻辑；限制长宽，避免长枪/双刀挤到相邻读数。
 	const MechHudFeedLocal::FSilhouette& Sil = MechHudFeedLocal::Silhouette(Icon);
 	if (Sil.Brush.IsValid())
 	{
-		const float H = MechHudFeedLocal::SilhouetteHeight * UI;
+		const float H = FMath::Min(Height, Width / FMath::Max(Sil.Aspect, .01f));
 		const float W = H * Sil.Aspect;
 		// 左上角对齐整像素：缩小的剪影边缘才利落
-		const float X0 = FMath::RoundToFloat(X - W * 0.5f);
-		const float Y0 = FMath::RoundToFloat(Y - H * 0.5f);
+		const float X0 = FMath::RoundToFloat(X + (Width - W) * 0.5f);
+		const float Y0 = FMath::RoundToFloat(Y + (Height - H) * 0.5f);
 		const FVector2f A(X0, Y0), B(X0 + W, Y0), D(X0 + W, Y0 + H), E(X0, Y0 + H);
 		const TArray<FVector2f> UVs = {FVector2f(0.f, 0.f), FVector2f(1.f, 0.f), FVector2f(1.f, 1.f), FVector2f(0.f, 0.f), FVector2f(1.f, 1.f), FVector2f(0.f, 1.f)};
 		// 先压一层淡影子（和 Text 一样：亮天空、爆炸上也看得清），再画剪影
@@ -127,8 +127,16 @@ void AMechHUD::FeedIcon(uint8 Icon, float X, float Y, float S, const FLinearColo
 		const FLinearColor Shadow(0.f, 0.f, 0.f, C.A * 0.6f);
 		AddImageTris(Sil.Brush, {A + O, B + O, D + O, A + O, D + O, E + O}, UVs, {Shadow, Shadow, Shadow, Shadow, Shadow, Shadow});
 		AddImageTris(Sil.Brush, {A, B, D, A, D, E}, UVs, {C, C, C, C, C, C});
-		return;
+		return true;
 	}
+	return false;
+}
+
+void AMechHUD::FeedIcon(uint8 Icon, float X, float Y, float S, const FLinearColor& C)
+{
+	const float Height = MechHudFeedLocal::SilhouetteHeight * UI;
+	const float Width = MechHudFeedLocal::IconWidth(Icon) * UI;
+	if (WeaponSilhouette(Icon, X - Width * .5f, Y - Height * .5f, Width, Height, C)) return;
 	// 坐标按 u（= S / 6）写：横条图标约 28u 宽、12u 高，方图标约 14u；枪口 / 刀尖朝右（击毁者在左、被击毁的在右）
 	const float u = S / 6.f;
 	auto R = [&](float x, float y, float w, float h) { DrawRect(C, X + x * u, Y + y * u, w * u, h * u); };

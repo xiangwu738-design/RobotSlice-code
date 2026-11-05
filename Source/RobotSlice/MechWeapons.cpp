@@ -15,7 +15,7 @@ namespace
 		// 名字, 说明, 模型, 枪口, 弹匣, 间隔, 伤害, 冲击, 弹速, 飞行时间, 换弹, 散布, 瞄准散布倍数, 弹丸, 曳光, 后坐,
 		// 热量, 充能时间, 充能激光每秒伤害, 激光每秒冲击, 耗能, 吸血比例, 连中加成, 双持, 左手握点
 		{TEXT("步枪"), TEXT("连射稳定，连续打中同一目标伤害越打越高"),
-			TEXT("/Game/Weapons/Meshes/SM_Gun3"), FVector(77.f, 0.f, 17.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Rifle"), FVector(77.f, 0.f, 17.f),
 			36, 0.11f, 86.f, 22.f, 33000.f, 1.1f, 2.2f, 0.55f, 0.35f, 1, 1.f, 16.f,
 			0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.03f, false, FVector(30.f, 0.f, 5.f)},
 		// 冲锋枪（10-30 玩家：强度过低、没特色、不能持续输出）→ 持续输出、中近距离最强：伤害 46→82、热量每发 0.022→0.0093
@@ -24,27 +24,27 @@ namespace
 		// 和狙击枪「每发都开镜命中」的理论值（约 1100）基本持平，仍是不开镜的枪里最高
 		// 11-01 用户：「冲锋枪过热快一点」→ 每发热量 0.0093→0.013：连续开火约 7 秒 → 约 5 秒过热（开火时不散热）
 		{TEXT("冲锋枪"), TEXT("近距离输出最高，不用换弹；连续开火会过热，距离远伤害掉得快"),
-			TEXT("/Game/Weapons/Meshes/SM_Gun6"), FVector(62.f, 0.f, 8.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_SMG"), FVector(62.f, 0.f, 8.f),
 			0, 0.065f, 78.f, 16.f, 28000.f, 0.6f, 0.f, 1.2f, 0.6f, 1, 0.8f, 10.f,
 			0.013f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, false, FVector(22.f, 0.f, -1.f)},
 		// 霰弹枪（10-30 玩家：设计为近战优势，但面对刀剑优势不高）→ 击毁回 3000 改成按伤害 30% 吸血；15 米内冲击 ×1.5、
 		// 打中正在出刀（还没砍下）的人直接打断这一刀。
 		// 11-01 用户：「霰弹枪伤害x1.5倍」→ 每颗 69→104（一发满中 621→936；吸血按伤害算，跟着涨）
 		{TEXT("霰弹枪"), TEXT("近距离爆发，打中回装甲，能打断对方出刀"),
-			TEXT("/Game/Weapons/Meshes/SM_Gun11"), FVector(77.f, 0.f, 7.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Shotgun"), FVector(77.f, 0.f, 7.f),
 			6, 0.75f, 104.f, 32.f, 24000.f, 0.45f, 2.6f, 4.5f, 0.75f, 9, 0.7f, 40.f,
 			0.f, 0.f, 0.f, 0.f, 0.f, 0.3f, 0.f, false, FVector(34.f, 0.f, -3.f)},
 		// 精准步枪 → 充能步枪（10-30 玩家：改成类似 Apex 旧版充能步枪）：按住充能 1 秒，期间枪口一道激光（命中扫描、所有人看得见，
 		// 照到的敌人每秒 120 伤害），充满自动打出一道光束 1150（以前充满一发 960、要自己松开）；弹匣 8→6。
 		// 10-30 晚试玩后（玩家：松手就发射，不会撤回）：提前松开按当时充能打出，230（不到 0.15 充能）到 1150 线性，光束粗细亮度跟着变
 		{TEXT("充能步枪"), TEXT("按住充能，充满或松手就打出光束；充能时的激光也伤人，所有人都看得见"),
-			TEXT("/Game/Weapons/Meshes/SM_Gun2"), FVector(87.f, 0.f, 11.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Marksman"), FVector(87.f, 0.f, 11.f),
 			6, 0.45f, 1150.f, 320.f, 60000.f, 1.f, 2.4f, 0.15f, 0.2f, 1, 1.6f, 34.f,
 			0.f, 1.f, 120.f, 40.f, 0.f, 0.f, 0.f, false, FVector(40.f, 0.f, -6.f)},
 		// 狙击枪（10-30 玩家：伤害、手感、追踪都要提升）：伤害 1260→1400、间隔 1.4→1.3 秒、每发耗能 35→28、弹速 950→1200 米/秒（少提前量），
 		// 开镜时小范围吸附（bScopeMagnet，以前开镜完全不帮）
 		{TEXT("狙击枪"), TEXT("单发重击，不用弹药、耗推进能量；开镜时子弹吸附到准星附近的敌人"),
-			TEXT("/Game/Weapons/Meshes/SM_Gun9"), FVector(102.f, 0.f, 9.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Sniper"), FVector(102.f, 0.f, 9.f),
 			0, 1.3f, 1100.f, 760.f, 120000.f, 0.6f, 0.f, 2.f, 0.01f, 1, 2.2f, 50.f,
 			0.f, 0.f, 0.f, 0.f, 28.f, 0.f, 0.f, false, FVector(44.f, 0.f, -4.f)},
 		// 双持手枪（10-30 玩家：闪避自动装满太强，基本等于无限弹药）→ 先改成闪避装满 6 秒一次；
@@ -55,7 +55,7 @@ namespace
 		// 11-01 用户：「手枪近战精准度提升」→ 腰射散布 0.8°→0.5°（贴身来回闪的时候基本不用开镜），开镜 0.4°→0.25°；
 		// 「手枪还是冲刺回弹，没有回弹cd」→ 快速闪避立即装满、没有冷却（bDodgeRefill），重斩补满照旧
 		{TEXT("双持手枪"), TEXT("连射；快速闪避立刻装满弹匣，重斩砍中也补满"),
-			TEXT("/Game/Weapons/Meshes/SM_Pistol7"), FVector(32.f, 0.f, 14.f),
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_DualPistol"), FVector(32.f, 0.f, 14.f),
 			28, 0.13f, 128.f, 28.f, 30000.f, 0.9f, 2.4f, 0.5f, 0.5f, 1, 0.9f, 12.f,
 			0.f, 0.f, 0.f, 0.f, 0.f, 0.f, 0.f, true},
 	};
@@ -121,29 +121,29 @@ namespace
 	FBlade Blades[] = {
 		// 名字, 说明, 模型, 快慢, 伤害, 冲击, 削失衡, 够得着, 双刀, 匕首数, 回复, 匕首伤害, 匕首冲击, 匕首速度
 		{TEXT("化境"), TEXT("攻击范围最大；第一下伤害最高，越打越低，停手恢复；打中失衡的敌人追加伤害；没有击退"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword07"), 1.f, 1.f, 1.f, 0.55f, 520.f, false, 0, 0.f, 0.f, 0.f, 0.f},
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Katana"), 1.f, 1.f, 1.f, 0.55f, 520.f, false, 0, 0.f, 0.f, 0.f, 0.f},
 		{TEXT("快刀"), TEXT("出刀快，连续砍中越砍越快，移速也更快"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword11"), 0.8f, 0.85f, 0.8f, 0.4f, 370.f, false, 0, 0.f, 0.f, 0.f, 0.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_QuickBlade"), 0.8f, 0.85f, 0.8f, 0.4f, 370.f, false, 0, 0.f, 0.f, 0.f, 0.f,
 			true, FVector(-6.45f, 3.95f, -1.10f), FQuat(0.00629f, -0.28633f, -0.19775f, 0.93748f), FVector(-9.f, 0.f, 0.f)},  // 长剑包，双手
 		{TEXT("单手刀"), TEXT("闪避后马上轻击，能远距离突进斩"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword13"), 0.88f, 0.9f, 0.85f, 0.4f, 350.f, false, 0, 0.f, 0.f, 0.f, 0.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_OneHand"), 0.88f, 0.9f, 0.85f, 0.4f, 350.f, false, 0, 0.f, 0.f, 0.f, 0.f,
 			true, FVector(-6.11f, 4.07f, -2.30f), FQuat(0.45294f, -0.01837f, 0.89037f, 0.04194f)},  // 单手剑包
 		// 削失衡 0.6→0.42（中型框架：四连 + 重斩 1747→1223，以前光这一套就失衡，现在还要再补几枪）
 		{TEXT("大剑"), TEXT("慢但伤害高；重斩时不被打断、受伤减少"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword14"), 1.3f, 1.45f, 1.25f, 0.42f, 440.f, false, 0, 0.f, 0.f, 0.f, 0.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_GreatSword"), 1.3f, 1.45f, 1.25f, 0.42f, 440.f, false, 0, 0.f, 0.f, 0.f, 0.f,
 			true, FVector(-10.45f, 5.39f, -0.70f), FQuat(0.64021f, -0.05469f, 0.76401f, 0.05856f), FVector(-17.f, 0.f, 0.f)},  // 大剑包，双手
 		{TEXT("双刀"), TEXT("出刀很快、伤害低；砍中会让对方受到的伤害增加"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword16"), 0.65f, 0.6f, 0.6f, 0.25f, 340.f, true, 0, 0.f, 0.f, 0.f, 0.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_TwinBlades"), 0.65f, 0.6f, 0.6f, 0.25f, 340.f, true, 0, 0.f, 0.f, 0.f, 0.f,
 			true, FVector(-9.15f, 6.06f, -0.31f), FQuat(0.59658f, -0.20384f, 0.77470f, 0.04879f)},  // 双刀包
 		// 削失衡 0.8→0.45（中型框架：以前光四连就 1656 直接失衡，现在四连 932、四连 + 重斩 1573 才失衡）
 		// 11-01 用户：「钝器减少伤害，增加破韧效果」（破韧 = 削韧性条，也就是失衡）→ 伤害倍数 1.35→1.1（四连 + 重斩循环约 1119→912/秒，近战里最低）；
 		// 削失衡 0.45→0.65（失衡积累按冲击算、不看伤害；中型框架上限 1400：四连 932→1346，差一点，再中任何一下就失衡；没回到 0.8，那时光四连就失衡，玩家说 1v1 无法抗衡）
 		{TEXT("钝器"), TEXT("很慢，削失衡很快；重斩砍在格挡上直接破防"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword20"), 1.5f, 1.1f, 1.5f, 0.65f, 420.f, false, 0, 0.f, 0.f, 0.f, 0.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Blunt"), 1.5f, 1.1f, 1.5f, 0.65f, 420.f, false, 0, 0.f, 0.f, 0.f, 0.f,
 			true, FVector(-7.08f, 4.92f, -13.85f), FQuat(-0.01428f, 0.76663f, -0.06417f, -0.63872f), FVector(-30.f, 0.f, 0.f)},  // 锤子包（右手握在靠锤头那一端）；握点往刀体挪 12 厘米，下面多留一段柄给左手
 		// 冲击 130→160（10-30 玩家：匕首命中加轻微击退；冲击过 150 才有击退和顿帧），削失衡 0.4→0.33，一把积累的失衡不变（约 53）
 		{TEXT("投掷匕首"), TEXT("按住左键投掷，会追踪目标，每第 5 把威力 3 倍；右键近身挥刀，不能格挡"),
-			TEXT("/Game/Weapons/Meshes/SM_Sword03"), 1.f, 1.f, 1.f, 0.33f, 300.f, false, 4, 1.6f, 240.f, 160.f, 7500.f,
+			TEXT("/Game/Weapons/Refits/Meshes/SM_RF_Dagger"), 1.f, 1.f, 1.f, 0.33f, 300.f, false, 4, 1.6f, 240.f, 160.f, 7500.f,
 			true, FVector(-8.87f, 4.85f, 1.55f), FQuat(0.04369f, 0.49782f, -0.06716f, 0.86357f)},  // 双匕首包（反手握）
 	};
 	/** 10-31 握持：各把刀的柄（右手空腔对准的点、半径、柄的 x 范围）、刀身在右手里的方向（手坐标 k 往拇指、n 手心、d 往指尖）、

@@ -33,7 +33,7 @@ ICON_OVERRIDE = {'Mine', 'Missiles'}
 def items():
     """[(名字, 模型路径)]：代码表里还没有模型的肩部装备不在里面（HUD 退回几何小图标）"""
     with open(f'{SRC}/MechWeapons.cpp', encoding='utf-8') as f:
-        weapons = re.findall(r'TEXT\("(/Game/Weapons/Meshes/SM_\w+)"\)', f.read())
+        weapons = re.findall(r'TEXT\("(/Game/Weapons/(?:\w+/)*SM_\w+)"\)', f.read())
     if len(weapons) != len(GUNS) + len(BLADES):
         raise RuntimeError(f'MechWeapons.cpp 里找到 {len(weapons)} 个武器模型，应该是 {len(GUNS) + len(BLADES)} 个：{weapons}')
     with open(f'{SRC}/MechItemStudio.cpp', encoding='utf-8') as f:

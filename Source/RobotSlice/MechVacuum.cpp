@@ -24,7 +24,8 @@ bool UMechVacuum::ShouldCreateSubsystem(UObject* Outer) const
 		return false;
 	}
 	static const bool bOff = FParse::Param(FCommandLine::Get(), TEXT("MechVacuumOff"));
-	return !bOff && World->GetMapName().EndsWith(TEXT("L_Moon"));
+	// 原开发图和新蓝穹基地共用真空声音规则；空气范围由各图 MoonAir 标记决定。
+	return !bOff && (World->GetMapName().EndsWith(TEXT("L_Moon")) || World->GetMapName().EndsWith(TEXT("L_MoonDome")));
 }
 
 void UMechVacuum::Deinitialize()

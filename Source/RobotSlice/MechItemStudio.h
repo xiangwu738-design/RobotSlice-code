@@ -148,8 +148,12 @@ private:
 	void PlaceDronePads(UStaticMeshComponent* Body, int32 Set, float DroneScale);
 	/** 机体骨头的包围盒（棚里坐标，按装甲加一圈）；bUpper 只取胸口往上 */
 	FBox MechBox(bool bUpper) const;
-	/** 玩家设置里的涂装刷到机体 / 无人机（材质槽 MI_Robot_Paint / PaintDark / Accent） */
+	/** 玩家设置里的涂装刷到机体 / 无人机 / 手持武器（统一三路材质槽） */
 	void ApplyPaint(class UMeshComponent* Target);
+	/** 涂装变了就重新拍缓存照片，并刷新实时转台的动态材质。 */
+	void RefreshPaint();
+	bool bPaintCached = false;
+	FColor CachedPaintPrimary, CachedPaintSecondary, CachedPaintAccent;
 
 	UPROPERTY()
 	TObjectPtr<USceneComponent> Rig;

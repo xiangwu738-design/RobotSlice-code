@@ -1,4 +1,5 @@
 #include "MechItemStudio.h"
+#include "MechWeaponGlow.h"
 
 #include "Algo/Sort.h"
 #include "Components/PointLightComponent.h"
@@ -643,6 +644,7 @@ UTextureRenderTarget2D* AMechItemStudio::ShootLive(int32 Category, int32 Index, 
 bool AMechItemStudio::LiveShot(int32 Category, int32 Index, float Angle, FIntPoint Pixels)
 {
 	using namespace MechStudioPriv;
+	RefreshPaint();
 	const double T0 = FPlatformTime::Seconds();
 	// 渲染目标跟着照片在屏幕上的像素大小（乘超采样，宽封顶 LiveMaxW，按比例缩高）；差几个像素不重建
 	Pixels = FIntPoint(FMath::RoundToInt(Pixels.X * LiveSuperSample), FMath::RoundToInt(Pixels.Y * LiveSuperSample));
@@ -857,6 +859,7 @@ void AMechItemStudio::Tick(float DeltaSeconds)
 {
 	using namespace MechStudioPriv;
 	Super::Tick(DeltaSeconds);
+	RefreshPaint();
 	const double Now = FPlatformTime::Seconds();
 	if (MechSettle > 0)
 	{
@@ -966,6 +969,7 @@ void AMechItemStudio::ArrangeWeapon(UStaticMesh* Mesh)
 	// 打包版日志报「MI_Drone_*_Paint missing usage flag Nanite」（紧接着就清掉了，画面不受影响，但日志是假警报）
 	Item->EmptyOverrideMaterials();
 	Item->SetStaticMesh(Mesh);
+	ApplyPaint(Item);  // 新武器的主色、副色和点缀色与玩家机体一致。
 	Mesh->SetForceMipLevelsToBeResident(30.f);
 	Item->PrestreamTextures(30.f, true);
 	// 最长的轴横放（棚里 Y）、第二长的竖放（Z）、最短的朝镜头（X），中心放在原点
@@ -1134,10 +1138,41 @@ bool AMechItemStudio::ArrangeMech(int32 FrameIndex, const FSetup& S)
 	return MechSettle <= 0;
 }
 
+void AMechItemStudio::RefreshPaint()
+{
+	using namespace MechStudioPriv;
+	const FMechPaint& SelectedPaint = FMechSettings::Get().Paint;
+	if (bPaintCached && CachedPaintPrimary == SelectedPaint.Primary && CachedPaintSecondary == SelectedPaint.Secondary
+		&& CachedPaintAccent == SelectedPaint.Accent)
+	{
+		return;
+	}
+	bPaintCached = true;
+	CachedPaintPrimary = SelectedPaint.Primary;
+	CachedPaintSecondary = SelectedPaint.Secondary;
+	CachedPaintAccent = SelectedPaint.Accent;
+	for (UMeshComponent* Painted : {static_cast<UMeshComponent*>(Item.Get()), static_cast<UMeshComponent*>(Mech.Get()),
+		static_cast<UMeshComponent*>(ShoulderDrone.Get())})
+	{
+		if (Painted) ApplyPaint(Painted);
+	}
+	Shot.Reset();
+	for (const auto& Thumb : Thumbs) Enqueue(Thumb.Key, -1, 1);
+	if (PreviewKey >= 0)
+	{
+		for (int32 ViewIndex = 0; ViewIndex < NumViews(PreviewKey / 100); ++ViewIndex)
+		{
+			Enqueue(PreviewKey, ViewSlot + ViewIndex, 0);
+		}
+	}
+	bLiveValid = false;
+}
+
 void AMechItemStudio::ApplyPaint(UMeshComponent* Target)
 {
 	// 用玩家自己的涂装（同 AMechCharacter::ApplyPaint；主菜单展示机体也是这样）
 	const FMechPaint& Paint = FMechSettings::Get().Paint;
+	MechWeaponGlow::Apply(Target, Paint.Accent);
 	const TPair<const TCHAR*, FColor> Slots[] = {{TEXT("MI_Robot_Paint"), Paint.Primary}, {TEXT("MI_Robot_PaintDark"), Paint.Secondary},
 		{TEXT("MI_Robot_Accent"), Paint.Accent}};
 	for (const TPair<const TCHAR*, FColor>& S : Slots)

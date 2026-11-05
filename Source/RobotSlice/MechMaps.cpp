@@ -26,6 +26,9 @@ namespace MechMaps
 			{TEXT("/Game/Maps/L_OldStreet"), TEXT("老旧街道"), DM},
 			// 11-02 用户：「加入一个训练场联机模式，人们可以在这个训练场开启友伤」：房间里选这张 = 训练场模式
 			{TEXT("/Game/Maps/L_Range"), TEXT("训练场"), Training},
+			// 11-03 原图留作开发对照，新建原创场景；追加索引，不改已有房间的地图编号。
+			{TEXT("/Game/Maps/L_MoonDome"), TEXT("蓝穹月球基地"), Elim | DM},
+			{TEXT("/Game/Maps/L_MillenniumStreet"), TEXT("千禧老街"), DM},
 		};
 		return Table;
 	}

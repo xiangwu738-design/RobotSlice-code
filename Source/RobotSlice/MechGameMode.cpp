@@ -483,6 +483,27 @@ void AMechPlayerController::PerfSummary()
 		1000.f * Sorted.Num() / Sum, Sum / Sorted.Num(), P99, Sorted.Last(), PerfHitches);
 }
 
+FRotator AMechPlayerController::GetDesiredRotation() const
+{
+	// 移动组件仍按机体自身转速转身；镜头和横移的输入坐标继续用控制器朝向。
+	const AMechCharacter* Mech = Cast<AMechCharacter>(GetPawn());
+	const UMechCombatComponent* Combat = Mech ? Mech->GetCombat() : nullptr;
+	float ContactYaw;
+	if (Combat && Combat->GetContactFacingYaw(ContactYaw))
+	{
+		return FRotator(0.f, ContactYaw, 0.f);
+	}
+	if (Combat && Combat->GetTarget() && Combat->WantsTargetFacing())
+	{
+		const FVector Direction = MechLoop::Delta(GetWorld(), Mech->GetActorLocation(), Combat->GetTarget()->GetActorLocation());
+		if (!Direction.IsNearlyZero() && Direction.SizeSquared2D() > 1.)
+		{
+			return FRotator(0., Direction.Rotation().Yaw, 0.);
+		}
+	}
+	return Super::GetDesiredRotation();
+}
+
 void AMechPlayerController::PlayerTick(float DeltaTime)
 {
 	MechMapRules::UpdateBoosterLock(GetWorld());  // 11-02 石林：配装界面锁定专用推进器（房间里选了这张图也算）
@@ -2269,7 +2290,7 @@ void AMechGameMode::StartPlay()
 		Hour = 13.f;  // 夺芯灰盒：白天晴天
 		WeatherName = TEXT("Clear");
 	}
-	if (GetWorld()->GetMapName().EndsWith(TEXT("L_OldStreet")))
+	if (GetWorld()->GetMapName().EndsWith(TEXT("L_OldStreet")) || GetWorld()->GetMapName().EndsWith(TEXT("L_MillenniumStreet")))
 	{
 		// 11-02 老旧街道：「A 老胶片午后」，暖黄、褪色（调色在地图的后期体积里）；测试场也用这个，不然画面不对。
 		// 这张图名字里有 Street，以前的 Contains("Street") 会把它当成赛博朋克街道（夜里下雨），现在那几处都改成了 EndsWith("L_Street")

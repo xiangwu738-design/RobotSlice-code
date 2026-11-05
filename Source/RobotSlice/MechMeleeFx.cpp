@@ -1,4 +1,5 @@
 #include "MechMeleeFx.h"
+#include "MechWeaponGlow.h"
 
 #include "Camera/PlayerCameraManager.h"
 #include "Components/SkeletalMeshComponent.h"
@@ -311,6 +312,7 @@ void UMechMeleeFx::OnBladeHit(AMechCharacter* Victim, const FVector& At, float H
 	}
 	const EMechMeleeWeapon W = Combat->GetBladeType();
 	const FLook& L = Looks[static_cast<int32>(W)];
+	const FLinearColor WeaponColor = MechWeaponGlow::EffectColor(Mech->GetPaint().Accent);
 	const FVector Toward = (Victim->GetActorLocation() - Mech->GetActorLocation()).GetSafeNormal();
 	// 刀痕：刀身这一帧的位置（两点）找离它最近的那段身体；刀走的方向 = 刀尖速度方向
 	FVector A = At;
@@ -330,7 +332,7 @@ void UMechMeleeFx::OnBladeHit(AMechCharacter* Victim, const FVector& At, float H
 	// 冲击环：重击、钝器每一下、第四段（小）；朝着砍的方向扩开，贴在被砍那台面前
 	const FVector RingAt = Victim->GetActorLocation() - Toward * 70.f + FVector(0.f, 0.f, 50.f);
 	const bool bBlunt = W == EMechMeleeWeapon::Blunt;
-	const FLinearColor RingColor = bBlunt ? FLinearColor(0.75f, 0.8f, 0.85f) : (L.Heat.IsAlmostBlack() ? L.Color : L.Heat);
+	const FLinearColor RingColor = WeaponColor;
 	if (bHeavy)
 	{
 		const float R = W == EMechMeleeWeapon::GreatSword ? 230.f : bBlunt ? 270.f : 170.f;
@@ -471,23 +473,25 @@ void UMechMeleeFx::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 	const EMechMeleeWeapon W = Combat->GetBladeType();
 	const FLook& L = Looks[static_cast<int32>(W)];
 	const bool bActive = Combat->IsMeleeActive();
+	const FLinearColor WeaponColor = MechWeaponGlow::EffectColor(Mech->GetPaint().Accent);
+	const FLinearColor WeaponCore = MechWeaponGlow::CoreColor(WeaponColor);
 	const bool bHeavy = Combat->GetMeleeMove() == EMechMelee::Heavy;
 	UMechMeshComponent* MM = Mech->GetMechMesh();
 	USceneComponent* Right = MM ? MM->Props[0].Get() : nullptr;
 	USceneComponent* Left = MM && Combat->GetBlade().bTwin ? MM->Props[4].Get() : nullptr;
 
-	// 这一刀的颜色：快刀按连斩层数往橙色走，弹反后那一刀金色
+	// 11-02：点缀色统一刀光色相；连斩、弹反用亮度/宽度/火花数量体现。
 	const int32 Flurry = W == EMechMeleeWeapon::QuickBlade && Mech->GetEffects() ? FMath::Min(Mech->GetEffects()->GetStacks(TEXT("Flurry")), MechWeapons::FlurryMax) : 0;
 	const float FlurryLerp = Flurry / static_cast<float>(FMath::Max(MechWeapons::FlurryMax, 1));
 	if (bTrailOld)
 	{
-		FLinearColor Color = FMath::Lerp(L.Color, FlurryColor, FlurryLerp);
-		FLinearColor Core = FMath::Lerp(L.Core, FlurryCore, FlurryLerp);
+		FLinearColor Color = WeaponColor;
+		FLinearColor Core = L.Core.IsAlmostBlack() ? FLinearColor::Black : WeaponCore;
 		const float Strength = L.Strength * SwingStrength * (1.f + 0.35f * FlurryLerp);
 		if (bSwingParry)
 		{
-			Color = ParryColor;
-			Core = ParryCore;
+			Color = WeaponColor * 1.15f;
+			Core = WeaponCore * 1.15f;
 		}
 		const float CoreW = L.CoreWidth * (bHeavy ? 1.3f : 1.f) * (bSwingDash ? 1.3f : 1.f);
 		for (FTrail& T : Trails)
@@ -505,11 +509,13 @@ void UMechMeleeFx::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 		// 第二版刀光：按刀、这一刀的招式（出招时记下的，刀光散完之前不变）、快刀连斩层数、弹反加成
 		const FArc& A = Arcs[static_cast<int32>(W)];
 		const bool bSwingHeavy = SwingMove == EMechMelee::Heavy;
-		FArcTint Tint{FMath::Lerp(A.Hot, FlurryArc.Hot, FlurryLerp), FMath::Lerp(A.Color, FlurryArc.Color, FlurryLerp), FMath::Lerp(A.Deep, FlurryArc.Deep, FlurryLerp),
-			FMath::Lerp(A.Core, FlurryArc.Core, FlurryLerp), FMath::Lerp(A.SparkColor, FlurryArc.Spark, FlurryLerp)};
+		// 点缀色决定色相；各把刀的形状、节奏、火花数量仍沿用各自参数。
+		FArcTint Tint{WeaponCore * .7f, WeaponColor, WeaponColor * .24f,
+			A.Core.IsAlmostBlack() ? FLinearColor::Black : WeaponCore, WeaponColor};
 		if (bSwingParry)
 		{
-			Tint = ParryArc;
+			Tint.Hot *= 1.2f;
+			Tint.Core *= 1.2f;
 		}
 		const float Bright = A.Bright * SwingStrength * (1.f + 0.35f * FlurryLerp);
 		const float CoreW = A.CoreWidth * (bSwingHeavy ? 1.3f : 1.f) * (bSwingDash ? 1.3f : 1.f);
@@ -528,8 +534,8 @@ void UMechMeleeFx::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 			{
 				continue;
 			}
-			// 双刀左手那把偏红一点：两道刀光交错时分得开
-			const FLinearColor Side = i == 1 ? FLinearColor(1.f, 0.62f, 0.6f, 1.f) : FLinearColor::White;
+			// 双刀左手只略暗，不再偏红，保证两把刀使用同一色相。
+			const FLinearColor Side = i == 1 ? FLinearColor(.85f, .85f, .85f, 1.f) : FLinearColor::White;
 			MID->SetVectorParameterValue(TEXT("Hot"), Tint.Hot);
 			MID->SetVectorParameterValue(TEXT("Color"), Tint.Color * Side);
 			MID->SetVectorParameterValue(TEXT("Deep"), Tint.Deep * Side);
@@ -546,7 +552,7 @@ void UMechMeleeFx::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 	// 刀刃热光：出招前段慢慢烧热（重斩更热——对面看得出来要来重的），砍下时最热，之后很快冷下去；
 	// 平时：快刀连斩层数越多越热，双手刀弹反后那几秒刀刃金光
 	float Heat = 0.f;
-	FLinearColor HeatColor = FMath::Lerp(L.Heat, FLinearColor(1.f, 0.5f, 0.15f), FlurryLerp);
+	FLinearColor HeatColor = WeaponColor;
 	if (!L.Heat.IsAlmostBlack())
 	{
 		if (bActive)
@@ -560,20 +566,20 @@ void UMechMeleeFx::TickComponent(float DeltaTime, ELevelTick TickType, FActorCom
 		if (FxClock < ParryReadyUntil && W == EMechMeleeWeapon::Katana)
 		{
 			Heat = FMath::Max(Heat, 1.3f * (0.8f + 0.2f * FMath::Sin(FxClock * 8.f)));
-			HeatColor = ParryColor;
+			HeatColor = WeaponColor;
 		}
 		if (bSwingParry && bActive)
 		{
-			HeatColor = ParryColor;
+			HeatColor = WeaponColor;
 		}
 	}
 	UpdateHeat(Trails[0], Right, Heat, HeatColor);
 	UpdateHeat(Trails[1], Left, Heat, HeatColor);
 
-	// 大剑霸体重斩：出招过程中全身一层橙色的热光（不吃失衡、不被打断，对面要看得出来）
+	// 大剑霸体重斩：点缀色热光随强度脉动，保留原起手提示。
 	if (Combat->IsSuperArmor())
 	{
-		Mech->FlashBody(FLinearColor(1.f, 0.4f, 0.1f), 0.22f + 0.08f * FMath::Sin(FxClock * 18.f));
+		Mech->FlashBody(WeaponColor, 0.22f + 0.08f * FMath::Sin(FxClock * 18.f));
 	}
 	// 被弹反僵直：身上冒电火花、一闪一闪
 	if (FxClock < StunFxUntil)

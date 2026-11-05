@@ -1,4 +1,5 @@
 #include "MechHUD.h"
+#include "MechFeed.h"
 #include "MechLoop.h"
 
 #include "Engine/GameViewportClient.h"
@@ -1176,23 +1177,20 @@ void AMechHUD::DrawDash(AMechCharacter* Mech)
 	}
 	const float WX = CX + 130.f * UI;
 	const FLinearColor IconC = Fade(Ink, 0.6f);
-	if (bBlade)
-	{
-		SoftLine(WX + 1.f * UI, LabelY + 12.f * UI, WX + 22.f * UI, LabelY, IconC, 1.5f);
-		SoftLine(WX + 2.f * UI, LabelY + 5.f * UI, WX + 9.f * UI, LabelY + 13.f * UI, IconC, 1.5f);
-	}
-	else
-	{
-		DrawRect(IconC, WX, LabelY + 3.f * UI, 24.f * UI, 4.f * UI);
-		DrawRect(IconC, WX + 4.f * UI, LabelY + 7.f * UI, 4.f * UI, 7.f * UI);
-	}
+	const uint8 GunIcon = MechFeedIcon::Shooter0 + static_cast<uint8>(Mech->GetLoadout().Shooter);
+	const uint8 BladeIcon = MechFeedIcon::Melee0 + static_cast<uint8>(Mech->GetLoadout().Melee);
+	auto EquipmentIcon = [&](uint8 Icon, float X, float Y, float Width, float Height, const FLinearColor& Color) {
+		if (!WeaponSilhouette(Icon, X, Y, Width * UI, Height * UI, Color))
+			FeedIcon(Icon, X + Width * UI * .5f, Y + Height * UI * .5f, 5.f * UI, Color);
+	};
+	EquipmentIcon(bBlade ? BladeIcon : GunIcon, WX, LabelY, 56.f, 14.f, IconC);
 	if (G.bHeavyRefill)
 	{
 		// 双持手枪（10-30 晚起）：武器图标右边一个小菱形 = 「重斩砍中补满弹匣」。平时暗的空心（提醒有这个机制），
 		// 刚补满的 1.2 秒里实心金色、先放大再收回（两种姿态都画：补满是在拿刀时发生的）
 		const float Since = GetWorld()->GetTimeSeconds() - Combat->GetLastRefillTime();
 		const bool bFresh = Since < 1.2f;
-		const float DX = WX + 34.f * UI, DY = LabelY + 7.f * UI;
+		const float DX = WX + 64.f * UI, DY = LabelY + 7.f * UI;
 		const float DR = (bFresh ? 4.5f + 3.f * FMath::Max(0.f, 1.f - Since / 0.3f) : 4.5f) * UI;
 		if (bFresh)
 		{
@@ -1213,12 +1211,12 @@ void AMechHUD::DrawDash(AMechCharacter* Mech)
 	if (Th.bExtraLabels)
 	{
 		// 维克托：图标旁再写一个缩写（MFD 每块读数都有名字）
-		Text(TEXT("WPN"), WX + (G.bHeavyRefill ? 46.f : 32.f) * UI, LabelY, 12.f, Fade(Ink, 0.6f));
-		Text(TEXT("SHD"), CX + 260.f * UI + 22.f * UI, LabelY, 12.f, Fade(Ink, 0.6f));
+		Text(TEXT("WPN"), WX + (G.bHeavyRefill ? 76.f : 64.f) * UI, LabelY, 12.f, Fade(Ink, 0.6f));
+		Text(TEXT("SHD"), CX + 260.f * UI + 56.f * UI, LabelY, 12.f, Fade(Ink, 0.6f));
 	}
 
-	// 肩部装备：图标（导弹三角、钩爪爪形、捕获网菱形网格……）；冷却时写剩几秒，就绪时写 --、读条满（导弹锁上 / 钩爪对准敌人时红）。
-	// 紧急脱离这四件（11-01 并入肩部）：就绪但现在用不了时橙，刚转好图标闪两下（原来战术装备单独那个图标的规矩）；地雷在图标右边多几小格 = 场上还有几颗
+	// 肩部装备：与击毁播报相同的真实模型剪影；冷却时写剩几秒，就绪时写 --、读条满（导弹锁上 / 钩爪对准敌人时红）。
+	// 紧急脱离这四件（11-01 并入肩部）：就绪但现在用不了时橙，刚转好图标闪两下；地雷存量小格移到读条下方。
 	const float MX = CX + 260.f * UI;
 	const EMechShoulder ShoulderType = Mech->GetLoadout().Shoulder;
 	const float Missile = FMath::Clamp(Mech->GetShoulderReady(), 0.f, 1.f);
@@ -1230,62 +1228,11 @@ void AMechHUD::DrawDash(AMechCharacter* Mech)
 	const float SinceReady = GetWorld()->GetTimeSeconds() - Tac->GetReadySince();
 	const bool bReadyFlash = bTacticalShoulder && bMissileReady && SinceReady < 0.5f && FMath::Fmod(SinceReady, 0.25f) < 0.12f;
 	const FLinearColor MIcon = bReadyFlash ? Ink : bMissileReady ? MC : IconC;
-	if (ShoulderType == EMechShoulder::Grapple)
+	EquipmentIcon(MechFeedIcon::Shoulder0 + static_cast<uint8>(ShoulderType), MX, LabelY, 48.f, 14.f, MIcon);
+	if (ShoulderType == EMechShoulder::Mine)
 	{
-		// 爪：一根杆 + 张开的两根爪指
-		SoftLine(MX + 6.f * UI, LabelY + 13.f * UI, MX + 6.f * UI, LabelY + 5.f * UI, MIcon, 1.5f);
-		SoftLine(MX + 6.f * UI, LabelY + 5.f * UI, MX + 1.f * UI, LabelY, MIcon, 1.5f);
-		SoftLine(MX + 6.f * UI, LabelY + 5.f * UI, MX + 11.f * UI, LabelY, MIcon, 1.5f);
-	}
-	else if (ShoulderType == EMechShoulder::Net)
-	{
-		// 网：菱形里一个十字交叉
-		const float NX = MX + 6.f * UI, NY = LabelY + 6.5f * UI, NR = 6.5f * UI;
-		SoftLine(NX, NY - NR, NX + NR, NY, MIcon, 1.2f);
-		SoftLine(NX + NR, NY, NX, NY + NR, MIcon, 1.2f);
-		SoftLine(NX, NY + NR, NX - NR, NY, MIcon, 1.2f);
-		SoftLine(NX - NR, NY, NX, NY - NR, MIcon, 1.2f);
-		SoftLine(NX - NR * 0.5f, NY - NR * 0.5f, NX + NR * 0.5f, NY + NR * 0.5f, MIcon, 1.f);
-		SoftLine(NX - NR * 0.5f, NY + NR * 0.5f, NX + NR * 0.5f, NY - NR * 0.5f, MIcon, 1.f);
-	}
-	else if (ShoulderType == EMechShoulder::Artillery)
-	{
-		// 炮：一根长炮管 + 方炮尾
-		DrawRect(MIcon, MX - 1.f * UI, LabelY + 4.f * UI, 6.f * UI, 7.f * UI);
-		SoftLine(MX + 5.f * UI, LabelY + 7.5f * UI, MX + 15.f * UI, LabelY + 3.f * UI, MIcon, 1.8f);
-	}
-	else if (ShoulderType == EMechShoulder::Shield)
-	{
-		// 盾：一道朝前的弧 + 中间一点
-		Arc(MX + 2.f * UI, LabelY + 6.5f * UI, 9.f * UI, -0.95f, 0.95f, MIcon, 1.8f);
-		DrawRect(MIcon, MX + 1.f * UI, LabelY + 5.5f * UI, 2.f * UI, 2.f * UI);
-	}
-	else if (ShoulderType == EMechShoulder::Smoke)
-	{
-		// 烟：三个小圈
-		Arc(MX + 3.f * UI, LabelY + 8.f * UI, 3.5f * UI, 0.f, 2.f * PI, MIcon, 1.2f);
-		Arc(MX + 9.f * UI, LabelY + 8.f * UI, 3.5f * UI, 0.f, 2.f * PI, MIcon, 1.2f);
-		Arc(MX + 6.f * UI, LabelY + 3.f * UI, 3.5f * UI, 0.f, 2.f * PI, MIcon, 1.2f);
-	}
-	else if (ShoulderType == EMechShoulder::Emp)
-	{
-		// EMP：闪电
-		SoftLine(MX + 8.f * UI, LabelY, MX + 2.f * UI, LabelY + 7.f * UI, MIcon, 1.6f);
-		SoftLine(MX + 2.f * UI, LabelY + 7.f * UI, MX + 9.f * UI, LabelY + 6.f * UI, MIcon, 1.6f);
-		SoftLine(MX + 9.f * UI, LabelY + 6.f * UI, MX + 3.f * UI, LabelY + 13.f * UI, MIcon, 1.6f);
-	}
-	else if (bTacticalShoulder)
-	{
-		DrawTacticalIcon(ShoulderType, MX + 6.f * UI, LabelY + 6.5f * UI, 6.5f * UI, MIcon);
-		if (ShoulderType == EMechShoulder::Mine)
-		{
-			// 维克托主题图标右边还有 SHD 缩写，让开
-			DrawTacticalMines(Mech, MX + (Th.bExtraLabels ? 50.f : 20.f) * UI, LabelY + 5.f * UI, Tac->CanUse() ? Accent : Warn);
-		}
-	}
-	else
-	{
-		Triangle(FVector2D(MX + 6.f * UI, LabelY), FVector2D(MX + 12.f * UI, LabelY + 12.f * UI), FVector2D(MX, LabelY + 12.f * UI), MIcon);
+		// 地雷存量放在读条下方，给剪影和 SHD 缩写让出完整一行。
+		DrawTacticalMines(Mech, MX, BarY + 7.f * UI, Tac->CanUse() ? Accent : Warn);
 	}
 	Gauge(MX, 0.f, bMissileReady ? FString(Th.bPadDigits ? TEXT("RDY") : TEXT("--")) : FString::Printf(TEXT("%.1f"), Mech->GetShoulderTimer()), FString(), bMissileReady ? MC : Dim, Missile, MC);
 
@@ -1337,20 +1284,17 @@ void AMechHUD::DrawDash(AMechCharacter* Mech)
 	const float SY = H - 70.f * UI;
 	const FLinearColor GunC = bBlade ? Faint : Ink;
 	const FLinearColor BladeC = bBlade ? Ink : Faint;
-	DrawRect(GunC, SX, SY + 2.f * UI, 28.f * UI, 5.f * UI);
-	DrawRect(GunC, SX + 4.f * UI, SY + 7.f * UI, 5.f * UI, 9.f * UI);
-	DrawRect(GunC, SX + 15.f * UI, SY + 7.f * UI, 3.f * UI, 6.f * UI);
-	SoftLine(SX + 52.f * UI, SY + 16.f * UI, SX + 78.f * UI, SY, BladeC, 2.f);
-	SoftLine(SX + 53.f * UI, SY + 7.f * UI, SX + 62.f * UI, SY + 17.f * UI, BladeC, 2.f);
-	DrawRect(Track, SX, BarY, 80.f * UI, BarT);
+	EquipmentIcon(GunIcon, SX, SY - 3.f * UI, 56.f, 18.f, GunC);
+	EquipmentIcon(BladeIcon, SX + 64.f * UI, SY - 3.f * UI, 56.f, 18.f, BladeC);
+	DrawRect(Track, SX, BarY, 120.f * UI, BarT);
 	const float Switch = Combat->GetSwitchProgress();
 	if (Switch >= 0.f)
 	{
-		DrawRect(Accent, SX, BarY, 80.f * UI * Switch, BarT);
+		DrawRect(Accent, SX, BarY, 120.f * UI * Switch, BarT);
 	}
 	else
 	{
-		DrawRect(Accent, bBlade ? SX + 48.f * UI : SX, BarY, 32.f * UI, BarT);
+		DrawRect(Accent, bBlade ? SX + 64.f * UI : SX, BarY, 56.f * UI, BarT);
 	}
 }
 

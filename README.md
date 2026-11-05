@@ -52,6 +52,7 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **信息区（11-01，类似 CS2 右上角，接管原来的击毁通报；设置里「信息区」可关，关了整块不画，告警不受影响）**：右上角一条一行，新的在最上面（旧行平滑往下挪），最多 6 行；击毁留 7 秒（和自己有关的 10 秒），别的 4.5 秒。图标为主、字为辅：
   - 所有人的击毁：「击毁者 [武器图标] 被击毁的」，名字按敌我上色（自己主色；个人死斗别人都是红），武器图标按击毁者的配装画（6 把枪、7 把刀、肩部 11 件各一个，爆炸类按击毁者带的肩部装备算（那件不能打人就写爆炸）；没有击毁者 = 场地）；自己击毁的那行淡底 + 主色细框，自己被击毁的那行淡底 + 红框。
   - 武器图标是**真实模型的剪影**（11-01，用户：「使用武器真正的黑白底图」）：纯白 + 透明底，HUD 按主题色染色，枪口 / 刀尖朝右，高度统一 18（1080p 18 像素、4K 36 像素，贴图高 64 再带 Mip），宽度按贴图比例（手枪 128×64，长枪和刀 256×64），双持手枪画一前一后两把、双刀画交叉两把。肩部 11 件也是剪影（导弹画导弹本身、地雷画雷本身：导弹巢和布雷器的轮廓不好认；地雷是侧面、竖直放大一倍）。爆炸、场地（撞地 / 掉出地图）、杂兵和以后还没有模型的装备是几何小符号（找不到贴图就自动退回）。贴图 `/Game/UI/WeaponIcons/T_WI_*`（在 `DirectoriesToAlwaysCook` 里），源图 `SourceAssets/ui_weapon_icons`。**重新出图**：拿 `Saved/ue_busy.txt` 锁后跑 `tools/make_weapon_icons.sh`（① UE 导出 OBJ → ② `py -3` 把三角形正交投影填白 → ③ UE 导入），模型路径自动读 `MechWeapons.cpp` 和 `MechItemStudio.cpp` 的 `Shoulders[]`，所以换模型 / 补模型后重跑就行，不用改 HUD 代码；摆放不对改 `tools/weapon_icon_table.py` 的 `POSE`（看 `SourceAssets/ui_weapon_icons/_contact.png`），`make_weapon_icons.sh draw` 只重画。检查：`"/Game/Maps/L_City?Match?Team=2" -game -MechNoLobby -MechNoDraft -MechNoIntro -MechPingTest -MechFeedIcons -RenderOffscreen -windowed -ForceRes -ResX=1920 -ResY=1080 -unattended`，每件放一行击毁，每页 6 行截到 `Saved/Screenshots/FeedIcons`。
+  - **底部仪表盘模型图标（11-02）**：当前枪／刀、肩部装备、右侧枪／刀姿态均与击毁播报共用上述 24 张真实模型剪影，按当前配装切换，等比缩放并保留主题明暗、冷却和选中状态；补弹提示向右留位，地雷数量放在肩部冷却条下方。公共绘制 `AMechHUD::WeaponSilhouette`（`MechHudFeed.cpp`），仪表盘调用在 `MechHUD.cpp::DrawDash`。验证：24 组 PNG／贴图资源存在且透明剪影非空，3 档缩放 × 3 种图标框共 216 项比例检查通过；RobotSliceEditor Development 编译通过（17 项构建动作）。试玩检查：三种 HUD 主题下切换枪／刀与肩部装备，确认剪影辨识度、补弹提示和地雷数量不重叠。
   - 队友（不含自己）用了肩部装备：「名字 [图标] EMP」（同一台同一件 8 秒内只记一次）；拿到插件：「名字 [插件六边形]」；标点：「名字 [标点图形] 敌人」（双击换成「危险」时改写那一行）。敌人的技能不显示。
   - 夺芯拿起 / 交芯（所有人）；保卫战第 N 波开始、指挥所挨打（剩多少，12 秒最多一次）。
   - 事件都在服务器产生（`UMechFeedSubsystem`，`MechFeed.h/.cpp`：每帧看每台机体的肩部冷却有没有突然变长 = 刚用了一次，不改技能代码；核心、保卫战也是轮询；击毁接各机体的阵亡事件，最后一下是什么打的在 `AMechCharacter::ReceiveHit` 里记），按「该看的人」用 `UMechCommsComponent::ClientFeed` 发给各玩家；HUD 在 `MechHudFeed.cpp`。原来 GameState 的文字播报（`MulticastFeed`）还在发，只是不再画。
@@ -230,7 +231,7 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
   - **禁用阶段**（11-01）：`MechDraft::IsBannable` 从「射击、近战、战术」改成「射击、近战、肩部」——**肩部整类都能禁了**（导弹、火炮这些以前禁不了，用户：这四件「和其他肩部装备一样」能禁；护盾 11-01 做完也能禁了）。AI 代禁 `AutoBan` 也会禁；AI 代选 `AutoPick` 在肩部上也避开队友已经定下的，不会全带同一件。存档 `[MechSettings] Loadout=` 5 个数（10-31 到 11-01 的 6 个数照样读，多的不读，肩部还是原来选的）；键位去掉 `Key_Tactical`（老 ini 里多的这一行没人读，不会让键位重置）。C 键现在空着（模型查看模式里 C 仍是换框架）。
   - HUD：肩部只有一个图标和冷却（准星下细条左下一层、仪表盘 E 那一格，`MechHUD.cpp`；这四件的图标 `DrawTacticalIcon` 在 `MechTacticalHUD.cpp`，颜色跟 HUD 主题）；就绪但现在用不了（EMP 中、被网住、失衡、带芯）时橙，刚转好图标闪两下；地雷在图标右边几小格 = 场上还有几颗；震荡波蓄力时准星外一圈读条。无人机（设定：肩部装备都是飘在左肩旁的无人机）：四件没有自己的模型，机身借现成的（紧急脱离 = 捕获网发射器、弹射升空 = 烟雾弹发射器、震荡波 = 护盾发生器、地雷 = 钩爪发射器，`AMechCharacter` 构造函数），用的时候 `OnDroneFired` 往后一顿、转向准星；地雷从无人机发射口抛出（落点算法没变）。配装页 / 选配：没有照片（`AMechItemStudio::MeshFor` 超出表返回空，不能夹到 EMP 模型），卡片和大图画 `SMechItemIcon`；参数行的名字和其他肩部装备同一套。AI：`AIThink`（被围挨打 / 装甲低有人贴着 / 有人冲刀过来时脱离或弹射；圈里有人时震荡波；目标 8–15 米扔地雷，挨打后撤时丢身后）；AI 不会躲雷、不会打雷。
   - 测试：`"/Game/Maps/L_Range?Range" -game -MechTacticalTest -RenderOffscreen -ForceRes -ResX=1280 -ResY=720 -windowed -MechHour=13 -MechWeather=Clear`（约 30 秒，8 项，都走按 E 的路：脱离 > 15 米、脱离后能量 0 且过热、肩部冷却和无人机对得上、弹射 > 10 米、震荡波掉装甲且推开 > 3 米、地雷炸木桩、地雷自己人打不掉敌人打得掉、配装五类 / 肩部 11 件 / 能禁 / 按 E；日志 `[tacticaltest]`，截图 `Saved/Screenshots/Tactical`）；自动对战 `"/Game/Maps/L_City?Match?Team=3" -game -MechAutoBattle -MechMode=Elim -MechWinRounds=2 -MechForceShoulder=789a -nullrhi`（代选的肩部按位轮流取，**a = 10**，一位数字放不下；老写法 `-MechForceTactical=0123` 还认；日志 `[tactical]`）；联机预测：房主 `"/Game/Maps/L_Range?Range?listen" -MechNoLobby`，客户端 `127.0.0.1 -MechTacticalTest -MechCorrectionLog`，日志 `[tacticalnet]`（11-01 本机双开 -nullrhi：限 60 帧（`-ExecCmds="t.MaxFPS 60"`）三下都是 0 次纠正；不限帧约 700 帧时每下 8–10 次，第一下差 5–6 米，要限帧才算数）。11-01 并入肩部后跑过：`-MechTacticalTest` 8/8，`-MechPingTest` 单机 14/14，`-UIClickTest` 47/47（禁用轮点肩部页禁地雷），`-MechForceShoulder=789a` 自动对战四件 AI 都用了（紧急脱离 8、弹射 8、地雷 6、震荡波 2），没有报错。
-- **锁定**：画面中心 13° 内最近的敌人自动锁定（锁上后放宽到 24°），步枪按目标速度带提前量。
+- **玩家索敌**。平时在准星周围 13° 内选敌，24° 内可保留目标。按住瞄准或攻击时，从当前画面内可见、在射程内的敌机中选择最靠近准星的一台。机身按自身转速朝敌机转动，可继续横移和微调准星。当前目标进入画面外侧时，镜头按偏出的方向平滑补转。动鼠标或右摇杆会接管镜头 0.30 秒，持续输入会延长接管。在两敌交叉时保留原锁；主动把准星移到另一台敌机，同时已明显偏离原目标时切换。烟幕、实体遮挡与 EMP 会阻断索敌，导弹仍按原锁定角度积累进度。
 - **打击感**：
   - 射击：曳光弹、枪口焰和枪口闪光、镜头每发上抬一点再回位；子弹打中机体时火花、金属声、打中点闪一下暖色点光（直击更亮）。
   - **枪口焰的「光线」（10-30，玩家：「子弹光线拉出来……只在竞技场出现」）**：枪口焰 `Ex_03_Muzzle`（AAAVFX 课程 4，命中扫描枪）里有一条「动态光束」发射器，终点是用户参数 `Target`（世界坐标），课程里由开枪代码设成命中点。我们以前没设，默认 (0,0,0)：**每开一枪都从枪口拉一条细光线到世界原点**。测试场出生点就在原点，这条线就在机体脚边、跟着走位晃；别的地图原点远在场地外，线又长又细，多半不在画面里——所以「只在竞技场出现」。和曳光的运动模糊（10-29 修过的那个）无关：`-MechTracerTest` 里关掉动态模糊 / TSR / Lumen / 曳光本身线都还在，只有关掉粒子才没了。现在 `UMechCombatComponent` 里开枪、充能步枪光束、导弹出膛都走 `SpawnMuzzleFX`：先不激活，把 `Target` 设在枪口前 1 厘米再激活（光束缩成看不见的一点，火光火花照旧）。**别的地方用 `Ex_03_Muzzle` 也要这样设**（肩部无人机发射 `UMechShoulderComponent::LaunchFX` 那份没改，交给肩部那边）。对比：`-MechTracerTest -MechTracerOld`。
@@ -491,8 +492,21 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 
 ## 武器模型
 
-- 步枪：`Inbox/9776 Blender次世代科幻3D模型.zip` 的 GUN 套（12 把长枪，另有 COLT 套 10 把手枪）里的 **3 号**无托步枪 → `/Game/Weapons/Meshes/SM_Gun3`，原包是白色，底色压成冷灰（`BaseTint` 0.42/0.46/0.5）。
-- 刀：`Inbox/NO454-20把科幻剑游戏武器3D模型素材` 的 **fbx 07**（就是预览图 14：圆形格栅护手、螺纹握把、带钩刀尖）→ `SM_Sword07`。**注意：这个包的 fbx 编号和预览图编号对不上**，挑之前先渲一遍所有 fbx 对照。刀身凹槽的自发光贴图当遮罩，颜色跟队伍（蓝队青、红队红）。
+- **原模型科幻改造版（11-02，已接入）**：6 把手持枪械、7 把近战全部改用 `/Game/Weapons/Refits/Meshes/SM_RF_*`。保留成熟底模的握把、机芯、主要刃口与原贴图，新做贴合结构的外壳、护罩、导轨与镂空；不改伤害、射速、握持坐标或枪口坐标。前四轮独立建模候选保留作历史文件，本轮不使用。`MechWeapons.cpp` 仅换 13 处模型路径；`MechCharacter.cpp` 默认模型同样更新；`MechCombatComponent.cpp` 飞出的匕首从武器表取新模型。肩部装备不在本轮改造范围。
+  - **机体配色联动**：武器的主装甲、副色结构、强调条分别使用 `MI_Robot_Paint / MI_Robot_PaintDark / MI_Robot_Accent`。`AMechCharacter::ApplyPaint` 遍历机体上的网格组件，左右手、双持副手和飞刀实例一起刷三色；钢件和橡胶保留各自材质；武器灯条、镜头、原发光遮罩与刀刃热光统一跟随点缀色，机体识别灯保持队伍色。换装先清旧材质覆盖，再刷当前涂装，修复同框架只换武器时颜色不更新的问题。`MechItemStudio` 转台、详情图和缩略图在配色变化后刷新缓存。
+  - **武器光效与点缀色（11-02）**：用户确认第三栏「点缀色」同时控制刀光与武器发光部位。`MechWeaponGlow.h` 统一左右手与飞刀的灯条、镜头、原贴图发光遮罩；`MechMeleeFx.cpp` 的刀光主体、亮芯、深色尾部、刀尖火花、重斩残影与刀刃热光共用该色相。连斩、重斩、弹反仍通过亮度、宽度、火花数量表达强弱，不再强制变橙/金；双刀左手仅略暗，不再偏红。钝器保留原气压拖影形状与不烧热刃口的设定。普通/强力飞刀尾迹和枪口闪光补光也跟随点缀色，强力飞刀保持更高亮度。黑色关闭发光，其他刀光按色相归一以维持可读性。
+    - 武器新增近距离彩色补光：每个持械网格一个点光源，半径 140 厘米、14 cd，无阴影、间接光和体积散射；只点亮当前手持姿态，超过镜头 14 米、收起、死亡、角色隐藏、该武器不可见或选黑色时关闭。灯条/镜头发光强度 16，原贴图遮罩强度 8；配装棚里的材质发光和缓存同步更新，涂装栏注明「点缀（兼武器光色）」。机体/肩部的敌我识别灯沿用队伍色。
+    - 修复了上一轮原贴图材质副本仅复制、未保存的问题：`RF_Original` 在重启后为空会丢机芯/刀刃纹理，也无法换发光色。`tools/ue_repair_refit_original_materials.py` 备份后保存 13 份材质并修复网格引用；`ue_import_weapon_refits.py` 同步补上显式保存，后续重导不会再丢。最终自动检查在全新游戏进程中读取这些资产。
+    - 验证：编辑器编译通过；`-MechWeaponPaintTest -nullrhi` 扩展为 4 组配色（含紫色与黑色）、56 次换装，检查 13 把武器及副手/飞刀的发光槽、固定金属材质、4 个补光源、左右刀光与两种飞刀尾迹，共 **3516 项通过、0 失败**。结果仍为 `Saved/Automation/WeaponPaint.json`。未做本轮 GPU 画面或帧率测试，未打包；试玩时重点看白天/夜晚的灯条亮度、近墙彩色补光、双刀/飞刀，以及换点缀色后的配装预览。
+  - **大剑 / 化境追加细化**：大剑护根从三个方孔的平盒改成渐收的折面壳，长窗露出导能柱，刀背导轨自然收尖；根据用户近景反馈，删除护手上下两片竖向叶片及外翻端帽，改成握柄锁固环与短厚护手。化境围绕原圆形谐振护手缩紧轮廓，加入金属压圈与分层刀脊。握柄和主要刃口原网格保留。
+  - **资源与重建**：`SourceAssets/weapon_refits/` 包含 13 套可编辑 `.blend`、运行时 `.blend`、FBX、逐把检查 JSON 和原生模型渲染。`tools/weapon_refit_common.py` 生成步枪及三色样例，`tools/build_weapon_refits.py` 生成其余 12 把（末尾 `-- Katana GreatSword` 可单独重建两把）；Blender 使用 `-b --factory-startup --python-exit-code 1 -P`。`tools/ue_import_weapon_refits.py` 独立导入并检查尺寸及三色槽，覆盖前自动备份工程资源。保留部件的几何与 UV 在导出前逐件校验；运行时统一有效 UV 为一个通道，移除旧模型的重复通道，原可编辑文件仍保留完整数据。`tools/normalize_refit_runtime_uv.py` 可整理已有导出，不重建造型。
+  - **减面与图标**：新模型原始数据合计 1,165,598 三角；Nanite 保留比例按长枪每把约 25,000、手枪 / 刀每把约 12,000 设置，合计目标约 221,000（这是设置目标，非实际 GPU 面数或帧率实测）。旧资源未删除。击毁播报剪影从新模型重新导出、绘制、导入；`weapon_icon_table.py` 已支持新的嵌套资产路径。
+  - **验证**：编辑器 Development 编译通过；13 个模型的导入尺寸、三路材质槽检查通过，运行时有效 UV 通道全部为 1。`-MechWeaponPaintTest -nullrhi` 在 `/Game/Maps/L_Range?Range` 下自动运行三组配色、42 次换装，左右手与飞刀模型 / 颜色 / 固定材质共 **1734 项检查通过、0 失败**；结果 `Saved/Automation/WeaponPaint.json`。未重新打包，现有打包 EXE 不包含本轮更新。联机显示、实际握持画面与战斗手感仍由用户试玩确认。
+  - **预览**：`docs/新版枪械_六把总览.jpg`、`docs/新版近战_七把总览.jpg`、`docs/武器跟随机体配色_三组示例.jpg`、`docs/大剑与化境_细化版_20261102.jpg`（均为模型棚拍，不是游戏截图）。
+  - **剩余导入提示**：重复 UV 超限问题已修复。步枪与最终大剑导入仍有少量近零切线 / 副法线提示；尚未做游戏内近距离光照的视觉确认，不能据此宣称无着色瑕疵。
+  - **给用户的检查项**：配装页切换深浅两套机体配色，查看武器缩略图与转台是否同步；依次装备 13 把武器，重点看大剑 / 化境挥砍时的护手及刀背、双持副手、投出的匕首；联机检查对方涂装和敌我识别光。
+- 原底模来源（步枪）：`Inbox/9776 Blender次世代科幻3D模型.zip` 的 GUN 套（12 把长枪，另有 COLT 套 10 把手枪）里的 **3 号**无托步枪 → `/Game/Weapons/Meshes/SM_Gun3`，原包是白色，底色压成冷灰（`BaseTint` 0.42/0.46/0.5）。
+- 原底模来源（化境）：`Inbox/NO454-20把科幻剑游戏武器3D模型素材` 的 **fbx 07**（就是预览图 14：圆形格栅护手、螺纹握把、带钩刀尖）→ `SM_Sword07`。**注意：这个包的 fbx 编号和预览图编号对不上**，挑之前先渲一遍所有 fbx 对照。刀身凹槽的自发光贴图当遮罩，颜色跟队伍（蓝队青、红队红）。
 - 流程：`lookdev/weapon_normalize.py`（Blender，摆成原点在握把中心、刀身 / 枪管沿 +X、刃口 / 枪底朝 -Z，按握把到刀尖 / 枪口的长度缩放；刀 1.15 米、枪口 0.75 米，人形尺寸，游戏里再放大 1.35 倍）→ `tools/ue_import_weapon.py <名字> <fbx> <贴图目录> [底色] [自发光强度]`（贴图最大 2048、母材质 `M_WeaponPBR`、开 Nanite）。命令行参数按空格分，贴图路径有空格就先拷到 `SourceAssets/` 下。
 - 代码里的关键点：`RifleMuzzle`（枪口）、`BladeTrailAt`（刀光挂点）在 `MechCombatComponent.cpp`，`RifleGrip` / `BladeGrip`（握持偏移；10-31 起枪改按握把算 `GripPropOffset`，`RifleGrip` 只在 `-MechOldGrip` 时用，见「握持」）、`BladeHoldPitch`（剑比前臂往上翘 45 度）在 `MechCharacter.cpp`。武器组件不进距离场和 Lumen（每帧都在动，进了的话游戏 / 渲染线程各多 5 毫秒以上）。
 - 检查：`-MechAnimTest -MechAnimFrom=11` 只拍武器那几段（持械右前、持械左前、挥刀、从右肩后看开火）。
@@ -827,6 +841,69 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 - **开场运镜**：`Content/Intro/MechIntro.txt` 的 `map city` 段换成了这张图自己的三镜（西南上空推向路口 → 贴着大道低飞对准转播塔赔率屏 → 东北上方俯看工地框架楼和天桥）+ 两段自动队伍镜头，`tools/run_intro_test.sh city` 看过。
 - **测试结果**（10-31，编辑器版 -game 离屏，3v3 全 AI，slomo 2）：死斗 150–200 秒打出 20 次左右击毁，12 个重生点都用到、重生离最近敌人 76–124 米；团队淘汰一局 73 秒分出胜负；四次对战（死斗 3 次、团队淘汰 1 次）没有出界或掉出地图，前三次没有机体卡住（最后一次 90 秒的短局里有一台 6 次采样 4 次几乎不动，可能是阵亡等重生，没细查），AI 大多在大道和中间两个街区（AI 本身离场地中心高 12 米以上就往回走，很少上屋顶 / 高架）。小地图底图 241×207 米、2048² 、高度校验 0 厘米。帧率（`-MechInputTest -MechPerf`，1600×900）：平均 103 帧/秒，最慢 1% 的帧 15 毫秒，没有超过 50 毫秒的帧（街道图同条件约 80 帧）。贴图预算（`ue_texture_budget.py report`）：132 张、满分辨率约 306 MiB，池子 700 MiB 以内（褐石底色图 2048×1493 仍按未压缩算 15.5 MiB，法线 / ARM 已拉成 2 的幂压缩了）。成图和小地图、开场截图存了一份在 `docs/地图/K059_截图/`。
 - **还没做**：用户没试玩过（屋顶高度、绕后路线、出生点距离都按图纸定的）；AI 不会专门走天桥 / 高架 / 屋顶绕后；街边小品组的朝向是按原包规律摆的，没逐个检查；世界观牌子只有 4 种 6 块，转播机位等没做；没打包验证。
+
+### 梦核旷野 · 免费资源拼装版（11-03，当前方向）
+
+用户否决了前两版自行生成的墙体、草地，明确要求「不要自己建模，找免费资源下载拼接」。后续环境美术按此执行；下面的「原创替换」段落只留作历史记录，不能再作为当前画面验收结论。
+
+- **实际使用来源**：Poly Haven 的 [Grass Medium 01](https://polyhaven.com/a/grass_medium_01)、[Grass Ground](https://polyhaven.com/a/grass_ground)、[Concrete Wall 006](https://polyhaven.com/a/concrete_wall_006)、[Kloppenheim 06 Pure Sky](https://polyhaven.com/a/kloppenheim_06_puresky)，均为 CC0；loafbrr 的 [Brutalist themed buildings](https://loafbrr.itch.io/brutalist-themed-buildings) 也明确使用 CC0。原下载文件、官方 API 元数据、MD5 和来源记录在 `SourceAssets/dreamfield_free/`，没有使用效果图充当模型。
+- **拼装方式**：早期试用的 6 种 Medium 草丛过高且成团，已改试 Poly Haven [Grass Bermuda 01](https://polyhaven.com/a/grass_bermuda_01)：只复制、散布并合批作者现有草株成 2 种小草坪，保留叶片和 UV，调整到低草高度；巨墙使用建筑包现成墙片、窄缝墙片、柱体与平台边缘拼接。先试过整栋建筑叠放，因像堆楼已弃用。Blender 脚本只做现成对象归零、合并和格式转换，没有新建几何。沿用项目地形及平台、坡道、电梯和碰撞；天空改为 8K 实拍 HDR，不再显示程序云。墙体采用下载的粗糙混凝土材质。
+- **资源与脚本**：UE 新资源位于 `/Game/Env/DreamfieldFree`；下载 `tools/download_dreamfield_free_assets.py`，模型整理 `tools/prepare_dreamfield_free_assets.py`，导入与拼装 `tools/ue_dreamfield_free_assets.py`。默认只保存试拼关卡 `/Game/Maps/L_Dreamfield_FreeStudy`，试拼资源独立在 `/Game/Env/DreamfieldFreeStudy`，材质也与开发图隔离；设置环境变量 `DF_FREE_FULL=1` 才覆盖开发图 `/Game/Maps/L_Dreamfield`。覆盖前自动备份地图和新资源目录到 `Saved/Backup/DreamfieldFree_<时间>/`。
+- **材质注意**：使用官方提供的 JPG 版本颜色、法线、粗糙度和遮罩贴图，避免本轮 PNG 颜色贴图发白；草的世界空间法线偏向上方，保留遮罩、轻风与距离淡出。不要通过批量自造草片来替代下载模型。
+- **工业墙独立试拼（11-03，未替换开发图）**：`L_Dreamfield_WallStudy` 和 `/Game/Env/DreamfieldIndustrialStudy` 复用 Quaternius CC0 大型结构柱、loafbrr CC0 墙片及平台边缘、Poly Haven CC0 工业管线／风管／检修平台，形成深挑檐、后退墙面与局部管线井。脚本 `tools/ue_probe_dreamwall_existing.py` 读取现有资源，`tools/ue_build_dreamwall_industrial.py` 默认只写试拼图；4,681 个实例、9 组 HISM，14 个玩法对象位置不变。`tools/ue_dreamwall_industrial_material.py` 可备份后单独更新混凝土，错开贴图方向与尺度、减弱法线和底色反差；本轮材质执行 0 错误／0 警告，实拍日志无材质编译失败或缺少用法标记。记录见 `DreamwallIndustrialStudy.json`、`DreamwallMaterial.json`，截图 `docs/梦核旷野_工业墙试拼未定稿_20261103.png`。画面有更深体量，但墙面仍重复、柱体衔接生硬，因此未推广到 `L_Dreamfield`，未将位置校验当成通行验收。当前开发图、草地和其他地图均未被这次试拼覆盖。只有明确准备推广时才使用 `DF_WALL_FULL=1`，此前须改善外观并补通行检查。
+- **低草修正**：整图现有 611,564 个小草坪实例，每片散布并合批 144 株作者现成 Bermuda 草；沿坡面旋转、小幅交叠，减少高草团和块状露地。草叶使用偏向上方的世界空间法线接光；距离 40–95 米淡出。11-03 后续将草叶和地表接到同一套世界坐标草地底色，压低叶片图集反差，并补偿透光着色的偏黄；以引擎 DitherTemporalAA 函数做遮罩淡出，减少叶片随距离被硬裁成点。材质单独更新用 `tools/ue_dreamfield_free_grass_material.py`（须设 `DF_FREE_FULL=1`），同步备份、更新草叶和地表两种材质，不重建实例或保存地图。当前保留用户中档画质；最新截图 `docs/梦核旷野_草地远近衔接_20261103.png`，上一步留存 `docs/梦核旷野_低草资源拼装_20261103.png`。固定视角下远近色差收敛，近景仍偏碎、整体偏灰，不能作为自然度及梦核氛围的最终验收版本。
+- **当前草地材质（11-03 后续，已写开发图）**：上面的低草配色作为历史步骤保留。`tools/ue_dreamfield_lawn_study.py` 保留 611,564 个作者草坪实例、原地形及碰撞，仅替换两组草叶组件和两组地表组件的材质。叶片改用 Default Lit、直接朝上的世界空间法线；地面和草叶共用低反差绿色底色及现成照片细节。38–76 米逐渐向地面沉降 28 厘米，95 米剔除，取消透明抖动淡出；地面法线强度降至 0.12。对照诊断中关闭环境遮蔽没有消除黑斑，而去掉草叶世界法线上的 TwoSidedSign 后黑斑大幅消退；最终保留原环境遮蔽设置。默认试拼图 `L_Dreamfield_LawnStudy`／资源 `DreamfieldLawnStudy`，`DF_LAWN_FULL=1` 写开发图并使用独立 `DreamfieldLawn` 资源。覆盖前完整备份到 `Saved/Backup/DreamfieldLawn_时间/`；当前实际绑定 `M_LawnBlades`、`M_LawnGround`，重跑旧全图构建后须重跑此材质脚本。最新画面 `docs/梦核旷野_草地接光修正_20261103.png`。远近色块和碎屑感减轻；草坪仍偏均匀，不能据此宣布整个梦核地图完成。
+- **检查入口**：整图拼装报告 `Saved/Automation/DreamfieldFree.json`，草地更新报告 `DreamfieldLawn.json`，试拼报告 `DreamfieldFreeStudy.json`／`DreamfieldLawnStudy.json`；重新加载检查 `tools/ue_verify_dreamfield_free.py` → `Saved/Automation/DreamfieldFreeVerify.json`。检查出生点、平台、坡道、电梯及边界位置，当前草地材质绑定与编译、原图备份哈希，以及其他 8 张原开发地图哈希。地面关闭 Nanite，避免降级网格偏移导致草被地面吞没。
+- **现成行星（11-03，已加入开发图）**：使用 [NASA VTAD 的 Jupiter 3D Model](https://science.nasa.gov/resource/jupiter-3d-model/)，原始 GLB 11,479,456 字节，作者网格 3,072 三角面；`SourceAssets/dreamfield_free/nasa_jupiter/` 保留原包、SHA-256、原始贴图及来源。遵循 [NASA 媒体使用规范](https://www.nasa.gov/nasa-brand-center/images-and-media/)，记载 NASA Visualization Technology Applications and Development (VTAD) 来源，不暗示 NASA 背书，也不把它标成 CC0。`prepare_dreamfield_planet.py` 仅将作者几何导出为 FBX、提取原 PNG；`ue_dreamfield_planet.py` 保留网格与 UV，材质调整为淡玫瑰色、球面光照和 0.72 透明度。行星中心距场地原点 18 千米、半径 3.8 千米，位于巨墙后上方；没有碰撞和投影。默认 `L_Dreamfield_PlanetStudy`／`DreamfieldPlanetStudy` 隔离试拼，设 `DF_PLANET_FULL=1` 才备份后写入 `L_Dreamfield`／`DreamfieldPlanet`。实际资产为 `AuthorMesh/SM_JupiterAuthor`，关闭 Nanite，从原始 3,072 面渲染；GLB 默认导入的 256 面回退网格曾产生轮廓缺口，现已弃用。`DreamfieldPlanet.json` 记录保存结果，免费版总校验读回面数、材质、位置、无碰撞无阴影及原图哈希。FBX 有缺少平滑组提示，仍使用作者法线和切线。行星加入时的实拍为 `docs/梦核旷野_现成行星恢复_20261103.png`；其中墙体为历史过渡版，当前墙见下条。
+- **当前巨墙（11-03，已替换开发图）**：`ue_build_dreamwall_bastion.py` 使用 Quaternius CC0 成套墙板、闭合空心柱和平台顶板，后部用 loafbrr CC0 墙片封闭；只缩放和拼装作者模型，没有新建几何。91 跨、200 米高，柱体前凸、墙板后退，替代原细格线墙；5 组 HISM 共 3,094 个实例。保留三扇封锁门，柱脚避让门楼，平台、坡道、两部电梯及 14 个功能对象不动。混凝土沿用 Poly Haven `concrete_wall_006`，资源隔离在 `/Game/Env/DreamfieldBastion`。默认 `L_Dreamfield_BastionStudy` 试拼；`DF_BASTION_FULL=1` 备份后写 `L_Dreamfield`，报告 `DreamwallBastion.json`。总校验现在同时检查新墙实例、网格及材质目录。`ue_dreamwall_access_runtime.py` 在游戏物理场景验证地面、平台与两侧坡道胶囊通行、墙面和封锁门碰撞。实际 `L_Dreamfield` 通行检查共 60 项（29 处地面、20 段通道、9 处墙面和 2 扇封锁门），0 失败；读回的 15 种材质编译通过。当前图 `docs/梦核旷野_现成厚墙与草地_20261103.png`。当前墙有完整体量，但连续立柱仍有重复感；实拍保留用户画质，暗部存在颗粒感，不视为用户已认可美术效果。
+- Chuck_CG Industrial Kitbash 仅留作备选。墙顶七座设施已撤回，当前开发图使用加入设施前的巨墙版本。
+- **验收范围**：免费资源拼装版仍需用户看实际美术效果；不把「导入成功」「检查通过」写成视觉质量已经认可。试玩看草地近远过渡、墙脚封锁门、两条坡道、两部电梯及对战帧率。
+
+### 蓝穹月球基地／千禧老街 · 开发现成资源版（11-03）
+
+新增 `/Game/Maps/L_MoonDome` 与 `/Game/Maps/L_MillenniumStreet`，菜单追加到原 9 张地图之后，原月球与老街文件保持不变。月球的上一版自行生成建筑已移出新关卡，现以 `/Game/Env/MoonFree` 的 Quaternius 现成模块拼装；蓝穹保留既有功能网格，地板和地环从旧组合模型分离保留，发射器与掩体已换成现成模块。千禧老街也已完成现成资源拼装，见下文；两图均为开发可玩版本，美术效果仍需用户实际观看。
+
+- 月球沿用月面、岩石、出生点和 `-327 cm/s²` 重力。蓝穹带 `MoonAir` 和 `MoonShield` 标记，保留场景中真实查询碰撞：子弹射线和投射物扫掠被挡，机器人胶囊可穿过。`MechVacuum.cpp` 增加新图名，让穹外接入真空声音效果。
+- 千禧老街保留 `OldStreetBounds`、100 米循环周期、50 米接缝、出生点和老街彩蛋，并在 `MechGameMode.cpp` 与 `MechEaster.cpp` 加入新图名。沿街旧程序楼体和设施现已替换为 Poly Haven 模块拼装，原街道地面继续使用。
+- **11-03 现成资源优先**：用户明确要求老街也尽量使用现有资源。已核对本机 Poly Haven 的公寓立面、卷帘门、空调外机、电杆、电缆、落水管、配电箱、街灯和井盖共 9 套／319 个已导入网格，glTF 引用的贴图及二进制文件缺失数为 0，官方许可为 CC0。筛选记录：`SourceAssets/millennium_street_existing/resource_selection.json`。建筑需筛除过于欧式的细节，保留千禧年中国旧街定位；原有来源未确认的老街包仅留在开发版作参照。该盘点已用于下述第一轮实际替换；其中模块电缆包暂未使用，跨街线复用工程已有电缆成品。
+- `MechMaps.cpp` 菜单共 11 项，`Config/DefaultGame.ini` 已追加新图；没有打包。`tools/ue_build_original_developer_maps.py` 是历史底版生成脚本，后续不要再自行生成建筑几何。
+- 编译 `RobotSliceEditor Win64 Development` 通过。`-MechOriginalMapTest` 的 NullRHI 最小检查已运行：`Saved/Automation/MoonDomeRuntime.json` 为 **33 项／0 失败**，`MillenniumStreetRuntime.json` 为 **13 项／0 失败**。覆盖穹内外空气、双向子弹阻挡、机器人穿穹、循环距离及接缝地面。回调用真实时间计时，避免 NullRHI 极短帧时长造成测试长期不执行。
+- 试玩仍需看穹内外声音、实际走动和联机表现；数字检查不代表美术或手感验收。
+
+#### 蓝穹月球基地 · 现成科幻模块拼装（11-03，通道与设备轮）
+
+- **来源**：Quaternius [Modular Sci-Fi MegaKit Standard](https://opengameart.org/content/modular-sci-fi-megakit)，作者页面与包内 `License_Standard.txt` 注明 CC0 1.0。标准版 190 个模型，已导入 36 个墙、门框、平台、柱体和设备模块，保留原几何与 UV；原包、SHA-256 和来源见 `SourceAssets/moon_free/quaternius_scifi/provenance.json`。另外从既有功能模型分离地板及地环两件，只删去旧设备部件，没有新建几何。
+- **实际关卡**：`L_MoonDome`，原 `L_Moon` 文件 SHA-256 不变。75 个房体（含屋顶控制室），23 组实例组件、4,925 个现成部件实例。四向通道接到中央蓝穹，东西两侧另接外部机库，共 6 段、362 米、8 米宽；92 块下载平台沿原月面摆放，最大坡度 10%。偶数格房间采用居中宽门，避免道路中心撞柱。屋面和墙采用匹配圆角，保留原月面、岩石与出生点。
+- **穹内与地环**：4 组旧方块掩体替换为作者货箱、工具箱和控制台；8 个膜外发射器换成结构柱和灯条，四向入口留空。功能地板上移 6 厘米，消除与月面重合产生的闪烁；地环只显示，不再挡机器人。门框下沿埋入地板并补偿顶部高度，修复通道入口的胶囊擦碰。蓝穹膜的位置、标签、网格及碰撞配置保持不变。
+- **材质隔离**：`/Game/Env/MoonFree` 使用原 PBR 贴图、灰白外壳和蓝色设备光；金属度为原值 15%、粗糙度下限 0.62，ORM 采样为 Masks。保留地板、地环的 4 种材质另复制到本图目录并打开 Nanite／实例化标记，避免回退为默认灰材质；不修改共享原材质。`ue_moon_retained_materials.py` 可单独更新这些副本。最终实拍日志的材质编译失败与缺失 usage 标记均为 0。
+- **验证范围**：`MoonFreeScene.json` 核实 24 个玩法标记、蓝穹配置与 `-327 cm/s²` 重力不变。`MoonWalkwaysVerify.json` 在实际游戏物理场景执行 92 处地面射线、104 次机器人尺寸胶囊扫掠，覆盖通道与入口，失败为 0；蓝穹在此项通道查询中被显式忽略，由独立的 `MoonDomeRuntime.json` 33 项／0 失败验证空气边界、四方向双向射线及投射物阻挡、机器人穿膜。真空子系统继续缩短环境 3D 音效范围并低通，2D 提示音保持；数字检查不代表声音听感或联机手感验收。本轮未改 C++、未打包。
+- **制作与检查入口**：`prepare_moon_retained_floor.py` 分离旧功能地面，`ue_moon_free_import.py` 导入，`plan_moon_walkways.py` 采样原月面生成摆放数据，`ue_build_moon_free.py` 备份后写新图。`ue_moon_walkways_runtime.py` 在 `-game -nullrhi` 中等待物理注册后调用 `ue_verify_moon_walkways.py`；不要在编辑器命令行直接做通道碰撞结论，那里没有完整 HISM 物理场景。备份位于 `Saved/Backup/MoonFreeScene_时间/`、`MoonFreeImport_时间/` 和 `MoonRetainedMaterials_时间/`。作者 FBX 缺少平滑组信息产生警告，仍使用所带法线和切线。
+- **当前画面**：`docs/蓝穹月球基地_通道与设备_20261103.png`、`docs/蓝穹月球基地_穹内设备近景_20261103.png`，原第一轮图片仍保留。截图保持用户画质并恢复配置。建筑、通道和穹内设备已形成可玩布局；试玩可沿通道进出建筑、跨膜射击并比较穹内外声音，检查对战时的遮挡与手感。梦核地图的现成模块巨墙也已落入开发图；三图均保留原地图与覆盖前备份。
+
+
+#### 千禧老街 · 现成资源拼装（11-03，生活细节轮）
+
+- **关卡与来源**：`L_MillenniumStreet`；原 `L_OldStreet` 文件 SHA-256 不变。使用 Poly Haven 的公寓立面、卷帘门、空调、电杆、落水管、配电箱、路灯、井盖、罩车衣汽车、旧轮胎，以及新下载的塑料椅、木板凳、矮桌、周转箱和盆栽，共 15 套现成模型。全部为 CC0，来源及文件哈希见 `SourceAssets/millennium_street_existing/resource_selection.json`；5 套新下载的官方元数据、全部 glTF 依赖和 MD5 在同目录 `life/manifest.json`。保留作者几何、UV，只做组合与摆放。跨街线复用 `Env/Cables`，自拟中文店招及原街道路面几何沿用。
+- **布局与生活细节**：每周期 8 栋沿街建筑、4 栋后排住宅，11 个周期共 132 栋；98 组 HISM、30,976 个作者部件实例。近 3 个周期保留建筑与车辆碰撞，远 8 个周期只显示。门脸混排卷帘、平直门窗组合和升起卷帘；面馆门前放桌凳，副食/五金店放周转箱，理发店等放盆栽、塑料椅。每周期两辆罩车衣汽车停靠街边，车身距街道中心最近 4.908 米，中央约 9.8 米宽；小物件无碰撞，未增加隐形障碍。原程序楼、树和设施已移出新图。
+- **材质隔离**：网格与材质复制到 `/Game/Env/MillenniumStreetExisting`，增加 Nanite／实例化支持，不写回共享 Poly Haven 资源或引擎材质。街道使用独立 `M_StreetAsphalt`，沿用已有沥青贴图，取消继承水洼分支，已在实际画面中消除第一轮的大片异常反光；人行道继续用独立干燥材质。店招 UV 正反方向已修正。
+- **入口与备份**：`tools/download_street_life_assets.py` 下载；`tools/ue_import_street_life.py` 导入；`tools/ue_probe_street_existing.py` 只读测量；`tools/ue_build_street_existing.py` 备份后重建。覆盖前备份在 `Saved/Backup/StreetExisting_时间/`、`StreetLifeImport_时间/`。本轮未修改 C++，未打包。
+- **验证**：`StreetExistingBuild.json` 记录 18 个玩法标记、100 米周期与原老街文件不变。`tools/ue_verify_street_life.py` 读回地图，`StreetLifeVerify.json` 核实 30,976 个实例、2,848 种布置签名按 11 周期一致重复、99 盆植物的三个部件对齐、两组道路正确绑定新材质。`MillenniumStreetRuntime.json` 本轮为 13 项／0 失败，覆盖双向循环、跨缝距离和接缝地面。实拍日志没有材质编译失败或缺少实例化标记；构建有一项既有 Subobject API 弃用警告。
+- **实拍与验收边界**：最新 `docs/千禧老街_现成资源生活细节_20261103.png`，原图 `Saved/Screenshots/StreetExisting/life_final/street_eye.png`；第一轮图片保留。保持用户现有画质，退出恢复设置。店铺、道具和后排空间已补上；立面重复感、门窗是否符合用户心目中的千禧中国街景，仍需结合实际观看判断。试玩检查两向穿越循环接缝、街边车辆掩体及彩蛋门；不能以数字检查替代整体美术或联机手感验收。
+
+
+### 梦核旷野 · 开发版原创替换（11-03，已弃用的历史方案）
+
+继续在开发版本的 `/Game/Maps/L_Dreamfield` 上迭代，房间仍保留原来的九张地图；其他八张地图未修改，也未创建发布工程或打包。旧梦核地图完整留档于 `Saved/Backup/DreamfieldOriginal_20261102/L_Dreamfield.umap`，九张地图的原始 SHA-256 在同目录 `developer_maps.json`。
+
+- **巨构墙**：重新程序建模的四种 60 米墙段，共 90 段，沿墙 5.4 公里、高 200 米；保留悬垂立柱、深凹槽、分段装甲、散热格栅及厚顶檐的构型，使用真实厚度、倒角和加权法线。每种源网格约 3.36 万三角形，Nanite + HISM 实例化。平台新做 29 根支撑。未读取旧墙网格或面板纹理。
+- **天空／行星**：复用本机校园工程 `PlanetaryEngine/xiuzhou-campus/ue5` 的 `AdvancedLightingSystem / LightingEnvironmentRig` 和 `nature_sky.hlsl` 的视线、解析圆盘方法；做静态梦核配色，使用原生大气、粉蓝天空、缓慢漂移的程序云和淡玫瑰色程序行星，不再引用旧 HDR、行星贴图和云模型。未启用全局天气 Director，避免切地图时战斗天气参数覆盖这张图的配色。
+- **旷野**：移除旧草花包和 Kikuyu 草坪贴图引用，换成三种原创细弯草叶（每种 140 三角形）、原创白花与程序草色。67,226 组短草、326 组白花，按宽缓色带与疏密区域分布；近草 48–85 米剔除并在末段缩回地面，轻微风摆，白花稀疏聚集。重新导出原创地形，复用 `dreamfield_terrain.py` 的高度函数，让已有坡道、电梯入口和战斗地形保持对齐。
+- **玩法结构**：14 个关键 Actor 的位置保持一致，包含出生点、平台、两条坡道、两部电梯及边界；封锁门保留，墙／平台／井架换成无贴图的原创程序材质。旧目录仅剩项目自己生成的警示条和红／琥珀状态灯材质被引用。
+- **文件与重建**：源模型 `SourceAssets/dreamfield_original/DreamfieldOriginal.blend`；来源记录 `provenance.json`；Blender 脚本 `tools/build_dreamfield_original.py`；UE 导入与场景替换 `tools/ue_dreamfield_original.py`；材质 `tools/shaders/dreamfield_original_surface.hlsl`、`dreamfield_original_sky.hlsl`；资源独立放在 `/Game/Env/DreamfieldOriginal`。重跑前先备份当前地图与这个新资源目录，照协作规则拿 UE 锁，只保存 `/Game` 资源。
+- **检查**：`Saved/Automation/DreamfieldOriginal.json` 记录导入和关键位置检查；`DreamfieldOriginalVerify.json` 从新进程重新加载地图，检查实例、天空载体、电梯和资源依赖。旧墙／天空／行星／植被视觉资源的依赖为 0；原图备份哈希正确，其他 8 张地图哈希未变。没有改 C++。
+- **给用户的试玩检查**：房间选「梦核旷野」，先在平台上看草坡和地平线，再下到草地看草叶尺度、墙的阴影和星球位置；走两条坡道、乘两部电梯。实际画面、梦核氛围和运行帧率尚待试玩验收，本轮未跑大量画面测试。
+
+以下保留旧版制作记录，旧资源仍留在开发工程中供对照。
 
 ### 梦核旷野 · 巨构墙（L_Dreamfield，10-31）
 
@@ -1231,7 +1308,7 @@ UE 5.8.2 C++ 工程。高机动机体战斗，单人为主、另有 2v2 / 3v3 �
 
 - **老街**：隐形墙收到主街 ±7.6 米（`tools/ue_oldstreet_walls.py`、`oldstreet_layout.py` 的 `ARENA_HALF_Y`）；过接缝「顿一下」是弹簧臂镜头延迟在瞬移那帧被拉回 → `UMechSpringArm::ShiftLag`（`MechSpringArm.h`，构造里 `SetDefaultSubobjectClass` 换掉 CameraBoom），移动组件检测到循环瞬移时把延迟的历史位置一起平移；马路上随视角闪的黑影是树叶风动（WPO）让虚拟阴影页反复失效 → 风调小、2500 厘米外关 WPO（`tools/oldstreet_wind.json` + `ue_oldstreet_wind.py`，还闪就把 `shadow_static` 改 true 重跑）；调色第三轮 `tools/oldstreet_look.json`（去暖黄，白平衡 7200）。
 - **威胁框**：`MechHudAlerts.cpp` 只给「屏幕上、前方、最近的那个非导弹威胁」画菱形（`FrontNearest`），不再每个敌人都画。
-- **近战命中后转向**：`TurnToward` 加了加速度参数；出刀命中后用 2400°/秒、64000°/秒² 立刻转回镜头方向。
+- **命中和拼刀转向**。玩家用枪或刀打中敌机后，机身用 0.40 秒朝这次命中的位置转身；范围爆炸只对原锁定目标触发。拼刀或格挡弹刀时，参与交手的玩家各自朝向对手的位置 0.55 秒，包括受击弹开的阶段。转身只改机身水平朝向，镜头仍可手动控制。挥空的刀沿用原来的收刀转向。
 - **灵敏度**：设置「操作」页多两行「瞄准灵敏度」（右键瞄准，默认 = 鼠标 × 0.6）「开镜灵敏度」（狙击镜，默认 = 鼠标 × 放大倍率换算），`FMechSettings::AimSensitivity / ScopeSensitivity`，旧存档按 `SensVersion 3` 迁移。
 - **调色**：石林用第一轮（`tools/pillars_look.json` + `ue_pillars_look.py`）；月球 `moon_look.json` + `ue_moon_look.py`（地面清晰度：先试「史诗」贴图质量，不够再换 4K 贴图）。
 - **苏联板楼**：只做合理性小改（`tools/soviet_plan.py` + `ue_soviet_replan.py`）：居民区去掉工业烟囱（MD_C → MD_E、删 LG_H），外圈楼的朝向对齐街道（0/90/180/270）。布局其余不变。

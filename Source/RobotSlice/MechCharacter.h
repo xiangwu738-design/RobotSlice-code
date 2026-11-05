@@ -461,6 +461,10 @@ private:
 	UPROPERTY(VisibleAnywhere, Category="Mech|FX")
 	TObjectPtr<UPointLightComponent> FillLight;
 
+	/** 近处武器的小范围补光，无阴影；收起、死亡、远距离时关闭。 */
+	UPROPERTY()
+	TObjectPtr<UPointLightComponent> WeaponGlowLights[4];
+
 	UPROPERTY(VisibleAnywhere, Category="Mech|FX")
 	TObjectPtr<UAudioComponent> BoostAudio;
 

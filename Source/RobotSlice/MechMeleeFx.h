@@ -11,6 +11,8 @@
 //  重斩、闪避斩留几个刀身残影（M_BladeGhost）。每把刀的样子在 MechMeleeFx.cpp 的 Arcs[]。-MechTrailOld 用回第一版刀光（对比用）
 #pragma once
 
+// 11-02：下方形状、时间、机制参数沿用；刀光、火花、残影与刀身热光改随涂装点缀色。
+
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "MechTypes.h"
